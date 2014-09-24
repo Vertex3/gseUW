@@ -17,6 +17,7 @@
 	<File>fpFloorArea.xml</File>
 	<File>fpFloorplanLine.xml</File>
 	<File>fpFloorplanLinePublish.xml</File>
+	<File>fpFloorOutline.xml</File>
 	<File>fpFloorPoint.xml</File>
 	<File>fpFloorPoly.xml</File>
 	<File>fpInteriorSpace.xml</File>
