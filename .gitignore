@@ -4,7 +4,6 @@
 ## Log files
 *.log
 
-<<<<<<< HEAD
 ## FME error files
 *.ffs
 =======
@@ -14,4 +13,3 @@ gseData*.xml
 *.bat
 gseLocal.tbx
 *.zip
->>>>>>> 699e5c1319c4b0ccdcfec522686fec8b2faac4b0
