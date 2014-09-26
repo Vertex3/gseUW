@@ -1,5 +1,12 @@
-# Object files
+## Object files
 *.pyc
 
-Log files
+## Log files
 *.log
+
+## local config files
+gseData*.xml
+*.sde
+*.bat
+gseLocal.tbx
+*.zip
