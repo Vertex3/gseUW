@@ -1,8 +1,17 @@
-# Object files
+## Object files
 *.pyc
 
 ## Log files
 *.log
 
+<<<<<<< HEAD
 ## FME error files
 *.ffs
+=======
+## local config files
+gseData*.xml
+*.sde
+*.bat
+gseLocal.tbx
+*.zip
+>>>>>>> 699e5c1319c4b0ccdcfec522686fec8b2faac4b0
