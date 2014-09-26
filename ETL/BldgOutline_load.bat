@@ -1,1 +1,1 @@
-py\\gseLoaderFME.py bldgOutlinePlaylist.xml gseDataConfig.xml True False
+py\\gseLoaderFME.py bldgOutlinePlaylist.xml gseDataConfig.xml True True
