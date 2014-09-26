@@ -4,6 +4,9 @@
 ## Log files
 *.log
 
+## FME error files
+*.ffs
+=======
 ## local config files
 gseData*.xml
 *.sde
