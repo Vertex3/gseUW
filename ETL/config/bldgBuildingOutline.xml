@@ -84,13 +84,6 @@
 				<FieldLength>8</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">WORLDFILE</TargetName>
-				<Method>None</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>255</FieldLength>
-			</Field>
-			<Field>
 				<SourceName qa="Optional">Handle</SourceName>
 				<TargetName qa="Optional">SOURCEID</TargetName>
 				<Method>Copy</Method>
@@ -131,7 +124,7 @@
 			<ChangeDetection exceptProductionView="BuildingOutlineTiltExceptProduction" exceptStagingView="BuildingOutlineTiltExceptStaging" 
 			idField="BUILDINGID"
 			viewIdField="BUILDINGID"
-			viewFields="BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,SOURCEID,CALCROT,WORLDFILE,SHAPE"/>
+			viewFields="BUILDINGID,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,SOURCEID,CALCROT,SHAPE"/>
 			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
 		</Dataset>
 	</Transform>
