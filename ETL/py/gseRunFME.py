@@ -9,9 +9,9 @@ etl = os.sep+'ETL'+os.sep
 gsepath = ospath[:ospath.rfind(etl)]
 etlpath = gsepath + etl
 if (etlpath) not in sys.path:
-	sys.path.insert(0, etlpath)
-	print etlpath
-	
+    sys.path.insert(0, etlpath)
+    print etlpath
+    
 import time, subprocess, gse, gseDrawing
 
 runAs = "FME" # default to FME
@@ -20,9 +20,6 @@ import gseDrawing
 def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,runas,truncate,playlist_xml,source,fread,fwrite):
 
     global runAs
-    #print fread
-    #print fwrite
-	truncateProd = truncate
     ret = False
     sTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     logFolder = fmeFile[:fmeFile.rfind(os.sep)] + os.sep + "log" + os.sep
