@@ -4,11 +4,11 @@
 			<WhereClause/>
 		</GDBDataset>
 	</Extract>
-	<Extract>
+<!--	<Extract>
 		<GDBDataset sourceIDField="SOURCEID" sourceName="Floor_Poly" targetName="Floor_Outline">
 			<WhereClause/>
 		</GDBDataset>
-	</Extract>
+	</Extract>-->
 	<Transform>
 		<Dataset name="Floor_Area" qa="CheckFields,CheckGeometry" sourceIDField="FLOORID" sourceNameField="FLOORID">
 			<Field>

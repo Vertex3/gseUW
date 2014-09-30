@@ -8,6 +8,7 @@
 	<File>fpFloorArea.xml</File>
 	<File>fpFloorPoly.xml</File>
 	<File>fpFloorPoint.xml</File>
+	<File>fpFloorOutline.xml</File>
 	<File>fpFloorplanLinePublish.xml</File>
 	<File>fpInteriorSpaceTilt.xml</File>
 	<File>fpInteriorSpacePoint.xml</File>

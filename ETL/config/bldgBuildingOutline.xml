@@ -33,13 +33,6 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">HULLROT</TargetName>
-				<Method>None</Method>
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
 				<TargetName qa="Optional">BLDGHEIGHT</TargetName>
 				<Method>DefaultValue</Method>
 				<DefaultValue>100</DefaultValue>				
@@ -50,7 +43,7 @@
 				<SourceName qa="Optional"></SourceName>
 				<TargetName qa="Optional">SPACING</TargetName>
 				<Method>DefaultValue</Method>
-				<DefaultValue>20</DefaultValue>				
+				<DefaultValue>1</DefaultValue>				
 				<FieldType>Double</FieldType>
 				<FieldLength>8</FieldLength>
 			</Field>
