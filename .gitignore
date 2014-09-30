@@ -10,7 +10,6 @@
 ## local config files
 gseData*.xml
 *.sde
-*.bat
 gseLocal.tbx
 *.zip
 *.mxd
