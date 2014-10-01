@@ -8,8 +8,6 @@
 *.ffs
 =======
 ## local config files
-gseData*.xml
 *.sde
-gseLocal.tbx
 *.zip
 *.mxd
