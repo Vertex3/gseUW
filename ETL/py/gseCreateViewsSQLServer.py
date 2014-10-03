@@ -101,7 +101,7 @@ def createView(viewName,sql):
     return retVal
 
 def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
-    evwname = dsname + "_EVW"
+    evwname = dsname # + "_EVW"
     viewSql = ""
     viewSql = "CREATE VIEW dbo." + exceptProd + " AS SELECT "
     viewSql += getFieldSql(fields)
@@ -113,7 +113,7 @@ def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
     return viewSql
 
 def getExceptStagingViewSql(dsname,exceptProd,exceptStaging,fields):
-    evwname = dsname + "_EVW"
+    evwname = dsname # + "_EVW"
     viewSql = ""
     viewSql = "CREATE VIEW dbo." + exceptStaging + " AS SELECT "
     viewSql += getFieldSql(fields)

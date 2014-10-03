@@ -7,9 +7,9 @@
 #    
 #    C:\apps\FME\fme.exe C:\apps\Gizinta\gseUW\ETL\fme\gseFloorplanDerive.fmw
 #          --DestDataset_GEODATABASE_SDE sde
-#          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
-#          --ProductionConnectionFile "C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
-#          --GizintaProject C:\apps\Gizinta\gseUW\ETL\config\fpDerivePlaylist.xml
+#          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
+#          --ProductionConnectionFile "C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
+#          --GizintaProject C:\Apps\Gizinta\gseUW\ETL\config\fpDerivePlaylist.xml
 #          --SourceFieldQA False
 #          --TargetFieldQA True
 #          --IgnoreErrors False
@@ -26,7 +26,7 @@
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="6437 19"
+#! VIEW_POSITION="-639 19"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON="import&lt;space&gt;xml.dom.minidom&lt;lf&gt;import&lt;space&gt;os&lt;lf&gt;import&lt;space&gt;sys&lt;lf&gt;import&lt;space&gt;time&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;ospath&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;FME_MF_DIR&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;print&lt;space&gt;ospath&lt;lf&gt;if&lt;space&gt;ospath&lt;space&gt;not&lt;space&gt;in&lt;space&gt;sys.path:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;sys.path.append&lt;openparen&gt;ospath&lt;closeparen&gt;&lt;lf&gt;import&lt;space&gt;gzfme&lt;lf&gt;&lt;lf&gt;ErrorUniqueID&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorUniqueID&lt;quote&gt;&lt;lf&gt;ErrorRequiredValue&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorRequiredValue&lt;quote&gt;&lt;lf&gt;ErrorValueMap&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorValueMap&lt;quote&gt;&lt;lf&gt;Errors&lt;space&gt;=&lt;space&gt;False&lt;lf&gt;&lt;lf&gt;debug&lt;space&gt;=&lt;space&gt;gzfme.setDebug&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;gzDebug&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;logger&lt;space&gt;=&lt;space&gt;fmeobjects.FMELogFile&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;gzfme.logger&lt;space&gt;=&lt;space&gt;logger"
@@ -44,13 +44,13 @@
 #! USAGE="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Add the xml file and other parameters &lt;/p&gt;&#10;"
 #! END_PYTHON="import&lt;space&gt;fmeobjects&lt;comma&gt;&lt;space&gt;gzfme&lt;lf&gt;&lt;lf&gt;gzfme.shutdown&lt;openparen&gt;Errors&lt;comma&gt;str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;IgnoreErrors&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;FME_TotalFeaturesWritten&lt;comma&gt;FME_MacroValues&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;del&lt;space&gt;Errors&lt;lf&gt;del&lt;space&gt;ErrorUniqueID&lt;lf&gt;del&lt;space&gt;ErrorRequiredValue&lt;lf&gt;del&lt;space&gt;ErrorValueMap&lt;space&gt;&lt;lf&gt;del&lt;space&gt;debug&lt;lf&gt;del&lt;space&gt;logger&lt;lf&gt;gzfme.logger&lt;space&gt;=&lt;space&gt;None&lt;lf&gt;"
 #! HISTORY="31&lt;solidus&gt;10&lt;solidus&gt;2013,support&lt;at&gt;Gizinta.com,First&lt;space&gt;Draft"
-#! FME_DOCUMENT_PRIORGUID="03e8161e-876e-4fb7-ad77-72a8476c60d0,4e804a79-b8cf-4fa1-a081-cad51bd6eca9,96793fce-7580-4025-8d85-c11b6131977a,59b66b5f-7e2c-42d5-b98c-f29ae8640422,78c71f3b-74c1-4586-b10d-6ea3963b7e17,2956030e-7006-4c45-840a-d70eff2378ba,547aef96-4c4a-484d-91b3-4e07a37000ce,3ad62927-73e6-4162-8306-61e2e4687353,56e38f89-003d-4975-839f-cf9bc5dda5fa,28544154-c335-4683-a8f8-a6eeb7d11627,e19af7f0-4581-4342-8f12-091c111c7426,407711ae-fe2a-4c9f-a2f1-a7f5556083d4,80aba9f0-a767-43ef-ac98-007530b53e62,0c1a775e-ea1c-4cf4-a583-c6ded80b62d2,b16a372d-e8ad-43f2-a1db-59f9162a1399,5d828f32-54bd-44c6-b378-25c7afd7efa4,cdeff387-df92-4dbe-af3e-9e7e7ecc7de8,deaf01a7-6a9b-496a-93c4-e2b257854991,7b9db82a-7493-4f70-93b4-2fcc542ad9c4,19a4ca87-e68a-487e-9a44-7144202aa658,671bbe99-ecfb-4a30-9bb1-6bdf059bf1d2,f28daf85-5635-4a74-9c4c-e17ca3f0440b,9e91ea1c-cfdb-4466-ba81-0ccb6c03ecf7,b56bf05f-ba73-4dde-8e2f-53629de4af81,56116063-a8b7-4a4c-bcea-53c8cd80c0d2,32f0978d-b92d-4807-aa99-0633c66563bb,7201a265-d36d-4370-ba68-4fde1d072577,26b818ac-38e3-4e4a-ab71-02d47bffde5d,ff7184f0-6071-4410-b4bf-25092261b2c9,c1a3e918-eb16-4dd6-823b-913687fefc5e,f1e78495-e648-4253-95a5-e7f664cec992,b5c51b94-b372-4d80-98a7-5ffe59962f1c,fbfdb52c-8534-47f0-9147-61030b025214,6c7f53ce-c503-4f90-a611-991c1d186e70,59d10dfa-2e9c-472f-b9f6-b891341f2f2d,ed08a71d-bfe0-497a-b7ef-a5e42f7d3b74,bd8eae1b-4995-45b5-863a-124ec0b0a0e7,a09f7da4-4dfb-490f-86ba-22cde60daf06,e821abec-92ce-4fba-8427-ec29d796144b,b93d301c-9d8c-432c-b58e-0e06d44ee7e0,078df6b8-f77a-4b28-9e57-983483c33ef6,a1255429-5b89-4064-9181-67083fc9cc1f,60bfd418-21b2-4e28-9e83-a75f903d2ac6,1822d502-d6c9-4261-a9b3-0510bb5e0d44,9f135a07-d47b-4f13-b6fe-4ab64fd9fc5c,622d1c70-64ac-40dc-92f0-f449fe3c6348,cf52e43e-0bb4-4ada-b612-e3a5f542763a,e6542b59-ca1e-4a86-a01d-4fd83249347f"
+#! FME_DOCUMENT_PRIORGUID="03e8161e-876e-4fb7-ad77-72a8476c60d0,4e804a79-b8cf-4fa1-a081-cad51bd6eca9,96793fce-7580-4025-8d85-c11b6131977a,59b66b5f-7e2c-42d5-b98c-f29ae8640422,78c71f3b-74c1-4586-b10d-6ea3963b7e17,2956030e-7006-4c45-840a-d70eff2378ba,547aef96-4c4a-484d-91b3-4e07a37000ce,3ad62927-73e6-4162-8306-61e2e4687353,56e38f89-003d-4975-839f-cf9bc5dda5fa,28544154-c335-4683-a8f8-a6eeb7d11627,e19af7f0-4581-4342-8f12-091c111c7426,407711ae-fe2a-4c9f-a2f1-a7f5556083d4,80aba9f0-a767-43ef-ac98-007530b53e62,0c1a775e-ea1c-4cf4-a583-c6ded80b62d2,b16a372d-e8ad-43f2-a1db-59f9162a1399,5d828f32-54bd-44c6-b378-25c7afd7efa4,cdeff387-df92-4dbe-af3e-9e7e7ecc7de8,deaf01a7-6a9b-496a-93c4-e2b257854991,7b9db82a-7493-4f70-93b4-2fcc542ad9c4,19a4ca87-e68a-487e-9a44-7144202aa658,671bbe99-ecfb-4a30-9bb1-6bdf059bf1d2,f28daf85-5635-4a74-9c4c-e17ca3f0440b,9e91ea1c-cfdb-4466-ba81-0ccb6c03ecf7,b56bf05f-ba73-4dde-8e2f-53629de4af81,56116063-a8b7-4a4c-bcea-53c8cd80c0d2,32f0978d-b92d-4807-aa99-0633c66563bb,7201a265-d36d-4370-ba68-4fde1d072577,26b818ac-38e3-4e4a-ab71-02d47bffde5d,ff7184f0-6071-4410-b4bf-25092261b2c9,c1a3e918-eb16-4dd6-823b-913687fefc5e,f1e78495-e648-4253-95a5-e7f664cec992,b5c51b94-b372-4d80-98a7-5ffe59962f1c,fbfdb52c-8534-47f0-9147-61030b025214,6c7f53ce-c503-4f90-a611-991c1d186e70,59d10dfa-2e9c-472f-b9f6-b891341f2f2d,ed08a71d-bfe0-497a-b7ef-a5e42f7d3b74,bd8eae1b-4995-45b5-863a-124ec0b0a0e7,a09f7da4-4dfb-490f-86ba-22cde60daf06,e821abec-92ce-4fba-8427-ec29d796144b,b93d301c-9d8c-432c-b58e-0e06d44ee7e0,078df6b8-f77a-4b28-9e57-983483c33ef6,a1255429-5b89-4064-9181-67083fc9cc1f,60bfd418-21b2-4e28-9e83-a75f903d2ac6,1822d502-d6c9-4261-a9b3-0510bb5e0d44,9f135a07-d47b-4f13-b6fe-4ab64fd9fc5c,622d1c70-64ac-40dc-92f0-f449fe3c6348,cf52e43e-0bb4-4ada-b612-e3a5f542763a,e6542b59-ca1e-4a86-a01d-4fd83249347f,75194ae3-30f7-4cf0-848b-b962ffcb1040,1c94a58a-0e8d-4dea-8fd5-a727468f2438"
 #! DOC_TOP_LEFT="-600 -1957"
 #! REQUIREMENTS_KEYWORD="none"
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-09-30T15:01:44"
+#! LAST_SAVE_DATE="2014-10-03T14:04:52"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
@@ -61,7 +61,7 @@
 #! REQUIREMENTS="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;test &lt;/p&gt;&#10;"
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="10819 1725"
-#! FME_DOCUMENT_GUID="75194ae3-30f7-4cf0-848b-b962ffcb1040"
+#! FME_DOCUMENT_GUID="e1599b5d-607d-4e47-baae-1d804da4dc2f"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -1051,17 +1051,17 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI FILENAME_MUSTEXIST OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:"
-#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
+#! DEFAULT_VALUE="C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST ProductionConnectionFile Connection_File|.sde Enter the path and name of the Production SDE Database connection file:"
-#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
+#! DEFAULT_VALUE="C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FILENAME_MUSTEXIST GizintaProject Xml|.xml Select the Gizinta Xml File to use:"
-#! DEFAULT_VALUE="C:\apps\Gizinta\gseUW\ETL\config\fpDerivePlaylist.xml"
+#! DEFAULT_VALUE="C:\Apps\Gizinta\gseUW\ETL\config\fpDerivePlaylist.xml"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
@@ -1105,7 +1105,7 @@
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\&quot;,WHERE,FLOORID=&apos;UWS_1002_02&apos;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
+#! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\&quot;,WHERE,FLOORID=&apos;UWS_1002_02&apos;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
 #! DEFAULT_VALUE="Floor_Area Floor_Poly InteriorSpace FloorplanLine"
 #! IS_STAND_ALONE="false"
 #! />
@@ -1115,7 +1115,7 @@
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_2 &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,SourceDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
+#! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_2 &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,SourceDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
 #! DEFAULT_VALUE="Building_Outline_Point Building_Outline_Tilt Active_Floor Floor_Level Building_Outline_Point"
 #! IS_STAND_ALONE="false"
 #! />
@@ -4364,25 +4364,46 @@
 #! </BREAKPOINTS>
 #! <ATTR_LINKS>
 #! <ATTR_LINK
-#! IDENTIFIER="393324"
-#! SOURCE_NODE="91"
-#! TARGET_NODE="1"
-#! SOURCE_PORT_DESC="ao 0 1"
-#! TARGET_PORT_DESC="3"
-#! />
-#! <ATTR_LINK
-#! IDENTIFIER="65644"
+#! IDENTIFIER="262252"
 #! SOURCE_NODE="91"
 #! TARGET_NODE="1"
 #! SOURCE_PORT_DESC="ao 0 17"
 #! TARGET_PORT_DESC="4"
 #! />
 #! <ATTR_LINK
-#! IDENTIFIER="196716"
+#! IDENTIFIER="65644"
+#! SOURCE_NODE="91"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="ao 0 1"
+#! TARGET_PORT_DESC="3"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131180"
 #! SOURCE_NODE="91"
 #! TARGET_NODE="1"
 #! SOURCE_PORT_DESC="ao 0 19"
 #! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196716"
+#! SOURCE_NODE="91"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="ao 0 15"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="393324"
+#! SOURCE_NODE="91"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="ao 0 18"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="458860"
+#! SOURCE_NODE="91"
+#! TARGET_NODE="1"
+#! SOURCE_PORT_DESC="ao 0 16"
+#! TARGET_PORT_DESC="2"
 #! />
 #! <ATTR_LINK
 #! IDENTIFIER="327788"
@@ -4392,42 +4413,49 @@
 #! TARGET_PORT_DESC="0"
 #! />
 #! <ATTR_LINK
-#! IDENTIFIER="262252"
+#! IDENTIFIER="131160"
 #! SOURCE_NODE="91"
-#! TARGET_NODE="1"
-#! SOURCE_PORT_DESC="ao 0 16"
-#! TARGET_PORT_DESC="2"
-#! />
-#! <ATTR_LINK
-#! IDENTIFIER="131180"
-#! SOURCE_NODE="91"
-#! TARGET_NODE="1"
-#! SOURCE_PORT_DESC="ao 0 15"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="ao 2 85"
 #! TARGET_PORT_DESC="1"
 #! />
 #! <ATTR_LINK
-#! IDENTIFIER="458860"
+#! IDENTIFIER="458840"
 #! SOURCE_NODE="91"
-#! TARGET_NODE="1"
-#! SOURCE_PORT_DESC="ao 0 18"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="ao 2 65"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196696"
+#! SOURCE_NODE="91"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="ao 2 82"
 #! TARGET_PORT_DESC="5"
 #! />
 #! <ATTR_LINK
-#! IDENTIFIER="393304"
+#! IDENTIFIER="65624"
 #! SOURCE_NODE="91"
 #! TARGET_NODE="2"
 #! SOURCE_PORT_DESC="ao 2 86"
 #! TARGET_PORT_DESC="7"
 #! />
 #! <ATTR_LINK
-#! IDENTIFIER="458840"
+#! IDENTIFIER="393304"
 #! SOURCE_NODE="91"
 #! TARGET_NODE="2"
 #! SOURCE_PORT_DESC="ao 2 84"
 #! TARGET_PORT_DESC="0"
 #! />
 #! <ATTR_LINK
-#! IDENTIFIER="65624"
+#! IDENTIFIER="524376"
+#! SOURCE_NODE="91"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="ao 2 66"
+#! TARGET_PORT_DESC="3"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="327768"
 #! SOURCE_NODE="91"
 #! TARGET_NODE="2"
 #! SOURCE_PORT_DESC="ao 2 64"
@@ -4437,36 +4465,8 @@
 #! IDENTIFIER="262232"
 #! SOURCE_NODE="91"
 #! TARGET_NODE="2"
-#! SOURCE_PORT_DESC="ao 2 82"
-#! TARGET_PORT_DESC="5"
-#! />
-#! <ATTR_LINK
-#! IDENTIFIER="196696"
-#! SOURCE_NODE="91"
-#! TARGET_NODE="2"
 #! SOURCE_PORT_DESC="ao 2 83"
 #! TARGET_PORT_DESC="4"
-#! />
-#! <ATTR_LINK
-#! IDENTIFIER="327768"
-#! SOURCE_NODE="91"
-#! TARGET_NODE="2"
-#! SOURCE_PORT_DESC="ao 2 85"
-#! TARGET_PORT_DESC="1"
-#! />
-#! <ATTR_LINK
-#! IDENTIFIER="131160"
-#! SOURCE_NODE="91"
-#! TARGET_NODE="2"
-#! SOURCE_PORT_DESC="ao 2 66"
-#! TARGET_PORT_DESC="3"
-#! />
-#! <ATTR_LINK
-#! IDENTIFIER="524376"
-#! SOURCE_NODE="91"
-#! TARGET_NODE="2"
-#! SOURCE_PORT_DESC="ao 2 65"
-#! TARGET_PORT_DESC="2"
 #! />
 #! </ATTR_LINKS>
 #! <SUBDOCUMENTS>
@@ -9898,7 +9898,7 @@
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_FEATURE_READ_MODE" PARM_VALUE="Features"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_IGNORE_NETWORK_INFO" PARM_VALUE="yes"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
@@ -16012,11 +16012,11 @@
 GUI IGNORE SourceDataset_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1,_GEODBInSearchFeature_GEODATABASE_SDE_1,_GEODBInSearchOrder_GEODATABASE_SDE_1,_GEODBInSearchMethod_GEODATABASE_SDE_1,_GEODBInChildVersionName_GEODATABASE_SDE_1,_GEODBInFeatureReadMode_GEODATABASE_SDE_1,_GEODBInArchiveWhereClause_GEODATABASE_SDE_1,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1,_GEODBInPersistentConnection_GEODATABASE_SDE_1,_GEODBInBeginSql_GEODATABASE_SDE_1,_GEODBInEndSql_GEODATABASE_SDE_1,SourceDataset_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_2,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_2,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_2,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_2,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_2,_GEODBInSearchFeature_GEODATABASE_SDE_2,_GEODBInSearchOrder_GEODATABASE_SDE_2,_GEODBInSearchMethod_GEODATABASE_SDE_2,_GEODBInChildVersionName_GEODATABASE_SDE_2,_GEODBInFeatureReadMode_GEODATABASE_SDE_2,_GEODBInArchiveWhereClause_GEODATABASE_SDE_2,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_2,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_2,_GEODBInPersistentConnection_GEODATABASE_SDE_2,_GEODBInBeginSql_GEODATABASE_SDE_2,_GEODBInEndSql_GEODATABASE_SDE_2,SourceDataset_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_3,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_3,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_3,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_3,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_3,_GEODBInSearchFeature_GEODATABASE_SDE_3,_GEODBInSearchOrder_GEODATABASE_SDE_3,_GEODBInSearchMethod_GEODATABASE_SDE_3,_GEODBInChildVersionName_GEODATABASE_SDE_3,_GEODBInArchiveWhereClause_GEODATABASE_SDE_3,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_3,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_3,_GEODBInPersistentConnection_GEODATABASE_SDE_3,_GEODBInBeginSql_GEODATABASE_SDE_3,_GEODBInEndSql_GEODATABASE_SDE_3,DestDataset_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_4,GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_4,_GEODBOutDefaultZValue_GEODATABASE_SDE_4,_GEODBOutWriterMode_GEODATABASE_SDE_4,_GEODBOutTransaction_GEODATABASE_SDE_4,_GEODBOutTransactionInterval_GEODATABASE_SDE_4,_GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_4,_GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_4,_GEODBOutDumpFailedFeatures_GEODATABASE_SDE_4,_GEODBOutFFSDumpFile_GEODATABASE_SDE_4,_GEODBOutAnnotationUnits_GEODATABASE_SDE_4,_GEODBOutMeasures_GEODATABASE_SDE_4,_GEODBOutMeasureOrigin_GEODATABASE_SDE_4,_GEODBOutMeasureScale_GEODATABASE_SDE_4,_GEODBOutReconcileAndPost_GEODATABASE_SDE_4,_GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_4,_GEODBOutValidateFeatures_GEODATABASE_SDE_4,_GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_4,_GEODBOutPersistentConnection_GEODATABASE_SDE_4,_GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_4,_GEODBOutBeginSql_GEODATABASE_SDE_4,_GEODBOutEndSql_GEODATABASE_SDE_4
 DEFAULT_MACRO DestDataset_GEODATABASE_SDE sde
 GUI TEXT DestDataset_GEODATABASE_SDE Destination Esri ArcSDE Geodatabase Dataset:
-DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde
+DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde
 GUI FILENAME_EXISTING OUT_CONNECTION_FILE_GEODATABASE_SDE Connection File:
-DEFAULT_MACRO ProductionConnectionFile C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde
+DEFAULT_MACRO ProductionConnectionFile C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde
 GUI OPTIONAL FILENAME_EXISTING ProductionConnectionFile Connection_File|.sde Enter the path and name of the Production SDE Database connection file:
-DEFAULT_MACRO GizintaProject C:\apps\Gizinta\gseUW\ETL\config\fpDerivePlaylist.xml
+DEFAULT_MACRO GizintaProject C:\Apps\Gizinta\gseUW\ETL\config\fpDerivePlaylist.xml
 GUI OPTIONAL FILENAME_EXISTING GizintaProject Xml|.xml Select the Gizinta Xml File to use:
 DEFAULT_MACRO SourceFieldQA False
 GUI OPTIONAL CHOICE SourceFieldQA True%False Choose whether to perform QA on Source Fields:
@@ -16035,11 +16035,11 @@ GUI OPTIONAL FILENAME LOG_FILE Log_Files_(*.log)|*.log|All_Files_(*.*)|*.* Log F
 DEFAULT_MACRO FEATURE_TYPES InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point
 GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES InteriorSpace_Tilt%FloorplanLine%InteriorSpace%Floor_Outline%Floor_Point%Floor_Poly%FloorplanLine_Publish%Floor_Area%InteriorSpace_Point Feature Types to Write:
 DEFAULT_MACRO FEATURE_TYPES_READ Floor_Area Floor_Poly InteriorSpace FloorplanLine
-GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",WHERE,FLOORID='UWS_1002_02',TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
+GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",WHERE,FLOORID='UWS_1002_02',TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO SourceDataset_GEODATABASE_SDE sde
 GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:
 DEFAULT_MACRO FEATURE_TYPES_2 Building_Outline_Point Building_Outline_Tilt Active_Floor Floor_Level Building_Outline_Point
-GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_2 "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,SourceDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
+GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_2 "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,SourceDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO truncate Y
 GUI OPTIONAL STRING_OR_CHOICE truncate Y%N Truncate before load option:
 INCLUDE [ if {{$(DestDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'DestDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
@@ -16648,7 +16648,7 @@ DEFAULT_MACRO _GEODBInUsingConnFile_GEODATABASE_SDE_3 no
 #
 # =============================================================================
 #
-DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_3 C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde
+DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_3 $(ProductionConnectionFile)
 GUI FILENAME_MUSTEXIST GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_3 Connection File:
 GEODATABASE_SDE_3_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_3)"
 # ============================================================================
@@ -16929,7 +16929,7 @@ GEODATABASE_SDE_4_CONNECTION_FILE "$(GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATA
 # when writing to a versioned table/feature class in an Enterprise Geodatabase.
 # Both TRANSACTIONS and NONE can be chosen only when writing to non-versioned
 # tables/feature classes.
-DEFAULT_MACRO GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_4 VERSIONING
+DEFAULT_MACRO GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_4 TRANSACTIONS
 GEODATABASE_SDE_4_TRANSACTION_TYPE "$(GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_4)"
 GUI ACTIVECHOICE GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_4 VERSIONING%TRANSACTIONS,GEODATABASE_SDE_OUT_VERSION%NONE,GEODATABASE_SDE_OUT_VERSION Transaction Type:
 # ============================================================================
@@ -17006,7 +17006,7 @@ GEODATABASE_SDE_4_TRANSACTION $(_GEODBOutTransaction_GEODATABASE_SDE_4)
 # ============================================================================
 # This option specifies how many features will be written to the Geodatabase on
 # each transaction.
-DEFAULT_MACRO _GEODBOutTransactionInterval_GEODATABASE_SDE_4 1000
+DEFAULT_MACRO _GEODBOutTransactionInterval_GEODATABASE_SDE_4 10000
 GUI OPTIONAL INTEGER _GEODBOutTransactionInterval_GEODATABASE_SDE_4 Features to Write Per Transaction:
 GEODATABASE_SDE_4_TRANSACTION_INTERVAL $(_GEODBOutTransactionInterval_GEODATABASE_SDE_4)
 # ============================================================================
@@ -17224,7 +17224,7 @@ MACRO $(gseGetBldgFloorInfo_WORKSPACE_NAME)_FME_FEATURE_TYPE <at>Value<openparen
 MACRO $(gseGetBldgFloorInfo_WORKSPACE_NAME)_BLDG <at>Value<openparen>bldg<closeparen>
 DEFAULT_MACRO gseGetBldgFloorInfo_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(gseGetBldgFloorInfo_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(gseGetBldgFloorInfo_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_TestFilter_2_Input1412114504 Input Splitter"   INPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_TestFilter_2_Input"   OUTPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_TestFilter_2_Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,siteid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SITEID),buildingid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_BUILDINGID),calcrot,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_CALCROT),numfloors,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_NUMFLOORS),sourcedwg,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SOURCEDWG),scale_85x11,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SCALE_85X11),scale_11x17,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SCALE_11X17),sensitivity,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SENSITIVITY),in_date,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_IN_DATE),last_user,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_LAST_USER),altitude,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_ALTITUDE),sourceid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SOURCEID),dwg_name,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_DWG_NAME),floor,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOOR),interiorspace,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_INTERIORSPACE),name_long,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_NAME_LONG),bldgheight,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_BLDGHEIGHT),floor_level,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOOR_LEVEL),schelev,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SCHELEV),margin,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_MARGIN),floorplanline,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOORPLANLINE),ycenter,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_YCENTER),xcenter,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_XCENTER),floorid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOORID),spacing,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SPACING),name_short,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_NAME_SHORT),drawing,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_DRAWING),fme_feature_type,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FME_FEATURE_TYPE),bldg,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_BLDG), FEATURE_TYPE)"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_TestFilter_2_Input1412370292 Input Splitter"   INPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_TestFilter_2_Input"   OUTPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_TestFilter_2_Input" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,siteid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SITEID),buildingid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_BUILDINGID),calcrot,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_CALCROT),numfloors,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_NUMFLOORS),sourcedwg,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SOURCEDWG),scale_85x11,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SCALE_85X11),scale_11x17,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SCALE_11X17),sensitivity,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SENSITIVITY),in_date,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_IN_DATE),last_user,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_LAST_USER),altitude,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_ALTITUDE),sourceid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SOURCEID),dwg_name,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_DWG_NAME),floor,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOOR),interiorspace,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_INTERIORSPACE),name_long,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_NAME_LONG),bldgheight,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_BLDGHEIGHT),floor_level,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOOR_LEVEL),schelev,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SCHELEV),margin,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_MARGIN),floorplanline,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOORPLANLINE),ycenter,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_YCENTER),xcenter,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_XCENTER),floorid,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FLOORID),spacing,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_SPACING),name_short,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_NAME_SHORT),drawing,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_DRAWING),fme_feature_type,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FME_FEATURE_TYPE),bldg,$($(gseGetBldgFloorInfo_WORKSPACE_NAME)_BLDG), FEATURE_TYPE)"
 # -------------------------------------------------------------------------
 
 # Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
@@ -17305,7 +17305,7 @@ INCLUDE [if { {ATTRIBUTES} == {ATTRIBUTES} } {                puts "MACRO $(gseG
 
 FACTORY_DEF * ReferenceFactory    FACTORY_NAME $(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3    INPUT REFERENCER FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_2_MERGED"    INPUT REFERENCEE FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_TestFilter_2_Floor_Level"    REFERENCE_INFO $($(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_REFERENCE_INFO)    REFERENCE_TABLE @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>floor<closeparen>,$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3) @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>floor<closeparen>,$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3) AUTO    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    REFERENCEES_FIRST No    OUTPUT COMPLETE FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_MERGED"
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_Merged1412114504 Output Collector"   INPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_MERGED"   OUTPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_Merged"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_Merged1412370292 Output Collector"   INPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_MERGED"   OUTPUT FEATURE_TYPE "$(gseGetBldgFloorInfo_WORKSPACE_NAME)_FeatureMerger_3_Merged"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(gseGetBldgFloorInfo_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gseGetBldgFloorInfo FeatureMerger_3_Merged Output Renamer/Nuker"   INPUT FEATURE_TYPE gseGetBldgFloorInfo_FeatureMerger_3_Merged   OUTPUT FEATURE_TYPE gseGetBldgFloorInfo_FeatureMerger_3_Merged
 # -------------------------------------------------------------------------
@@ -17363,7 +17363,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryReplacer    INPUT  FEATURE_TYPE
 # -------------------------------------------------------------------------
 FACTORY_DEF * AttrSetFactory FACTORY_NAME Floor_Point INPUT  FEATURE_TYPE GeometryReplacer_OUTPUT ATTR fme_feature_type Floor_Point    OUTPUT OUTPUT FEATURE_TYPE Floor_Point_OUTPUT 
 # -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory   FACTORY_NAME "gzTiltRooms INPUT Input Collector"   INPUT FEATURE_TYPE TestFilter_InteriorSpace_0_vp82Rr2Y61w=   OUTPUT FEATURE_TYPE gzTiltRooms_INPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "gzTiltRooms INPUT Input Collector"   INPUT FEATURE_TYPE TestFilter_InteriorSpace_1_vp82Rr2Y61w=   OUTPUT FEATURE_TYPE gzTiltRooms_INPUT
 MACRO gzTiltRooms_WORKSPACE_NAME gzTiltRooms
 MACRO $(gzTiltRooms_WORKSPACE_NAME)_XFORMER_NAME gzTiltRooms
 MACRO $(gzTiltRooms_WORKSPACE_NAME)_TRANSFORMER_GROUP 
@@ -17373,12 +17373,14 @@ MACRO $(gzTiltRooms_WORKSPACE_NAME)_pFLOORID @Value(floorid)
 MACRO $(gzTiltRooms_WORKSPACE_NAME)_tiltHeight 2
 DEFAULT_MACRO gzTiltRooms_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(gzTiltRooms_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(gzTiltRooms_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_INPUT1412114504 Input Splitter"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_INPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_INPUT1412370292 Input Splitter"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_INPUT"
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT"         @CopyAttributes(stacklevel,_stack_index,STACKLEVEL,_stack_index)
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3 OUTPUT Splitter"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT_0_eTaPVaTrFrQ="   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT_1_eTaPVaTrFrQ="
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_Output (Disabled) Nuker"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT_0_eTaPVaTrFrQ="
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_Rotation    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT_1_eTaPVaTrFrQ="    OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_Rotation_OUTPUT"         "CALCULATED_ROTATION" "@EvaluateExpression(FLOAT,<at>Value<openparen>calcrot<closeparen><space>+<space>15,$(gzTiltRooms_WORKSPACE_NAME)_Rotation)"
@@ -17418,7 +17420,7 @@ FACTORY_DEF * ConnectionFactory     FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_P
 # -------------------------------------------------------------------------
 
 INCLUDE [          if { ({fme_polygon} == {fme_point}) } {             puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_point)};          } elseif { ({fme_polygon} == {fme_line}) } {             puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_line)};          } elseif { ({fme_polygon} == {fme_polygon}) } {               if { ({No} == {Yes}) } {                puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_polygon, CHECK_Z_IN_DUPLICATE_POINTS_REMOVAL)};             } else {                puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_polygon)};             }          } elseif { ({fme_polygon} == {fme_arc}) } {             puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_arc,@Value(fme_rotation),@Value(fme_primary_axis),@Value(fme_secondary_axis),@Value(fme_start_angle),@Value(fme_sweep_angle))};          }  elseif { ({fme_polygon} == {fme_ellipse}) } {             puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_ellipse,@Value(fme_primary_axis),@Value(fme_secondary_axis),@Value(fme_rotation),LEFT_HAND_RULE)};          } elseif { ({fme_polygon} == {fme_text}) } {             puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_text,@Value(fme_text_string),@Value(fme_text_size),@Value(fme_rotation))};          } elseif { ({fme_polygon} == {fme_composite_surface}) } {               puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_composite_surface)};          } elseif { ({fme_polygon} == {fme_brep_solid}) } {               puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_brep_solid)};          } elseif { ({fme_polygon} == {fme_point_cloud}) } {               puts {MACRO $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func @GeometryType(fme_point_cloud)};          }          ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_Renamer    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_PointConnector_POLYGON"    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_PointConnector_LINE"    OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_COERCED"         $($(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_Renamer    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_PointConnector_LINE"    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_PointConnector_POLYGON"    OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_COERCED"         $($(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_func)
 
 # -------------------------------------------------------------------------
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2 Input Input Collector"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_GeometryCoercer_2_COERCED"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_Input"
@@ -17429,7 +17431,7 @@ MACRO $(SelfIntersectChecker_WORKSPACE_NAME)___COMPOUND_PARAMETERS
 MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_SUB_DOC_NAME SelfIntersectChecker
 DEFAULT_MACRO SelfIntersectChecker_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(SelfIntersectChecker_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(SelfIntersectChecker_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_Input1412114504 Input Splitter"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_Input1412370292 Input Splitter"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_PartCounter    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_PartCounter_OUTPUT"        "_part_count1" @Geometry(PART_COUNT,NONRECURSIVE)
@@ -17455,8 +17457,8 @@ FACTORY_DEF * IntersectionFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPA
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c670_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c670___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c670__KeySeenCount($attrVal)] - 1]; };
-FACTORY_DEF * TestFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersector_SELF_INTERSECTED"    TEST @Tcl2("$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c670_dupKeyCount {(_selfID)}") > 0    OUTPUT FAILED FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"
+Tcl2 proc $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f0_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f0___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f0__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersector_SELF_INTERSECTED"    TEST @Tcl2("$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f0_dupKeyCount {(_selfID)}") > 0    OUTPUT FAILED FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"
 
 # -------------------------------------------------------------------------
 
@@ -17480,15 +17482,15 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_
 
 MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function
 INCLUDE [ if {{wkt} == {fmebinary} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY,_geometry) }           } elseif {{wkt} == {fmehex} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY_HEX,_geometry) }           } elseif {{wkt} == {fmexml} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE,_geometry) }           } elseif {{wkt} == {fmexmlencoded} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ENCODED_STRING,&_geometry) }           } elseif {{wkt} == {wkt} ||                      {wkt} == {wkb} ||                      {wkt} == {wkbhex} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @OGCGeometry(from_attribute,wkt,_geometry) }           } elseif {{wkt} == {GEOJSON} ||                     {wkt} == {ESRIJSON} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @JSONGeometry(FROM_ATTRIBUTE,wkt,_geometry) }           } elseif {{wkt} == {GEORSS} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @GeoRSSGeometry(FROM_ATTRIBUTE,_geometry) }           } elseif {{wkt} == {KML} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @KMLGeometry(FROM_ATTRIBUTE,_geometry) }           } elseif {{wkt} == {GML} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @GMLGeometry(FROM_ATTRIBUTE,_geometry,<Unused>) }           } elseif {{wkt} == {geohash} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @GeoHash(FROM_ATTRIBUTE,_geometry) }           }         ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_PASSED"    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_2_FAILED"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"         $($(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_2_FAILED"    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_PASSED"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"         $($(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function)
 
 # -------------------------------------------------------------------------
 
 INCLUDE [    set macroLine "MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "{\[0-9\]+}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_OUTPUT"        @RemoveAttributes(_selfID,_geometry,_segments)        @RemoveAttributes(fme_regexp_match"$($(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_LIST_EXP)")
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting1412114504 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting1412114504 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting1412370292 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting1412370292 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(SelfIntersectChecker_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2 NotSelfIntersecting Output Renamer/Nuker"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2 SelfIntersecting Output Renamer/Nuker"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_SelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_SelfIntersecting"
@@ -17497,9 +17499,7 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_SelfInter
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzTiltRooms_WORKSPACE_NAME)_Logger_SelfIntersecting_Logger    INPUT  FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_SelfIntersecting"    OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_Logger_SelfIntersecting_LOGGED"                        @FeatureType("")                  @Log("$(gzTiltRooms_WORKSPACE_NAME)_Logger_SelfIntersecting: Feature is:",20,20)
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_Logger_SelfIntersecting LOGGED Output Nuker"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_Logger_SelfIntersecting_LOGGED"
-# -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_Output (Disabled) Nuker"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_AttributeCopier_3_OUTPUT_0_eTaPVaTrFrQ="
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_OUTPUT1412114504 Output Collector"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzTiltRooms_WORKSPACE_NAME)_OUTPUT1412370292 Output Collector"   INPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzTiltRooms_WORKSPACE_NAME)_OUTPUT"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(gzTiltRooms_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzTiltRooms OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE gzTiltRooms_OUTPUT   OUTPUT FEATURE_TYPE gzTiltRooms_OUTPUT
 # -------------------------------------------------------------------------
@@ -17514,7 +17514,7 @@ MACRO $(gzFixIntersections_WORKSPACE_NAME)_UniqueIDName @Value(spaceid)
 MACRO $(gzFixIntersections_WORKSPACE_NAME)_Feature_Type InteriorSpace
 DEFAULT_MACRO gzFixIntersections_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(gzFixIntersections_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(gzFixIntersections_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_INPUT1412114504 Input Splitter"   INPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_INPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_INPUT1412370292 Input Splitter"   INPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_INPUT"
 # -------------------------------------------------------------------------
 
 # Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
@@ -17526,8 +17526,8 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzFixIntersections_WORKSPACE_NAME)_At
 
 MACRO casemac
 INCLUDE [ if { {NO} == {NO} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(gzFixIntersections_WORKSPACE_NAME)_StringReplacer_1d6747f1_c406_4053_a2cb_5c9f632390950_replacer { findText replaceText invalidValue} {     set attrs [split \"fme_feature_type\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       set noMatch true;       if {$length > 0} {          if {{NO} == {YES}} {             set newAttrVal [regsub $(casemac) -all -- $findValue $attrVal $replaceValue];          } else {             set newAttrVal [string map $(casemac) [list $findValue $replaceValue] $attrVal];          };          if { $newAttrVal ne $attrVal } {             set noMatch false;             FME_SetAttribute $attr $newAttrVal;          };       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzFixIntersections_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_AttributeExposer_OUTPUT"    OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(gzFixIntersections_WORKSPACE_NAME)_StringReplacer_1d6747f1_c406_4053_a2cb_5c9f632390950_replacer {DBO.} {} {_FME_NO_OP_}")
+Tcl2 proc $(gzFixIntersections_WORKSPACE_NAME)_StringReplacer_496512f3_9f28_4198_8efc_215aa88e5faf0_replacer { findText replaceText invalidValue} {     set attrs [split \"fme_feature_type\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set length [string length $attrVal];       set noMatch true;       if {$length > 0} {          if {{NO} == {YES}} {             set newAttrVal [regsub $(casemac) -all -- $findValue $attrVal $replaceValue];          } else {             set newAttrVal [string map $(casemac) [list $findValue $replaceValue] $attrVal];          };          if { $newAttrVal ne $attrVal } {             set noMatch false;             FME_SetAttribute $attr $newAttrVal;          };       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzFixIntersections_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_AttributeExposer_OUTPUT"    OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(gzFixIntersections_WORKSPACE_NAME)_StringReplacer_496512f3_9f28_4198_8efc_215aa88e5faf0_replacer {DBO.} {} {_FME_NO_OP_}")
 
 # -------------------------------------------------------------------------
 
@@ -17579,7 +17579,7 @@ MACRO $(SelfIntersectChecker_WORKSPACE_NAME)___COMPOUND_PARAMETERS
 MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_SUB_DOC_NAME SelfIntersectChecker
 DEFAULT_MACRO SelfIntersectChecker_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(SelfIntersectChecker_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(SelfIntersectChecker_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_Input1412114504 Input Splitter"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_Input1412370292 Input Splitter"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_PartCounter    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_Input"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_PartCounter_OUTPUT"        "_part_count1" @Geometry(PART_COUNT,NONRECURSIVE)
@@ -17605,8 +17605,8 @@ FACTORY_DEF * IntersectionFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPA
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c671_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c671___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c671__KeySeenCount($attrVal)] - 1]; };
-FACTORY_DEF * TestFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersector_SELF_INTERSECTED"    TEST @Tcl2("$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_140d0b36_f733_4a7c_a090_787797a96c671_dupKeyCount {(_selfID)}") > 0    OUTPUT FAILED FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"
+Tcl2 proc $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f1_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f1___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f1__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersector_SELF_INTERSECTED"    TEST @Tcl2("$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_1dcdc42d_038a_4d88_895d_3407c6d0bc7f1_dupKeyCount {(_selfID)}") > 0    OUTPUT FAILED FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"
 
 # -------------------------------------------------------------------------
 
@@ -17630,15 +17630,15 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_
 
 MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function
 INCLUDE [ if {{wkt} == {fmebinary} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY,_geometry) }           } elseif {{wkt} == {fmehex} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE_BINARY_HEX,_geometry) }           } elseif {{wkt} == {fmexml} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ATTRIBUTE,_geometry) }           } elseif {{wkt} == {fmexmlencoded} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @Geometry(FROM_ENCODED_STRING,&_geometry) }           } elseif {{wkt} == {wkt} ||                      {wkt} == {wkb} ||                      {wkt} == {wkbhex} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @OGCGeometry(from_attribute,wkt,_geometry) }           } elseif {{wkt} == {GEOJSON} ||                     {wkt} == {ESRIJSON} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @JSONGeometry(FROM_ATTRIBUTE,wkt,_geometry) }           } elseif {{wkt} == {GEORSS} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @GeoRSSGeometry(FROM_ATTRIBUTE,_geometry) }           } elseif {{wkt} == {KML} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @KMLGeometry(FROM_ATTRIBUTE,_geometry) }           } elseif {{wkt} == {GML} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @GMLGeometry(FROM_ATTRIBUTE,_geometry,<Unused>) }           } elseif {{wkt} == {geohash} } {               puts {MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function @GeoHash(FROM_ATTRIBUTE,_geometry) }           }         ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_PASSED"    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_2_FAILED"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"         $($(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_2_FAILED"    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_TESTER_PASSED"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"         $($(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_Function)
 
 # -------------------------------------------------------------------------
 
 INCLUDE [    set macroLine "MACRO $(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_LIST_EXP ";    foreach attr [split ""] {       set attr [FME_DecodeText $attr];       set attr [regsub "{}$" $attr "{}.*"];       set attr [regsub -all "{}" $attr "{\[0-9\]+}"];       append macroLine ",^$attr$";    };    puts $macroLine; ]
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2    INPUT  FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"    OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_OUTPUT"        @RemoveAttributes(_selfID,_geometry,_segments)        @RemoveAttributes(fme_regexp_match"$($(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_LIST_EXP)")
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting1412114504 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting1412114504 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting1412370292 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_NotSelfIntersecting"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting1412370292 Output Collector"   INPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_ATTRIBUTEREMOVER_2_OUTPUT"   OUTPUT FEATURE_TYPE "$(SelfIntersectChecker_WORKSPACE_NAME)_SelfIntersecting"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(SelfIntersectChecker_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2 NotSelfIntersecting Output Renamer/Nuker"   INPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2 SelfIntersecting Output Renamer/Nuker"   INPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2_SelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2_SelfIntersecting"
@@ -17647,14 +17647,14 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_Se
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzFixIntersections_WORKSPACE_NAME)_Logger_SelfIntersecting_Logger    INPUT  FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2_SelfIntersecting"    OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_Logger_SelfIntersecting_LOGGED"                        @FeatureType("")                  @Log("$(gzFixIntersections_WORKSPACE_NAME)_Logger_SelfIntersecting: Feature is self-intersecting:",20,100)
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_Logger_SelfIntersecting LOGGED Output Nuker"   INPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_Logger_SelfIntersecting_LOGGED"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_OUTPUT1412114504 Output Collector"   INPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzFixIntersections_WORKSPACE_NAME)_OUTPUT1412370292 Output Collector"   INPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_SelfIntersectChecker_2_NotSelfIntersecting"   OUTPUT FEATURE_TYPE "$(gzFixIntersections_WORKSPACE_NAME)_OUTPUT"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(gzFixIntersections_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzFixIntersections OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE gzFixIntersections_OUTPUT   OUTPUT FEATURE_TYPE gzFixIntersections_OUTPUT
 # -------------------------------------------------------------------------
 FACTORY_DEF * AttrSetFactory FACTORY_NAME InteriorSpace_Tilt INPUT  FEATURE_TYPE gzFixIntersections_OUTPUT ATTR fme_feature_type InteriorSpace_Tilt    OUTPUT OUTPUT FEATURE_TYPE InteriorSpace_Tilt_OUTPUT 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME InsidePointReplacer_generator    INPUT  FEATURE_TYPE TestFilter_InteriorSpace_1_vp82Rr2Y61w=    OUTPUT FEATURE_TYPE __TO_TEST__         @GeneratePoint(3D,__temp_x__,__temp_y__,__temp_z__)
+FACTORY_DEF * TeeFactory    FACTORY_NAME InsidePointReplacer_generator    INPUT  FEATURE_TYPE TestFilter_InteriorSpace_0_vp82Rr2Y61w=    OUTPUT FEATURE_TYPE __TO_TEST__         @GeneratePoint(3D,__temp_x__,__temp_y__,__temp_z__)
 FACTORY_DEF * TestFactory    FACTORY_NAME InsidePointReplacer_router    INPUT FEATURE_TYPE __TO_TEST__    TEST &__temp_x__ == ""    OUTPUT FAILED FEATURE_TYPE InsidePointReplacer_INSIDEPOINT         @XValue(&__temp_x__,RESET)         @YValue(&__temp_y__)         @ZValue(&__temp_z__)         @GeometryType(fme_point)         @RemoveAttributes(__temp_x__,__temp_y__,__temp_z__)
 
 # -------------------------------------------------------------------------
@@ -17668,7 +17668,7 @@ MACRO $(gzAggregateLines_WORKSPACE_NAME)___COMPOUND_PARAMETERS
 MACRO $(gzAggregateLines_WORKSPACE_NAME)_SUB_DOC_NAME gzAggregateLines
 DEFAULT_MACRO gzAggregateLines_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(gzAggregateLines_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(gzAggregateLines_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzAggregateLines_WORKSPACE_NAME)_INPUT1412114504 Input Splitter"   INPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_INPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzAggregateLines_WORKSPACE_NAME)_INPUT1412370292 Input Splitter"   INPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_INPUT"
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_CoordinateCounter    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_INPUT"    OUTPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_CoordinateCounter_OUTPUT"         "_coordcount" @NumCoords(FLATTEN_AGGREGATE)
@@ -17722,13 +17722,13 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_Geom
 FACTORY_DEF * TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_InstanceTest    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___AllInput___    TEST @Geometry(IS_GEOMETRY_INSTANCE) == 1    OUTPUT FAILED FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___RestInput___
 FACTORY_DEF $(COLLECTION_HANDLING) TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_CollectionTest    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___RestInput___    TEST &fme_type == "fme_collection"    OUTPUT FAILED FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Not_Collection___    OUTPUT PASSED FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Collection___
 FACTORY_DEF $(COLLECTION_HANDLING) DeaggregateFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_Deagg    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Collection___    HOMOGENIZE_COLLECTIONS YES    RECURSIVE YES    SET_FME_TYPE YES    OUTPUT POINT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT LINE FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT POLYGON FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT DONUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    OUTPUT AGGREGATE FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_RouterPrepper    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Not_Collection___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___RestInput___    OUTPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Prepped___        $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_7b0a0aaa_9277_435a_8672_f87a349ba7820_targetFeatureType @Lookup($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_RouterTable,&fme_type)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_RouterPrepper    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___HomogeneousAggregate___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Not_Collection___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___RestInput___    OUTPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Prepped___        $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_de07b761_c1c7_403e_95f8_2c356c260e000_targetFeatureType @Lookup($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_RouterTable,&fme_type)
 
-FACTORY_DEF * TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_Router    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Prepped___    TEST &$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_7b0a0aaa_9277_435a_8672_f87a349ba7820_targetFeatureType != "x"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(&$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_7b0a0aaa_9277_435a_8672_f87a349ba7820_targetFeatureType)                                 @RemoveAttributes($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_7b0a0aaa_9277_435a_8672_f87a349ba7820_targetFeatureType)
+FACTORY_DEF * TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_Router    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter___Prepped___    TEST &$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_de07b761_c1c7_403e_95f8_2c356c260e000_targetFeatureType != "x"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(&$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_de07b761_c1c7_403e_95f8_2c356c260e000_targetFeatureType)                                 @RemoveAttributes($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_de07b761_c1c7_403e_95f8_2c356c260e000_targetFeatureType)
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * IntersectionFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_ARC"    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_LINE"    OVERLAP_COUNT_ATTRIBUTE _segments    SELF_INTERSECTION_ONLY    MODE COMPLETE    OUTPUT SEGMENT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector_SELF_INTERSECTED"
+FACTORY_DEF * IntersectionFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_LINE"    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_ARC"    OVERLAP_COUNT_ATTRIBUTE _segments    SELF_INTERSECTION_ONLY    MODE COMPLETE    OUTPUT SEGMENT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector_SELF_INTERSECTED"
 
 # -------------------------------------------------------------------------
 
@@ -17775,13 +17775,13 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_Geom
 FACTORY_DEF * TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_InstanceTest    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___AllInput___    TEST @Geometry(IS_GEOMETRY_INSTANCE) == 1    OUTPUT FAILED FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___RestInput___
 FACTORY_DEF $(COLLECTION_HANDLING) TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_CollectionTest    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___RestInput___    TEST &fme_type == "fme_collection"    OUTPUT FAILED FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Not_Collection___    OUTPUT PASSED FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Collection___
 FACTORY_DEF $(COLLECTION_HANDLING) DeaggregateFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_Deagg    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Collection___    HOMOGENIZE_COLLECTIONS YES    RECURSIVE YES    SET_FME_TYPE YES    OUTPUT POINT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___HomogeneousAggregate___    OUTPUT LINE FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___HomogeneousAggregate___    OUTPUT POLYGON FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___HomogeneousAggregate___    OUTPUT DONUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___HomogeneousAggregate___    OUTPUT AGGREGATE FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___HomogeneousAggregate___
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_RouterPrepper    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___HomogeneousAggregate___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Not_Collection___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___RestInput___    OUTPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Prepped___        $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_951127d5_833c_4f0c_947e_11f35a9b4b720_targetFeatureType @Lookup($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_RouterTable,&fme_type)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_RouterPrepper    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___HomogeneousAggregate___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Not_Collection___    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___RestInput___    OUTPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Prepped___        $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_3b5696f3_6676_4ea5_a56d_6f6ab05996300_targetFeatureType @Lookup($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_RouterTable,&fme_type)
 
-FACTORY_DEF * TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_Router    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Prepped___    TEST &$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_951127d5_833c_4f0c_947e_11f35a9b4b720_targetFeatureType != "x"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(&$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_951127d5_833c_4f0c_947e_11f35a9b4b720_targetFeatureType)                                 @RemoveAttributes($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_951127d5_833c_4f0c_947e_11f35a9b4b720_targetFeatureType)
+FACTORY_DEF * TestFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_Router    INPUT FEATURE_TYPE $(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2___Prepped___    TEST &$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_3b5696f3_6676_4ea5_a56d_6f6ab05996300_targetFeatureType != "x"    OUTPUT PASSED FEATURE_TYPE * @FeatureType(&$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_3b5696f3_6676_4ea5_a56d_6f6ab05996300_targetFeatureType)                                 @RemoveAttributes($(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_3b5696f3_6676_4ea5_a56d_6f6ab05996300_targetFeatureType)
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * IntersectionFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector_2    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_ARC"    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_LINE"    OVERLAP_COUNT_ATTRIBUTE _segments    SELF_INTERSECTION_ONLY    MODE COMPLETE    OUTPUT SEGMENT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector_2_SELF_INTERSECTED"
+FACTORY_DEF * IntersectionFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector_2    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_LINE"    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_GeometryFilter_2_ARC"    OVERLAP_COUNT_ATTRIBUTE _segments    SELF_INTERSECTION_ONLY    MODE COMPLETE    OUTPUT SEGMENT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_SelfIntersector_2_SELF_INTERSECTED"
 
 # -------------------------------------------------------------------------
 
@@ -17801,7 +17801,7 @@ DEFAULT_MACRO $(gzAggregateLines_WORKSPACE_NAME)_Aggregator_2_BREAK_ATTR
 INCLUDE [if {"No" == "Yes"} {puts {MACRO $(gzAggregateLines_WORKSPACE_NAME)_Aggregator_2_BREAK_ATTR BREAK_BEFORE_FIELD_CHANGE floorid} }]
 FACTORY_DEF * AggregateFactory    FACTORY_NAME $(gzAggregateLines_WORKSPACE_NAME)_Aggregator_2    INPUT  FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_Tester_2_PASSED"    GROUP_BY floorid    $($(gzAggregateLines_WORKSPACE_NAME)_Aggregator_2_BREAK_ATTR)    ACCUMULATE_ATTRIBUTES Yes    SEPARATOR <comma>    OUTPUT AGGREGATE FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_Aggregator_2_AGGREGATE"         @Geometry(SET_TO_CONTAIN_INDIVIDUAL_GEOMS, No)
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzAggregateLines_WORKSPACE_NAME)_OUTPUT1412114504 Output Collector"   INPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_Aggregator_2_AGGREGATE"   OUTPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzAggregateLines_WORKSPACE_NAME)_OUTPUT1412370292 Output Collector"   INPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_Aggregator_2_AGGREGATE"   OUTPUT FEATURE_TYPE "$(gzAggregateLines_WORKSPACE_NAME)_OUTPUT"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(gzAggregateLines_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzAggregateLines OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE gzAggregateLines_OUTPUT   OUTPUT FEATURE_TYPE gzAggregateLines_OUTPUT
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzAggregateLines OUTPUT Splitter"   INPUT FEATURE_TYPE gzAggregateLines_OUTPUT   OUTPUT FEATURE_TYPE gzAggregateLines_OUTPUT_0_NrqRlu/BcA0=   OUTPUT FEATURE_TYPE gzAggregateLines_OUTPUT_1_NrqRlu/BcA0=
@@ -17817,7 +17817,7 @@ FACTORY_DEF * AttrSetFactory FACTORY_NAME Floor_Outline INPUT  FEATURE_TYPE Hull
 # -------------------------------------------------------------------------
 FACTORY_DEF * AttrSetFactory FACTORY_NAME FloorplanLine_Publish INPUT  FEATURE_TYPE gzAggregateLines_OUTPUT_1_NrqRlu/BcA0= ATTR fme_feature_type FloorplanLine_Publish    OUTPUT OUTPUT FEATURE_TYPE FloorplanLine_Publish_OUTPUT 
 # -------------------------------------------------------------------------
-FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_3 INPUT  FEATURE_TYPE FloorplanLine_Publish_OUTPUT    INPUT  FEATURE_TYPE Floor_Outline_OUTPUT    INPUT  FEATURE_TYPE InteriorSpace_Point_OUTPUT    INPUT  FEATURE_TYPE Floor_Point_OUTPUT    INPUT  FEATURE_TYPE InteriorSpace_Tilt_OUTPUT ATTR DRAWING $(pFLOORID$encode)    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT 
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_3 INPUT  FEATURE_TYPE Floor_Point_OUTPUT    INPUT  FEATURE_TYPE InteriorSpace_Tilt_OUTPUT    INPUT  FEATURE_TYPE InteriorSpace_Point_OUTPUT    INPUT  FEATURE_TYPE Floor_Outline_OUTPUT    INPUT  FEATURE_TYPE FloorplanLine_Publish_OUTPUT ATTR DRAWING $(pFLOORID$encode)    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT 
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME BulkAttributeRenamer_3    INPUT  FEATURE_TYPE AttributeCreator_3_OUTPUT    OUTPUT FEATURE_TYPE BulkAttributeRenamer_3_OUTPUT        @RenameAttributes(PATTERN_REPLACE, CASECHANGE, <Unused>, "<Unused>", "<Unused>", "upper", "<Unused>", "-_")
