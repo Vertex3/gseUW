@@ -22,8 +22,9 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
     global runAs
     ret = False
     sTime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:len(inputDrawing)-4]
     logFolder = fmeFile[:fmeFile.rfind(os.sep)] + os.sep + "log" + os.sep
-    logFile = logFolder + fmeFile[fmeFile.rfind(os.sep)+1:].replace(".fmw",".log")
+    logFile = logFolder + fmeFile[fmeFile.rfind(os.sep)+1:].replace(".fmw",dwg + ".log")
     runAs = runas 
     if not sourceEPSG.upper().startswith("EPSG:"):
         sourceEPSG = "EPSG:" + sourceEPSG
