@@ -4,7 +4,7 @@
 # Copyright 2012-2014 Vertex3 Inc
 # This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
 
-import sys,os,time, xml.dom.minidom, pprint, gseDrawing
+import sys,os,time, xml.dom.minidom, pprint, gseDrawing, fmeobjects
 
 namedelimiter = "_"
 
@@ -240,13 +240,11 @@ def shutdown(Errors,ignore,numWritten,FME_MacroValues):
 		err = "gz Fatal QA errors encountered"
 		#pp = pprint.PrettyPrinter(indent=4)
 		#pp.pprint(FME_MacroValues)
-		logger.logMessageString(err)
+		#logger.logMessageString(err)
+		raise fmeobjects.FMEException(err)
 		#raise Exception(err)
 	else:
 		if ignore == 'true':
 			logger.logMessageString("gz IgnoreErrors parameter was set to ignore all QA errors")
 		else:
 			logger.logMessageString("gz No Fatal QA errors encountered ")
-
-
-
