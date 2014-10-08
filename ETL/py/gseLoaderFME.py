@@ -49,10 +49,11 @@ successParam = 4
 print "Playlist Parameters '" + playlists_xml + "'"
 
 log = None
+playlists = []
 
 def main(argv = None):
     # process one or more drawings
-    global log, playlists_xml
+    global log, playlists_xml, playlists
     outputSuccess = True # default value, will be set to False if any processing errors returned
     doImports()
     processed = 0
@@ -62,7 +63,6 @@ def main(argv = None):
     gseData = gseDataSettings(xmlDataDoc)
     playlists_xml = playlists_xml.split(",")
     gss = []
-    playlists = []
     for playlist in playlists_xml:
         filepath = fixConfigPath(playlist)
         playlists.append(filepath)
@@ -95,9 +95,9 @@ def main(argv = None):
                         else:
                             gss[pVal].loaded = True
                     pVal += 1
-                if (errorCount,exitOnError,partFailed):
+                if cont(errorCount,exitOnError,partFailed):
                     pVal = 0
-                    if errorCount == 0 or autoSync == True: # Sync is param set and no errors have been returned
+                    if partFailed == False and autoSync == True: # Sync is param set and no errors have been returned
                         retVal = doSync(playlists,folder,dwg,gss[pVal]) # sync from Staging to Production
                         if(retVal != True):
                             outputSuccess = False
@@ -120,9 +120,12 @@ def main(argv = None):
                         except:
                             msg("Unable to delete CAD file " + dwg + "... continuing")
                 gzSupport.cleanupGarbage()
-                if processed % 100 == 0:
-                    msg("Processed " + str(processed) + " database compress...")
+                if processed % 10 == 0:
+                    msg("Processed " + str(processed) + " - Analyzing datasets...")
+                    arcpy.gseAnalyzeDatasets_gse()
+                    msg("Compressing...")
                     gzSupport.compressGDB(gss[0].productionWS)
+                    gzSupport.compressGDB(gss[0].stagingWS)
     except:
         errorCount += 1
         msg("A fatal error was encountered in gseLoaderFME.py")
@@ -181,15 +184,15 @@ def getFeatureTypes(playlist,nm):
     strVals = " ".join(vals)
     return strVals
 
-def doSync(playlist_xml,folder,dwg,gs):
+def doSync(playlists,folder,dwg,gs):
     # Sync process drawing
     global log
     inputDrawing = os.path.join(folder,dwg)
     drawingTime = gzSupport.timer(0)
     msg("Sync changes to database for " + dwg)
-    plists = " ".join(playlist_xml)
+    
     # sync changes
-    result = arcpy.gseSyncChanges_gse(inputDrawing,plists,gs.stagingWS,gs.productionWS)
+    result = arcpy.gseSyncChanges_gse(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS)
     if result.getOutput(0) != None and result.getOutput(0).lower() == 'true':
         retVal=True
     else:
