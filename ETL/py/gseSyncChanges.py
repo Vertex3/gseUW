@@ -42,7 +42,7 @@ def main(argv = None):
     gzSupport.workspace = GISProdDefault_sde
     retVal = True
     tm = time.strftime("%Y%m%d%H%M%S")	
-    print str(tm)
+
     log = open(os.path.join(sys.path[0],'gseSyncChanges_' + tm + '.log'),'w')
     processed = []
     for dataset in datasets:
