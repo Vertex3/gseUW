@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
   <Extract>
-    <GDBDataset idField="sourceid" sourceName="Floor_Poly" targetName="Floor_Outline">
+    <GDBDataset idField="sourceid" sourceName="FloorplanLine" targetName="Floor_Outline">
       <WhereClause />
     </GDBDataset>
   </Extract>

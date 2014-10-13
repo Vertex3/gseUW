@@ -11,10 +11,10 @@ def getDrawing(feature):
 	return dwgName
 
 def getSiteID(feature):
-    site = "MAIN"
-    pth = feature.getAttribute("autocad_source_filename")
-    site = getSiteIDFromPath(pth)
-    return site
+	site = "MAIN"
+	pth = feature.getAttribute("autocad_source_filename")
+	site = getSiteIDFromPath(pth)
+	return site
 
 def getSiteIDFromPath(pth):
 	site = None
@@ -27,29 +27,29 @@ def getSiteIDFromPath(pth):
 	return site
 
 def getFloorIDFromPath(pth):
-    global namedelimiter
-    dwg = pth[pth.rfind(os.sep)+1:]
-    site = getSiteIDFromPath(pth)
-    floorID = site + namedelimiter + getBuildingFromName(dwg) + namedelimiter + getFloorCodeFromName(dwg)
-    return floorID
+	global namedelimiter
+	dwg = pth[pth.rfind(os.sep)+1:]
+	site = getSiteIDFromPath(pth)
+	floorID = site + namedelimiter + getBuildingFromName(dwg) + namedelimiter + getFloorCodeFromName(dwg)
+	return floorID
 
 def getBuildingIDFromPath(pth):
-    global namedelimiter
-    dwg = pth[pth.rfind(os.sep)+1:]
-    site = getSiteIDFromPath(pth)
-    buildingID = site + namedelimiter + getBuildingFromName(dwg)
-    return buildingID
+	global namedelimiter
+	dwg = pth[pth.rfind(os.sep)+1:]
+	site = getSiteIDFromPath(pth)
+	buildingID = site + namedelimiter + getBuildingFromName(dwg)
+	return buildingID
 
 def getSiteplanID(feature):
-    site = "MAIN"
-    pth = feature.getAttribute("autocad_source_filename")
-    try:
-        pth = pth.split(os.sep)
-        if len(pth) > 2:
-            site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
-    except:
-        print "Error getting SiteID for:" + str(pth)
-    return site
+	site = "MAIN"
+	pth = feature.getAttribute("autocad_source_filename")
+	try:
+		pth = pth.split(os.sep)
+		if len(pth) > 2:
+			site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
+	except:
+		print "Error getting SiteID for:" + str(pth)
+	return site
 
 def getSiteplanBuildingID(feature):
 	try:
@@ -81,21 +81,28 @@ def getFloor(feature):
 	return floorNum
 
 def getFloorID(feature):
-    global namedelimiter
-    dwgName = getDrawing(feature)
-    floorID = getBuildingID(feature) + namedelimiter + getFloor(feature)
-    return floorID
+	global namedelimiter
+	dwgName = getDrawing(feature)
+	floorID = getBuildingID(feature) + namedelimiter + getFloor(feature)
+	return floorID
 
 def getSpaceID(feature,attrname):
 	global namedelimiter
 	spaceID = getFloorID(feature) + namedelimiter + feature.getAttribute(attrname)
 	return spaceID
 
+def getSensitivity(feature):
+	bldg = getBuilding(feature)
+	if bldg in ('1212',  '1053',  '6327'):
+		return 'Hidden'
+	else:
+		return 'None'
+
 def getBuildingFromName(dwg):
-    building = ""
-    if dwg and len(dwg) > 3:
-        building = dwg[:4]
-    return building
+	building = ""
+	if dwg and len(dwg) > 3:
+		building = dwg[:4]
+	return building
 
 def getFloorFromName(dwg):
 	global namedelimiter
@@ -103,35 +110,39 @@ def getFloorFromName(dwg):
 	return floor
 
 def getFloorCodeFromName(dwg):
-    if dwg.lower().rfind(".dwg") > -1:
-        dwg = dwg[:dwg.lower().rfind(".dwg")]
-    floorNum = dwg[len(dwg)-2:]
-    return floorNum.upper()
+	if dwg.lower().rfind(".dwg") > -1:
+		dwg = dwg[:dwg.lower().rfind(".dwg")]
+	floorNum = dwg[len(dwg)-2:]
+	return floorNum.upper()
 
 def getDrawingFromName(dwg):
-    if dwg.find(os.sep) > -1:
-        dwg = dwg[dwg.rfind(os.sep)+1:]
-    if dwg.lower().rfind(".dwg") > -1:
-        dwg = dwg[:dwg.lower().rfind(".dwg")]
-    return dwg
+	if dwg.find(os.sep) > -1:
+		dwg = dwg[dwg.rfind(os.sep)+1:]
+	if dwg.lower().rfind(".dwg") > -1:
+		dwg = dwg[:dwg.lower().rfind(".dwg")]
+	return dwg
+
+def getSensitivityFromName(dwg):
+	bldg = getBuildingFromName(dwg)
+	if bldg in ('1212',  '1053',  '6327'):
+		return 'Hidden'
+	else:
+		return 'None'
 
 def defaultUserName():
 	return "DataLoad"
 
 def timer(input):
-    return time.time() - input
+	return time.time() - input
 
 def getDBTime():
-    return getStrTime(time.localtime())
+	return getStrTime(time.localtime())
 
 def getStrTime(timeVal):
-    return time.strftime("%Y%m%d%H%M%S", timeVal)
+	return time.strftime("%Y%m%d%H%M%S", timeVal)
 
 def getTimeFromStr(timeStr):
-    return time.strptime(timeStr,"%d/%m/%Y %I:%M:%S %p")
-
-def getSensitivity(feature):
-	return 'None'
+	return time.strptime(timeStr,"%d/%m/%Y %I:%M:%S %p")
 
 def getAmenityLayer(layer):
 	if layer == "MISC-FENCE":

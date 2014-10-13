@@ -1,14 +1,9 @@
 <Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
 	<Extract>
-		<GDBDataset sourceIDField="SOURCEID" sourceName="Floor_Poly" targetName="Floor_Area">
+		<GDBDataset sourceIDField="SOURCEID" sourceName="GSF" targetName="Floor_Area"> <!-- technically this comes from floor_poly but a bit cleaner for procesing like this -->
 			<WhereClause/>
 		</GDBDataset>
 	</Extract>
-<!--	<Extract>
-		<GDBDataset sourceIDField="SOURCEID" sourceName="Floor_Poly" targetName="Floor_Outline">
-			<WhereClause/>
-		</GDBDataset>
-	</Extract>-->
 	<Transform>
 		<Dataset name="Floor_Area" qa="CheckFields,CheckGeometry" sourceIDField="FLOORID" sourceNameField="FLOORID">
 			<Field>
