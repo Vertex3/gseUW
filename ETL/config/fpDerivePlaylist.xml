@@ -6,7 +6,7 @@
 		fmeLoadFile="gseFloorplanDerive.fmw" 
 		source="GDB"/>
 	<File>fpFloorArea.xml</File>
-	<File>fpFloorPoly.xml</File>
+<!--	<File>fpFloorPoly.xml</File>-->
 	<File>fpFloorPoint.xml</File>
 	<File>fpFloorOutline.xml</File>
 	<!--<File>fpFloorplanLinePublish.xml</File>-->
