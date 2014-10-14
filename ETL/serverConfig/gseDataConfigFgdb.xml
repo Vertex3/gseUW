@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <gseDataConfig xmlns:gizinta="http://gizinta.com">
 	<Settings 
-		cadFolder="'R:\UWS\1200'" 
+		cadFolder="'R:\UWS\'" 
 		stagingWS="GIS Staging.sde" productionWS="GIS Production.sde" 
 		deleteCADFiles="False" 
 		minTime="01/11/1900 9:00:00 AM"
@@ -9,6 +9,6 @@
 		fmeExe = "d:\apps\FME\fme.exe"
 		sourceEPSG="2285"
 		runas="FME"
-		truncate="Y"
+		truncate="N"
 		/>
 </gseDataConfig>
