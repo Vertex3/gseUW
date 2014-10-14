@@ -10,7 +10,7 @@ import os, sys
 dbSchema = 'sde'
 
 ospath = os.path.realpath(__file__)
-gsepath = ospath[:ospath.rfind(os.sep+'ETL')]
+gsepath = 'C:\\apps\\Gizinta\\gseUW'  #ospath[:ospath.rfind(os.sep+'ETL')]
 
 print gsepath
 
