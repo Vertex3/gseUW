@@ -79,10 +79,11 @@ def main(argv = None):
                 break
             folder = fileFound[0]
             dwg = fileFound[1]
+            cadFile = os.path.join(folder,dwg)
             drawingTime = gzSupport.timer(0)
             pVal = 0 # counter for playlist looping
             partFailed = False
-            if(dwg.find(gss[pVal].nameContains) > -1):
+            if(dwg.find(gss[pVal].nameContains) > -1) and os.path.exists(cadFile):
                 msg("\n" + dwg)
                 for playlist in playlists: # Loop through the playlists and do the loading from CAD
                     if cont(errorCount,exitOnError,partFailed): # stop processing if any errors or continue if exit on error param is false
@@ -112,20 +113,22 @@ def main(argv = None):
                         loaded = True
                 if loaded:
                     msg(dwg + " total processing time: " + getTimeElapsed(drawingTime))
-                    msg("Number of Errors = " + str(errorCount))
+                    msg("Total Number of Processing Errors = " + str(errorCount))
                     processed += 1
                     if gss[0].deleteCADFiles == True:
                         try:
-                            os.remove(os.path.join(folder,dwg))
+                            gzSupport.cleanupGarbage()
+                            os.remove(cadFile)
+                            msg(cadFile + " deleted")
                         except:
-                            msg("Unable to delete CAD file " + dwg + "... continuing")
-                gzSupport.cleanupGarbage()
+                            msg("Unable to delete CAD file " + cadFile + "... continuing")
                 if processed % 10 == 0:
                     msg("Processed " + str(processed) + " - Analyzing datasets...")
                     arcpy.gseAnalyzeDatasets_gse()
                     msg("Compressing...")
                     gzSupport.compressGDB(gss[0].productionWS)
                     gzSupport.compressGDB(gss[0].stagingWS)
+                gzSupport.cleanupGarbage()
     except:
         errorCount += 1
         msg("A fatal error was encountered in gseLoaderFME.py")
@@ -199,6 +202,7 @@ def doSync(playlists,folder,dwg,gs):
         retVal=False
     logProcess("Sync to Production",dwg,retVal,gs.productionWS)
     msg(dwg + " Sync processing time: " + getTimeElapsed(drawingTime) )
+    del inputDrawing
     gzSupport.cleanupGarbage()
 
     msg("return value set to: " + str(retVal))
