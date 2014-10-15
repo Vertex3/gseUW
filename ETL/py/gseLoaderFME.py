@@ -263,7 +263,7 @@ class gseDataSettings:
         self.cadFolder = eval(dataSettings.getAttributeNode("cadFolder").nodeValue.replace(os.sep,os.sep+os.sep))
         self.stagingWS = os.path.join(gse.sdeConnFolder,dataSettings.getAttributeNode("stagingWS").nodeValue)
         self.productionWS = os.path.join(gse.sdeConnFolder,dataSettings.getAttributeNode("productionWS").nodeValue)
-        self.minTime = datetime.datetime.strptime(dataSettings.getAttributeNode("minTime").nodeValue,"%d/%m/%Y %I:%M:%S %p")
+        self.minTime = datetime.datetime.strptime(eval(dataSettings.getAttributeNode("minTime").nodeValue),"%d/%m/%Y %I:%M:%S %p")
         self.deleteCADFiles = gzSupport.strToBool(dataSettings.getAttributeNode("deleteCADFiles").nodeValue)
         self.fileExt = dataSettings.getAttributeNode("fileExt").nodeValue
         self.fmeExe = dataSettings.getAttributeNode("fmeExe").nodeValue
