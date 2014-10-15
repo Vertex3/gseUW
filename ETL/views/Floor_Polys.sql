@@ -1,23 +1,20 @@
 SELECT 
- FLOORID as FloorID,
- FLOOR as Floor,
+ FP.FLOORID as FloorID,
+ FP.FLOOR as Floor,
 FL.NAME_SHORT as NameShort, 
 FL.NAME_LONG as NameLong, 
 AF.SCHELEV as SchematicElevation, 
- FLOOR_AREA as FloorArea,
--- SCHELEV,
--- ALTITUDE,
- SENSITIVITY as Sensitivity,
- SOURCEDWG as SourceDWG,
- IN_DATE as InDate,
- LAST_USER as LastUser,
--- GlobalID,
--- FLOOR_NAME,
--- BLDG_NAME,
- BUILDINGID as BuildingID,
- SITEID as SiteID,
- SHAPE,
- OBJECTID
+ FP.FLOOR_AREA as FloorArea,
+
+ FP.SENSITIVITY as Sensitivity,
+ FP.SOURCEDWG as SourceDWG,
+ FP.IN_DATE as InDate,
+ FP.LAST_USER as LastUser,
+
+ FP.BUILDINGID as BuildingID,
+ FP.SITEID as SiteID,
+ FP.SHAPE,
+ FP.OBJECTID
 FROM            dbo.FLOOR_POLY FP
 INNER JOIN
   dbo.ACTIVE_FLOOR AF ON FP.FLOORID = AF.FLOORID
