@@ -11,3 +11,5 @@
 *.sde
 *.zip
 *.mxd
+ETL/py/*.pyc
+ETL/fme/*.pyc
