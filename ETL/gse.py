@@ -1,4 +1,4 @@
-# gse.py - Gizinta Sync Engine Supporting functions
+# gse.py - Gizinta Sync Engine Supporting functions for University of Washington
 # ---------------------------------------------------------------------------
 # Created on: 2014.923 SG
 #
@@ -7,12 +7,9 @@
 
 import os, sys
 
-dbSchema = 'sde'
+dbSchema = 'dbo'
 
-ospath = os.path.realpath(__file__)
-gsepath = 'C:\\apps\\Gizinta\\gseUW'  #ospath[:ospath.rfind(os.sep+'ETL')]
-
-print gsepath
+gsepath = r'C:\apps\gizinta\gseUW'
 
 fmeFolder = gsepath + "\\ETL\\fme\\"
 configFolder = gsepath + "\\ETL\\config\\"
@@ -20,7 +17,7 @@ serverConfigFolder = gsepath + "\\ETL\\serverConfig\\"
 etlFolder = gsepath + "\\ETL\\"
 sdeConnFolder = gsepath + "\\ETL\\serverConfig"
 pyFolder = gsepath + "\\ETL\\py\\"
-
+pyLogFolder = pyFolder + "\\log\\"
 
 if pyFolder not in sys.path:
 	sys.path.insert(0, pyFolder)
