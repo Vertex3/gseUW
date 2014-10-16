@@ -22,22 +22,8 @@
 				<FieldLength>20</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">BUILDINGID</SourceName>
-				<TargetName qa="Optional">buildingid</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>20</FieldLength>
-			</Field>
-			<Field>
 				<SourceName qa="Optional">FLOORID</SourceName>
 				<TargetName qa="Optional">FLOORID</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>12</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional">FLOORID</SourceName>
-				<TargetName qa="Optional">floorid</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>12</FieldLength>

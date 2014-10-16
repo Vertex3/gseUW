@@ -8,36 +8,36 @@
   <Transform>
     <Dataset name="Floor_Outline" qa="CheckFields,CheckGeometry" sourceIDField="floorid" sourceNameField="floor">
       <Field>
-        <SourceName qa="Optional">siteid</SourceName>
-        <TargetName qa="Required">siteid</TargetName>
+        <SourceName qa="Optional">SITEID</SourceName>
+        <TargetName qa="Required">SITEID</TargetName>
         <Method>Copy</Method>
         <FieldType>String</FieldType>
         <FieldLength>20</FieldLength>
       </Field>
       <Field>
-        <SourceName qa="Optional">buildingid</SourceName>
-        <TargetName qa="Required">buildingid</TargetName>
+        <SourceName qa="Optional">BUILDINGID</SourceName>
+        <TargetName qa="Required">BUILDINGID</TargetName>
         <Method>Copy</Method>
         <FieldType>String</FieldType>
         <FieldLength>2</FieldLength>
       </Field>
       <Field>
-        <SourceName qa="Optional">floor</SourceName>
-        <TargetName qa="Required">floor</TargetName>
+        <SourceName qa="Optional">FLOOR</SourceName>
+        <TargetName qa="Required">FLOOR</TargetName>
         <Method>Copy</Method>
         <FieldType>String</FieldType>
         <FieldLength>6</FieldLength>
       </Field>
       <Field>
-        <SourceName qa="Optional">floorid</SourceName>
-        <TargetName qa="Required,Unique">floorid</TargetName>
+        <SourceName qa="Optional">FLOORID</SourceName>
+        <TargetName qa="Required,Unique">FLOORID</TargetName>
         <Method>Copy</Method>
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
       <Field>
         <SourceName qa="Optional" />
-        <TargetName qa="Required">in_date</TargetName>
+        <TargetName qa="Required">IN_DATE</TargetName>
         <Method>PythonCalculate</Method>
         <PythonExpression>gseDrawing.getDBTime()</PythonExpression>
         <FieldType>Date</FieldType>
@@ -45,22 +45,22 @@
       </Field>
       <Field>
         <SourceName qa="Optional" />
-        <TargetName qa="Required">last_user</TargetName>
+        <TargetName qa="Required">LAST_USER</TargetName>
         <Method>PythonCalculate</Method>
         <PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
       <Field>
-        <SourceName qa="Optional">sourcedwg</SourceName>
-        <TargetName qa="Required">sourcedwg</TargetName>
+        <SourceName qa="Optional">SOURCEDWG</SourceName>
+        <TargetName qa="Required">SOURCEDWG</TargetName>
         <Method>Copy</Method>
         <FieldType>String</FieldType>
         <FieldLength>60</FieldLength>
       </Field>
       <Field>
         <SourceName qa="Optional" />
-        <TargetName qa="Required">sensitivity</TargetName>
+        <TargetName qa="Required">SENSITIVITY</TargetName>
         <Method>PythonCalculate</Method>
         <PythonExpression>gseDrawing.getSensitivity(feature)</PythonExpression>
         <FieldType>String</FieldType>

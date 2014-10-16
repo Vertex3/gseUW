@@ -22,13 +22,6 @@
 				<FieldLength>4</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">BUILDINGID</SourceName>
-				<TargetName qa="Optional">buildingid</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>4</FieldLength>
-			</Field>
-			<Field>
 				<SourceName qa="Optional">FLOOR</SourceName>
 				<TargetName qa="Optional">FLOOR</TargetName>
 				<Method>Copy</Method>
@@ -43,13 +36,6 @@
 				<FieldLength>12</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">FLOORID</SourceName>
-				<TargetName qa="Optional">floorid</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>12</FieldLength>
-			</Field>
-			<Field>
 				<SourceName qa="Optional">ROOM</SourceName>
 				<TargetName qa="Optional">ROOM</TargetName>
 				<Method>Copy</Method>
@@ -59,13 +45,6 @@
 			<Field>
 				<SourceName qa="Optional">SPACEID</SourceName>
 				<TargetName qa="Required,Unique">SPACEID</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>25</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional">SPACEID</SourceName>
-				<TargetName qa="Optional">spaceid</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>25</FieldLength>
