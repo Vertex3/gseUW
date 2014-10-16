@@ -4,7 +4,7 @@
 		cadFolder="'e:\Vault_Mirror\CADVault\UWS\3900'" 
 		stagingWS="GIS Production.sde" productionWS="GIS Production.sde" 
 		deleteCADFiles="False" 
-		minTime="01/11/1900 9:00:00 AM"
+		minTime="'01/11/1900 9:00:00 AM'"
 		fileExt = ".dwg"
 		fmeExe = "c:\apps\FME\fme.exe"
 		sourceEPSG="2285"
