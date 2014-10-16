@@ -16,7 +16,7 @@ if (etlpath) not in sys.path:
     sys.path.insert(0, etlpath)
     print etlpath
 
-import arcpy, datetime, xml.dom.minidom, gse, gzSupport, gseRunFME
+import arcpy, time, datetime, xml.dom.minidom, gse, gzSupport, gseRunFME
 
 # Script arguments
 playlists_xml = arcpy.GetParameterAsText(0) # one or more playlist xml values, separated by commas.
@@ -69,7 +69,12 @@ def main(argv = None):
         xmlDoc = xml.dom.minidom.parse(filepath)
         gsClass = gseSettings(xmlDoc,gseData)
         gss.append(gsClass)
-    log = open(gss[0].logFileName,"w")
+        
+    tm = time.strftime("%Y%m%d%H%M%S")
+    
+    logFile = gss[0].logFileName.replace('.log','_' + tm + '.log')
+    log = open(logFile,'w')
+        
     try:
         totalTime = gzSupport.timer(0)
         inputFiles = gzSupport.getFileList(gss[0].cadFolder,gss[0].fileExt,gss[0].minTime)
@@ -195,7 +200,13 @@ def doSync(playlists,folder,dwg,gs):
     msg("Sync changes to database for " + dwg)
     
     # sync changes
-    result = arcpy.gseSyncChanges_gse(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS)
+    try:
+        result = arcpy.gseSyncChanges_gse(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS)
+    except:
+        # sometimes there are deadlocks, try again
+        msg("Error encountered, attempting to sync again...")
+        result = arcpy.gseSyncChanges_gse(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS)
+        
     if result.getOutput(0) != None and result.getOutput(0).lower() == 'true':
         retVal=True
     else:
@@ -245,7 +256,7 @@ class gseSettings:
         self.runas = gseData.runas
         self.truncate = gseData.truncate
         self.nameContains = loadSettings.getAttributeNode("nameContains").nodeValue
-        self.logFileName = os.path.join(gse.pyFolder,loadSettings.getAttributeNode("logFileName").nodeValue)
+        self.logFileName = os.path.join(gse.pyLogFolder,loadSettings.getAttributeNode("logFileName").nodeValue)
         fmename = loadSettings.getAttributeNode("fmeLoadFile").nodeValue
         if fmename == "" or fmename == "None":
             self.fmeLoadFile = ""

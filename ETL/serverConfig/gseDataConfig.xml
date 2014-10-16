@@ -3,8 +3,8 @@
 	<Settings 
 		cadFolder="'R:\UWS\'" 
 		stagingWS="GIS Staging.sde" productionWS="GIS Production.sde" 
-		deleteCADFiles="False" 
-		minTime="01/11/1900 9:00:00 AM"
+		deleteCADFiles="True" 
+		minTime="'01/11/1900 9:00:00 AM'"
 		fileExt = ".dwg"
 		fmeExe = "d:\apps\FME\fme.exe"
 		sourceEPSG="2285"

@@ -42,8 +42,9 @@ def main(argv = None):
     gzSupport.workspace = GISProdDefault_sde
     retVal = True
     tm = time.strftime("%Y%m%d%H%M%S")	
-
-    log = open(os.path.join(sys.path[0],'gseSyncChanges_' + tm + '.log'),'w')
+    dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
+    drawingID = gseDrawing.getDrawingFromName(dwg)
+    log = open(gse.pyLogFolder + 'gseSyncChanges_' + drawingID + '_' + tm + '.log','w')
     processed = []
     for dataset in datasets:
         name = dataset.getAttributeNode("name").nodeValue
