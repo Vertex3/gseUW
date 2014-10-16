@@ -73,7 +73,7 @@ def main(argv = None):
     tm = time.strftime("%Y%m%d%H%M%S")
     
     logFile = gss[0].logFileName.replace('.log','_' + tm + '.log')
-    log = open(logFile,'w')
+    log = open(logFile,'w',1)
         
     try:
         totalTime = gzSupport.timer(0)
@@ -147,6 +147,7 @@ def main(argv = None):
         msg("outputSuccess set to: " + str(outputSuccess) + ", " + str(processed) + " drawings processed")
         msg("Total Processing time: " + getTimeElapsed(totalTime) + "\n")
         del gss, playlists
+        log.flush()
         log.close()
 
 def cont(errorCount,exitOnError,partFailed):
