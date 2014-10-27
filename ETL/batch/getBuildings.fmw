@@ -1,0 +1,1950 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\Apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\batch\getBuildings.fmw
+#          --SourceDataset_ESRIMSD C:\Apps\Gizinta\gseUW\CAD\Siteplan\**\*.dwg
+#          --DestDataset_FILEGDB C:\Apps\Gizinta\gseUW\ETL\batch\bldgs.gdb
+#          --SourceDataset_GEODATABASE_SDE sde
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="336 0"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14338"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="f7915fee-90ba-4b9c-9df5-6fb391eacfb7,e05e84fe-aeb9-4a1c-a9ec-10223cffe200"
+#! DOC_TOP_LEFT="100 -673"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2014-10-23T11:06:58"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140606 - Build 14338 - WIN32)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="2775 643"
+#! FME_DOCUMENT_GUID="8469479a-e525-4ed8-aad3-8fd73be2fe79"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="ESRIMSD"
+#! DATASET="$(SourceDataset_ESRIMSD)"
+#! KEYWORD="ESRIMSD_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="autocad_color 10 autocad_linetype CONTINUOUS msd_type {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="autocad_layer_linetype char(33) autocad_linetype_generation number(1,0) autocad_dim_leader_pt2.x number(31,15) autocad_backwards char(1) autocad_dim_leader_pt2.y number(31,15) autocad_fontname char(50) autocad_dim_leader_pt2.z number(31,15) autocad_xref_path char(255) autocad_group_num_entities char(50) autocad_mpolygon_pattern_name char(32) autocad_arc_defpt.x number(31,15) autocad_dim_arc_is_partial number(5,0) autocad_arc_defpt.y number(31,15) fme_attrib_info{}.field_name char(513) autocad_arc_defpt.z number(31,15) autocad_estimated_num_lines number(5,0) autocad_mpolygon_shade_tint_value number(31,15) autocad_periodic_spline number(6,0) autocad_xrecord_data{}.real{0} number(31,15) autocad_box_width number(31,15) multi_reader_full_id number(11,0) autocad_num_verts number(5,0) autocad_extended_data{0}.world_displacement{0}.x number(31,15) autocad_extended_data{0}.world_displacement{0}.y number(31,15) autocad_extended_data{0}.world_displacement{0}.z number(31,15) autocad_hatch_pattern_scale number(31,15) multi_reader_keyword char(50) fme_attrib_info{}.color.green number(31,15) autocad_layer_type char(50) autocad_hatch_origin_point_x number(31,15) autocad_defpt3.x number(31,15) autocad_hatch_origin_point_y number(31,15) autocad_defpt3.y number(31,15) autocad_box_height number(31,15) autocad_defpt3.z number(31,15) autocad_hatch_loop{}.autocad_hatch_loop_type number(11,0) autocad_layer_frozen char(10) autocad_knots char(255) autocad_extended_data{}.three_reals{0}.real1 number(31,15) autocad_extended_data{}.three_reals{0}.real2 number(31,15) autocad_textpict char(50) autocad_extended_data{}.three_reals{0}.real3 number(31,15) autocad_hatch_object_type number(6,0) autocad_hatch_gradient_angle number(31,15) fme_dataset char(50) autocad_xrecord_data{0}.binary{0} char(50) autocad_mpolygon_gradient_color1 char(50) autocad_mpolygon_gradient_color2 char(50) autocad_extended_data{0}.autocad_scale{0} number(31,15) autocad_bulge char(50) fme_attrib_info{}.rotation number(31,15) autocad_extended_data_list{} char(50) autocad_linespace_factor number(31,15) autocad_closed_spline number(6,0) autocad_xrecord_data{}.handle{0} char(50) autocad_text_size number(31,15) autocad_original_color char(10) autocad_raster_display_opt_transparent logical autocad_extended_data{0}.handle{0} char(50) autocad_rational_spline number(6,0) autocad_dim_flag number(5,0) autocad_xref_status char(50) autocad_xrecord_data{}.handle{1} char(50) autocad_extended_data{0}.string{0} char(50) msd_type char(50) autocad_dim_arrowhead_pt_1.x number(31,15) autocad_number_rows number(5,0) autocad_dim_arrowhead_pt_1.y number(31,15) autocad_extended_data{}.handle{0} char(50) autocad_xrecord_data{}.world_displacement{0}.x number(31,15) autocad_xrecord_data{}.world_displacement{0}.y number(31,15) autocad_xrecord_data{}.world_displacement{0}.z number(31,15) autocad_raster_display_opt_clip logical autocad_original_text_size number(31,15) autocad_raster_display_opt_show logical autocad_xrecord_data{}.handle{2} char(50) autocad_mpolygon_offset_x number(31,15) autocad_group_name char(50) autocad_mpolygon_offset_y number(31,15) autocad_text_string char(50) autocad_mline_type char(50) autocad_anno_height number(31,15) autocad_hatch_pattern_double number(5,0) autocad_group_anonymous char(50) autocad_extended_data{}.string{} char(50) autocad_linetype_scale number(31,15) autocad_hatch_pixel_size number(31,15) autocad_mpolygon_pattern_type number(6,0) autocad_xrecord_data{0}.world_displacement{0}.x number(31,15) autocad_rotation number(31,15) autocad_mpolygon_pattern_angle number(31,15) autocad_xrecord_data{0}.world_displacement{0}.y number(31,15) autocad_text_x_pos number(31,15) autocad_xrecord_data{0}.world_displacement{0}.z number(31,15) autocad_color number(5,0) msd_feature_class_query char(255) autocad_raster_display_opt_show_unaligned logical fme_attrib_info{}.color.red number(31,15) autocad_lineweight char(10) autocad_block_insert_x number(31,15) autocad_group_description char(50) autocad_extended_data{}.distance{0} number(31,15) autocad_control_weights char(255) autocad_block_insert_y number(31,15) autocad_block_insert_z number(31,15) autocad_has_hook_line char(10) autocad_visible_attributes{} char(50) autocad_hatch_associative number(5,0) autocad_xrecord_data_list{} char(50) autocad_dimension_type char(50) autocad_thickness number(31,15) autocad_width number(31,15) autocad_hatch_loop{}.autocad_hatch_bulges_present number(5,0) autocad_layer_locked char(10) autocad_xrecord_data{0}.world_direction{0}.x number(31,15) autocad_xrecord_data{0}.world_direction{0}.y number(31,15) autocad_xrecord_data{0}.world_direction{0}.z number(31,15) autocad_attr_def_prompt char(255) autocad_attributes_follow char(50) autocad_text_y_pos number(31,15) autocad_attach_point char(50) autocad_dim_arc_symbol_type number(6,0) autocad_txt_offset_x number(31,15) autocad_raster_contrast number(4,0) multi_reader_id number(11,0) autocad_txt_offset_y number(31,15) autocad_extended_data{}.world_position{0}.x number(31,15) autocad_txt_offset_z number(31,15) autocad_extended_data{}.autocad_layer{0} char(50) autocad_hatch_pattern_name char(32) autocad_extended_data{}.world_position{0}.y number(31,15) autocad_extended_data{}.world_position{0}.z number(31,15) autocad_layer_on char(10) fme_attrib_info{}.width_factor number(31,15) autocad_hatch_shade_tint_value number(31,15) autocad_dimension_attach_point number(5,0) fme_rotation number(31,15) autocad_xrecord_data{}.three_reals{0}.real1 number(31,15) autocad_extended_data{0}.real{0} number(31,15) autocad_xrecord_data{}.three_reals{0}.real2 number(31,15) autocad_extended_data{}.16Bit_integer{0} number(5,0) autocad_xrecord_data{}.three_reals{0}.real3 number(31,15) autocad_extended_data{0}.world_direction{0}.x number(31,15) autocad_xrecord_data{0}.autocad_scale{0} number(31,15) autocad_extended_data{0}.world_direction{0}.y number(31,15) autocad_extended_data{0}.world_direction{0}.z number(31,15) autocad_upside_down char(1) autocad_control_x char(255) autocad_shape_index number(31,15) autocad_control_y char(255) autocad_xrecord_data{0}.handle{0} char(50) autocad_control_z char(255) autocad_linetype char(50) fme_color char(50) autocad_raster_filename char(255) autocad_path_type char(10) autocad_extended_data{0}.binary{0} char(50) autocad_end_width number(31,15) autocad_extended_data{}.real{0} number(31,15) autocad_shape_filename char(65) autocad_raster_clip_inverted logical autocad_xrecord_data{0}.three_reals{0}.real1 number(31,15) autocad_extended_data{}.binary{0} char(50) autocad_group_accessible char(50) autocad_xrecord_data{}.distance{0} number(31,15) autocad_xrecord_data{0}.three_reals{0}.real2 number(31,15) autocad_xrecord_data{0}.three_reals{0}.real3 number(31,15) autocad_dim_arc_end_param number(31,15) fme_geometry fme_char(50) autocad_xrecord_data{}.autocad_scale{0} number(31,15) autocad_invisible_attributes{} char(50) autocad_shape_height number(31,15) fme_secondary_axis number(31,15) autocad_mpolygon_gradient_name char(32) autocad_xrecord_data{}.world_position{0}.x number(31,15) autocad_xrecord_data{}.world_position{0}.y number(31,15) autocad_xrecord_data{}.world_position{0}.z number(31,15) autocad_layer_hidden char(10) autocad_resolved_linetype char(50) autocad_zscale number(31,15) autocad_dimension_style_name char(50) autocad_extended_data{}.autocad_scale{0} number(31,15) autocad_extended_data{}.world_displacement{0}.x number(31,15) autocad_extended_data{}.world_displacement{0}.y number(31,15) autocad_extended_data{}.world_displacement{0}.z number(31,15) autocad_extended_data{0}.distance{0} number(31,15) autocad_polyflag char(50) autocad_original_layer char(50) autocad_xrecord_data{}.binary{0} char(50) autocad_x_dir_x number(31,15) autocad_mtext_text_height number(31,15) autocad_x_dir_y number(31,15) autocad_x_dir_z number(31,15) autocad_start_angle number(31,15) autocad_line_defpoint.x number(31,15) autocad_line_defpoint.y number(31,15) autocad_line_defpoint.z number(31,15) autocad_extended_data{0}.three_reals{0}.real1 number(31,15) fme_attrib_info{}.generation char(25) autocad_extended_data{0}.three_reals{0}.real2 number(31,15) autocad_shape_rotation number(31,15) autocad_extended_data{0}.three_reals{0}.real3 number(31,15) autocad_original_position_x number(31,15) autocad_original_entity_type char(50) autocad_original_position_y number(31,15) autocad_original_position_z number(31,15) autocad_mpolygon_pixel_size number(31,15) fme_fill_color char(50) fme_attrib_info{}.color.source char(10) autocad_hatch_gradient_name char(32) autocad_source_filename char(255) autocad_dim_leader_pt1.x number(31,15) autocad_dim_leader_pt1.y number(31,15) autocad_dim_leader_pt1.z number(31,15) autocad_overlined char(1) autocad_underlined char(1) autocad_mpolygon_pattern_double number(5,0) autocad_attr_def_default char(255) autocad_arrow_head_on char(50) fme_start_angle number(31,15) fme_type char(50) autocad_fit_x char(255) autocad_fit_y char(255) autocad_fit_z char(255) autocad_mpolygon_gradient_one_color_mode number(5,0) msd_feature_class_type char(30) msd_feature_class_name{} char(30) autocad_true_color char(50) autocad_raster_clip_points{}.x number(31,15) autocad_hook_line_on_xdir char(10) autocad_raster_clip_points{}.y number(31,15) autocad_raster_clip_points{}.z number(31,15) autocad_defpt4.x number(31,15) autocad_defpt4.y number(31,15) fme_attrib_info{}.field_size number(5,0) autocad_defpt4.z number(31,15) fme_attrib_info{}.field_value char(2049) autocad_width_factor number(31,15) autocad_hatch_gradient_one_color_mode number(5,0) autocad_shape_width number(31,15) autocad_xrecord_data{}.16Bit_integer{0} number(5,0) autocad_justification char(50) autocad_mtext_ref_rect_width number(31,15) autocad_xrecord_data{}.world_direction{0}.x number(31,15) autocad_xrecord_data{}.world_direction{0}.y number(31,15) autocad_defpt2.x number(31,15) autocad_xrecord_data{}.world_direction{0}.z number(31,15) autocad_tracking_percent number(31,15) autocad_defpt2.y number(31,15) autocad_hatch_style number(6,0) autocad_defpt2.z number(31,15) autocad_extended_data{0}.world_position{0}.x number(31,15) autocad_extended_data{0}.world_position{0}.y number(31,15) fme_attrib_info{}.style char(512) autocad_extended_data{0}.world_position{0}.z number(31,15) autocad_num_fit_pts number(11,0) autocad_entity_handle char(50) autocad_layer_color number(6,0) autocad_mpolygon_gradient_shift number(31,15) autocad_xrecord_data{0}.handle{1} char(50) autocad_xscale number(31,15) autocad_dim_clone_inspection_point.x number(31,15) autocad_dim_clone_inspection_point.y number(31,15) autocad_group_selectable char(50) autocad_dim_clone_inspection_point.z number(31,15) fme_basename char(50) autocad_xrecord_data{}.autocad_layer{0} char(50) autocad_dim_arc_start_param number(31,15) autocad_hatch_pattern_space number(31,15) autocad_xrecord_data{0}.handle{2} char(50) autocad_vertical char(1) fme_attrib_info{}.isVisible char(6) autocad_extended_data{0}.application_name char(50) autocad_layer char(50) fme_attrib_info{}.layer char(512) autocad_mpolygon_pattern_space number(31,15) autocad_text_z_pos number(31,15) autocad_hatch_gradient_shift number(31,15) autocad_block_name char(50) autocad_xrecord_data{}.string{} char(50) autocad_hatch_complex_mode number(5,0) autocad_text_midpoint.x number(31,15) autocad_text_midpoint.y number(31,15) fme_attrib_info{}.color.blue number(31,15) autocad_dim_arrowhead_pt_2.x number(31,15) autocad_attribute_display char(50) autocad_text_midpoint.z number(31,15) autocad_xref_name char(50) autocad_dim_arrowhead_pt_2.y number(31,15) autocad_anno_type char(30) autocad_entity_visibility char(12) autocad_original_text_string char(255) autocad_shape_name char(33) autocad_mpolygon_object_type number(6,0) autocad_sweep_angle number(31,15) autocad_hatch_pattern_angle number(31,15) autocad_attr_def_tag char(255) autocad_ucs_xangle number(31,15) autocad_start_width number(31,15) autocad_raster_original_transparency char(50) autocad_extrusion_x number(31,15) autocad_extrusion_y number(31,15) fme_feature_type char(50) autocad_extrusion_z number(31,15) autocad_num_cntl_pts number(11,0) autocad_mtext_string char(50) autocad_raster_brightness number(4,0) autocad_extended_data{0}.16Bit_integer{0} number(5,0) autocad_extended_data{}.application_name char(50) autocad_extended_data{0}.autocad_layer{0} char(50) autocad_mline_style char(50) autocad_original_rotation number(31,15) autocad_layer_lineweight number(5,0) multi_reader_type char(50) autocad_mpolygon_gradient_type number(6,0) autocad_extended_data{0}.handle{1} char(50) autocad_alignment_x number(31,15) autocad_alignment_y number(31,15) autocad_xrecord_data{0}.world_position{0}.x number(31,15) autocad_alignment_z number(31,15) autocad_xrecord_data{0}.world_position{0}.y number(31,15) fme_attrib_info{}.oblique number(31,15) autocad_xrecord_data{0}.world_position{0}.z number(31,15) autocad_yscale number(31,15) autocad_anno_width number(31,15) autocad_space char(255) autocad_num_lines number(5,0) autocad_text_rotation number(31,15) autocad_extended_data{0}.handle{2} char(50) autocad_hatch_gradient_color1 char(50) autocad_hatch_gradient_color2 char(50) fme_attrib_info{} char(50) fme_attrib_info{}.location_x number(31,15) fme_attrib_info{}.location_y number(31,15) autocad_num_knots number(11,0) fme_attrib_info{}.location_z number(31,15) autocad_degree number(31,15) fme_sweep_angle number(31,15) autocad_xrecord_data{0}.16Bit_integer{0} number(5,0) autocad_hatch_pattern_type number(6,0) autocad_xrecord_data{}.xrecord_name char(50) autocad_raster_transparency number(4,0) fme_text_size number(31,15) autocad_primary_axis number(31,15) autocad_mpolygon_style number(6,0) autocad_extended_data{}.world_direction{0}.x number(31,15) autocad_extended_data{}.world_direction{0}.y number(31,15) autocad_extended_data{}.world_direction{0}.z number(31,15) autocad_original_entity char(50) autocad_entity char(50) autocad_mpolygon_origin_point_x number(31,15) autocad_mpolygon_origin_point_y number(31,15) autocad_xrecord_data{0}.distance{0} number(31,15) autocad_shape_vertical char(6) autocad_number_columns number(5,0) fme_attrib_info{}.align_x number(31,15) autocad_oblique number(31,15) fme_attrib_info{}.align_y number(31,15) autocad_xrecord_data{0}.string{0} char(50) autocad_xrecord_data{0}.autocad_layer{0} char(50) autocad_extended_data{}.handle{1} char(50) autocad_block_number number(5,0) autocad_mpolygon_gradient_angle number(31,15) fme_attrib_info{}.height number(31,15) msd_entity_key char(50) autocad_elevation number(31,15) autocad_big_fontname char(65) fme_attrib_info{}.justification char(25) fme_text_string char(50) autocad_scale number(31,15) autocad_raster_fade number(4,0) autocad_xrecord_data{0}.xrecord_name char(50) autocad_secondary_axis number(31,15) autocad_hatch_loop{}.autocad_hatch_bulge{} number(31,15) fme_primary_axis number(31,15) autocad_mpolygon_pattern_scale number(31,15) autocad_anno_handle char(50) autocad_extended_data{}.handle{2} char(50) autocad_base_x number(31,15) autocad_mpolygon_associative number(5,0) autocad_xref_type char(10) autocad_base_y number(31,15) autocad_row_distance number(31,15) autocad_base_z number(31,15) autocad_xrecord_data{0}.real{0} number(31,15) autocad_hatch_gradient_type number(6,0) fme_attrib_info{}.attribute_flag char(2)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14338"
+#! MAX_FEATURES=""
+#! COORDSYS="EPSG:2285"
+#! MIN_FEATURES=""
+#! FEATURE_TYPES="Building"
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="MIME_TYPE"
+#! VALUE=".dwg image/vnd.dwg .dxf image/vnd.dxf ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="READER_AUTO_EXPOSE"
+#! VALUE="autocad_layer char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="ESRIMSD_IN_USE_BLOCK_HEADER_LAYER ESRIMSD_IN_USE_BLOCK_LAYER_INFO RESOLVE_ENTITY_COLOR _OUTPUT_BLOCKS_AT_START _STORE_BULGE_INFO _BULGES_AS_ARCS ESRIMSD_IN_READ_PAPER_SPACE READ_GROUPS READ_XREFS EVALUATE_MLINE_GEOM _CONVERT_ZERO_LENGTH_ARCS_TO_POINTS _OUTPUT_ZERO_LENGTH_LINES_AS_LINES ESRIMSD_IN_IGNORE_UCS PRESERVE_COMPLEX_HATCHES _STORE_SPLINE_DEFS _USE_DXF_HEADER _ACADResolveDimensions APPLY_WORLD_FILE _XRECORD_READING ESRIMSD_IN_STORE_INSERT_POINT ESRIMSD_IN_SEARCH_ENVELOPE_MINX ESRIMSD_IN_SEARCH_ENVELOPE_MINY ESRIMSD_IN_SEARCH_ENVELOPE_MAXX ESRIMSD_IN_SEARCH_ENVELOPE_MAXY ESRIMSD_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="GEODATABASE_SDE"
+#! DATASET="$(SourceDataset_GEODATABASE_SDE)"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="geodb_text_leader_line_anchor_point char(254) geodb_dim_length double geodb_v_align char(50) geodb_rel_destination_oid integer multi_reader_type char(50) geodb_edge_feature_count integer geodb_feature_dataset char(254) geodb_subtype_name char(254) geodb_text_lc_gap double geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_from_junction_element_id integer geodb_raster_pyramid_resample_type char(100) geodb_rel_origin_oid integer fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_lc_textbox_y2 double geodb_metadata_string char(254) geodb_text_lc_textbox_y3 double geodb_dim_text_x double geodb_text_lc_textbox_y4 double geodb_dim_text_y double geodb_symbol_id integer geodb_text_lc_margin_left double geodb_dim_text_z double multi_reader_keyword char(50) geodb_text_point_scale_factor double geodb_text_leader_line char(254) geodb_element_id integer geodb_text_lc_accent_bar_width double geodb_font_italic boolean fme_basename char(50) geodb_text_line_spacing double geodb_text_ref_scale double geodb_topological_configuration char(6) geodb_h_align char(50) geodb_start_angle double fme_secondary_axis double geodb_text_lc_accent_bar_color char(50) geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_lc_margin_bottom double geodb_text_size double geodb_raster_pyramid_level integer geodb_text_leader_line_width double fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean fme_dataset char(50) geodb_text_character_width double geodb_text_lc_textbox_x1 double geodb_text_lc_textbox_x2 double geodb_rotation double geodb_text_lc_textbox_x3 double fme_fill_color char(50) geodb_secondary_axis double geodb_text_lc_textbox_x4 double geodb_font_underline boolean geodb_font_bold boolean geodb_text_color char(254) geodb_text_y_offset double geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_text_part_count integer geodb_type char(25) geodb_dim_line_display smallint geodb_text_clip boolean geodb_to_junction_element_id integer fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) multi_reader_id integer geodb_text_lc_margin_right double geodb_text_lc_style char(20) geodb_text_break_char integer geodb_text_leader_line_tolerance double geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_feature_is_simple boolean geodb_primary_axis double geodb_dim_line_x double geodb_right_to_left boolean geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_feature_has_relationships boolean geodb_junction_feature_count integer geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_edge_element_count integer geodb_text_lc_margin_top double geodb_text_word_spacing double geodb_dim_marker_display smallint fme_rotation double multi_reader_full_id integer geodb_junction_element_count integer fme_start_angle double geodb_dim_extn_line_angle double geodb_font_weight smallint geodb_element_index integer geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14338"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY GEODATABASE_SDE_IN_RESOLVE_DOMAINS GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES GEODATABASE_SDE_IN_WHERE _GEODBInSearchFeature _GEODBInSearchOrder _GEODBInSearchMethod _GEODBInChildVersionName NULL_OUT_TRANSACTION_TYPE NULL_OUT_SIMPLIFY_GEOM NULL_OUT_ORIGIN_X NULL_OUT_ORIGIN_Y NULL_OUT_XY_SCALE NULL_OUT_HAS_Z_VALUES NULL_OUT_Z_ORIGIN NULL_OUT_Z_SCALE NULL_OUT_GRID_1 _GEODBOutWriterMode _GEODBOutTransaction _GEODBOutTransactionInterval _GEODBOutIgnoreFailedFeatureEntry _GEODBOutMaxNumberFailedFeatures _GEODBOutDumpFailedFeatures _GEODBOutFFSDumpFile _GEODBOutAnnotationUnits _GEODBOutReconcileAndPost _GEODBInArchiveWhereClause _GEODBMergeFeatLinkedAnnos _GEODBInCheckSimpleGeom _GEODBOutDeleteChildAfterReconcileAndPost _GEODBOutValidateFeatures _GEODBOutSimplifyNetworkFeatures _GEODBInPersistentConnection _GEODBOutPersistentConnection GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS _GEODBSplitComplexAnnotations _GEODBOutCommitTransactionsAfterWrite _GEODBInBeginSql _GEODBInEndSql _GEODBOutBeginSql _GEODBOutEndSql _GEODBCacheMultipatchTextures"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="FILEGDB"
+#! DATASET="$(DestDataset_FILEGDB)"
+#! KEYWORD="FILEGDB_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="64"
+#! ATTR_CASE="ANYFIRSTNONNUMERIC"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="filegdb_type {FME_GEN_GEOMETRY} filegdb_drop_table NO filegdb_truncate_table NO filegdb_object_id_field OBJECTID filegdb_object_id_alias OBJECTID filegdb_shape_field SHAPE filegdb_shape_alias SHAPE filegdb_config_keyword DEFAULTS filegdb_xy_tolerance &quot;&quot; filegdb_z_tolerance 0.001 filegdb_m_tolerance 0.001"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_secondary_axis double fme_dataset text(50) fme_fill_color text(50) fme_text_string text(50) fme_feature_type text(50) fme_text_size double fme_start_angle double fme_rotation double fme_type text(50) fme_geometry fme_char(50) fme_primary_axis double fme_sweep_angle double fme_basename text(50) fme_color text(50)"
+#! DEFLINE_PARMS="&quot;GUI CHOICE filegdb_drop_table YES%NO Drop Existing Table&quot; NO &quot;GUI CHOICE filegdb_truncate_table YES%NO Truncate Existing Table&quot; NO &quot;GUI TEXT filegdb_object_id_field Object ID Field&quot; OBJECTID &quot;GUI TEXT filegdb_object_id_alias Object ID Alias&quot; OBJECTID &quot;GUI TEXT filegdb_shape_field Shape Field&quot; SHAPE &quot;GUI TEXT filegdb_shape_alias Shape Alias&quot; SHAPE &quot;GUI TEXT filegdb_config_keyword Configuration Keyword&quot; DEFAULTS &quot;GUI OPTIONAL FLOAT filegdb_xy_tolerance XY Tolerance&quot; &quot;&quot; &quot;GUI FLOAT filegdb_z_tolerance Z Tolerance&quot; 0.001 &quot;GUI FLOAT filegdb_m_tolerance M Tolerance&quot; 0.001 "
+#! ATTR_INDEX_TYPES="indexed"
+#! ATTR_NAME_INVALID_CHARS="\\&quot;:?*&lt;&gt;|[%# &apos;&amp;+-].^\{\}~"
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14338"
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! />
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(254)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_date"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(15,7)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(4,0)"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="ESRIMSD"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(2048)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="blob"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="guid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_time"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="boolean"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="subtype(stringset)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="subtype_codes(stringmap)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="range_domain(range_domain)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="coded_domain(coded_domain)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text(2048)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="blob"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_time"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="single"
+#! FME_TYPE="fme_real32"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_int32"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text(20)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="text(20)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="int"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="objectid"
+#! FME_TYPE="fme_int32"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="guid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="FILEGDB"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="globalid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="FILEGDB"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_polyline"
+#! FME_TYPE="fme_line"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_annotation"
+#! FME_TYPE="fme_text"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_multipatch"
+#! FME_TYPE="fme_surface"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_multipatch"
+#! FME_TYPE="fme_solid"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_polygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="msd_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="ESRIMSD"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_table"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_table"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_annotation"
+#! FME_TYPE="fme_text"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_dimension"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_simple_junction"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_simple_edge"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_complex_junction"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_complex_edge"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_attributed_relationship"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_relationship"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_undefined"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_metadata"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_multipatch"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_multipatch"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_line"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_point"
+#! FME_TYPE="fme_text"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_arc"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_surface"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_solid"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="FILEGDB"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_no_geom"
+#! FME_TYPE="fme_collection"
+#! FORMAT="FILEGDB"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="Building"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="msd_polygon"
+#! POSITION="100 -138"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="ESRIMSD_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="FACNUM" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="RULEID" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="msd_feature_class_name" ATTR_TYPE="" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="autocad_layer" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="Building"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="2"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="2875 -318"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="FILEGDB_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="FACNUM" ATTR_TYPE="text(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_xy_tolerance" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_z_tolerance" PARM_VALUE="0.001"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_object_id_field" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_shape_alias" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_truncate_table" PARM_VALUE="YES"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_object_id_alias" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_config_keyword" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_m_tolerance" PARM_VALUE="0.001"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_drop_table" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="filegdb_shape_field" PARM_VALUE="SHAPE"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Building_Outline_Tilt"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="7"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="118 -564"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CALCROT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDGNAME" ATTR_TYPE="char(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_ESRIMSD DWG_Files(*.dwg)/DXF_Files(*.dxf)|*.dwg;*.dxf|DWG_Files(*.dwg)|*.dwg|DXF_Files(*.dxf)|*.dxf|All_Files|*.* Source Autodesk AutoCAD DWG/DXF File(s):"
+#! DEFAULT_VALUE="C:\Apps\Gizinta\gseUW\CAD\Siteplan\**\*.dwg"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI DEST_GEODATABASE DestDataset_FILEGDB Destination Geodatabase:"
+#! DEFAULT_VALUE="$(FME_MF_DIR)bldgs.gdb"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:"
+#! DEFAULT_VALUE="sde"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#! IDENTIFIER="4"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Reader Feature Types&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="100 -30"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="100 -30"
+#! BOTTOM_RIGHT="100 -30"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="SOURCE_HEADER"
+#! ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#! IDENTIFIER="5"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Data Flow&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="1397 -30"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="1397 -30"
+#! BOTTOM_RIGHT="1397 -30"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="DATAFLOW_HEADER"
+#! ANCHORED_NODE="0"
+#! />
+#! <COMMENT
+#! IDENTIFIER="6"
+#! COMMENT_VALUE="&lt;html&gt;&lt;body&gt;Writer Feature Types&lt;/body&gt;&lt;/html&gt;"
+#! POSITION="2532 -30"
+#! ORDER="5e+014"
+#! FOLLOW_ANCHOR="true"
+#! INFO_NODE="false"
+#! TOP_LEFT="2532 -30"
+#! BOTTOM_RIGHT="2532 -30"
+#! COLOUR="1,1,0.784314,0.192157"
+#! SIZE_POLICY="10"
+#! COMMENT_TYPE="DEST_HEADER"
+#! ANCHORED_NODE="0"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="9"
+#! TYPE="AttributeCreator"
+#! VERSION="5"
+#! POSITION="1309 -540"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LASTUPDATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LASTEDITOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BLDGNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="FACNUM,&lt;at&gt;Value&lt;openparen&gt;_list&lt;opencurly&gt;1&lt;closecurly&gt;&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="12"
+#! TYPE="DuplicateRemover"
+#! VERSION="3"
+#! POSITION="2057 -496"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="UNIQUE"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RULEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="msd_feature_class_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LASTUPDATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LASTEDITOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BLDGNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="DUPLICATE"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RULEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="msd_feature_class_name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="LASTUPDATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="LASTEDITOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="BLDGNAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DuplicateRemover"/>
+#! <XFORM_PARM PARM_NAME="KEYATTR" PARM_VALUE="FACNUM"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="16"
+#! TYPE="AttributeSplitter"
+#! VERSION="2"
+#! POSITION="737 -673"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LASTUPDATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LASTEDITOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BLDGNAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STArea()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_list{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_list"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeSplitter"/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="BUILDINGID"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="DELIMITER" PARM_VALUE="_"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRIM_OPTION" PARM_VALUE="Both"/>
+#! <XFORM_PARM PARM_NAME="DROP_EMPTY_PARTS" PARM_VALUE="No"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="22"
+#! TYPE="AttributeFilter"
+#! VERSION="3"
+#! POSITION="1007 -131"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="&lt;EMPTY&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="RULEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="msd_feature_class_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="&lt;MISSING&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="RULEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="msd_feature_class_name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="&lt;NULL&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="RULEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="msd_feature_class_name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="RULEID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="msd_feature_class_name" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="0000"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="RULEID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="msd_feature_class_name" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeFilter"/>
+#! <XFORM_PARM PARM_NAME="ATTR_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="ATTR_NAME" PARM_VALUE="FACNUM"/>
+#! <XFORM_PARM PARM_NAME="ATTR_VALUES" PARM_VALUE="&lt;lt&gt;EMPTY&lt;gt&gt;,&lt;lt&gt;MISSING&lt;gt&gt;,&lt;lt&gt;NULL&lt;gt&gt;,&lt;lt&gt;UNFILTERED&lt;gt&gt;,0000"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="13"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="17"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="16"
+#! TARGET_NODE="9"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="25"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="2"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="21"
+#! SOURCE_NODE="22"
+#! TARGET_NODE="12"
+#! SOURCE_PORT_DESC="fo 3"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="24"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_ESRIMSD_1,_OUTPUT_BLOCKS_AT_START_ESRIMSD_1,_PRESERVE_INSERTS_ESRIMSD_1,_STORE_BULGE_INFO_ESRIMSD_1,_CONVERT_ZERO_LENGTH_ARCS_TO_POINTS_ESRIMSD_1,_OUTPUT_ZERO_LENGTH_LINES_AS_LINES_ESRIMSD_1,_USE_DXF_HEADER_ESRIMSD_1,_XRECORD_READING_ESRIMSD_1,ESRIMSD_IN_RESOLVE_BLOCKS_ESRIMSD_1,ESRIMSD_IN_USE_BLOCK_HEADER_LAYER_ESRIMSD_1,ESRIMSD_IN_USE_BLOCK_LAYER_INFO_ESRIMSD_1,ESRIMSD_IN_STORE_INSERT_POINT_ESRIMSD_1,ESRIMSD_IN_VISIBLE_ATTRIBUTES_AS_TEXT_ESRIMSD_1,ESRIMSD_IN_EXPLODE_MTEXT_ESRIMSD_1,ESRIMSD_IN_READ_AS_2_5D_ESRIMSD_1,ESRIMSD_IN_READ_PAPER_SPACE_ESRIMSD_1,ESRIMSD_IN_IGNORE_UCS_ESRIMSD_1,ESRIMSD_IN_APPLY_WORLD_FILE_ESRIMSD_1,ESRIMSD_IN_EXPOSE_ATTRS_GROUP_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MINX_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MINY_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MAXX_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MAXY_ESRIMSD_1,ESRIMSD_IN_CLIP_TO_ENVELOPE_ESRIMSD_1,ESRIMSD_IN_NETWORK_AUTHENTICATION_ESRIMSD_1,ESRIMSD_IN_NETWORK_PROXY_ESRIMSD_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_ESRIMSD_1,_STORE_SPLINE_DEFS_ESRIMSD_1,RESOLVE_ENTITY_COLOR_ESRIMSD_1,PRESERVE_COMPLEX_HATCHES_ESRIMSD_1,READ_GROUPS_ESRIMSD_1,READ_XREFS_ESRIMSD_1,EVALUATE_MLINE_GEOM_ESRIMSD_1,_ACADResolveDimensions_ESRIMSD_1,SourceDataset_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1,_GEODBInSearchFeature_GEODATABASE_SDE_1,_GEODBInSearchOrder_GEODATABASE_SDE_1,_GEODBInSearchMethod_GEODATABASE_SDE_1,_GEODBInChildVersionName_GEODATABASE_SDE_1,_GEODBInArchiveWhereClause_GEODATABASE_SDE_1,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1,_GEODBInPersistentConnection_GEODATABASE_SDE_1,_GEODBInBeginSql_GEODATABASE_SDE_1,_GEODBInEndSql_GEODATABASE_SDE_1,DestDataset_FILEGDB_1,FILEGDB_OUT_OVERWRITE_GEODB_FILEGDB_1
+DEFAULT_MACRO SourceDataset_ESRIMSD C:\Apps\Gizinta\gseUW\CAD\Siteplan\**\*.dwg
+GUI MULTIFILE SourceDataset_ESRIMSD DWG_Files(*.dwg)/DXF_Files(*.dxf)|*.dwg;*.dxf|DWG_Files(*.dwg)|*.dwg|DXF_Files(*.dxf)|*.dxf|All_Files|*.* Source Autodesk AutoCAD DWG/DXF File(s):
+DEFAULT_MACRO DestDataset_FILEGDB $(FME_MF_DIR)bldgs.gdb
+GUI DEST_GEODATABASE DestDataset_FILEGDB Destination Geodatabase:
+DEFAULT_MACRO SourceDataset_GEODATABASE_SDE sde
+GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:
+INCLUDE [ if {{$(SourceDataset_ESRIMSD)} == {}} { puts_real {Parameter 'SourceDataset_ESRIMSD' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_FILEGDB)} == {}} { puts_real {Parameter 'DestDataset_FILEGDB' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'SourceDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! WORKSPACE_VERSION 1
+# ============================================================================ 
+# 
+# This mapping file was generated by FME Workbench
+# on 10/22/14 18:14:13 for translation between ESRIMSD and FILEGDB
+# 
+# This workspace was generated with FME build 14338
+#
+# You may edit this mapping file to customize its operation.  Comments are 
+# placed throughout to assist you. 
+# 
+# Modification History:
+# 
+#     Name              Date     Description
+#     ================= ======== =============================================
+# 
+# 
+# ============================================================================ 
+# ============================================================================ 
+# The following line defines the title presented to the user when this
+# mapping file is run through the FME GUI.  You may modify this
+# if a more meaningful title would be appropriate.
+GUI TITLE ESRIMSD to FILEGDB Translation 
+# ============================================================================ 
+# The following line names the log file to which useful statistics about
+# the translation will be written.  This line can be uncommented and
+# updated if you do wish to keep these statistics.
+# LOG_FILENAME translation.log
+# LOG_APPEND NO
+# ============================================================================ 
+# The following line instructs the FME to log any features that do not
+# match any of the source feature patterns listed further down in
+# this file.  If you are modifying this mapping file, this will be
+# useful to describe to you exactly which features you are losing
+# during translation, if the statistics indicate that features are
+# not being correlated or grouped.  Uncorrelated features do not
+# match any source specification, ungrouped features do not have
+# any corresponding _DEF line. 
+# FME_DEBUG UNGROUPED UNCORRELATED
+# ============================================================================ 
+# The following two lines define the type of reader and writer to be
+# used for this translation.  If you want to translate your data
+# back into its original format, you may make a copy of this file
+# and switch the reader and writer types.  If you rerun the FME, you
+# will get your original data back again (together with any modifications
+# you made in the meantime).  Note that several formats are NOT
+# bi-directional (for example, GIF can only be used as a WRITER)
+# so a reverse translation may not always be possible.
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} ESRIMSD
+MULTI_READER_KEYWORD{0} ESRIMSD_1
+MULTI_READER_GEN_DIRECTIVES{0} RESOLVE_BLOCKS,yes,USE_BLOCK_HEADER_LAYER,yes,USE_BLOCK_LAYER_INFO,no,STORE_INSERT_POINT,no,VISIBLE_ATTRIBUTES_AS_TEXT,yes,EXPLODE_MTEXT,yes,READ_AS_2_5D,no,READ_PAPER_SPACE,no,IGNORE_UCS,no,APPLY_WORLD_FILE,yes,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,CLIP_TO_ENVELOPE,NO,SIMPLE_DONUT_BUILD_HATCHES,YES,SourceDataset,C:<backslash>Apps<backslash>Gizinta<backslash>gseUW<backslash>CAD<backslash>Siteplan<backslash>**<backslash>*.dwg,FME_GEOMETRY_HANDLING,Enhanced
+MULTI_READER_TYPE{1} GEODATABASE_SDE
+MULTI_READER_KEYWORD{1} GEODATABASE_SDE_1
+MULTI_READER_GEN_DIRECTIVES{1} INSTANCE,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,USERID,,_MERGE_SCHEMAS,YES,HISTORICAL_VERSION_NAME,,VERSION,,HISTORICAL_VERSION_TIMESTAMP,,CONNECTION_FILE,C:<backslash>Apps<backslash>Gizinta<backslash>gseUW<backslash>ETL<backslash>serverConfig<backslash>GIS<space>Staging.sde,VERSION_TYPE,Connect<space>using<space>a<space>Transactional<space>Version,FEATURE_READ_MODE,Features,CONNECTION,Connection<space>File,WHERE,,USE_SEARCH_ENVELOPE,NO,SERVER,,TRANSLATE_SPATIAL_DATA_ONLY,no,REMOVE_TABLE_QUALIFIER,NO,IGNORE_RELATIONSHIP_INFO,yes,EXPOSE_ATTRS_GROUP,,SPLIT_COMPLEX_EDGES,no,CLIP_TO_ENVELOPE,NO,SPLIT_MULTI_PART_ANNOS,no,GEODATABASE_SDE_EXPOSE_FORMAT_ATTRS,,RESOLVE_DOMAINS,no,TABLELIST,DBO.Building_Outline_Tilt,IGNORE_NETWORK_INFO,yes,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,RESOLVE_SUBTYPE_NAMES,yes
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} FILEGDB
+MULTI_WRITER_KEYWORD{0} FILEGDB_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * BranchingFactory                                         \
+  FACTORY_NAME "Source Feature Router"                                 \
+  INPUT FEATURE_TYPE *                                                 \
+  TARGET_FACTORY @Concatenate("Source Catcher ", &multi_reader_id)     \
+  FALLBACK_TARGET_FACTORY "Branching Catcher"
+
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "ESRIMSD_1"
+FACTORY_DEF * TeeFactory                                               \
+  FACTORY_NAME "Source Catcher 0"                                      \
+  INPUT FEATURE_TYPE *                                                 \
+  OUTPUT FEATURE_TYPE *
+
+#! END_WB_HEADER
+#! START_SOURCE_HEADER ESRIMSD ESRIMSD_1
+# ============================================================================
+# The following GUI line prompts for a file to be used as the
+# source of the DWG/DXF translation.
+# The user input is stored in a MACRO, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_ESRIMSD_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER ESRIMSD ESRIMSD_1
+DEFAULT_MACRO SourceDataset_ESRIMSD_1 $(SourceDataset_ESRIMSD)
+GUI MULTIFILE SourceDataset_ESRIMSD_1 DWG_Files(*.dwg)/DXF_Files(*.dxf)|*.dwg;*.dxf|DWG_Files(*.dwg)|*.dwg|DXF_Files(*.dxf)|*.dxf|All_Files|*.* Source Autodesk AutoCAD DWG/DXF File(s):
+# ============================================================================
+# A new section for defining the default values for MACROS that do not affect
+# the schema but which are not provided on the settings box.
+# MACROS set for the schema scan may not count.
+# These are given values based on the best default for the destination format.
+# ============================================================================
+DEFAULT_MACRO _OUTPUT_BLOCKS_AT_START_ESRIMSD_1 no
+GUI CHOICE _OUTPUT_BLOCKS_AT_START_ESRIMSD_1 yes%no Output Blocks at Start:
+ESRIMSD_1_OUTPUT_BLOCKS_AT_START $(_OUTPUT_BLOCKS_AT_START_ESRIMSD_1)
+# ============================================================================
+# 20040204
+# Decide if we should handle the user coordinate system (ucs)
+DEFAULT_MACRO _PRESERVE_INSERTS_ESRIMSD_1 no
+GUI CHOICE _PRESERVE_INSERTS_ESRIMSD_1 yes%no Preserve Insert Points:
+ESRIMSD_1_PRESERVE_INSERTS $(_PRESERVE_INSERTS_ESRIMSD_1)
+# ============================================================================
+# Decide how we should handle bulges
+DEFAULT_MACRO _STORE_BULGE_INFO_ESRIMSD_1 no
+GUI CHOICE _STORE_BULGE_INFO_ESRIMSD_1 yes%no Store Bulge Info:
+ESRIMSD_1_STORE_BULGE_INFO $(_STORE_BULGE_INFO_ESRIMSD_1)
+DEFAULT_MACRO _BULGES_AS_ARCS_ESRIMSD_1 no
+ESRIMSD_1_SPLIT_BULGE_ARCS $(_BULGES_AS_ARCS_ESRIMSD_1)
+# ============================================================================
+# Now define a TestFactory which deletes any Insert entities
+# which do not have any attributes following. If you want to get
+# rid of these points for any reason then, remove the comments
+#
+#FACTORY_DEF * TestFactory # INPUT FEATURE_TYPE * autocad_entity autocad_insert # TEST &autocad_attributes_follow = false # OUTPUT FAILED   FEATURE_TYPE *
+#
+DEFAULT_MACRO WB_KEYWORD_ESRIMSD_1 "DWG"
+FACTORY_DEF * TeeFactory                              \
+FACTORY_NAME $(WB_KEYWORD)"RenameAutocadExtendedAttrs"          \
+INPUT FEATURE_TYPE *                               \
+OUTPUT FEATURE_TYPE *                              \
+@CopyAttributes(autocad_extended_data_list{},extended_data_list{})    \
+@CopyAttributes(autocad_extended_data{},extended_data{})    \
+@RemoveAttributes(fme_regexp_match,^extended_data)
+# ============================================================================
+# Decide how we should handle zero length arcs
+DEFAULT_MACRO _CONVERT_ZERO_LENGTH_ARCS_TO_POINTS_ESRIMSD_1 yes
+GUI CHOICE _CONVERT_ZERO_LENGTH_ARCS_TO_POINTS_ESRIMSD_1 yes%no Convert Zero Length Arcs to Points:
+# By default, we'll convert any zero length arcs we encounter to points
+ESRIMSD_1_CONVERT_ZERO_LENGTH_ARCS_TO_POINTS $(_CONVERT_ZERO_LENGTH_ARCS_TO_POINTS_ESRIMSD_1)
+# ============================================================================
+# Decide how we should handle zero length lines
+DEFAULT_MACRO _OUTPUT_ZERO_LENGTH_LINES_AS_LINES_ESRIMSD_1 no
+GUI CHOICE _OUTPUT_ZERO_LENGTH_LINES_AS_LINES_ESRIMSD_1 yes%no Output Zero Length Lines as Lines:
+# By default, we'll convert any zero length lines we encounter to points
+ESRIMSD_1_OUTPUT_ZERO_LENGTH_LINES_AS_LINES $(_OUTPUT_ZERO_LENGTH_LINES_AS_LINES_ESRIMSD_1)
+# ============================================================================
+DEFAULT_MACRO _USE_DXF_HEADER_ESRIMSD_1 
+GUI OPTIONAL FILENAME_MUSTEXIST _USE_DXF_HEADER_ESRIMSD_1 DXF_Files(*.dxf)|*.dxf|All_files(*.*)|*.* Use DXF Header:
+ESRIMSD_1_USE_DXF_HEADER "$(_USE_DXF_HEADER_ESRIMSD_1)"
+# ============================================================================
+DEFAULT_MACRO _XRECORD_READING_ESRIMSD_1 None
+GUI CHOICE _XRECORD_READING_ESRIMSD_1 None%Lists Entity XRecord Reading:
+ESRIMSD_1_XRECORD_READING $(_XRECORD_READING_ESRIMSD_1)
+# ============================================================================
+# And indicate whether or not we are to expand the blocks.
+DEFAULT_MACRO ESRIMSD_IN_RESOLVE_BLOCKS_ESRIMSD_1 yes
+ESRIMSD_1_RESOLVE_BLOCKS "$(ESRIMSD_IN_RESOLVE_BLOCKS_ESRIMSD_1)"
+GUI ACTIVEDISCLOSUREGROUP ESRIMSD_IN_RESOLVE_BLOCKS_ESRIMSD_1 USE_BLOCK_HEADER_LAYER%USE_BLOCK_LAYER_INFO%STORE_INSERT_POINT Expand Blocks into Entities
+# ============================================================================
+# Indicate whether we want to use the block header feature type for the components
+# when blocks are exploded or to read components on their original feature types.
+DEFAULT_MACRO ESRIMSD_IN_USE_BLOCK_HEADER_LAYER_ESRIMSD_1 yes
+ESRIMSD_1_USE_BLOCK_HEADER_LAYER "$(ESRIMSD_IN_USE_BLOCK_HEADER_LAYER_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_USE_BLOCK_HEADER_LAYER_ESRIMSD_1 yes%no Use Block Feature Type for Components
+# ============================================================================
+# Indicate whether we want to use the block header layer information for the components
+# when blocks are exploded or to read components with their original layer information.
+DEFAULT_MACRO ESRIMSD_IN_USE_BLOCK_LAYER_INFO_ESRIMSD_1 no
+ESRIMSD_1_USE_BLOCK_LAYER_INFO "$(ESRIMSD_IN_USE_BLOCK_LAYER_INFO_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_USE_BLOCK_LAYER_INFO_ESRIMSD_1 yes%no Use Block Layer Information for Components
+# ============================================================================
+# Indicate whether we want to store the insert location for the block reference
+# on the components when blocks are exploded.
+DEFAULT_MACRO ESRIMSD_IN_STORE_INSERT_POINT_ESRIMSD_1 no
+ESRIMSD_1_STORE_INSERT_POINT "$(ESRIMSD_IN_STORE_INSERT_POINT_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_STORE_INSERT_POINT_ESRIMSD_1 yes%no Store Insert Location on Components
+# ============================================================================
+# As well, see if we should turn visible attributes into text
+# entities so they will be visible in the output system
+DEFAULT_MACRO ESRIMSD_IN_VISIBLE_ATTRIBUTES_AS_TEXT_ESRIMSD_1 yes
+ESRIMSD_1_VISIBLE_ATTRIBUTES_AS_TEXT "$(ESRIMSD_IN_VISIBLE_ATTRIBUTES_AS_TEXT_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_VISIBLE_ATTRIBUTES_AS_TEXT_ESRIMSD_1 yes%no Read Visible Attributes as Text Entities
+# ============================================================================
+DEFAULT_MACRO ESRIMSD_IN_EXPLODE_MTEXT_ESRIMSD_1 yes
+ESRIMSD_1_EXPLODE_MTEXT "$(ESRIMSD_IN_EXPLODE_MTEXT_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_EXPLODE_MTEXT_ESRIMSD_1 yes%no Explode MText Entities
+# ============================================================================
+# read polylines as 2D or 2.5D polylines
+DEFAULT_MACRO ESRIMSD_IN_READ_AS_2_5D_ESRIMSD_1 no
+ESRIMSD_1_READ_AS_2_5D "$(ESRIMSD_IN_READ_AS_2_5D_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_READ_AS_2_5D_ESRIMSD_1 yes%no Read Polylines as 2.5D
+# ============================================================================
+# And indicate whether or not we will read the paper space.
+DEFAULT_MACRO ESRIMSD_IN_READ_PAPER_SPACE_ESRIMSD_1 no
+ESRIMSD_1_READ_PAPER_SPACE "$(ESRIMSD_IN_READ_PAPER_SPACE_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_READ_PAPER_SPACE_ESRIMSD_1 yes%no Read Paper Space
+# ============================================================================
+# 20040114 - Decide if we should handle the user coordinate system (ucs)
+DEFAULT_MACRO ESRIMSD_IN_IGNORE_UCS_ESRIMSD_1 no
+ESRIMSD_1_IGNORE_UCS "$(ESRIMSD_IN_IGNORE_UCS_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_IGNORE_UCS_ESRIMSD_1 yes%no Ignore UCS
+# ============================================================================
+# 20090504 - Decide if we should apply world file or not - default is YES
+DEFAULT_MACRO ESRIMSD_IN_APPLY_WORLD_FILE_ESRIMSD_1 yes
+ESRIMSD_1_APPLY_WORLD_FILE "$(ESRIMSD_IN_APPLY_WORLD_FILE_ESRIMSD_1)"
+GUI CHECKBOX ESRIMSD_IN_APPLY_WORLD_FILE_ESRIMSD_1 yes%no Apply World File
+DEFAULT_MACRO ESRIMSD_IN_EXPOSE_ATTRS_GROUP_ESRIMSD_1 
+ESRIMSD_1_EXPOSE_ATTRS_GROUP "$(ESRIMSD_IN_EXPOSE_ATTRS_GROUP_ESRIMSD_1)"
+GUI DISCLOSUREGROUP ESRIMSD_IN_EXPOSE_ATTRS_GROUP_ESRIMSD_1 ESRIMSD_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO ESRIMSD_IN_SEARCH_ENVELOPE_MINX_ESRIMSD_1 0
+ESRIMSD_1_SEARCH_ENVELOPE "$(ESRIMSD_IN_SEARCH_ENVELOPE_MINX_ESRIMSD_1)"
+GUI OPTIONAL FLOAT ESRIMSD_IN_SEARCH_ENVELOPE_MINX_ESRIMSD_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO ESRIMSD_IN_SEARCH_ENVELOPE_MINY_ESRIMSD_1 0
+ESRIMSD_1_SEARCH_ENVELOPE "$(ESRIMSD_IN_SEARCH_ENVELOPE_MINY_ESRIMSD_1)"
+GUI OPTIONAL FLOAT ESRIMSD_IN_SEARCH_ENVELOPE_MINY_ESRIMSD_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO ESRIMSD_IN_SEARCH_ENVELOPE_MAXX_ESRIMSD_1 0
+ESRIMSD_1_SEARCH_ENVELOPE "$(ESRIMSD_IN_SEARCH_ENVELOPE_MAXX_ESRIMSD_1)"
+GUI OPTIONAL FLOAT ESRIMSD_IN_SEARCH_ENVELOPE_MAXX_ESRIMSD_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO ESRIMSD_IN_SEARCH_ENVELOPE_MAXY_ESRIMSD_1 0
+ESRIMSD_1_SEARCH_ENVELOPE "$(ESRIMSD_IN_SEARCH_ENVELOPE_MAXY_ESRIMSD_1)"
+GUI OPTIONAL FLOAT ESRIMSD_IN_SEARCH_ENVELOPE_MAXY_ESRIMSD_1 Maximum Y:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+DEFAULT_MACRO ESRIMSD_IN_CLIP_TO_ENVELOPE_ESRIMSD_1 NO
+ESRIMSD_1_CLIP_TO_ENVELOPE "$(ESRIMSD_IN_CLIP_TO_ENVELOPE_ESRIMSD_1)"
+GUI OPTIONAL CHECKBOX ESRIMSD_IN_CLIP_TO_ENVELOPE_ESRIMSD_1 YES%NO Clip to Search Envelope
+# ============================================================================
+DEFAULT_MACRO ESRIMSD_IN_SIMPLE_DONUT_BUILD_HATCHES_ESRIMSD_1 YES
+ESRIMSD_1_SIMPLE_DONUT_BUILD_HATCHES "$(ESRIMSD_IN_SIMPLE_DONUT_BUILD_HATCHES_ESRIMSD_1)"
+# ===========================================================================
+DEFAULT_MACRO ESRIMSD_IN_NETWORK_AUTHENTICATION_ESRIMSD_1 
+ESRIMSD_1_NETWORK_AUTHENTICATION "$(ESRIMSD_IN_NETWORK_AUTHENTICATION_ESRIMSD_1)"
+GUI OPTIONAL AUTHENTICATOR ESRIMSD_IN_NETWORK_AUTHENTICATION_ESRIMSD_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ===========================================================================
+DEFAULT_MACRO ESRIMSD_IN_NETWORK_PROXY_ESRIMSD_1 
+ESRIMSD_1_NETWORK_PROXY "$(ESRIMSD_IN_NETWORK_PROXY_ESRIMSD_1)"
+GUI OPTIONAL AUTHENTICATOR ESRIMSD_IN_NETWORK_PROXY_ESRIMSD_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Proxy"%PROMPT_TYPE%PROXY Network Proxy
+# ============================================================================
+# Bring in macros for all the autocad colors
+INCLUDE "$(FME_HOME)/metafile/autocadColors.fmi"
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_ESRIMSD_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_ESRIMSD_1 Search Envelope Coordinate System:
+ESRIMSD_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_ESRIMSD_1)"
+# ===========================================================================
+# A new section for defining the default values for MACROS that do not affect
+# the schema but which are not provided on the settings box.
+# MACROS set for the schema scan may not count.
+# These are given values based on the best default for the destination format.
+GUI CHOICE _STORE_BULGE_INFO_ESRIMSD_1 yes%no Store Bulge Info:
+ESRIMSD_1_STORE_BULGE_INFO $(_STORE_BULGE_INFO_ESRIMSD_1)
+# ============================================================================
+DEFAULT_MACRO _STORE_SPLINE_DEFS_ESRIMSD_1 yes
+GUI OPTIONAL CHOICE _STORE_SPLINE_DEFS_ESRIMSD_1 yes%no Store Spline Definitions:
+ESRIMSD_1_STORE_SPLINE_DEFS $(_STORE_SPLINE_DEFS_ESRIMSD_1)
+# ============================================================================
+# PR#9808 - Indicate whether we want to resolve entities color or keep it as ByLayer.
+# By default, we'll resolve entity color because that's how we have been doing
+# it all along. So to maintain backwards compatibility we'll keep that as default.
+DEFAULT_MACRO RESOLVE_ENTITY_COLOR_ESRIMSD_1 yes
+GUI CHOICE RESOLVE_ENTITY_COLOR_ESRIMSD_1 yes%no Resolve Entity Color:
+ESRIMSD_1_RESOLVE_ENTITY_COLOR $(RESOLVE_ENTITY_COLOR_ESRIMSD_1)
+# ============================================================================
+DEFAULT_MACRO PRESERVE_COMPLEX_HATCHES_ESRIMSD_1 no
+GUI CHOICE PRESERVE_COMPLEX_HATCHES_ESRIMSD_1 yes%no Preserve Complex Hatches and MPolygons:
+ESRIMSD_1_PRESERVE_COMPLEX_HATCHES $(PRESERVE_COMPLEX_HATCHES_ESRIMSD_1)
+# ============================================================================
+# And indicate whether or not to read groups.
+DEFAULT_MACRO READ_GROUPS_ESRIMSD_1 no
+GUI CHOICE READ_GROUPS_ESRIMSD_1 yes%no Read Groups:
+ESRIMSD_1_READ_GROUPS $(READ_GROUPS_ESRIMSD_1)
+# ============================================================================
+# And indicate whether or not to read xrefs.
+DEFAULT_MACRO READ_XREFS_ESRIMSD_1 no
+GUI CHECKBOX READ_XREFS_ESRIMSD_1 yes%no Read External References:
+ESRIMSD_1_READ_XREFS $(READ_XREFS_ESRIMSD_1)
+# ============================================================================
+# And indicate whether to read mlines as stored vertexes, or as calculated vertexes.
+DEFAULT_MACRO EVALUATE_MLINE_GEOM_ESRIMSD_1 no
+GUI CHOICE EVALUATE_MLINE_GEOM_ESRIMSD_1 yes%no Evaluate Multi-line Entity Geometry
+ESRIMSD_1_EVALUATE_MLINE_GEOM $(EVALUATE_MLINE_GEOM_ESRIMSD_1)
+DEFAULT_MACRO _ACADResolveDimensions_ESRIMSD_1 yes
+GUI CHOICE _ACADResolveDimensions_ESRIMSD_1 yes%no Resolve Dimensions:
+ESRIMSD_1_RESOLVE_DIMENSIONS $(_ACADResolveDimensions_ESRIMSD_1)
+ESRIMSD_1_DATASET "$(SourceDataset_ESRIMSD_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * BranchingFactory                                         \
+  FACTORY_NAME "Source Brancher 0"                                     \
+  INPUT FEATURE_TYPE *                                                 \
+    @SupplyAttributes(multi_reader_type,ESRIMSD)                       \
+  TARGET_FACTORY "Branching Catcher"
+
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEODATABASE_SDE_1"
+FACTORY_DEF * TeeFactory                                               \
+  FACTORY_NAME "Source Catcher 1"                                      \
+  INPUT FEATURE_TYPE *                                                 \
+  OUTPUT FEATURE_TYPE *
+
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
+# ============================================================================
+# The following GUI line prompts for a source dataset, sometimes this is not
+# used by SDE.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
+DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(SourceDataset_GEODATABASE_SDE)
+GUI TEXT SourceDataset_GEODATABASE_SDE_1 Source Esri ArcSDE Geodatabase Dataset:
+# ============================================================================
+# Reader connection file stuff.
+# If you manually change this value for whether or not to use connection files,
+# you must also make sure the correct directives appear below this to support your
+# choice.
+# i.e. The GEODB_SDE_CONNECTION_FILE directive should exist and not
+# be commented if you set _GEODBInUsingConnFile to YES.
+# _GEODBInUsingConnFile
+DEFAULT_MACRO _GEODBInUsingConnFile_GEODATABASE_SDE_1 no
+#=============================================================================
+# READER CONNECTION PARAMETERS: Either these or the connection file should be specified.
+# ============================================================================
+# END OF CONNECTION PARAMETERS
+#==============================================================================
+# Translation flags.
+#
+# =============================================================================
+#
+DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde
+GUI FILENAME_MUSTEXIST GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 Connection File:
+GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the name of the host machine on which
+# the SDE Server runs.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_SERVER "$(GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the username to use for
+# accessing the SDE dataset.
+DEFAULT_MACRO GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_USERID "$(GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the user password.
+DEFAULT_MACRO GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_PASSWORD "$(GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the instance
+DEFAULT_MACRO GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_INSTANCE "$(GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1)"
+# ============================================================================
+GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the version.
+# ========================================================================
+# The following GUI line prompts for the historical version name.
+# ========================================================================
+# The following GUI line prompts for the historical version timestamp.
+# ========================================================================
+# ========================================================================
+# ========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_WHERE "$(GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1)"
+GUI OPTIONAL TEXT GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 WHERE Clause:
+# ========================================================================
+# Determines whether non-spatial data, such as tables, subtypes, domains,
+# and relationship classes, get translated
+DEFAULT_MACRO GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_TRANSLATE_SPATIAL_DATA_ONLY "$(GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 yes%no Spatial Data Only
+# ========================================================================
+# Determines whether to resolve domains
+DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_RESOLVE_DOMAINS "$(GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 yes%no Resolve Domains
+# ========================================================================
+# Determines whether to resolve the subtype associated with a feature to the
+# text description linked to the subtype value. The text description will
+# be added as an attribute on the feature.
+DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_RESOLVE_SUBTYPE_NAMES "$(GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes%no Resolve Subtypes
+# ========================================================================
+# Determines whether to ignore the network info associated with a feature
+# coming from a network feature class. When set to 'yes', junctions will be
+# treated as point features, and edges will be treated as polyline features,
+# with the geodb_type being set to geodb_point and geodb_polyline, respectively.
+# Caution should be taken when changing the value for this keyword to a different
+# value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_IGNORE_NETWORK_INFO "$(GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes%no Ignore Network Info
+# ========================================================================
+# Determines whether to ignore the relationship info associated with a feature
+# coming from a feature class containing relationships. When set to 'yes', simple
+# relationships will not be read, and attributed relationships will be read as
+# tables. Caution should be taken when changing the value for this keyword to a
+# different value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_IGNORE_RELATIONSHIP_INFO "$(GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes%no Ignore Relationship Info
+# ========================================================================
+# Determines whether complex edge features should be split up and each edge
+# element read as a separate feature. The default behaviour is to treat an
+# entire edge *feature* as an FME feature, rather than an edge *element* as an
+# FME feature. Returning edge elements ensures that all network connectivity
+# information on complex edges is read.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_SPLIT_COMPLEX_EDGES "$(GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 yes%no Split Complex Edges
+#==============================================================================
+# Determines whether annotation features should be split up and each part
+# element read as a separate feature. The default behaviour is to treat an
+# entire annotation *feature* as an FME feature, rather than an annotation
+# *element* as an FME feature. Returning edge elements ensures that all
+# rotation and positional information for each element is preserved.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_SPLIT_MULTI_PART_ANNOS "$(GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 yes%no Split Multi-Part Annotations
+# ========================================================================
+# The following determines whether to read features from the geodatabase
+# tables/feature classes or to read metadata from those tables/feature
+# classes.
+DEFAULT_MACRO GEODATABASE_SDE_IN_FEATURE_READ_MODE_GEODATABASE_SDE_1 Features
+GEODATABASE_SDE_1_FEATURE_READ_MODE "$(GEODATABASE_SDE_IN_FEATURE_READ_MODE_GEODATABASE_SDE_1)"
+DEFAULT_MACRO GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_EXPOSE_ATTRS_GROUP "$(GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1)"
+GUI DISCLOSUREGROUP GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1 GEODATABASE_SDE_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 NO
+GEODATABASE_SDE_1_CLIP_TO_ENVELOPE "$(GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 YES%NO Clip to Search Envelope
+#==============================================================================
+# The following specifies that complex representations for annotation should
+# be split into simpler representations.
+DEFAULT_MACRO _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 yes%no Split Complex Annotations:
+GEODATABASE_SDE_1_SPLIT_COMPLEX_ANNOS $(_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1)
+#==============================================================================
+# The following specifies whether to keep (YES) or clean up (NO) Esri's
+# multipatch texture caches.
+DEFAULT_MACRO _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes
+GUI CHOICE _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes%no Cache Multipatch Textures:
+GEODATABASE_SDE_1_CACHE_MULTIPATCH_TEXTURES $(_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1)
+# ============================================================================
+# Search Envelope Coordinate System
+DEFAULT_MACRO _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 
+GUI OPTIONAL COORDSYS _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 Search Envelope Coordinate System:
+GEODATABASE_SDE_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1)"
+# ========================================================================
+# The following determines whether to vectorize arcs. If SPLIT_AT_ARCS
+# is set to yes, then arcs do not get vectorized and lines/polygons
+# containing arcs get split up into line segments and arc segments.
+#
+# Update: This keyword is not applicable when using rich geometry. Since
+# all new mapping files/workspaces have FME_USE_RICH_GEOMETRY set to YES then
+# we do not need to expose this keyword.
+#DEFAULT_MACRO _GEODBInSplitAtArcs no
+#DEFAULT_MACRO _GEODBInSplitAtArcs NO
+#GUI OPTIONAL CHOICE _GEODBInSplitAtArcs yes%no Split at Arcs
+#GEODATABASE_SDE_SPLIT_AT_ARCS "$(_GEODBInSplitAtArcs_GEODATABASE_SDE_1)"
+#
+# ========================================================================
+# The following defines the search feature for the query. It defines an
+# arbitrarily complex search feature as a spatial contraint. It is in the
+# form <keyword>_SEARCH_FEATURE [<xCoord> <yCoord>]+.
+DEFAULT_MACRO _GEODBInSearchFeature_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInSearchFeature_GEODATABASE_SDE_1 Search Feature:
+GEODATABASE_SDE_1_SEARCH_FEATURE $(_GEODBInSearchFeature_GEODATABASE_SDE_1)
+# ========================================================================
+# Determines whether the spatial component or the attribute component of a
+# query is performed first. This is only applicable when both spatial and
+# non-spatial searches are being performed.
+DEFAULT_MACRO _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST
+GUI OPTIONAL CHOICE _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST%ATTRIBUTE_FIRST Search Order:
+GEODATABASE_SDE_1_SEARCH_ORDER $(_GEODBInSearchOrder_GEODATABASE_SDE_1)
+# ========================================================================
+# Determines which type of search method to use. This keyword is only applicable
+# when either the keyword SEARCH_ENVELOPE or the keyword SEARCH_FEATURE is specified.
+DEFAULT_MACRO _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS
+GUI OPTIONAL CHOICE _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS%GEODB_ENVELOPE_INTERSECTS%GEODB_TOUCHES%GEODB_OVERLAPS%GEODB_CROSSES%GEODB_WITHIN%GEODB_CONTAINS Search Method:
+GEODATABASE_SDE_1_SEARCH_METHOD $(_GEODBInSearchMethod_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies the name of a child version to be created. After
+# the version has been created, tables will be read using this version
+# rather than the version specified by the VERSION keyword.
+DEFAULT_MACRO _GEODBInChildVersionName_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInChildVersionName_GEODATABASE_SDE_1 Child Version Name:
+GEODATABASE_SDE_1_CHILD_VERSION_NAME $(_GEODBInChildVersionName_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies the archive where clause to be used when retrieving
+# features from an archived table in geodb.
+DEFAULT_MACRO _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 Archive WHERE Clause:
+GEODATABASE_SDE_1_ARCHIVE_WHERE $(_GEODBInArchiveWhereClause_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies that simple geometry should be checked for
+# when reading features.
+DEFAULT_MACRO _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 yes%no Check for Simple Geometry:
+GEODATABASE_SDE_1_CHECK_SIMPLE_GEOM $(_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies whether feature-linked annotations should
+# be merged onto the main feature as a text list attribute when reading.
+DEFAULT_MACRO _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 yes%no Merge Feature Linked Annotations:
+GEODATABASE_SDE_1_MERGE_FEAT_LINKED_ANNOS $(_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1)
+#==============================================================================
+# Determines whether the connection should persist after the reader/writer
+# has been shut down. The default is 'no'.
+DEFAULT_MACRO _GEODBInPersistentConnection_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBInPersistentConnection_GEODATABASE_SDE_1 yes%no Make Connection Persistent
+GEODATABASE_SDE_1_PERSISTENT_CONNECTION $(_GEODBInPersistentConnection_GEODATABASE_SDE_1)
+# ==============================================================================
+# The following specifies an SQL command to execute before opening the first
+# Geodatabase table.
+DEFAULT_MACRO _GEODBInBeginSql_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBInBeginSql_GEODATABASE_SDE_1 SQL Statement To Execute Before Translation:
+GEODATABASE_SDE_1_BEGIN_SQL{0} "$(_GEODBInBeginSql_GEODATABASE_SDE_1)"
+# ==============================================================================
+# The following specifies an SQL command to execute after closing all the
+# Geodatabase tables.
+DEFAULT_MACRO _GEODBInEndSql_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBInEndSql_GEODATABASE_SDE_1 SQL Statement To Execute After Translation:
+GEODATABASE_SDE_1_END_SQL{0} "$(_GEODBInEndSql_GEODATABASE_SDE_1)"
+GEODATABASE_SDE_1_DATASET "$(SourceDataset_GEODATABASE_SDE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * BranchingFactory                                         \
+  FACTORY_NAME "Source Brancher 1"                                     \
+  INPUT FEATURE_TYPE *                                                 \
+    @SupplyAttributes(multi_reader_type,GEODATABASE_SDE)               \
+  TARGET_FACTORY "Branching Catcher"
+
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "FILEGDB_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER FILEGDB FILEGDB_1
+# The dataset this mapping file was generated for was:
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_FILEGDB_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER FILEGDB FILEGDB_1
+DEFAULT_MACRO DestDataset_FILEGDB_1 $(DestDataset_FILEGDB)
+GUI DEST_GEODATABASE DestDataset_FILEGDB_1 Destination Geodatabase:
+FILEGDB_1_COORDINATE_SYSTEM_GRANULARITY FEATURE_TYPE
+DEFAULT_MACRO FILEGDB_OUT_OVERWRITE_GEODB_FILEGDB_1 NO
+FILEGDB_1_OVERWRITE_GEODB "$(FILEGDB_OUT_OVERWRITE_GEODB_FILEGDB_1)"
+GUI CHOICE FILEGDB_OUT_OVERWRITE_GEODB_FILEGDB_1 YES%NO Overwrite Geodatabase:
+FILEGDB_1_DATASET "$(DestDataset_FILEGDB_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * TeeFactory                                               \
+  FACTORY_NAME "Branching Catcher"                                     \
+  INPUT FEATURE_TYPE *                                                 \
+  OUTPUT FEATURE_TYPE *
+
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)getBuildings.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_ESRIMSD_1 ESRIMSD_1
+DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_SDE_1 GEODATABASE_SDE_1
+DEFAULT_MACRO DATASET_KEYWORD_FILEGDB_1 FILEGDB_1
+# -------------------------------------------------------------------------
+
+ESRIMSD_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+GEODATABASE_SDE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+ESRIMSD_1_COORDINATE_SYSTEM EPSG:2285
+ESRIMSD_1_FEATURE_TYPES Building
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME getBuildings
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+ESRIMSD_1_DEF Building   autocad_color                10   autocad_linetype             CONTINUOUS   msd_type                     msd_polygon   FACNUM                       char(255)   RULEID                       char(255)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Building_Outline_Tilt   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   CALCROT                      double   SOURCEID                     char(30)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)   BLDGNAME                     char(100)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+
+# -------------------------------------------------------------------------
+
+Lookup ___KnownFeatureTypes___   "$(DATASET_KEYWORD_GEODATABASE_SDE_1)_DBO.Building_Outline_Tilt" yes   "$(DATASET_KEYWORD_ESRIMSD_1)_Building" yes   "" no
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@Concatenate(&multi_reader_keyword,"_",@FeatureType())) == yes   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TYPE *    OUTPUT FEATURE_TYPE *       @Transform(&multi_reader_type,FME_GENERIC,PRESERVE_GEOMETRY)
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+Tcl2 set AttributeSplitter_066ffb91_7cdf_4109_b711_b9bc88a9241819_splitDelim [FME_DecodeText {_}];      if { [regexp {^([1-9][0-9]*s)+$} [set AttributeSplitter_066ffb91_7cdf_4109_b711_b9bc88a9241819_splitDelim]] }      {         set AttributeSplitter_066ffb91_7cdf_4109_b711_b9bc88a9241819_splitWidths [split [regsub -all {s$} {_} {}] s];         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_066ffb91_7cdf_4109_b711_b9bc88a9241819_splitWidths;            set source [FME_GetAttribute {"BUILDINGID"}];            set attrNum 0;            set listName {_list};            set attrPos 0;            foreach width [set AttributeSplitter_066ffb91_7cdf_4109_b711_b9bc88a9241819_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrPos $width;               incr attrNum;            };         };      }      else      {         proc AttributeSplitter_doSplit {}         {            global AttributeSplitter_066ffb91_7cdf_4109_b711_b9bc88a9241819_splitDelim;            set delim [set AttributeSplitter_066ffb91_7cdf_4109_b711_b9bc88a9241819_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute {"BUILDINGID"}];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              set part [string range $source $startIndex [expr $nextIndex-1]];              if { $keepEmptyParts || $part != \"\" } {                 lappend bits $part;              };              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            set lastPart [string range $source $startIndex end];            if { $keepEmptyParts || $lastPart != \"\" } { lappend bits $lastPart };            set listName {_list};            set attrNum 0;            foreach bit $bits            {               FME_SetAttribute "$listName{$attrNum}" [string trim $bit];               incr attrNum;            }          }       }
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeSplitter    INPUT  FEATURE_TYPE DBO.Building_Outline_Tilt    OUTPUT FEATURE_TYPE AttributeSplitter_OUTPUT         @Tcl2(AttributeSplitter_doSplit)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator ATTRSET_PROPAGATE_MISSING YES INPUT  FEATURE_TYPE AttributeSplitter_OUTPUT ATTR FACNUM <at>Value<openparen>_list<opencurly>1<closecurly><closeparen>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
+# -------------------------------------------------------------------------
+Lookup AttributeFilter_AttributeFilterLut   0000 ok   "" notok   ENCODED
+
+Tcl2 proc AttributeFilter_setFeatType {} {     global FME_FeatureType;     set ft {AttributeFilter_};     append ft [FME_EncodeText [FME_GetAttribute {"FACNUM"}]];     set FME_FeatureType $ft; }
+FACTORY_DEF * TestFactory    FACTORY_NAME AttributeFilter    INPUT  FEATURE_TYPE Building    TEST @Lookup(AttributeFilter_AttributeFilterLut,"FACNUM",ENCODED_ATTR) == "ok"    OUTPUT PASSED FEATURE_TYPE * @Tcl2(AttributeFilter_setFeatType)    OUTPUT FAILED FEATURE_TYPE AttributeFilter_<NULL>
+FACTORY_DEF * TestFactory    FACTORY_NAME AttributeFilter_NullFilter    INPUT FEATURE_TYPE AttributeFilter_<NULL>    TEST "FACNUM" ATTRIBUTE_VALUE_NULL ""    OUTPUT PASSED FEATURE_TYPE AttributeFilter_<NULL>    OUTPUT FAILED FEATURE_TYPE AttributeFilter_<MISSING>
+FACTORY_DEF * TestFactory    FACTORY_NAME AttributeFilter_MissingFilter    INPUT FEATURE_TYPE AttributeFilter_<MISSING>    TEST "FACNUM" ATTRIBUTE_IS_MISSING ""    OUTPUT PASSED FEATURE_TYPE AttributeFilter_<MISSING>    OUTPUT FAILED FEATURE_TYPE AttributeFilter_<UNFILTERED>
+FACTORY_DEF * TestFactory    FACTORY_NAME AttributeFilter_BlankFilter    INPUT FEATURE_TYPE AttributeFilter_<UNFILTERED>    TEST "FACNUM" ATTRIBUTE_IS_EMPTY ""    OUTPUT PASSED FEATURE_TYPE AttributeFilter_<EMPTY>    OUTPUT FAILED FEATURE_TYPE AttributeFilter_<UNFILTERED>
+
+
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter <EMPTY> Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_<EMPTY>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter <MISSING> Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_<MISSING>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter <NULL> Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_<NULL>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeFilter 0000 Output Nuker"   INPUT FEATURE_TYPE AttributeFilter_0000
+# -------------------------------------------------------------------------
+
+Tcl2 proc DuplicateRemover_1c4cdc72_7c03_4ea6_a86e_ec96e59adc0f21_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicateRemover_1c4cdc72_7c03_4ea6_a86e_ec96e59adc0f21___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicateRemover_1c4cdc72_7c03_4ea6_a86e_ec96e59adc0f21__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME DuplicateRemover    INPUT  FEATURE_TYPE AttributeCreator_OUTPUT    INPUT  FEATURE_TYPE AttributeFilter_<UNFILTERED>    TEST @Tcl2("DuplicateRemover_1c4cdc72_7c03_4ea6_a86e_ec96e59adc0f21_dupKeyCount {(FACNUM)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicateRemover_UNIQUE
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DuplicateRemover_UNIQUE -> Building Correlator"    INPUT FEATURE_TYPE DuplicateRemover_UNIQUE    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,FILEGDB)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,Building)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+FILEGDB_1_DEF Building   filegdb_type                 geodb_polygon   filegdb_drop_table           NO   filegdb_truncate_table       YES   filegdb_object_id_field      OBJECTID   filegdb_object_id_alias      OBJECTID   filegdb_shape_field          SHAPE   filegdb_shape_alias          SHAPE   filegdb_config_keyword       DEFAULTS   filegdb_xy_tolerance         ""   filegdb_z_tolerance          0.001   filegdb_m_tolerance          0.001   FACNUM                       text(255)
