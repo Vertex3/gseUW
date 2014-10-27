@@ -7,7 +7,8 @@ import sys,os, time
 namedelimiter = "_"
 
 def getDrawing(feature):
-	dwgName = feature.getAttribute("DRAWING")
+	#dwgName = feature.getAttribute("DRAWING")
+	dwgName = feature.getAttribute("fme_basename")
 	return dwgName
 
 def getSiteID(feature):
@@ -16,12 +17,18 @@ def getSiteID(feature):
 	site = getSiteIDFromPath(pth)
 	return site
 
+def getBuildingName(feature):
+	pth = feature.getAttribute("autocad_source_filename")
+	bldgname = getBuildingNameFromPath(pth)
+	return bldgname
+
 def getSiteIDFromPath(pth):
 	site = None
 	try:
 		pth = pth.split(os.sep)
 		if len(pth) > 3:
-			site = pth[len(pth)-4] # this will get the site folder name, needs to be set up for specific file structure
+			site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
+			site = site.split("-")[0] # get the first part of the string in case there is a dash
 	except:
 		print "Error getting SiteID for:" + str(pth)
 	return site
@@ -39,6 +46,17 @@ def getBuildingIDFromPath(pth):
 	site = getSiteIDFromPath(pth)
 	buildingID = site + namedelimiter + getBuildingFromName(dwg)
 	return buildingID
+
+def getBuildingNameFromPath(pth):
+	name = None
+	# look in the parent folder
+	try:
+		pth = pth.split(os.sep)
+		folder = pth[len(pth)-2] # this will get the parent folder name, needs to be set up for specific file structure
+		name = folder[9:].replace("-"," ").strip(' ').title()
+	except:
+		print "Error getting Building Name for:" + str(pth)
+	return name
 
 def getSiteplanID(feature):
 	site = "MAIN"

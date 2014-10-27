@@ -9,7 +9,7 @@ import os, sys
 
 dbSchema = 'dbo'
 
-gsepath = r'C:\apps\gizinta\gseUW'
+gsepath = r'C:\Apps\Gizinta\gseUW'
 
 fmeFolder = gsepath + "\\ETL\\fme\\"
 configFolder = gsepath + "\\ETL\\config\\"

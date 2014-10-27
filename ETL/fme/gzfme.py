@@ -190,7 +190,7 @@ def getWhereClause(xmlFileName,datasetName):
 
 def getDatasets(xmlFileName):
 	datasets = getXmlElements(xmlFileName,'Dataset')
-	logger.logMessageString("gz len(datasets)=" + str(len(datasets)))
+	#logger.logMessageString("gz len(datasets)=" + str(len(datasets)))
 	return datasets
 
 def getValueMaps(xmlFileName):
