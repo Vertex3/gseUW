@@ -5,7 +5,7 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\fme\gseBuildingOutlineLoader.fmw
+#    C:\Apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\fme\gseBuildingOutlineLoader.fmw
 #          --DestDataset_GEODATABASE_SDE sde
 #          --OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde"
 #          --GizintaProject C:\Apps\Gizinta\gseUW\ETL\config\bldgOutlinePlaylist.xml
@@ -13,17 +13,18 @@
 #          --TargetFieldQA True
 #          --IgnoreErrors False
 #          --SourceDatasetTypes CADDataset
-#          --gzDebug True
+#          --gzDebug False
 #          --LOG_FILE ""
 #          --SourceCoordinateSystem EPSG:2285
-#          --FEATURE_TYPES "Building_Foundation Building_Outline_Point Building_Point Building_Outline_Tilt Building_Roof"
-#          --SourceDataset_ESRIMSD "C:\Vault_Mirror\CADVault\UWS\Floorplans\1041-EIC-3939 UNIV WAY NE\1041Outline.dwg"
+#          --SourceDataset_ESRIMSD C:\Apps\Gizinta\CADVault\Floorplans\**\*Outline.dwg
 #          --FEATURE_TYPES_READ "Building_Footprint Building_Roof Building_Outline_Tilt "
+#          --SourceDataset_GEODATABASE_SDE sde
+#          --FEATURE_TYPES "Building_Foundation Building_Outline_Point Building_Outline_Tilt Building_Roof"
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="2500 0"
+#! VIEW_POSITION="5288 -502"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON="import&lt;space&gt;xml.dom.minidom&lt;lf&gt;import&lt;space&gt;os&lt;lf&gt;import&lt;space&gt;sys&lt;lf&gt;import&lt;space&gt;time&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;ospath&lt;space&gt;=&lt;space&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;FME_MF_DIR&lt;apos&gt;&lt;closebracket&gt;&lt;lf&gt;print&lt;space&gt;ospath&lt;lf&gt;if&lt;space&gt;ospath&lt;space&gt;not&lt;space&gt;in&lt;space&gt;sys.path:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;sys.path.append&lt;openparen&gt;ospath&lt;closeparen&gt;&lt;lf&gt;import&lt;space&gt;gzfme&lt;lf&gt;&lt;lf&gt;ErrorUniqueID&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorUniqueID&lt;quote&gt;&lt;lf&gt;ErrorRequiredValue&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorRequiredValue&lt;quote&gt;&lt;lf&gt;ErrorValueMap&lt;space&gt;=&lt;space&gt;&lt;quote&gt;ErrorValueMap&lt;quote&gt;&lt;lf&gt;Errors&lt;space&gt;=&lt;space&gt;False&lt;lf&gt;&lt;lf&gt;debug&lt;space&gt;=&lt;space&gt;gzfme.setDebug&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;gzDebug&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;lf&gt;logger&lt;space&gt;=&lt;space&gt;fmeobjects.FMELogFile&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;gzfme.logger&lt;space&gt;=&lt;space&gt;logger"
@@ -32,8 +33,8 @@
 #! TITLE="GizintaLoader"
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14391"
-#! ZOOM_SCALE="63"
+#! FME_BUILD_NUM="14338"
+#! ZOOM_SCALE="83"
 #! CATEGORY="Gizinta"
 #! REDIRECT_TERMINATORS="NONE"
 #! LEGAL_TERMS_CONDITIONS="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. &lt;/p&gt;&#10;"
@@ -41,62 +42,29 @@
 #! USAGE="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Add the xml file and other parameters &lt;/p&gt;&#10;"
 #! END_PYTHON="import&lt;space&gt;fmeobjects&lt;comma&gt;&lt;space&gt;gzfme&lt;lf&gt;&lt;lf&gt;gzfme.shutdown&lt;openparen&gt;Errors&lt;comma&gt;str&lt;openparen&gt;FME_MacroValues&lt;openbracket&gt;&lt;apos&gt;IgnoreErrors&lt;apos&gt;&lt;closebracket&gt;&lt;closeparen&gt;&lt;comma&gt;FME_TotalFeaturesWritten&lt;comma&gt;FME_MacroValues&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;del&lt;space&gt;Errors&lt;lf&gt;del&lt;space&gt;ErrorUniqueID&lt;lf&gt;del&lt;space&gt;ErrorRequiredValue&lt;lf&gt;del&lt;space&gt;ErrorValueMap&lt;space&gt;&lt;lf&gt;del&lt;space&gt;debug&lt;lf&gt;del&lt;space&gt;logger&lt;lf&gt;gzfme.logger&lt;space&gt;=&lt;space&gt;None"
 #! HISTORY="31&lt;solidus&gt;10&lt;solidus&gt;2013,support&lt;at&gt;Gizinta.com,First&lt;space&gt;Draft"
-#! FME_DOCUMENT_PRIORGUID="3248eb75-9367-4cf2-a18b-72c3e2c95942,095341ed-cb94-4fb0-8cf8-8a4e37d35275,0b237925-5f6c-45eb-984e-f3f7040eb1af,b6981689-92bc-4964-9896-8b7bc7d59bab,7133bb69-8895-442d-b242-98e7817a97f6,6b602e4a-d7f9-4143-97bd-df596d02584d,d3ce97bc-2361-40fe-9079-50c609c00b4d,efc17586-1a3e-4f6f-93e9-dbe8a87f66fc,4be36eb7-38d6-4476-a9d1-ac3d8ebd82d8,12277e11-57de-4bb8-a561-5047342deab9,5acec7d4-37a3-4e32-934c-bda5444ec232,c28816f6-1cce-4fad-962c-69554b74c30e,e105fba3-5585-4e12-9802-cdc9e7b42949,e19b03c6-405e-46ac-b89a-a6737d57a7ef,b4b66972-d41c-4e9f-8785-84f79a1869d9,1110fe34-cd01-4c16-9365-c7f97a8c1377,1e24e44b-f113-44cb-ab9d-0b0e88842d18,de3f7135-2ab2-4b85-85e4-1d6930bee2ad,bcf6424b-08bb-4d35-8a94-9b4024c0262a,febf75b7-3dd8-4834-9c64-bf0d16072e97,08e98e66-aadf-4090-b7cd-a37ddb803268,fd4ad70b-2091-4052-8f0e-dec8a374fe74,8e520eb4-f8c9-4c04-983b-d73bcfedc40c,51e53b3f-aebc-4bf9-90d2-19d12803a0eb,84bd9917-1647-491f-971e-1209632a3822,8cf8bae6-c9ea-4e44-a1e4-baa8a28418ed"
+#! FME_DOCUMENT_PRIORGUID="3248eb75-9367-4cf2-a18b-72c3e2c95942,095341ed-cb94-4fb0-8cf8-8a4e37d35275,0b237925-5f6c-45eb-984e-f3f7040eb1af,b6981689-92bc-4964-9896-8b7bc7d59bab,7133bb69-8895-442d-b242-98e7817a97f6,6b602e4a-d7f9-4143-97bd-df596d02584d,d3ce97bc-2361-40fe-9079-50c609c00b4d,efc17586-1a3e-4f6f-93e9-dbe8a87f66fc,4be36eb7-38d6-4476-a9d1-ac3d8ebd82d8,12277e11-57de-4bb8-a561-5047342deab9,5acec7d4-37a3-4e32-934c-bda5444ec232,c28816f6-1cce-4fad-962c-69554b74c30e,e105fba3-5585-4e12-9802-cdc9e7b42949,e19b03c6-405e-46ac-b89a-a6737d57a7ef,b4b66972-d41c-4e9f-8785-84f79a1869d9,1110fe34-cd01-4c16-9365-c7f97a8c1377,1e24e44b-f113-44cb-ab9d-0b0e88842d18,de3f7135-2ab2-4b85-85e4-1d6930bee2ad,bcf6424b-08bb-4d35-8a94-9b4024c0262a,febf75b7-3dd8-4834-9c64-bf0d16072e97,08e98e66-aadf-4090-b7cd-a37ddb803268,fd4ad70b-2091-4052-8f0e-dec8a374fe74,8e520eb4-f8c9-4c04-983b-d73bcfedc40c,51e53b3f-aebc-4bf9-90d2-19d12803a0eb,84bd9917-1647-491f-971e-1209632a3822,8cf8bae6-c9ea-4e44-a1e4-baa8a28418ed,9b41a31f-5479-42a1-8da0-e41cc8b1eef8,7b50b26d-096e-4a2d-b636-eb55647707b2,91f2b696-9656-4eb5-b9f6-cb5516a0fa09,dde8b646-a5ce-4f77-8313-0e13e4fe291b,628f6916-f100-48d9-ad69-baec758a8a80,080ebef3-fb95-4be1-b368-354be5ba758f,0e662e77-f59b-4431-b386-4f26fafb5dea,79405df0-dd69-4f8d-bc13-c34d619ff852,e2e1202f-0f0c-42a9-a446-2e840ad364c4,7b7d1ae9-2bbc-46b1-8eef-dedbd3c385da,28aae51a-3a03-40ec-9af7-ad5bea05d0b7,b34993a6-50ea-4a23-b3c7-ce88b662bb8e,c62fd848-f0d9-40dc-9350-544f4f3bc328"
 #! DOC_TOP_LEFT="663 -1402"
 #! REQUIREMENTS_KEYWORD="none"
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-09-26T14:56:33"
+#! LAST_SAVE_DATE="2014-10-23T10:23:54"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 SP3 (20140814 - Build 14391 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140606 - Build 14338 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE="$(LOG_FILE)"
 #! REQUIREMENTS="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;test &lt;/p&gt;&#10;"
 #! BEGIN_TCL=""
-#! DOC_EXTENTS="7307 965"
-#! FME_DOCUMENT_GUID="9b41a31f-5479-42a1-8da0-e41cc8b1eef8"
+#! DOC_EXTENTS="7640 965"
+#! FME_DOCUMENT_GUID="4fc26c84-2112-496d-a296-b8301b886a72"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
 #! >
 #! <DATASETS>
-#! <DATASET
-#! IS_SOURCE="true"
-#! ROLE="SCHEMA_READER"
-#! FORMAT="GEODATABASE_SDE"
-#! DATASET="$(DestDataset_GEODATABASE_SDE)"
-#! KEYWORD="GEODATABASE_SDE_1"
-#! MULTI_GEOM_ALLOWED="false"
-#! ATTR_MAX_LENGTH="60"
-#! ATTR_CASE="ANY"
-#! ALLOWED_FEAT_TYPES=""
-#! WRITE_DEFS="true"
-#! DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY}"
-#! DEFLINE_ATTRS="true"
-#! EXPOSABLE_ATTRS="geodb_text_leader_line_anchor_point char(254) geodb_dim_length double geodb_v_align char(50) geodb_rel_destination_oid integer multi_reader_type char(50) geodb_edge_feature_count integer geodb_feature_dataset char(254) geodb_text_lc_gap double geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_from_junction_element_id integer geodb_raster_pyramid_resample_type char(100) geodb_rel_origin_oid integer fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_original_arc_direction char(17) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_lc_textbox_y2 double geodb_text_lc_textbox_y3 double geodb_metadata_string char(254) geodb_text_lc_textbox_y4 double geodb_dim_text_x double geodb_symbol_id integer geodb_text_lc_margin_left double geodb_dim_text_y double multi_reader_keyword char(50) geodb_dim_text_z double geodb_text_point_scale_factor double geodb_text_leader_line char(254) geodb_element_id integer geodb_text_lc_accent_bar_width double geodb_font_italic boolean geodb_text_line_spacing double fme_basename char(50) geodb_text_ref_scale double geodb_topological_configuration char(6) geodb_start_angle double geodb_h_align char(50) fme_secondary_axis double geodb_text_lc_accent_bar_color char(50) geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_arc_end_x double geodb_dim_text_angle double geodb_arc_end_y double geodb_ancillary_role char(7) geodb_arc_end_z double geodb_font_size double fme_text_size double geodb_text_lc_margin_bottom double geodb_text_size double geodb_raster_pyramid_level integer geodb_text_leader_line_width double fme_sweep_angle double geodb_arc_start_x double geodb_arc_start_y double geodb_arc_start_z double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean fme_dataset char(50) geodb_text_character_width double geodb_text_lc_textbox_x1 double geodb_text_lc_textbox_x2 double geodb_rotation double geodb_text_lc_textbox_x3 double fme_fill_color char(50) geodb_secondary_axis double geodb_text_lc_textbox_x4 double geodb_font_underline boolean geodb_font_bold boolean geodb_text_color char(254) geodb_text_y_offset double geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_text_part_count integer geodb_type char(25) geodb_dim_line_display smallint geodb_text_clip boolean geodb_to_junction_element_id integer fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) multi_reader_id integer geodb_text_lc_margin_right double geodb_text_lc_style char(20) geodb_text_break_char integer geodb_text_leader_line_tolerance double geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_feature_is_simple boolean geodb_dim_line_x double geodb_primary_axis double geodb_right_to_left boolean geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_feature_has_relationships boolean geodb_junction_feature_count integer geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_edge_element_count integer geodb_text_lc_margin_top double geodb_text_word_spacing double geodb_dim_marker_display smallint fme_rotation double multi_reader_full_id integer geodb_junction_element_count integer fme_start_angle double geodb_dim_extn_line_angle double geodb_font_weight smallint geodb_element_index integer geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
-#! DEFLINE_PARMS=""
-#! ATTR_INDEX_TYPES=""
-#! ATTR_NAME_INVALID_CHARS=""
-#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
-#! ENABLED="true"
-#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
-#! FEATURE_TYPES_LIST="Building_Foundation Building_Outline_Point Building_Point Building_Outline_Tilt Floor_Poly Building_Roof Floor_Area Building Campus"
-#! GENERATE_FME_BUILD_NUM="13545"
-#! MAX_FEATURES=""
-#! COORDSYS=""
-#! MIN_FEATURES=""
-#! FEATURE_TYPES="$(FEATURE_TYPES)"
-#! START_FEATURE=""
-#! >
-#! <METAFILE_PARAMETER
-#! NAME="ADVANCED_PARMS"
-#! VALUE="GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY GEODATABASE_SDE_IN_RESOLVE_DOMAINS GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES GEODATABASE_SDE_IN_WHERE _GEODBInSearchFeature _GEODBInSearchOrder _GEODBInSearchMethod _GEODBInChildVersionName _GEODBInFeatureReadMode NULL_OUT_TRANSACTION_TYPE NULL_OUT_SIMPLIFY_GEOM NULL_OUT_ORIGIN_X NULL_OUT_ORIGIN_Y NULL_OUT_XY_SCALE NULL_OUT_HAS_Z_VALUES NULL_OUT_Z_ORIGIN NULL_OUT_Z_SCALE NULL_OUT_GRID_1 _GEODBOutWriterMode _GEODBOutTransaction _GEODBOutTransactionInterval _GEODBOutIgnoreFailedFeatureEntry _GEODBOutMaxNumberFailedFeatures _GEODBOutDumpFailedFeatures _GEODBOutFFSDumpFile _GEODBOutAnnotationUnits _GEODBOutReconcileAndPost _GEODBInArchiveWhereClause _GEODBMergeFeatLinkedAnnos _GEODBInCheckSimpleGeom _GEODBOutDeleteChildAfterReconcileAndPost _GEODBOutValidateFeatures _GEODBOutSimplifyNetworkFeatures _GEODBInPersistentConnection _GEODBOutPersistentConnection GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS _GEODBSplitComplexAnnotations _GEODBOutCommitTransactionsAfterWrite _GEODBInBeginSql _GEODBInEndSql _GEODBOutBeginSql _GEODBOutEndSql _GEODBCacheMultipatchTextures"
-#! />
-#! </DATASET>
 #! <DATASET
 #! IS_SOURCE="true"
 #! ROLE="READER"
@@ -135,6 +103,47 @@
 #! <METAFILE_PARAMETER
 #! NAME="ADVANCED_PARMS"
 #! VALUE="ESRIMSD_IN_USE_BLOCK_HEADER_LAYER ESRIMSD_IN_USE_BLOCK_LAYER_INFO RESOLVE_ENTITY_COLOR _OUTPUT_BLOCKS_AT_START _STORE_BULGE_INFO _BULGES_AS_ARCS ESRIMSD_IN_READ_PAPER_SPACE READ_GROUPS READ_XREFS EVALUATE_MLINE_GEOM _CONVERT_ZERO_LENGTH_ARCS_TO_POINTS _OUTPUT_ZERO_LENGTH_LINES_AS_LINES ESRIMSD_IN_IGNORE_UCS PRESERVE_COMPLEX_HATCHES _STORE_SPLINE_DEFS _USE_DXF_HEADER _ACADResolveDimensions APPLY_WORLD_FILE _XRECORD_READING ESRIMSD_IN_STORE_INSERT_POINT ESRIMSD_IN_SEARCH_ENVELOPE_MINX ESRIMSD_IN_SEARCH_ENVELOPE_MINY ESRIMSD_IN_SEARCH_ENVELOPE_MAXX ESRIMSD_IN_SEARCH_ENVELOPE_MAXY ESRIMSD_IN_CLIP_TO_ENVELOPE SEARCH_ENVELOPE_COORDINATE_SYSTEM"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="SCHEMA_READER"
+#! FORMAT="GEODATABASE_SDE"
+#! DATASET="$(SourceDataset_GEODATABASE_SDE)"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="geodb_text_leader_line_anchor_point char(254) geodb_dim_length double geodb_v_align char(50) geodb_rel_destination_oid integer multi_reader_type char(50) geodb_edge_feature_count integer geodb_feature_dataset char(254) geodb_text_lc_gap double geodb_subtype_name char(254) geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_from_junction_element_id integer geodb_raster_pyramid_resample_type char(100) geodb_rel_origin_oid integer fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_lc_textbox_y2 double geodb_text_lc_textbox_y3 double geodb_metadata_string char(254) geodb_text_lc_textbox_y4 double geodb_dim_text_x double geodb_symbol_id integer geodb_text_lc_margin_left double geodb_dim_text_y double multi_reader_keyword char(50) geodb_dim_text_z double geodb_text_point_scale_factor double geodb_text_leader_line char(254) geodb_element_id integer geodb_text_lc_accent_bar_width double geodb_font_italic boolean geodb_text_line_spacing double fme_basename char(50) geodb_text_ref_scale double geodb_topological_configuration char(6) geodb_start_angle double geodb_h_align char(50) fme_secondary_axis double geodb_text_lc_accent_bar_color char(50) geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_lc_margin_bottom double geodb_text_size double geodb_raster_pyramid_level integer geodb_text_leader_line_width double fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean geodb_text_character_width double fme_dataset char(50) geodb_text_lc_textbox_x1 double geodb_text_lc_textbox_x2 double geodb_text_lc_textbox_x3 double geodb_rotation double fme_fill_color char(50) geodb_secondary_axis double geodb_text_lc_textbox_x4 double geodb_font_underline boolean geodb_font_bold boolean geodb_text_color char(254) geodb_text_y_offset double geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_text_part_count integer geodb_type char(25) geodb_dim_line_display smallint geodb_text_clip boolean geodb_to_junction_element_id integer fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) multi_reader_id integer geodb_text_lc_margin_right double geodb_text_lc_style char(20) geodb_text_break_char integer geodb_text_leader_line_tolerance double geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_feature_is_simple boolean geodb_primary_axis double geodb_dim_line_x double geodb_right_to_left boolean geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_feature_has_relationships boolean geodb_junction_feature_count integer geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_edge_element_count integer geodb_text_lc_margin_top double geodb_text_word_spacing double geodb_dim_marker_display smallint fme_rotation double multi_reader_full_id integer geodb_junction_element_count integer fme_start_angle double geodb_dim_extn_line_angle double geodb_font_weight smallint geodb_element_index integer geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! FEATURE_TYPES_LIST="DBO.Building_Foundation DBO.Building_Outline_Point DBO.Building_Outline_Tilt DBO.Building_Roof"
+#! GENERATE_FME_BUILD_NUM="14338"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES="$(FEATURE_TYPES)"
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY GEODATABASE_SDE_IN_RESOLVE_DOMAINS GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES GEODATABASE_SDE_IN_WHERE _GEODBInSearchFeature _GEODBInSearchOrder _GEODBInSearchMethod _GEODBInChildVersionName NULL_OUT_TRANSACTION_TYPE NULL_OUT_SIMPLIFY_GEOM NULL_OUT_ORIGIN_X NULL_OUT_ORIGIN_Y NULL_OUT_XY_SCALE NULL_OUT_HAS_Z_VALUES NULL_OUT_Z_ORIGIN NULL_OUT_Z_SCALE NULL_OUT_GRID_1 _GEODBOutWriterMode _GEODBOutTransaction _GEODBOutTransactionInterval _GEODBOutIgnoreFailedFeatureEntry _GEODBOutMaxNumberFailedFeatures _GEODBOutDumpFailedFeatures _GEODBOutFFSDumpFile _GEODBOutAnnotationUnits _GEODBOutReconcileAndPost _GEODBInArchiveWhereClause _GEODBMergeFeatLinkedAnnos _GEODBInCheckSimpleGeom _GEODBOutDeleteChildAfterReconcileAndPost _GEODBOutValidateFeatures _GEODBOutSimplifyNetworkFeatures _GEODBInPersistentConnection _GEODBOutPersistentConnection GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS _GEODBSplitComplexAnnotations _GEODBOutCommitTransactionsAfterWrite _GEODBInBeginSql _GEODBInEndSql _GEODBOutBeginSql _GEODBOutEndSql _GEODBCacheMultipatchTextures"
 #! />
 #! </DATASET>
 #! <DATASET
@@ -418,6 +427,12 @@
 #! FME_TYPE="fme_char(width)"
 #! FORMAT="GEODATABASE_SDE"
 #! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="guid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
 #! </DATA_TYPES>
 #! <GEOM_TYPES>
 #! <GEOM_TYPE
@@ -646,7 +661,7 @@
 #! <FEATURE_TYPES>
 #! <FEATURE_TYPE
 #! IS_SOURCE="false"
-#! NODE_NAME="DBO.gzError"
+#! NODE_NAME="gzError"
 #! IS_EDITABLE="true"
 #! IDENTIFIER="3"
 #! FEAT_GEOMTYPE="geodb_table"
@@ -691,52 +706,7 @@
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #! IS_SOURCE="false"
-#! NODE_NAME="NewFeatureType"
-#! IS_EDITABLE="true"
-#! IDENTIFIER="4"
-#! FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
-#! POSITION="7970 -1154"
-#! ORDER="37"
-#! COLLAPSED="true"
-#! KEYWORD="GEODATABASE_SDE_2"
-#! ENABLED="true"
-#! FANOUT="No"
-#! FANOUT_ID_ATTR=""
-#! DYNAMIC_SCHEMA="true"
-#! DYNAMIC_SCHEMA_SOURCES="GEODATABASE_SDE_1"
-#! DYNAMIC_SCHEMA_FEATURE_TYPE="AUTOMATIC"
-#! DYNAMIC_SCHEMA_FEATURE_TYPE_NAME=""
-#! DYNAMIC_SCHEMA_DEFINITION="AUTOMATIC"
-#! DYNAMIC_SCHEMA_DEFINITION_NAME=""
-#! DYNAMIC_SCHEMA_GEOMETRY="AUTOMATIC"
-#! DYNAMIC_SCHEMA_GEOMETRY_NAME=""
-#! DYNAMIC_SCHEMA_ATTRIBUTES_TO_REMOVE=""
-#! >
-#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
-#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
-#! </FEATURE_TYPE>
-#! <FEATURE_TYPE
-#! IS_SOURCE="false"
-#! NODE_NAME="DBO.gzLog"
+#! NODE_NAME="gzLog"
 #! IS_EDITABLE="true"
 #! IDENTIFIER="2"
 #! FEAT_GEOMTYPE="geodb_table"
@@ -805,6 +775,63 @@
 #! <FEAT_ATTRIBUTE ATTR_NAME="autocad_layer_type" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="autocad_layer_color" ATTR_TYPE="number(6,0)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Building_Outline_Tilt"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="56"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="8303 -1158"
+#! ORDER="5e+014"
+#! COLLAPSED="true"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! DYNAMIC_SCHEMA="true"
+#! DYNAMIC_SCHEMA_SOURCES="GEODATABASE_SDE_1"
+#! DYNAMIC_SCHEMA_FEATURE_TYPE="AUTOMATIC"
+#! DYNAMIC_SCHEMA_FEATURE_TYPE_NAME=""
+#! DYNAMIC_SCHEMA_DEFINITION="AUTOMATIC"
+#! DYNAMIC_SCHEMA_DEFINITION_NAME=""
+#! DYNAMIC_SCHEMA_GEOMETRY="AUTOMATIC"
+#! DYNAMIC_SCHEMA_GEOMETRY_NAME=""
+#! DYNAMIC_SCHEMA_ATTRIBUTES_TO_REMOVE=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CALCROT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDGNAME" ATTR_TYPE="char(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
 #! </FMESERVER>
@@ -846,7 +873,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL CHOICE gzDebug True%False Enable gzDebug (True/False):"
-#! DEFAULT_VALUE="True"
+#! DEFAULT_VALUE="False"
 #! IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
@@ -860,19 +887,24 @@
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES Building_Foundation%Building_Outline_Point%Building_Point%Building_Outline_Tilt%Floor_Poly%Building_Roof%Floor_Area%Building%Campus Feature Types to Write:"
-#! DEFAULT_VALUE="Building_Foundation Building_Outline_Point Building_Point Building_Outline_Tilt Building_Roof"
-#! IS_STAND_ALONE="false"
-#! />
-#! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI MULTIFILE SourceDataset_ESRIMSD DWG_Files(*.dwg)/DXF_Files(*.dxf)|*.dwg;*.dxf|DWG_Files(*.dwg)|*.dwg|DXF_Files(*.dxf)|*.dxf|All_Files|*.* Source Autodesk AutoCAD DWG/DXF File(s):"
-#! DEFAULT_VALUE="C:\Vault_Mirror\CADVault\UWS\Floorplans\1041-EIC-3939 UNIV WAY NE\1041Outline.dwg"
+#! DEFAULT_VALUE="C:\Apps\Gizinta\CADVault\Floorplans\**\*Outline.dwg"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL TEXT_OR_ATTR FEATURE_TYPES_READ Feature Types to Read:"
 #! DEFAULT_VALUE="Building_Footprint Building_Roof Building_Outline_Tilt "
 #! IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:"
+#! DEFAULT_VALUE="sde"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES DBO.Building_Roof%DBO.Building_Outline_Tilt%DBO.Building_Foundation%DBO.Building_Outline_Point Feature Types to Read:"
+#! DEFAULT_VALUE="Building_Foundation Building_Outline_Point Building_Outline_Tilt Building_Roof"
+#! IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
 #! <COMMENTS>
@@ -908,27 +940,17 @@
 #! <OUTPUT_FEAT NAME="SourceTargetQA_Output_1"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -953,7 +975,6 @@
 #! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="fme_feature_type_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SRCIDFIELD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SRCIDVAL" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -986,73 +1007,27 @@
 #! <OUTPUT_FEAT NAME="AddFieldsValues_Output_1"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="gzFieldCalculator"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
-#! IDENTIFIER="14"
-#! TYPE="AttributeCopier"
-#! VERSION="2"
-#! POSITION="1708 -922"
-#! ORDER="27"
-#! PARMS_EDITED="true"
-#! ENABLED="true"
-#! >
-#! <OUTPUT_FEAT NAME="OUTPUT"/>
-#! <FEAT_COLLAPSED COLLAPSED="0"/>
-#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCopier"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="Layer,autocad_layer,Handle,autocad_entity_handle,Entity,autocad_entity,Color,autocad_layer_color,Linetype,autocad_layer_linetype,LineWt,autocad_layer_lineweight,Elevation,autocad_elevation,DRAWING,fme_basename,SOURCEDWG,fme_basename,SOURCEID,autocad_entity_handle,buildingid,FACNUM"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
 #! IDENTIFIER="15"
 #! TYPE="AttributeExposer"
 #! VERSION="0"
-#! POSITION="1195 -918"
+#! POSITION="1418 -913"
 #! ORDER="28"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -1070,42 +1045,33 @@
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeExposer"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_basename,fme_feature_type,FACNUM"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_basename,fme_feature_type,FACNUM,autocad_source_filename"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="47"
 #! TYPE="SubDocumentTransformer"
 #! VERSION="0"
-#! POSITION="4936 -626"
+#! POSITION="5311 -651"
 #! ORDER="40"
-#! PARMS_EDITED="true"
+#! PARMS_EDITED="false"
 #! ENABLED="true"
 #! >
 #! <OUTPUT_FEAT NAME="OUTPUT"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1134,7 +1100,7 @@
 #! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="gzBuildingOutlineTilt"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="BUILDINGID" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;buildingid&lt;closeparen&gt;"/>
+#! <XFORM_PARM PARM_NAME="BUILDINGID" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt;"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="54"
@@ -1148,77 +1114,47 @@
 #! <OUTPUT_FEAT NAME="Building_Outline"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="Building_Outline_Point"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
 #! <FEAT_COLLAPSED COLLAPSED="2"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;Building_Outline_Tilt&lt;quote&gt;,Building_Outline,BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;fme_feature_type&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;Building_Outline_Point&lt;quote&gt;,Building_Outline_Point"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter_2"/>
@@ -1258,27 +1194,17 @@
 #! <OUTPUT_FEAT NAME="gzFeatureWriter"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1303,7 +1229,6 @@
 #! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="fme_feature_type_name" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SRCIDFIELD" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SRCIDVAL" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1324,27 +1249,17 @@
 #! <OUTPUT_FEAT NAME="gzErrorWriter"/>
 #! <FEAT_COLLAPSED COLLAPSED="2"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -1369,7 +1284,6 @@
 #! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="fme_feature_type_name" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SRCIDFIELD" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SRCIDVAL" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -1395,15 +1309,15 @@
 #! <XFORM_PARM PARM_NAME="IgnoreErrors" PARM_VALUE="False"/>
 #! <XFORM_PARM PARM_NAME="__COMPOUND_PARAMETERS" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="gzWriteData"/>
+#! <XFORM_PARM PARM_NAME="FLOORID" PARM_VALUE="@Value(FLOORID)"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#! <XFORM_PARM PARM_NAME="GroupBy" PARM_VALUE="OBJECTID"/>
 #! <XFORM_PARM PARM_NAME="HASERRORS" PARM_VALUE="@Value(HasErrors)"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="43"
 #! TYPE="CenterPointReplacer"
 #! VERSION="0"
-#! POSITION="5504 -495"
+#! POSITION="5778 -473"
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -1411,27 +1325,17 @@
 #! <OUTPUT_FEAT NAME="CENTERPOINT"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1463,7 +1367,7 @@
 #! IDENTIFIER="38"
 #! TYPE="AttributeCreator"
 #! VERSION="4"
-#! POSITION="5999 -690"
+#! POSITION="6201 -693"
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -1471,27 +1375,17 @@
 #! <OUTPUT_FEAT NAME="OUTPUT"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1516,20 +1410,19 @@
 #! <XFORM_ATTR ATTR_NAME="YCENTER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BLDGHEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="fme_feature_type_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
 #! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_feature_type,Building_Outline_Point,fme_feature_type_name,Building_Outline_Point"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_feature_type,Building_Outline_Point"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="44"
 #! TYPE="Reprojector"
 #! VERSION="3"
-#! POSITION="2761 -934"
+#! POSITION="2689 -938"
 #! ORDER="39"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -1537,27 +1430,17 @@
 #! <OUTPUT_FEAT NAME="REPROJECTED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="DEST" PARM_VALUE="EPSG:3857"/>
 #! <XFORM_PARM PARM_NAME="RASTER_CELL_SIZE" PARM_VALUE="Preserve Cells"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Reprojector_2"/>
@@ -1571,7 +1454,7 @@
 #! IDENTIFIER="45"
 #! TYPE="Tester"
 #! VERSION="2"
-#! POSITION="2204 -938"
+#! POSITION="2070 -928"
 #! ORDER="5e+014"
 #! PARMS_EDITED="true"
 #! ENABLED="true"
@@ -1579,51 +1462,31 @@
 #! <OUTPUT_FEAT NAME="PASSED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="FAILED"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
 #! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
 #! <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
@@ -1636,7 +1499,7 @@
 #! IDENTIFIER="35"
 #! TYPE="Reprojector"
 #! VERSION="3"
-#! POSITION="3753 -917"
+#! POSITION="3767 -940"
 #! ORDER="42"
 #! PARMS_EDITED="false"
 #! ENABLED="true"
@@ -1644,27 +1507,17 @@
 #! <OUTPUT_FEAT NAME="REPROJECTED"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="LineWt" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="Color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="DRAWING" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SOURCEDWG" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="DEST" PARM_VALUE="EPSG:3857"/>
 #! <XFORM_PARM PARM_NAME="RASTER_CELL_SIZE" PARM_VALUE="Preserve Cells"/>
@@ -1675,17 +1528,36 @@
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="INTERPOLATION_TYPE_NAME" PARM_VALUE="Nearest Neighbor"/>
 #! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="49"
+#! TYPE="AttributeExposer"
+#! VERSION="0"
+#! POSITION="4918 -870"
+#! ORDER="28"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FACNUM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_entity" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_entity_handle" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer_linetype" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer_lineweight" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_layer_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="autocad_source_filename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ERRUSER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="bldg"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="BUILDINGID"/>
+#! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
-#! <FEAT_LINK
-#! IDENTIFIER="28"
-#! SOURCE_NODE="15"
-#! TARGET_NODE="14"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
 #! <FEAT_LINK
 #! IDENTIFIER="30"
 #! SOURCE_NODE="7"
@@ -1700,15 +1572,6 @@
 #! SOURCE_NODE="29"
 #! TARGET_NODE="2"
 #! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="-1"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#! IDENTIFIER="33"
-#! SOURCE_NODE="29"
-#! TARGET_NODE="4"
-#! SOURCE_PORT_DESC="fo 1"
 #! TARGET_PORT_DESC="-1"
 #! ENABLED="true"
 #! EXTRA_POINTS=""
@@ -1750,15 +1613,6 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="49"
-#! SOURCE_NODE="14"
-#! TARGET_NODE="45"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #! IDENTIFIER="71"
 #! SOURCE_NODE="44"
 #! TARGET_NODE="8"
@@ -1795,15 +1649,6 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="37"
-#! SOURCE_NODE="54"
-#! TARGET_NODE="47"
-#! SOURCE_PORT_DESC="fo 0"
-#! TARGET_PORT_DESC="fi 0"
-#! ENABLED="true"
-#! EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #! IDENTIFIER="36"
 #! SOURCE_NODE="8"
 #! TARGET_NODE="35"
@@ -1822,11 +1667,38 @@
 #! EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#! IDENTIFIER="39"
+#! IDENTIFIER="53"
 #! SOURCE_NODE="54"
-#! TARGET_NODE="7"
-#! SOURCE_PORT_DESC="fo 2"
+#! TARGET_NODE="49"
+#! SOURCE_PORT_DESC="fo 0"
 #! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="55"
+#! SOURCE_NODE="49"
+#! TARGET_NODE="47"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="46"
+#! SOURCE_NODE="15"
+#! TARGET_NODE="45"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="58"
+#! SOURCE_NODE="29"
+#! TARGET_NODE="56"
+#! SOURCE_PORT_DESC="fo 1"
+#! TARGET_PORT_DESC="-1"
 #! ENABLED="true"
 #! EXTRA_POINTS=""
 #! />
@@ -1841,7 +1713,7 @@
 #! FME_DOCUMENT_PRIORGUID=""
 #! IS_VISIBLE="true"
 #! DOC_TOP_LEFT="100 -2160"
-#! VIEW_POSITION="4648 -50"
+#! VIEW_POSITION="249 36"
 #! DOC_EXTENTS="7870 2109"
 #! SUPPRESS_UPGRADE="false"
 #! XFORM_DEPRECATED="No"
@@ -1862,8 +1734,8 @@
 #! >
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI TEXT_EDIT_OR_NUM_OR_ATTR BUILDINGID Buildingid:"
-#! DEFAULT_VALUE="@Value(BUILDINGID)"
+#! GUI_LINE="GUI TEXT_EDIT_OR_NUM_OR_ATTR BUILDINGID BUILDINGID:"
+#! DEFAULT_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt;"
 #! IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -2116,7 +1988,7 @@
 #! <XFORM_ATTR ATTR_NAME="_mean" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_stdev" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
 #! <XFORM_PARM PARM_NAME="STATS_ATTR" PARM_VALUE="_length"/>
 #! <XFORM_PARM PARM_NAME="PASS_THROUGH" PARM_VALUE="Yes"/>
 #! <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE="_max"/>
@@ -4486,10 +4358,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4516,10 +4388,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4527,10 +4399,10 @@
 #! <XFORM_ATTR ATTR_NAME="_y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4717,10 +4589,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4728,20 +4600,20 @@
 #! <XFORM_ATTR ATTR_NAME="_y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="NOT_MERGED"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -4753,10 +4625,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -4769,10 +4641,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="3" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="3" />
@@ -4784,10 +4656,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="4" />
@@ -4866,28 +4738,28 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="LINE"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <OUTPUT_FEAT NAME="POLYGON"/>
 #! <FEAT_COLLAPSED COLLAPSED="2"/>
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointConnector_2"/>
 #! <XFORM_PARM PARM_NAME="BREAKATTR" PARM_VALUE=""/>
@@ -4908,10 +4780,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="DEST" PARM_VALUE="EPSG:3857"/>
 #! <XFORM_PARM PARM_NAME="RASTER_CELL_SIZE" PARM_VALUE="Preserve Cells"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Reprojector_2"/>
@@ -4935,10 +4807,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4965,10 +4837,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5154,28 +5026,28 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="LINE"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <OUTPUT_FEAT NAME="POLYGON"/>
 #! <FEAT_COLLAPSED COLLAPSED="2"/>
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointConnector"/>
 #! <XFORM_PARM PARM_NAME="BREAKATTR" PARM_VALUE=""/>
@@ -5216,10 +5088,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5246,10 +5118,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5278,10 +5150,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5386,10 +5258,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5397,10 +5269,10 @@
 #! <XFORM_ATTR ATTR_NAME="_y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5425,10 +5297,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5436,10 +5308,10 @@
 #! <XFORM_ATTR ATTR_NAME="_y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5449,10 +5321,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -5460,10 +5332,10 @@
 #! <XFORM_ATTR ATTR_NAME="_y2" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="rot1" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="rot2" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -5486,10 +5358,10 @@
 #! <XFORM_ATTR ATTR_NAME="WORLD" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pts{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x3" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y3" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5497,10 +5369,10 @@
 #! <XFORM_ATTR ATTR_NAME="_y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot1" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_pt2{}" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="x2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="y2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="x4" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="y4" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="rot2" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WORLDFILE" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -6649,7 +6521,7 @@
 #! </LOOKUP_TABLES>
 #! </WORKSPACE>
 #! 
-GUI IGNORE SourceDataset_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1,_GEODBInSearchFeature_GEODATABASE_SDE_1,_GEODBInSearchOrder_GEODATABASE_SDE_1,_GEODBInSearchMethod_GEODATABASE_SDE_1,_GEODBInChildVersionName_GEODATABASE_SDE_1,_GEODBInFeatureReadMode_GEODATABASE_SDE_1,_GEODBInArchiveWhereClause_GEODATABASE_SDE_1,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1,_GEODBInPersistentConnection_GEODATABASE_SDE_1,_GEODBInBeginSql_GEODATABASE_SDE_1,_GEODBInEndSql_GEODATABASE_SDE_1,SourceDataset_ESRIMSD_1,_OUTPUT_BLOCKS_AT_START_ESRIMSD_1,_PRESERVE_INSERTS_ESRIMSD_1,_STORE_BULGE_INFO_ESRIMSD_1,_CONVERT_ZERO_LENGTH_ARCS_TO_POINTS_ESRIMSD_1,_OUTPUT_ZERO_LENGTH_LINES_AS_LINES_ESRIMSD_1,_USE_DXF_HEADER_ESRIMSD_1,_XRECORD_READING_ESRIMSD_1,ESRIMSD_IN_RESOLVE_BLOCKS_ESRIMSD_1,ESRIMSD_IN_USE_BLOCK_HEADER_LAYER_ESRIMSD_1,ESRIMSD_IN_USE_BLOCK_LAYER_INFO_ESRIMSD_1,ESRIMSD_IN_STORE_INSERT_POINT_ESRIMSD_1,ESRIMSD_IN_VISIBLE_ATTRIBUTES_AS_TEXT_ESRIMSD_1,ESRIMSD_IN_EXPLODE_MTEXT_ESRIMSD_1,ESRIMSD_IN_READ_AS_2_5D_ESRIMSD_1,ESRIMSD_IN_READ_PAPER_SPACE_ESRIMSD_1,ESRIMSD_IN_IGNORE_UCS_ESRIMSD_1,ESRIMSD_IN_APPLY_WORLD_FILE_ESRIMSD_1,ESRIMSD_IN_EXPOSE_ATTRS_GROUP_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MINX_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MINY_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MAXX_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MAXY_ESRIMSD_1,ESRIMSD_IN_CLIP_TO_ENVELOPE_ESRIMSD_1,ESRIMSD_IN_NETWORK_AUTHENTICATION_ESRIMSD_1,ESRIMSD_IN_NETWORK_PROXY_ESRIMSD_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_ESRIMSD_1,_STORE_SPLINE_DEFS_ESRIMSD_1,RESOLVE_ENTITY_COLOR_ESRIMSD_1,PRESERVE_COMPLEX_HATCHES_ESRIMSD_1,READ_GROUPS_ESRIMSD_1,READ_XREFS_ESRIMSD_1,EVALUATE_MLINE_GEOM_ESRIMSD_1,_ACADResolveDimensions_ESRIMSD_1,DestDataset_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_2,_GEODBOutDefaultZValue_GEODATABASE_SDE_2,_GEODBOutWriterMode_GEODATABASE_SDE_2,_GEODBOutTransaction_GEODATABASE_SDE_2,_GEODBOutTransactionInterval_GEODATABASE_SDE_2,_GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_2,_GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_2,_GEODBOutDumpFailedFeatures_GEODATABASE_SDE_2,_GEODBOutFFSDumpFile_GEODATABASE_SDE_2,_GEODBOutAnnotationUnits_GEODATABASE_SDE_2,_GEODBOutMeasures_GEODATABASE_SDE_2,_GEODBOutMeasureOrigin_GEODATABASE_SDE_2,_GEODBOutMeasureScale_GEODATABASE_SDE_2,_GEODBOutReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutValidateFeatures_GEODATABASE_SDE_2,_GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_2,_GEODBOutPersistentConnection_GEODATABASE_SDE_2,_GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_2,_GEODBOutBeginSql_GEODATABASE_SDE_2,_GEODBOutEndSql_GEODATABASE_SDE_2
+GUI IGNORE SourceDataset_ESRIMSD_1,_OUTPUT_BLOCKS_AT_START_ESRIMSD_1,_PRESERVE_INSERTS_ESRIMSD_1,_STORE_BULGE_INFO_ESRIMSD_1,_CONVERT_ZERO_LENGTH_ARCS_TO_POINTS_ESRIMSD_1,_OUTPUT_ZERO_LENGTH_LINES_AS_LINES_ESRIMSD_1,_USE_DXF_HEADER_ESRIMSD_1,_XRECORD_READING_ESRIMSD_1,ESRIMSD_IN_RESOLVE_BLOCKS_ESRIMSD_1,ESRIMSD_IN_USE_BLOCK_HEADER_LAYER_ESRIMSD_1,ESRIMSD_IN_USE_BLOCK_LAYER_INFO_ESRIMSD_1,ESRIMSD_IN_STORE_INSERT_POINT_ESRIMSD_1,ESRIMSD_IN_VISIBLE_ATTRIBUTES_AS_TEXT_ESRIMSD_1,ESRIMSD_IN_EXPLODE_MTEXT_ESRIMSD_1,ESRIMSD_IN_READ_AS_2_5D_ESRIMSD_1,ESRIMSD_IN_READ_PAPER_SPACE_ESRIMSD_1,ESRIMSD_IN_IGNORE_UCS_ESRIMSD_1,ESRIMSD_IN_APPLY_WORLD_FILE_ESRIMSD_1,ESRIMSD_IN_EXPOSE_ATTRS_GROUP_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MINX_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MINY_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MAXX_ESRIMSD_1,ESRIMSD_IN_SEARCH_ENVELOPE_MAXY_ESRIMSD_1,ESRIMSD_IN_CLIP_TO_ENVELOPE_ESRIMSD_1,ESRIMSD_IN_NETWORK_AUTHENTICATION_ESRIMSD_1,ESRIMSD_IN_NETWORK_PROXY_ESRIMSD_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_ESRIMSD_1,_STORE_SPLINE_DEFS_ESRIMSD_1,RESOLVE_ENTITY_COLOR_ESRIMSD_1,PRESERVE_COMPLEX_HATCHES_ESRIMSD_1,READ_GROUPS_ESRIMSD_1,READ_XREFS_ESRIMSD_1,EVALUATE_MLINE_GEOM_ESRIMSD_1,_ACADResolveDimensions_ESRIMSD_1,SourceDataset_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1,_GEODBInSearchFeature_GEODATABASE_SDE_1,_GEODBInSearchOrder_GEODATABASE_SDE_1,_GEODBInSearchMethod_GEODATABASE_SDE_1,_GEODBInChildVersionName_GEODATABASE_SDE_1,_GEODBInArchiveWhereClause_GEODATABASE_SDE_1,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1,_GEODBInPersistentConnection_GEODATABASE_SDE_1,_GEODBInBeginSql_GEODATABASE_SDE_1,_GEODBInEndSql_GEODATABASE_SDE_1,DestDataset_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_2,_GEODBOutDefaultZValue_GEODATABASE_SDE_2,_GEODBOutWriterMode_GEODATABASE_SDE_2,_GEODBOutTransaction_GEODATABASE_SDE_2,_GEODBOutTransactionInterval_GEODATABASE_SDE_2,_GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_2,_GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_2,_GEODBOutDumpFailedFeatures_GEODATABASE_SDE_2,_GEODBOutFFSDumpFile_GEODATABASE_SDE_2,_GEODBOutAnnotationUnits_GEODATABASE_SDE_2,_GEODBOutMeasures_GEODATABASE_SDE_2,_GEODBOutMeasureOrigin_GEODATABASE_SDE_2,_GEODBOutMeasureScale_GEODATABASE_SDE_2,_GEODBOutReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutValidateFeatures_GEODATABASE_SDE_2,_GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_2,_GEODBOutPersistentConnection_GEODATABASE_SDE_2,_GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_2,_GEODBOutBeginSql_GEODATABASE_SDE_2,_GEODBOutEndSql_GEODATABASE_SDE_2
 DEFAULT_MACRO DestDataset_GEODATABASE_SDE sde
 GUI TEXT DestDataset_GEODATABASE_SDE Destination Esri ArcSDE Geodatabase Dataset:
 DEFAULT_MACRO OUT_CONNECTION_FILE_GEODATABASE_SDE C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde
@@ -6664,21 +6536,24 @@ DEFAULT_MACRO IgnoreErrors False
 GUI OPTIONAL CHOICE IgnoreErrors True%False Ignore Errors and continue:
 DEFAULT_MACRO SourceDatasetTypes CADDataset
 GUI OPTIONAL TEXT SourceDatasetTypes Enter the Gizinta Source Dataset Type:
-DEFAULT_MACRO gzDebug True
+DEFAULT_MACRO gzDebug False
 GUI OPTIONAL CHOICE gzDebug True%False Enable gzDebug (True/False):
 DEFAULT_MACRO LOG_FILE 
 GUI OPTIONAL FILENAME LOG_FILE Log_Files_(*.log)|*.log|All_Files_(*.*)|*.* Log File:
 DEFAULT_MACRO SourceCoordinateSystem EPSG:2285
 GUI OPTIONAL COORDSYS SourceCoordinateSystem Source Coordinate System:
-DEFAULT_MACRO FEATURE_TYPES Building_Foundation Building_Outline_Point Building_Point Building_Outline_Tilt Building_Roof
-GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES Building_Foundation%Building_Outline_Point%Building_Point%Building_Outline_Tilt%Floor_Poly%Building_Roof%Floor_Area%Building%Campus Feature Types to Write:
-DEFAULT_MACRO SourceDataset_ESRIMSD C:\Vault_Mirror\CADVault\UWS\Floorplans\1041-EIC-3939 UNIV WAY NE\1041Outline.dwg
+DEFAULT_MACRO SourceDataset_ESRIMSD C:\Apps\Gizinta\CADVault\Floorplans\**\*Outline.dwg
 GUI MULTIFILE SourceDataset_ESRIMSD DWG_Files(*.dwg)/DXF_Files(*.dxf)|*.dwg;*.dxf|DWG_Files(*.dwg)|*.dwg|DXF_Files(*.dxf)|*.dxf|All_Files|*.* Source Autodesk AutoCAD DWG/DXF File(s):
 DEFAULT_MACRO FEATURE_TYPES_READ Building_Footprint Building_Roof Building_Outline_Tilt 
 GUI OPTIONAL TEXT FEATURE_TYPES_READ Feature Types to Read:
+DEFAULT_MACRO SourceDataset_GEODATABASE_SDE sde
+GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:
+DEFAULT_MACRO FEATURE_TYPES Building_Foundation Building_Outline_Point Building_Outline_Tilt Building_Roof
+GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES DBO.Building_Roof%DBO.Building_Outline_Tilt%DBO.Building_Foundation%DBO.Building_Outline_Point Feature Types to Read:
 INCLUDE [ if {{$(DestDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'DestDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(OUT_CONNECTION_FILE_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'OUT_CONNECTION_FILE_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(SourceDataset_ESRIMSD)} == {}} { puts_real {Parameter 'SourceDataset_ESRIMSD' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'SourceDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
 #! START_HEADER
 #! WORKSPACE_VERSION 1
 # ============================================================================ 
@@ -6730,13 +6605,12 @@ GUI TITLE GEODATABASE_FILE to GEODATABASE_FILE Translation
 # so a reverse translation may not always be possible.
 #! START_WB_HEADER
 READER_TYPE MULTI_READER
-MULTI_READER_TYPE{0} NULL
-MULTI_READER_FORMAT{0} GEODATABASE_SDE
-MULTI_READER_KEYWORD{0} GEODATABASE_SDE_1
-MULTI_READER_GEN_DIRECTIVES{0} 
-MULTI_READER_TYPE{1} ESRIMSD
-MULTI_READER_KEYWORD{1} ESRIMSD_1
-MULTI_READER_GEN_DIRECTIVES{1} SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,APPLY_WORLD_FILE,yes,_MERGE_SCHEMAS,YES,EXPLODE_MTEXT,yes,USE_BLOCK_LAYER_INFO,no,RESOLVE_BLOCKS,yes,READ_AS_2_5D,no,USE_SEARCH_ENVELOPE,NO,VISIBLE_ATTRIBUTES_AS_TEXT,yes,IGNORE_UCS,no,EXPOSE_ATTRS_GROUP,,STORE_INSERT_POINT,no,ESRIMSD_EXPOSE_FORMAT_ATTRS,,CLIP_TO_ENVELOPE,NO,USE_BLOCK_HEADER_LAYER,yes,DYNAMIC_WORKFLOW,yes,READ_PAPER_SPACE,no,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,SIMPLE_DONUT_BUILD_HATCHES,YES
+MULTI_READER_TYPE{0} ESRIMSD
+MULTI_READER_KEYWORD{0} ESRIMSD_1
+MULTI_READER_GEN_DIRECTIVES{0} SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,APPLY_WORLD_FILE,yes,_MERGE_SCHEMAS,YES,EXPLODE_MTEXT,yes,USE_BLOCK_LAYER_INFO,no,RESOLVE_BLOCKS,yes,READ_AS_2_5D,no,USE_SEARCH_ENVELOPE,NO,VISIBLE_ATTRIBUTES_AS_TEXT,yes,IGNORE_UCS,no,EXPOSE_ATTRS_GROUP,,STORE_INSERT_POINT,no,ESRIMSD_EXPOSE_FORMAT_ATTRS,,CLIP_TO_ENVELOPE,NO,USE_BLOCK_HEADER_LAYER,yes,DYNAMIC_WORKFLOW,yes,READ_PAPER_SPACE,no,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,SIMPLE_DONUT_BUILD_HATCHES,YES
+MULTI_READER_TYPE{1} NULL
+MULTI_READER_FORMAT{1} GEODATABASE_SDE
+MULTI_READER_KEYWORD{1} GEODATABASE_SDE_1
 WRITER_TYPE MULTI_WRITER
 MULTI_WRITER_DATASET_ORDER BY_ID
 MULTI_WRITER_FIRST_WRITER_ID 0
@@ -6752,272 +6626,9 @@ FACTORY_DEF * BranchingFactory                                         \
 
 #! END_WB_HEADER
 #! START_WB_HEADER
-MACRO WB_KEYWORD "GEODATABASE_SDE_1"
-FACTORY_DEF * TeeFactory                                               \
-  FACTORY_NAME "Source Catcher 0"                                      \
-  INPUT FEATURE_TYPE *                                                 \
-  OUTPUT FEATURE_TYPE *
-
-#! END_WB_HEADER
-#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
-# ============================================================================
-# The following GUI line prompts for a source dataset, sometimes this is not
-# used by SDE.
-# The dataset this mapping file was generated from was:
-#! END_SOURCE_HEADER
-#! START_WB_HEADER
-DEFAULT_MACRO SourceDataset
-INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
- puts {DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(SourceDataset)}     \
- } ]
-#! END_WB_HEADER
-#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
-DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(DestDataset_GEODATABASE_SDE)
-GUI TEXT SourceDataset_GEODATABASE_SDE_1 Source Esri ArcSDE Geodatabase Dataset:
-# ============================================================================
-# Reader connection file stuff.
-# If you manually change this value for whether or not to use connection files,
-# you must also make sure the correct directives appear below this to support your
-# choice.
-# i.e. The GEODB_SDE_CONNECTION_FILE directive should exist and not
-# be commented if you set _GEODBInUsingConnFile to YES.
-# _GEODBInUsingConnFile
-DEFAULT_MACRO _GEODBInUsingConnFile_GEODATABASE_SDE_1 no
-#=============================================================================
-# READER CONNECTION PARAMETERS: Either these or the connection file should be specified.
-# ============================================================================
-# END OF CONNECTION PARAMETERS
-#==============================================================================
-# Translation flags.
-#
-# =============================================================================
-#
-DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 $(OUT_CONNECTION_FILE_GEODATABASE_SDE)
-GUI FILENAME_MUSTEXIST GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 Connection File:
-GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
-# ============================================================================
-# The following GUI line prompts for the name of the host machine on which
-# the SDE Server runs.
-DEFAULT_MACRO GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1
-GEODATABASE_SDE_1_SERVER "$(GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1)"
-# ============================================================================
-# The following GUI line prompts for the username to use for
-# accessing the SDE dataset.
-DEFAULT_MACRO GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1
-GEODATABASE_SDE_1_USERID "$(GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1)"
-# ============================================================================
-# The following GUI line prompts for the user password.
-DEFAULT_MACRO GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1
-GEODATABASE_SDE_1_PASSWORD "$(GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1)"
-# ============================================================================
-# The following GUI line prompts for the instance
-DEFAULT_MACRO GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1 
-GEODATABASE_SDE_1_INSTANCE "$(GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1)"
-# ============================================================================
-GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
-# ============================================================================
-# The following GUI line prompts for the version.
-# ========================================================================
-# The following GUI line prompts for the historical version name.
-# ========================================================================
-# The following GUI line prompts for the historical version timestamp.
-# ========================================================================
-# ========================================================================
-# ========================================================================
-DEFAULT_MACRO GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 
-GEODATABASE_SDE_1_WHERE "$(GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1)"
-GUI OPTIONAL TEXT GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 WHERE Clause:
-# ========================================================================
-# Determines whether non-spatial data, such as tables, subtypes, domains,
-# and relationship classes, get translated
-DEFAULT_MACRO GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 no
-GEODATABASE_SDE_1_TRANSLATE_SPATIAL_DATA_ONLY "$(GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1)"
-GUI CHECKBOX GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 yes%no Spatial Data Only
-# ========================================================================
-# Determines whether to resolve domains
-DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 no
-GEODATABASE_SDE_1_RESOLVE_DOMAINS "$(GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1)"
-GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 yes%no Resolve Domains
-# ========================================================================
-# Determines whether to resolve the subtype associated with a feature to the
-# text description linked to the subtype value. The text description will
-# be added as an attribute on the feature.
-DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes
-GEODATABASE_SDE_1_RESOLVE_SUBTYPE_NAMES "$(GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1)"
-GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes%no Resolve Subtypes
-# ========================================================================
-# Determines whether to ignore the network info associated with a feature
-# coming from a network feature class. When set to 'yes', junctions will be
-# treated as point features, and edges will be treated as polyline features,
-# with the geodb_type being set to geodb_point and geodb_polyline, respectively.
-# Caution should be taken when changing the value for this keyword to a different
-# value than was specified when creating the mapping file/workspace.
-DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes
-GEODATABASE_SDE_1_IGNORE_NETWORK_INFO "$(GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1)"
-GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes%no Ignore Network Info
-# ========================================================================
-# Determines whether to ignore the relationship info associated with a feature
-# coming from a feature class containing relationships. When set to 'yes', simple
-# relationships will not be read, and attributed relationships will be read as
-# tables. Caution should be taken when changing the value for this keyword to a
-# different value than was specified when creating the mapping file/workspace.
-DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes
-GEODATABASE_SDE_1_IGNORE_RELATIONSHIP_INFO "$(GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1)"
-GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes%no Ignore Relationship Info
-# ========================================================================
-# Determines whether complex edge features should be split up and each edge
-# element read as a separate feature. The default behaviour is to treat an
-# entire edge *feature* as an FME feature, rather than an edge *element* as an
-# FME feature. Returning edge elements ensures that all network connectivity
-# information on complex edges is read.
-DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 no
-GEODATABASE_SDE_1_SPLIT_COMPLEX_EDGES "$(GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1)"
-GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 yes%no Split Complex Edges
-#==============================================================================
-# Determines whether annotation features should be split up and each part
-# element read as a separate feature. The default behaviour is to treat an
-# entire annotation *feature* as an FME feature, rather than an annotation
-# *element* as an FME feature. Returning edge elements ensures that all
-# rotation and positional information for each element is preserved.
-DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 no
-GEODATABASE_SDE_1_SPLIT_MULTI_PART_ANNOS "$(GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1)"
-GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 yes%no Split Multi-Part Annotations
-# Include this file in source setting section to add native search envelope processing
-# Zero as a default means we don't do any search -- this makes workbench happier
-# ===========================================================================
-DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 0
-GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1)"
-GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 Minimum X:
-# ===========================================================================
-DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 0
-GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1)"
-GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 Minimum Y:
-# ===========================================================================
-DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 0
-GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1)"
-GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 Maximum X:
-# ===========================================================================
-DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 0
-GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1)"
-GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 Maximum Y:
-# ===========================================================================
-DEFAULT_MACRO GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 NO
-GEODATABASE_SDE_1_CLIP_TO_ENVELOPE "$(GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1)"
-GUI OPTIONAL CHECKBOX GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 YES%NO Clip to Search Envelope
-#==============================================================================
-# The following specifies that complex representations for annotation should
-# be split into simpler representations.
-DEFAULT_MACRO _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 no
-GUI CHOICE _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 yes%no Split Complex Annotations:
-GEODATABASE_SDE_1_SPLIT_COMPLEX_ANNOS $(_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1)
-#==============================================================================
-# The following specifies whether to keep (YES) or clean up (NO) Esri's
-# multipatch texture caches.
-DEFAULT_MACRO _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes
-GUI CHOICE _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes%no Cache Multipatch Textures:
-GEODATABASE_SDE_1_CACHE_MULTIPATCH_TEXTURES $(_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1)
-# ============================================================================
-# Search Envelope Coordinate System
-DEFAULT_MACRO _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 
-GUI OPTIONAL COORDSYS _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 Search Envelope Coordinate System:
-GEODATABASE_SDE_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1)"
-# ========================================================================
-# The following determines whether to vectorize arcs. If SPLIT_AT_ARCS
-# is set to yes, then arcs do not get vectorized and lines/polygons
-# containing arcs get split up into line segments and arc segments.
-#
-# Update: This keyword is not applicable when using rich geometry. Since
-# all new mapping files/workspaces have FME_USE_RICH_GEOMETRY set to YES then
-# we do not need to expose this keyword.
-#DEFAULT_MACRO _GEODBInSplitAtArcs no
-#DEFAULT_MACRO _GEODBInSplitAtArcs NO
-#GUI OPTIONAL CHOICE _GEODBInSplitAtArcs yes%no Split at Arcs
-#GEODATABASE_SDE_SPLIT_AT_ARCS "$(_GEODBInSplitAtArcs_GEODATABASE_SDE_1)"
-#
-# ========================================================================
-# The following defines the search feature for the query. It defines an
-# arbitrarily complex search feature as a spatial contraint. It is in the
-# form <keyword>_SEARCH_FEATURE [<xCoord> <yCoord>]+.
-DEFAULT_MACRO _GEODBInSearchFeature_GEODATABASE_SDE_1 
-GUI OPTIONAL TEXT _GEODBInSearchFeature_GEODATABASE_SDE_1 Search Feature:
-GEODATABASE_SDE_1_SEARCH_FEATURE $(_GEODBInSearchFeature_GEODATABASE_SDE_1)
-# ========================================================================
-# Determines whether the spatial component or the attribute component of a
-# query is performed first. This is only applicable when both spatial and
-# non-spatial searches are being performed.
-DEFAULT_MACRO _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST
-GUI OPTIONAL CHOICE _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST%ATTRIBUTE_FIRST Search Order:
-GEODATABASE_SDE_1_SEARCH_ORDER $(_GEODBInSearchOrder_GEODATABASE_SDE_1)
-# ========================================================================
-# Determines which type of search method to use. This keyword is only applicable
-# when either the keyword SEARCH_ENVELOPE or the keyword SEARCH_FEATURE is specified.
-DEFAULT_MACRO _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS
-GUI OPTIONAL CHOICE _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS%GEODB_ENVELOPE_INTERSECTS%GEODB_TOUCHES%GEODB_OVERLAPS%GEODB_CROSSES%GEODB_WITHIN%GEODB_CONTAINS Search Method:
-GEODATABASE_SDE_1_SEARCH_METHOD $(_GEODBInSearchMethod_GEODATABASE_SDE_1)
-# ========================================================================
-# The following specifies the name of a child version to be created. After
-# the version has been created, tables will be read using this version
-# rather than the version specified by the VERSION keyword.
-DEFAULT_MACRO _GEODBInChildVersionName_GEODATABASE_SDE_1 
-GUI OPTIONAL TEXT _GEODBInChildVersionName_GEODATABASE_SDE_1 Child Version Name:
-GEODATABASE_SDE_1_CHILD_VERSION_NAME $(_GEODBInChildVersionName_GEODATABASE_SDE_1)
-# ========================================================================
-# The following determines whether to read features from the geodatabase
-# tables/feature classes or to read metadata from those tables/feature
-# classes.
-DEFAULT_MACRO _GEODBInFeatureReadMode_GEODATABASE_SDE_1 Features
-GUI CHOICE _GEODBInFeatureReadMode_GEODATABASE_SDE_1 Features%Metadata Feature Read Mode:
-GEODATABASE_SDE_1_FEATURE_READ_MODE "$(_GEODBInFeatureReadMode_GEODATABASE_SDE_1)"
-# ========================================================================
-# The following specifies the archive where clause to be used when retrieving
-# features from an archived table in geodb.
-DEFAULT_MACRO _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 
-GUI OPTIONAL TEXT _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 Archive WHERE Clause:
-GEODATABASE_SDE_1_ARCHIVE_WHERE $(_GEODBInArchiveWhereClause_GEODATABASE_SDE_1)
-# ========================================================================
-# The following specifies that simple geometry should be checked for
-# when reading features.
-DEFAULT_MACRO _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 no
-GUI CHOICE _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 yes%no Check for Simple Geometry:
-GEODATABASE_SDE_1_CHECK_SIMPLE_GEOM $(_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1)
-# ========================================================================
-# The following specifies whether feature-linked annotations should
-# be merged onto the main feature as a text list attribute when reading.
-DEFAULT_MACRO _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 no
-GUI CHOICE _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 yes%no Merge Feature Linked Annotations:
-GEODATABASE_SDE_1_MERGE_FEAT_LINKED_ANNOS $(_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1)
-#==============================================================================
-# Determines whether the connection should persist after the reader/writer
-# has been shut down. The default is 'no'.
-DEFAULT_MACRO _GEODBInPersistentConnection_GEODATABASE_SDE_1 no
-GUI CHOICE _GEODBInPersistentConnection_GEODATABASE_SDE_1 yes%no Make Connection Persistent
-GEODATABASE_SDE_1_PERSISTENT_CONNECTION $(_GEODBInPersistentConnection_GEODATABASE_SDE_1)
-# ==============================================================================
-# The following specifies an SQL command to execute before opening the first
-# Geodatabase table.
-DEFAULT_MACRO _GEODBInBeginSql_GEODATABASE_SDE_1 
-GUI OPTIONAL TEXT_EDIT_SQL _GEODBInBeginSql_GEODATABASE_SDE_1 SQL Statement To Execute Before Translation:
-GEODATABASE_SDE_1_BEGIN_SQL{0} "$(_GEODBInBeginSql_GEODATABASE_SDE_1)"
-# ==============================================================================
-# The following specifies an SQL command to execute after closing all the
-# Geodatabase tables.
-DEFAULT_MACRO _GEODBInEndSql_GEODATABASE_SDE_1 
-GUI OPTIONAL TEXT_EDIT_SQL _GEODBInEndSql_GEODATABASE_SDE_1 SQL Statement To Execute After Translation:
-GEODATABASE_SDE_1_END_SQL{0} "$(_GEODBInEndSql_GEODATABASE_SDE_1)"
-GEODATABASE_SDE_1_DATASET "$(SourceDataset_GEODATABASE_SDE_1)"
-#! END_SOURCE_HEADER
-#! START_WB_HEADER
-FACTORY_DEF * BranchingFactory                                         \
-  FACTORY_NAME "Source Brancher 0"                                     \
-  INPUT FEATURE_TYPE *                                                 \
-    @SupplyAttributes(multi_reader_type,GEODATABASE_SDE)               \
-  TARGET_FACTORY "Branching Catcher"
-
-#! END_WB_HEADER
-#! START_WB_HEADER
 MACRO WB_KEYWORD "ESRIMSD_1"
 FACTORY_DEF * TeeFactory                                               \
-  FACTORY_NAME "Source Catcher 1"                                      \
+  FACTORY_NAME "Source Catcher 0"                                      \
   INPUT FEATURE_TYPE *                                                 \
   OUTPUT FEATURE_TYPE *
 
@@ -7243,9 +6854,274 @@ ESRIMSD_1_DATASET "$(SourceDataset_ESRIMSD_1)"
 #! END_SOURCE_HEADER
 #! START_WB_HEADER
 FACTORY_DEF * BranchingFactory                                         \
-  FACTORY_NAME "Source Brancher 1"                                     \
+  FACTORY_NAME "Source Brancher 0"                                     \
   INPUT FEATURE_TYPE *                                                 \
     @SupplyAttributes(multi_reader_type,ESRIMSD)                       \
+  TARGET_FACTORY "Branching Catcher"
+
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEODATABASE_SDE_1"
+FACTORY_DEF * TeeFactory                                               \
+  FACTORY_NAME "Source Catcher 1"                                      \
+  INPUT FEATURE_TYPE *                                                 \
+  OUTPUT FEATURE_TYPE *
+
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
+# ============================================================================
+# The following GUI line prompts for a source dataset, sometimes this is not
+# used by SDE.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
+DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(SourceDataset_GEODATABASE_SDE)
+GUI TEXT SourceDataset_GEODATABASE_SDE_1 Source Esri ArcSDE Geodatabase Dataset:
+# ============================================================================
+# Reader connection file stuff.
+# If you manually change this value for whether or not to use connection files,
+# you must also make sure the correct directives appear below this to support your
+# choice.
+# i.e. The GEODB_SDE_CONNECTION_FILE directive should exist and not
+# be commented if you set _GEODBInUsingConnFile to YES.
+# _GEODBInUsingConnFile
+DEFAULT_MACRO _GEODBInUsingConnFile_GEODATABASE_SDE_1 no
+#=============================================================================
+# READER CONNECTION PARAMETERS: Either these or the connection file should be specified.
+# ============================================================================
+# END OF CONNECTION PARAMETERS
+#==============================================================================
+# Translation flags.
+#
+# =============================================================================
+#
+DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 $(OUT_CONNECTION_FILE_GEODATABASE_SDE)
+GUI FILENAME_MUSTEXIST GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 Connection File:
+GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the name of the host machine on which
+# the SDE Server runs.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_SERVER "$(GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the username to use for
+# accessing the SDE dataset.
+DEFAULT_MACRO GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_USERID "$(GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the user password.
+DEFAULT_MACRO GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_PASSWORD "$(GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the instance
+DEFAULT_MACRO GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_INSTANCE "$(GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1)"
+# ============================================================================
+GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the version.
+# ========================================================================
+# The following GUI line prompts for the historical version name.
+# ========================================================================
+# The following GUI line prompts for the historical version timestamp.
+# ========================================================================
+# ========================================================================
+# ========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_WHERE "$(GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1)"
+GUI OPTIONAL TEXT GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 WHERE Clause:
+# ========================================================================
+# Determines whether non-spatial data, such as tables, subtypes, domains,
+# and relationship classes, get translated
+DEFAULT_MACRO GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_TRANSLATE_SPATIAL_DATA_ONLY "$(GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 yes%no Spatial Data Only
+# ========================================================================
+# Determines whether to resolve domains
+DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_RESOLVE_DOMAINS "$(GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 yes%no Resolve Domains
+# ========================================================================
+# Determines whether to resolve the subtype associated with a feature to the
+# text description linked to the subtype value. The text description will
+# be added as an attribute on the feature.
+DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_RESOLVE_SUBTYPE_NAMES "$(GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes%no Resolve Subtypes
+# ========================================================================
+# Determines whether to ignore the network info associated with a feature
+# coming from a network feature class. When set to 'yes', junctions will be
+# treated as point features, and edges will be treated as polyline features,
+# with the geodb_type being set to geodb_point and geodb_polyline, respectively.
+# Caution should be taken when changing the value for this keyword to a different
+# value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_IGNORE_NETWORK_INFO "$(GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes%no Ignore Network Info
+# ========================================================================
+# Determines whether to ignore the relationship info associated with a feature
+# coming from a feature class containing relationships. When set to 'yes', simple
+# relationships will not be read, and attributed relationships will be read as
+# tables. Caution should be taken when changing the value for this keyword to a
+# different value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_IGNORE_RELATIONSHIP_INFO "$(GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes%no Ignore Relationship Info
+# ========================================================================
+# Determines whether complex edge features should be split up and each edge
+# element read as a separate feature. The default behaviour is to treat an
+# entire edge *feature* as an FME feature, rather than an edge *element* as an
+# FME feature. Returning edge elements ensures that all network connectivity
+# information on complex edges is read.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_SPLIT_COMPLEX_EDGES "$(GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 yes%no Split Complex Edges
+#==============================================================================
+# Determines whether annotation features should be split up and each part
+# element read as a separate feature. The default behaviour is to treat an
+# entire annotation *feature* as an FME feature, rather than an annotation
+# *element* as an FME feature. Returning edge elements ensures that all
+# rotation and positional information for each element is preserved.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_SPLIT_MULTI_PART_ANNOS "$(GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 yes%no Split Multi-Part Annotations
+# ========================================================================
+# The following determines whether to read features from the geodatabase
+# tables/feature classes or to read metadata from those tables/feature
+# classes.
+DEFAULT_MACRO GEODATABASE_SDE_IN_FEATURE_READ_MODE_GEODATABASE_SDE_1 Features
+GEODATABASE_SDE_1_FEATURE_READ_MODE "$(GEODATABASE_SDE_IN_FEATURE_READ_MODE_GEODATABASE_SDE_1)"
+DEFAULT_MACRO GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_EXPOSE_ATTRS_GROUP "$(GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1)"
+GUI DISCLOSUREGROUP GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1 GEODATABASE_SDE_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 NO
+GEODATABASE_SDE_1_CLIP_TO_ENVELOPE "$(GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 YES%NO Clip to Search Envelope
+#==============================================================================
+# The following specifies that complex representations for annotation should
+# be split into simpler representations.
+DEFAULT_MACRO _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 yes%no Split Complex Annotations:
+GEODATABASE_SDE_1_SPLIT_COMPLEX_ANNOS $(_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1)
+#==============================================================================
+# The following specifies whether to keep (YES) or clean up (NO) Esri's
+# multipatch texture caches.
+DEFAULT_MACRO _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes
+GUI CHOICE _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes%no Cache Multipatch Textures:
+GEODATABASE_SDE_1_CACHE_MULTIPATCH_TEXTURES $(_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1)
+# ============================================================================
+# Search Envelope Coordinate System
+DEFAULT_MACRO _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 
+GUI OPTIONAL COORDSYS _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 Search Envelope Coordinate System:
+GEODATABASE_SDE_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1)"
+# ========================================================================
+# The following determines whether to vectorize arcs. If SPLIT_AT_ARCS
+# is set to yes, then arcs do not get vectorized and lines/polygons
+# containing arcs get split up into line segments and arc segments.
+#
+# Update: This keyword is not applicable when using rich geometry. Since
+# all new mapping files/workspaces have FME_USE_RICH_GEOMETRY set to YES then
+# we do not need to expose this keyword.
+#DEFAULT_MACRO _GEODBInSplitAtArcs no
+#DEFAULT_MACRO _GEODBInSplitAtArcs NO
+#GUI OPTIONAL CHOICE _GEODBInSplitAtArcs yes%no Split at Arcs
+#GEODATABASE_SDE_SPLIT_AT_ARCS "$(_GEODBInSplitAtArcs_GEODATABASE_SDE_1)"
+#
+# ========================================================================
+# The following defines the search feature for the query. It defines an
+# arbitrarily complex search feature as a spatial contraint. It is in the
+# form <keyword>_SEARCH_FEATURE [<xCoord> <yCoord>]+.
+DEFAULT_MACRO _GEODBInSearchFeature_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInSearchFeature_GEODATABASE_SDE_1 Search Feature:
+GEODATABASE_SDE_1_SEARCH_FEATURE $(_GEODBInSearchFeature_GEODATABASE_SDE_1)
+# ========================================================================
+# Determines whether the spatial component or the attribute component of a
+# query is performed first. This is only applicable when both spatial and
+# non-spatial searches are being performed.
+DEFAULT_MACRO _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST
+GUI OPTIONAL CHOICE _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST%ATTRIBUTE_FIRST Search Order:
+GEODATABASE_SDE_1_SEARCH_ORDER $(_GEODBInSearchOrder_GEODATABASE_SDE_1)
+# ========================================================================
+# Determines which type of search method to use. This keyword is only applicable
+# when either the keyword SEARCH_ENVELOPE or the keyword SEARCH_FEATURE is specified.
+DEFAULT_MACRO _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS
+GUI OPTIONAL CHOICE _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS%GEODB_ENVELOPE_INTERSECTS%GEODB_TOUCHES%GEODB_OVERLAPS%GEODB_CROSSES%GEODB_WITHIN%GEODB_CONTAINS Search Method:
+GEODATABASE_SDE_1_SEARCH_METHOD $(_GEODBInSearchMethod_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies the name of a child version to be created. After
+# the version has been created, tables will be read using this version
+# rather than the version specified by the VERSION keyword.
+DEFAULT_MACRO _GEODBInChildVersionName_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInChildVersionName_GEODATABASE_SDE_1 Child Version Name:
+GEODATABASE_SDE_1_CHILD_VERSION_NAME $(_GEODBInChildVersionName_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies the archive where clause to be used when retrieving
+# features from an archived table in geodb.
+DEFAULT_MACRO _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 Archive WHERE Clause:
+GEODATABASE_SDE_1_ARCHIVE_WHERE $(_GEODBInArchiveWhereClause_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies that simple geometry should be checked for
+# when reading features.
+DEFAULT_MACRO _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 yes%no Check for Simple Geometry:
+GEODATABASE_SDE_1_CHECK_SIMPLE_GEOM $(_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies whether feature-linked annotations should
+# be merged onto the main feature as a text list attribute when reading.
+DEFAULT_MACRO _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 yes%no Merge Feature Linked Annotations:
+GEODATABASE_SDE_1_MERGE_FEAT_LINKED_ANNOS $(_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1)
+#==============================================================================
+# Determines whether the connection should persist after the reader/writer
+# has been shut down. The default is 'no'.
+DEFAULT_MACRO _GEODBInPersistentConnection_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBInPersistentConnection_GEODATABASE_SDE_1 yes%no Make Connection Persistent
+GEODATABASE_SDE_1_PERSISTENT_CONNECTION $(_GEODBInPersistentConnection_GEODATABASE_SDE_1)
+# ==============================================================================
+# The following specifies an SQL command to execute before opening the first
+# Geodatabase table.
+DEFAULT_MACRO _GEODBInBeginSql_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBInBeginSql_GEODATABASE_SDE_1 SQL Statement To Execute Before Translation:
+GEODATABASE_SDE_1_BEGIN_SQL{0} "$(_GEODBInBeginSql_GEODATABASE_SDE_1)"
+# ==============================================================================
+# The following specifies an SQL command to execute after closing all the
+# Geodatabase tables.
+DEFAULT_MACRO _GEODBInEndSql_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBInEndSql_GEODATABASE_SDE_1 SQL Statement To Execute After Translation:
+GEODATABASE_SDE_1_END_SQL{0} "$(_GEODBInEndSql_GEODATABASE_SDE_1)"
+GEODATABASE_SDE_1_DATASET "$(SourceDataset_GEODATABASE_SDE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+FACTORY_DEF * BranchingFactory                                         \
+  FACTORY_NAME "Source Brancher 1"                                     \
+  INPUT FEATURE_TYPE *                                                 \
+    @SupplyAttributes(multi_reader_type,GEODATABASE_SDE)               \
   TARGET_FACTORY "Branching Catcher"
 
 #! END_WB_HEADER
@@ -7391,7 +7267,7 @@ GEODATABASE_SDE_2_TRANSACTION $(_GEODBOutTransaction_GEODATABASE_SDE_2)
 # ============================================================================
 # This option specifies how many features will be written to the Geodatabase on
 # each transaction.
-DEFAULT_MACRO _GEODBOutTransactionInterval_GEODATABASE_SDE_2 1000
+DEFAULT_MACRO _GEODBOutTransactionInterval_GEODATABASE_SDE_2 10000
 GUI OPTIONAL INTEGER _GEODBOutTransactionInterval_GEODATABASE_SDE_2 Features to Write Per Transaction:
 GEODATABASE_SDE_2_TRANSACTION_INTERVAL $(_GEODBOutTransactionInterval_GEODATABASE_SDE_2)
 # ============================================================================
@@ -7512,16 +7388,16 @@ FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
 MAPPING_FILE_ID GizintaLoader
 LOG_FILTER_MASK -1
-DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_SDE_1 GEODATABASE_SDE_1
 DEFAULT_MACRO DATASET_KEYWORD_ESRIMSD_1 ESRIMSD_1
+DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_SDE_1 GEODATABASE_SDE_1
 DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_SDE_2 GEODATABASE_SDE_2
 # -------------------------------------------------------------------------
 
-GEODATABASE_SDE_1_READER_META_ATTRIBUTES fme_feature_type
+ESRIMSD_1_READER_META_ATTRIBUTES fme_feature_type
 
 # -------------------------------------------------------------------------
 
-ESRIMSD_1_READER_META_ATTRIBUTES fme_feature_type
+GEODATABASE_SDE_1_READER_META_ATTRIBUTES fme_feature_type
 
 # -------------------------------------------------------------------------
 
@@ -7563,11 +7439,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer    INPUT  FEATURE_TYPE
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCopier    INPUT  FEATURE_TYPE AttributeExposer_OUTPUT    OUTPUT FEATURE_TYPE AttributeCopier_OUTPUT         @CopyAttributes(Layer,autocad_layer,Handle,autocad_entity_handle,Entity,autocad_entity,Color,autocad_layer_color,Linetype,autocad_layer_linetype,LineWt,autocad_layer_lineweight,Elevation,autocad_elevation,DRAWING,fme_basename,SOURCEDWG,fme_basename,SOURCEID,autocad_entity_handle,buildingid,FACNUM)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE AttributeCopier_OUTPUT    TEST @EvaluateExpression(STRING_ENCODED,$(FEATURE_TYPES_READ$encode),Tester) CONTAINS @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>fme_feature_type<closeparen>,Tester) ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED
+FACTORY_DEF * TestFactory    FACTORY_NAME Tester    INPUT  FEATURE_TYPE AttributeExposer_OUTPUT    TEST @EvaluateExpression(STRING_ENCODED,$(FEATURE_TYPES_READ$encode),Tester) CONTAINS @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>fme_feature_type<closeparen>,Tester) ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE Tester_PASSED
 # -------------------------------------------------------------------------
 
 # Wipe out the source setting if it was untouched from the default setting
@@ -7600,20 +7472,28 @@ FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_2_TestFactory_0 INPUT FEATURE_
 FACTORY_DEF * TestFactory FACTORY_NAME TestFilter_2_TestFactory_1 INPUT FEATURE_TYPE TestFilter_2_TESTFILTERINPUTLINE_1 TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>fme_feature_type<closeparen>,TestFilter_2) = Building_Outline_Point ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilter_2_Building_Outline_Point OUTPUT FAILED FEATURE_TYPE TestFilter_2_TESTFILTERINPUTLINE_2
 FACTORY_DEF * TeeFactory FACTORY_NAME TestFilter_2_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE TestFilter_2_TESTFILTERINPUTLINE_2 OUTPUT FEATURE_TYPE TestFilter_2_<lt>UNFILTERED<gt>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter_2 Building_Outline_Point Output Nuker"   INPUT FEATURE_TYPE TestFilter_2_Building_Outline_Point
+FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter_2 <lt>UNFILTERED<gt> Output Nuker"   INPUT FEATURE_TYPE TestFilter_2_<lt>UNFILTERED<gt>
 # -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory   FACTORY_NAME "gzBuildingOutlineTilt INPUT Input Collector"   INPUT FEATURE_TYPE TestFilter_2_Building_Outline   OUTPUT FEATURE_TYPE gzBuildingOutlineTilt_INPUT
+
+# Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
+
+READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
+FACTORY_DEF * TeeFactory    FACTORY_NAME bldg    INPUT  FEATURE_TYPE TestFilter_2_Building_Outline    OUTPUT FEATURE_TYPE bldg_OUTPUT
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "gzBuildingOutlineTilt INPUT Input Collector"   INPUT FEATURE_TYPE bldg_OUTPUT   OUTPUT FEATURE_TYPE gzBuildingOutlineTilt_INPUT
 MACRO gzBuildingOutline_WORKSPACE_NAME gzBuildingOutlineTilt
 MACRO $(gzBuildingOutline_WORKSPACE_NAME)_XFORMER_NAME gzBuildingOutlineTilt
 MACRO $(gzBuildingOutline_WORKSPACE_NAME)_TRANSFORMER_GROUP 
 MACRO $(gzBuildingOutline_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
 MACRO $(gzBuildingOutline_WORKSPACE_NAME)_SUB_DOC_NAME gzBuildingOutline
-MACRO $(gzBuildingOutline_WORKSPACE_NAME)_BUILDINGID <at>Value<openparen>buildingid<closeparen>
+MACRO $(gzBuildingOutline_WORKSPACE_NAME)_BUILDINGID <at>Value<openparen>BUILDINGID<closeparen>
 DEFAULT_MACRO gzBuildingOutline_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(gzBuildingOutline_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(gzBuildingOutline_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT1411768594 Input Splitter"   INPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_0_kUrtDYTfmR4=" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,BUILDINGID,$($(gzBuildingOutline_WORKSPACE_NAME)_BUILDINGID), FEATURE_TYPE)"   OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_1_kUrtDYTfmR4=" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,BUILDINGID,$($(gzBuildingOutline_WORKSPACE_NAME)_BUILDINGID), FEATURE_TYPE)"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT1414074235 Input Splitter"   INPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT"   OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_0_kUrtDYTfmR4=" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,BUILDINGID,$($(gzBuildingOutline_WORKSPACE_NAME)_BUILDINGID), FEATURE_TYPE)"   OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_1_kUrtDYTfmR4=" "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,BUILDINGID,$($(gzBuildingOutline_WORKSPACE_NAME)_BUILDINGID), FEATURE_TYPE)"
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * ChoppingFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_Chopper_2_Areas    INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_1_kUrtDYTfmR4="    MAX_VERTICES 2    CHOP_POLYGONS    OUTPUT CHOPPED FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_Chopper_2_CHOPPED"
+FACTORY_DEF * ChoppingFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_Chopper_2_Areas    INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_0_kUrtDYTfmR4="    MAX_VERTICES 2    CHOP_POLYGONS    OUTPUT CHOPPED FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_Chopper_2_CHOPPED"
 
 # -------------------------------------------------------------------------
 
@@ -7621,11 +7501,11 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_Len
 
 # -------------------------------------------------------------------------
 
-DEFAULT_MACRO __$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_c51f788b_fc6b_4849_8d8c_59959bb2b3eb6_GROUP_BY
-
+DEFAULT_MACRO __$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_ec5a11e3_eb16_4bae_a274_951af07c90de0_GROUP_BY
+MACRO __$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_ec5a11e3_eb16_4bae_a274_951af07c90de0_GROUP_BY BUILDINGID
 DYNAMIC_FUNCTION_CONFIGURATION Python FMEOBJECTS
 DYNAMIC_FUNCTION_CONFIGURATION Python import StatisticsCalculator
-DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    '$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2',{     'GROUP_BY':FME_MacroValues['__$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_c51f788b_fc6b_4849_8d8c_59959bb2b3eb6_GROUP_BY'],     'STATS_ATTR':'_length',     'MIN_ATTR':'_min',     'MAX_ATTR':'_max',     'COUNT_ATTR':'_count',     'NUMERIC_ATTR':'_numeric_count',     'SUM_ATTR':'_sum',     'RANGE_ATTR':'_range',     'MEAN_ATTR':'_mean',     'MEDIAN_ATTR':'_median',     'STDEV_ATTR':'_stdev',     'MODE_ATTR':'_mode',     None:None})"
+DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    '$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2',{     'GROUP_BY':FME_MacroValues['__$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_ec5a11e3_eb16_4bae_a274_951af07c90de0_GROUP_BY'],     'STATS_ATTR':'_length',     'MIN_ATTR':'_min',     'MAX_ATTR':'_max',     'COUNT_ATTR':'_count',     'NUMERIC_ATTR':'_numeric_count',     'SUM_ATTR':'_sum',     'RANGE_ATTR':'_range',     'MEAN_ATTR':'_mean',     'MEDIAN_ATTR':'_median',     'STDEV_ATTR':'_stdev',     'MODE_ATTR':'_mode',     None:None})"
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_Processor    INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_LengthCalculator_2_OUTPUT"    OUTPUT FEATURE_TYPE __ORIGINAL__         @Python(StatisticsCalculator.recordFeature,$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2)
 FACTORY_DEF * CreationFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_Creator     CREATE_AT_END     NUMBER_TO_CREATE 1     OUTPUT FEATURE_TYPE __SINGLE_GUY__        @SupplyAttributes($(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_SUMMARY_STATS,True)
 FACTORY_DEF * SortFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2_Outputter    INPUT FEATURE_TYPE __ORIGINAL__    OUTPUT SORTED FEATURE_TYPE __ORIGINAL__       @Python(StatisticsCalculator.summarizeStatistics,$(gzBuildingOutline_WORKSPACE_NAME)_StatisticsCalculator_2,__ORIGINAL__)
@@ -7663,7 +7543,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_Exp
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_8    INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_7_OUTPUT"    INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_4_OUTPUT"    OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_8_OUTPUT"         "_angle" "@EvaluateExpression(FLOAT,<at>Value<openparen>_angle<closeparen><space>+<space>90.0,$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_8)"
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_8    INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_4_OUTPUT"    INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_7_OUTPUT"    OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_8_OUTPUT"         "_angle" "@EvaluateExpression(FLOAT,<at>Value<openparen>_angle<closeparen><space>+<space>90.0,$(gzBuildingOutline_WORKSPACE_NAME)_ExpressionEvaluator_8)"
 
 # -------------------------------------------------------------------------
 
@@ -7681,7 +7561,7 @@ FACTORY_DEF * SortFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_So
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * ReferenceFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_FeatureMerger_3    INPUT REFERENCER FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_0_kUrtDYTfmR4="    INPUT REFERENCEE FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_Sorter_2_SORTED"    REFERENCE_INFO ATTRIBUTES    REFERENCEE_FIELDS "BUILDINGID"    REFERENCER_FIELDS "BUILDINGID"    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    BUILD_INCOMPLETE_REFERENCERS No    OUTPUT COMPLETE FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_FeatureMerger_3_COMPLETE"
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_FeatureMerger_3    INPUT REFERENCER FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_INPUT_1_kUrtDYTfmR4="    INPUT REFERENCEE FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_Sorter_2_SORTED"    REFERENCE_INFO ATTRIBUTES    REFERENCEE_FIELDS "BUILDINGID"    REFERENCER_FIELDS "BUILDINGID"    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    BUILD_INCOMPLETE_REFERENCERS No    OUTPUT COMPLETE FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_FeatureMerger_3_COMPLETE"
 
 # -------------------------------------------------------------------------
 
@@ -7711,7 +7591,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_Geo
 
 # -------------------------------------------------------------------------
 FACTORY_DEF * AttrSetFactory FACTORY_NAME $(gzBuildingOutline_WORKSPACE_NAME)_AttributeCreator INPUT  FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_GeometryReplacer_OUTPUT" ATTR BLDGHEIGHT <at>Evaluate<openparen><space>abs<openparen><at>Value<openparen>_y2<closeparen><space>-<space><at>Value<openparen>_y1<closeparen><closeparen><space><closeparen> ATTR CALCROT <at>Value<openparen>_angle<closeparen>    OUTPUT OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_AttributeCreator_OUTPUT" 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzBuildingOutline_WORKSPACE_NAME)_OUTPUT1411768594 Output Collector"   INPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_AttributeCreator_OUTPUT"   OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(gzBuildingOutline_WORKSPACE_NAME)_OUTPUT1414074235 Output Collector"   INPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_AttributeCreator_OUTPUT"   OUTPUT FEATURE_TYPE "$(gzBuildingOutline_WORKSPACE_NAME)_OUTPUT"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(gzBuildingOutline_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzBuildingOutlineTilt OUTPUT Output Renamer/Nuker"   INPUT FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT   OUTPUT FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzBuildingOutlineTilt OUTPUT Splitter"   INPUT FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT   OUTPUT FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT_0_iufh1B0DmpQ=   OUTPUT FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT_1_iufh1B0DmpQ=
@@ -7720,9 +7600,9 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "gzBuildingOutlineTilt OUTPUT Splitter" 
 FACTORY_DEF * TeeFactory    FACTORY_NAME CenterPointReplacer    INPUT  FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT_1_iufh1B0DmpQ=    OUTPUT FEATURE_TYPE CenterPointReplacer_CENTERPOINT         @ConvertToPoint()
 
 # -------------------------------------------------------------------------
-FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator INPUT  FEATURE_TYPE CenterPointReplacer_CENTERPOINT ATTR fme_feature_type Building_Outline_Point ATTR fme_feature_type_name Building_Outline_Point    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator INPUT  FEATURE_TYPE CenterPointReplacer_CENTERPOINT ATTR fme_feature_type Building_Outline_Point    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
 # -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory   FACTORY_NAME "gzSourceTargetQA SourceTargetQA_Input_1 Input Collector"   INPUT FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT_0_iufh1B0DmpQ=   INPUT FEATURE_TYPE TestFilter_2_<lt>UNFILTERED<gt>   INPUT FEATURE_TYPE AttributeCreator_OUTPUT   OUTPUT FEATURE_TYPE gzSourceTargetQA_SourceTargetQA_Input_1
+FACTORY_DEF * TeeFactory   FACTORY_NAME "gzSourceTargetQA SourceTargetQA_Input_1 Input Collector"   INPUT FEATURE_TYPE gzBuildingOutlineTilt_OUTPUT_0_iufh1B0DmpQ=   INPUT FEATURE_TYPE AttributeCreator_OUTPUT   OUTPUT FEATURE_TYPE gzSourceTargetQA_SourceTargetQA_Input_1
 MACRO gzSourceTargetQA_WORKSPACE_NAME gzSourceTargetQA
 MACRO $(gzSourceTargetQA_WORKSPACE_NAME)_XFORMER_NAME gzSourceTargetQA
 MACRO $(gzSourceTargetQA_WORKSPACE_NAME)_TRANSFORMER_GROUP 
@@ -7737,20 +7617,20 @@ MACRO $(gzWriteData_WORKSPACE_NAME)_TRANSFORMER_GROUP
 MACRO $(gzWriteData_WORKSPACE_NAME)___COMPOUND_PARAMETERS 
 MACRO $(gzWriteData_WORKSPACE_NAME)_IgnoreErrors False
 MACRO $(gzWriteData_WORKSPACE_NAME)_HASERRORS @Value(HasErrors)
-MACRO $(gzWriteData_WORKSPACE_NAME)_GroupBy OBJECTID
+MACRO $(gzWriteData_WORKSPACE_NAME)_FLOORID @Value(FLOORID)
 INCLUDE_BUILTIN_CUSTOM_TRANSFORMER_VER gzWriteData:1
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzWriteData gzLogWriter Output Renamer/Nuker"   INPUT FEATURE_TYPE gzWriteData_gzLogWriter   OUTPUT FEATURE_TYPE gzWriteData_gzLogWriter
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzWriteData gzFeatureWriter Output Renamer/Nuker"   INPUT FEATURE_TYPE gzWriteData_gzFeatureWriter   OUTPUT FEATURE_TYPE gzWriteData_gzFeatureWriter
 FACTORY_DEF * TeeFactory   FACTORY_NAME "gzWriteData gzErrorWriter Output Renamer/Nuker"   INPUT FEATURE_TYPE gzWriteData_gzErrorWriter   OUTPUT FEATURE_TYPE gzWriteData_gzErrorWriter
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzFeatureWriter -> NewFeatureType Correlator"    INPUT FEATURE_TYPE gzWriteData_gzFeatureWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @SupplyAttributes(ENCODED,fme_template_feature_type,NewFeatureType)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,NewFeatureType)       @CopyAttributes(ENCODED,__wb_out_feat_type__,fme_feature_type)
+FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzErrorWriter -> gzError Correlator"    INPUT FEATURE_TYPE gzWriteData_gzErrorWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,ACTIVEFLAG,Y, ATTR_SET)"       @SupplyAttributes(ENCODED,__wb_out_feat_type__,gzError)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzLogWriter -> DBO.gzLog Correlator"    INPUT FEATURE_TYPE gzWriteData_gzLogWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,ACTIVEFLAG,Y, ATTR_SET)"       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.gzLog)
+FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzFeatureWriter -> DBO.Building_Outline_Tilt Correlator"    INPUT FEATURE_TYPE gzWriteData_gzFeatureWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @SupplyAttributes(ENCODED,fme_template_feature_type,DBO.Building_Outline_Tilt)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Building_Outline_Tilt)       @CopyAttributes(ENCODED,__wb_out_feat_type__,fme_feature_type)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzErrorWriter -> DBO.gzError Correlator"    INPUT FEATURE_TYPE gzWriteData_gzErrorWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,ACTIVEFLAG,Y, ATTR_SET)"       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.gzError)
+FACTORY_DEF * TeeFactory    FACTORY_NAME "gzWriteData_gzLogWriter -> gzLog Correlator"    INPUT FEATURE_TYPE gzWriteData_gzLogWriter    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,ACTIVEFLAG,Y, ATTR_SET)"       @SupplyAttributes(ENCODED,__wb_out_feat_type__,gzLog)
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
@@ -7759,8 +7639,8 @@ FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   IN
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
 # -------------------------------------------------------------------------
-GEODATABASE_SDE_2_DEF_TEMPLATE NewFeatureType   geodb_type                   {FME_GEN_GEOMETRY}   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   fme_schema_readers           GEODATABASE_SDE_1
+GEODATABASE_SDE_2_DEF gzError   geodb_type                   geodb_table   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   PROCNAME                     char(255)   SOURCENAME                   char(255)   SRCIDFIELD                   char(255)   SRCIDVAL                     char(255)   DATASET                      char(255)   REASON                       char(255)   ERRUSER                      char(255)   ERRTIME                      date   ACTIVEFLAG                   char(255)
 # -------------------------------------------------------------------------
-GEODATABASE_SDE_2_DEF DBO.gzLog   geodb_type                   geodb_table   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   PROCNAME                     char(255)   LOADTIME                     date   LOADNAME                     char(255)   DATASET                      char(255)   COMPLETED                    smallint   LOADUSER                     char(255)   ACTIVEFLAG                   char(255)
+GEODATABASE_SDE_2_DEF_TEMPLATE DBO.Building_Outline_Tilt   geodb_type                   {FME_GEN_GEOMETRY}   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   fme_schema_readers           GEODATABASE_SDE_1   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   CALCROT                      double   SOURCEID                     char(30)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)   BLDGNAME                     char(100)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
 # -------------------------------------------------------------------------
-GEODATABASE_SDE_2_DEF DBO.gzError   geodb_type                   geodb_table   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   PROCNAME                     char(255)   SOURCENAME                   char(255)   SRCIDFIELD                   char(255)   SRCIDVAL                     char(255)   DATASET                      char(255)   REASON                       char(255)   ERRUSER                      char(255)   ERRTIME                      date   ACTIVEFLAG                   char(255)
+GEODATABASE_SDE_2_DEF gzLog   geodb_type                   geodb_table   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   PROCNAME                     char(255)   LOADTIME                     date   LOADNAME                     char(255)   DATASET                      char(255)   COMPLETED                    smallint   LOADUSER                     char(255)   ACTIVEFLAG                   char(255)
