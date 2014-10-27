@@ -1,0 +1,3166 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    C:\Apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\fme\LoadtoNewFisdm.fmw
+#          --SourceDataset_GEODATABASE_SDE sde
+#          --DestDataset_GEODATABASE_SDE sde
+#    
+#    
+#! PASSWORD=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! VIEW_POSITION="-1855 4530"
+#! SHOW_INFO_NODES="true"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! TITLE=""
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="14338"
+#! ZOOM_SCALE="60"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! FME_DOCUMENT_PRIORGUID="82932f28-9c16-49b1-a8ec-687e014db057,d200f1d5-1ff5-4c67-9a25-3be00daa13a2"
+#! DOC_TOP_LEFT="-356 -12592"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2014-10-20T19:15:20"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140606 - Build 14338 - WIN32)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! DOC_EXTENTS="2336 14856"
+#! FME_DOCUMENT_GUID="0796e5a2-fce6-4731-be3b-24d646318dc6"
+#! SHOW_ANNOTATIONS="true"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="GEODATABASE_SDE"
+#! DATASET="$(SourceDataset_GEODATABASE_SDE)"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY}"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="geodb_text_leader_line_anchor_point char(254) geodb_dim_length double geodb_v_align char(50) geodb_rel_destination_oid integer multi_reader_type char(50) geodb_edge_feature_count integer geodb_feature_dataset char(254) geodb_text_lc_gap double geodb_subtype_name char(254) geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_from_junction_element_id integer geodb_raster_pyramid_resample_type char(100) geodb_rel_origin_oid integer fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_lc_textbox_y2 double geodb_text_lc_textbox_y3 double geodb_metadata_string char(254) geodb_text_lc_textbox_y4 double geodb_dim_text_x double geodb_symbol_id integer geodb_text_lc_margin_left double geodb_dim_text_y double multi_reader_keyword char(50) geodb_dim_text_z double geodb_text_point_scale_factor double geodb_text_leader_line char(254) geodb_element_id integer geodb_text_lc_accent_bar_width double geodb_font_italic boolean geodb_text_line_spacing double fme_basename char(50) geodb_text_ref_scale double geodb_topological_configuration char(6) geodb_start_angle double geodb_h_align char(50) fme_secondary_axis double geodb_text_lc_accent_bar_color char(50) geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_lc_margin_bottom double geodb_text_size double geodb_raster_pyramid_level integer geodb_text_leader_line_width double fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean geodb_text_character_width double fme_dataset char(50) geodb_text_lc_textbox_x1 double geodb_text_lc_textbox_x2 double geodb_text_lc_textbox_x3 double geodb_rotation double fme_fill_color char(50) geodb_secondary_axis double geodb_text_lc_textbox_x4 double geodb_font_underline boolean geodb_font_bold boolean geodb_text_color char(254) geodb_text_y_offset double geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_text_part_count integer geodb_type char(25) geodb_dim_line_display smallint geodb_text_clip boolean geodb_to_junction_element_id integer fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) multi_reader_id integer geodb_text_lc_margin_right double geodb_text_lc_style char(20) geodb_text_break_char integer geodb_text_leader_line_tolerance double geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_feature_is_simple boolean geodb_primary_axis double geodb_dim_line_x double geodb_right_to_left boolean geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_feature_has_relationships boolean geodb_junction_feature_count integer geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_edge_element_count integer geodb_text_lc_margin_top double geodb_text_word_spacing double geodb_dim_marker_display smallint fme_rotation double multi_reader_full_id integer geodb_junction_element_count integer fme_start_angle double geodb_dim_extn_line_angle double geodb_font_weight smallint geodb_element_index integer geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14338"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY GEODATABASE_SDE_IN_RESOLVE_DOMAINS GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES GEODATABASE_SDE_IN_WHERE _GEODBInSearchFeature _GEODBInSearchOrder _GEODBInSearchMethod _GEODBInChildVersionName NULL_OUT_TRANSACTION_TYPE NULL_OUT_SIMPLIFY_GEOM NULL_OUT_ORIGIN_X NULL_OUT_ORIGIN_Y NULL_OUT_XY_SCALE NULL_OUT_HAS_Z_VALUES NULL_OUT_Z_ORIGIN NULL_OUT_Z_SCALE NULL_OUT_GRID_1 _GEODBOutWriterMode _GEODBOutTransaction _GEODBOutTransactionInterval _GEODBOutIgnoreFailedFeatureEntry _GEODBOutMaxNumberFailedFeatures _GEODBOutDumpFailedFeatures _GEODBOutFFSDumpFile _GEODBOutAnnotationUnits _GEODBOutReconcileAndPost _GEODBInArchiveWhereClause _GEODBMergeFeatLinkedAnnos _GEODBInCheckSimpleGeom _GEODBOutDeleteChildAfterReconcileAndPost _GEODBOutValidateFeatures _GEODBOutSimplifyNetworkFeatures _GEODBInPersistentConnection _GEODBOutPersistentConnection GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS _GEODBSplitComplexAnnotations _GEODBOutCommitTransactionsAfterWrite _GEODBInBeginSql _GEODBInEndSql _GEODBOutBeginSql _GEODBOutEndSql _GEODBCacheMultipatchTextures"
+#! />
+#! </DATASET>
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="GEODATABASE_SDE"
+#! DATASET="$(DestDataset_GEODATABASE_SDE)"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="30"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY} GEODB_UPDATE_KEY_COLUMNS &quot;&quot; GEODB_DROP_TABLE NO GEODB_TRUNCATE_TABLE NO GEODB_OBJECT_ID_NAME OBJECTID GEODB_OBJECT_ID_ALIAS OBJECTID GEODB_SHAPE_NAME SHAPE GEODB_SHAPE_ALIAS SHAPE GEODB_CONFIG_KEYWORD DEFAULTS GEODB_FEATURE_DATASET &quot;&quot; GEODB_GRID{1} &quot;&quot; GEODB_AVG_NUM_POINTS &quot;&quot; GEODB_XORIGIN &quot;&quot; GEODB_YORIGIN &quot;&quot; GEODB_XYSCALE &quot;&quot; GEODB_HAS_Z_VALUES &quot;&quot; GEODB_ZORIGIN &quot;&quot; GEODB_ZSCALE &quot;&quot; GEODB_HAS_MEASURES &quot;&quot; GEODB_MEASURES_ORIGIN &quot;&quot; GEODB_MEASURES_SCALE &quot;&quot; GEODB_ANNO_REFERENCE_SCALE &quot;&quot;"
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="geodb_dim_length double geodb_v_align char(50) geodb_feature_dataset char(254) geodb_text_feat_class_name char(254) fme_where char(254) geodb_subtype_name char(254) geodb_allow_symbol_overrides boolean geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_raster_pyramid_resample_type char(100) fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_metadata_string char(254) geodb_dim_text_x double geodb_symbol_id integer geodb_dim_text_y double geodb_dim_text_z double geodb_font_italic boolean geodb_text_line_spacing double fme_basename char(50) geodb_text_ref_scale double geodb_start_angle double geodb_h_align char(50) fme_secondary_axis double geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_size double fme_db_operation char(8) geodb_raster_pyramid_level integer fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean geodb_text_character_width double fme_dataset char(50) geodb_rotation double fme_fill_color char(50) geodb_secondary_axis double geodb_text_y_offset double geodb_font_underline boolean geodb_text_color char(254) geodb_font_bold boolean geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_type char(25) geodb_text_clip boolean geodb_dim_line_display smallint fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) geodb_text_break_char integer geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_primary_axis double geodb_right_to_left boolean geodb_dim_line_x double geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_text_word_spacing double geodb_text_y_coord double geodb_dim_marker_display smallint fme_rotation double fme_start_angle double geodb_dim_extn_line_angle double geodb_text_x_coord double geodb_font_weight smallint geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
+#! DEFLINE_PARMS="&quot;GUI CHOICE GEODB_DROP_TABLE YES%NO Drop Table First&quot; NO &quot;GUI CHOICE GEODB_TRUNCATE_TABLE YES%NO Truncate Table First&quot; NO &quot;GUI OPTIONAL WHOLE_LINE FORCE_DEFS ATTRLIST_COMMAS GEODB_UPDATE_KEY_COLUMNS Update Key Fields&quot; &quot;&quot; &quot;GUI TEXT GEODB_OBJECT_ID_NAME Object ID Field&quot; OBJECTID &quot;GUI TEXT GEODB_OBJECT_ID_ALIAS Object ID Alias&quot; OBJECTID &quot;GUI TEXT GEODB_SHAPE_NAME Shape Field&quot; SHAPE &quot;GUI TEXT GEODB_SHAPE_ALIAS Shape Alias&quot; SHAPE &quot;GUI TEXT GEODB_CONFIG_KEYWORD Configuration Keyword&quot; DEFAULTS &quot;GUI OPTIONAL TEXT GEODB_FEATURE_DATASET Feature Dataset&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_GRID{1} Grid 1&quot; &quot;&quot; &quot;GUI OPTIONAL INTEGER GEODB_AVG_NUM_POINTS Avg Num of Points&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_XORIGIN X Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_YORIGIN Y Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_XYSCALE X,Y Scale&quot; &quot;&quot; &quot;GUI OPTIONAL CHOICE GEODB_HAS_Z_VALUES yes%no Contains Z Values&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_ZORIGIN Z Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_ZSCALE Z Scale&quot; &quot;&quot; &quot;GUI OPTIONAL CHOICE GEODB_HAS_MEASURES yes%no Contains Measures&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_MEASURES_ORIGIN Measure Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_MEASURES_SCALE Measure Scale&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_ANNO_REFERENCE_SCALE Annotation Reference Scale&quot; &quot;&quot; "
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=":. %-#[]&quot;()!?*&apos;&amp;+\/{}|="
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="14338"
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_PROXY"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="NETWORK_AUTHENTICATION"
+#! VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="ADVANCED_PARMS"
+#! VALUE="NULL_IN_SEARCH_ENVELOPE_MINX NULL_IN_SEARCH_ENVELOPE_MINY NULL_IN_SEARCH_ENVELOPE_MAXX NULL_IN_SEARCH_ENVELOPE_MAXY _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM NULL_IN_CLIP_TO_ENVELOPE NULL_IN_TRANSLATE_SPATIAL_DATA_ONLY NULL_IN_RESOLVE_DOMAINS NULL_IN_RESOLVE_SUBTYPE_NAMES NULL_IN_IGNORE_NETWORK_INFO NULL_IN_IGNORE_RELATIONSHIP_INFO NULL_IN_SPLIT_COMPLEX_EDGES NULL_IN_WHERE _GEODBInSearchFeature _GEODBInSearchOrder _GEODBInSearchMethod _GEODBInChildVersionName GEODATABASE_SDE_OUT_TRANSACTION_TYPE GEODATABASE_SDE_OUT_SIMPLIFY_GEOM GEODATABASE_SDE_OUT_ORIGIN_X GEODATABASE_SDE_OUT_ORIGIN_Y GEODATABASE_SDE_OUT_XY_SCALE GEODATABASE_SDE_OUT_HAS_Z_VALUES GEODATABASE_SDE_OUT_Z_ORIGIN GEODATABASE_SDE_OUT_Z_SCALE GEODATABASE_SDE_OUT_GRID_1 _GEODBOutWriterMode _GEODBOutTransaction _GEODBOutTransactionInterval _GEODBOutIgnoreFailedFeatureEntry _GEODBOutMaxNumberFailedFeatures _GEODBOutDumpFailedFeatures _GEODBOutFFSDumpFile _GEODBOutAnnotationUnits _GEODBOutReconcileAndPost _GEODBInArchiveWhereClause _GEODBMergeFeatLinkedAnnos _GEODBInCheckSimpleGeom _GEODBOutDeleteChildAfterReconcileAndPost _GEODBOutValidateFeatures _GEODBOutSimplifyNetworkFeatures _GEODBInPersistentConnection _GEODBOutPersistentConnection NULL_IN_SPLIT_MULTI_PART_ANNOS _GEODBSplitComplexAnnotations _GEODBOutCommitTransactionsAfterWrite _GEODBInBeginSql _GEODBInEndSql _GEODBOutBeginSql _GEODBOutEndSql _GEODBCacheMultipatchTextures"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(2048)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="blob"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="guid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_time"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="boolean"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="double(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="subtype(stringset)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="subtype_codes(stringmap)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="range_domain(range_domain)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="coded_domain(coded_domain)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(2048)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="blob"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="guid"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_time"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_int32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="integer"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_int16"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="smallint"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="float"
+#! FME_TYPE="fme_real32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_real64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="boolean"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="double(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="subtype(stringset)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="subtype_codes(stringmap)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="range_domain(range_domain)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="coded_domain(coded_domain)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_table"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_table"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_annotation"
+#! FME_TYPE="fme_text"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_dimension"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_simple_junction"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_simple_edge"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_complex_junction"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_complex_edge"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_attributed_relationship"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_relationship"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_undefined"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_metadata"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_multipatch"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_multipatch"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_multipoint"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_table"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_table"
+#! FME_TYPE="fme_collection"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polyline"
+#! FME_TYPE="fme_arc"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_annotation"
+#! FME_TYPE="fme_text"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_dimension"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_simple_junction"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_simple_edge"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_complex_junction"
+#! FME_TYPE="fme_point"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_complex_edge"
+#! FME_TYPE="fme_line"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_attributed_relationship"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_relationship"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_metadata"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_multipatch"
+#! FME_TYPE="fme_surface"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_multipatch"
+#! FME_TYPE="fme_solid"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_raster"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="geodb_polygon"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="GEODATABASE_SDE"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Floor_Area"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="27 -11293"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_AREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCHELEV" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ALTITUDE" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Floor_Outline"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="2"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="-356 2264"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCHELEV" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ALTITUDE" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Floor_Point"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="3"
+#! FEAT_GEOMTYPE="geodb_point"
+#! POSITION="-31 -9496"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CALCROT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="WEBMERCROT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MODPORTRAIT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MODLANDSCAPE" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_NAME" ATTR_TYPE="char(254)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCALE_85X11" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCALE_11X17" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_LEVEL" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAME_LONG" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAME_SHORT" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAME" ATTR_TYPE="char(254)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HASINTERIORSPACES" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HASFLOORPLANLINES" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HASFLOORAREAS" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FACILITY_CODE" ATTR_TYPE="char(254)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FACLEVEL" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_NAME_1" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Floor_Poly"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="4"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="-24 -7307"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_AREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCHELEV" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ALTITUDE" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.InteriorSpace"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="5"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="-86 -5002"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ROOM" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACECLASS" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEAREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.InteriorSpace_Point"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="6"
+#! FEAT_GEOMTYPE="geodb_point"
+#! POSITION="-132 -3810"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ROOM" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDG_NAME" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.InteriorSpace_Tilt"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="7"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="-204 -2654"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ROOM" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="STACKLEVEL" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.FloorplanLine"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="8"
+#! FEAT_GEOMTYPE="geodb_polyline"
+#! POSITION="-50 -6353"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCELAYER" ATTR_TYPE="char(24)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Active_Floor"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="9"
+#! FEAT_GEOMTYPE="geodb_table"
+#! POSITION="-10 -8513"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="DWG_NAME" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="INTERIORSPACE" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORPLANLINE" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCHELEV" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ALTITUDE" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Floor_Level"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="10"
+#! FEAT_GEOMTYPE="geodb_table"
+#! POSITION="-314 1139"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_LEVEL" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAME_LONG" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAME_SHORT" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BOTTOM_ELEV" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Building_Outline_Tilt"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="11"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="-277 -406"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BLDGHEIGHT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACING" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="MARGIN" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="XCENTER" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="YCENTER" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CALCROT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Building_Foundation"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="12"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="-218 -1606"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FACILITYNO" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAME" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FOUNDTYPE" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Building_Outline_Point"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="13"
+#! FEAT_GEOMTYPE="geodb_point"
+#! POSITION="54 -12580"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CALCROT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NUMFLOORS" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCALE_85X11" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCALE_11X17" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="DBO.Building_Roof"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="14"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="-299 526"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FACILITYNO" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAME" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="IN_DATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LAST_USER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GlobalID" ATTR_TYPE="char(38)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STArea()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SHAPE.STLength()" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Active_Floor"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="15"
+#! FEAT_GEOMTYPE="geodb_table"
+#! POSITION="1877 -8496"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HASINTERIORSPACES" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HASFLOORPLANLINES" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="HASFLOORAREA" ATTR_TYPE="char(3)" ATTR_HAS_PORT="false" ATTR_VALUE="T"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SCHELEV" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="GROUNDELEV" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="STACKLEVEL" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Floor_Level"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="16"
+#! FEAT_GEOMTYPE="geodb_table"
+#! POSITION="1656 1113"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="false" ATTR_VALUE="UWS"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORLEVEL" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAMELONG" ATTR_TYPE="char(100)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="NAMESHORT" ATTR_TYPE="char(50)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Building_Roof"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="17"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1650 464"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Building_Outline_Tilt"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="18"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1654 -429"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="CALCROT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Building_Outline_Point"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="19"
+#! FEAT_GEOMTYPE="geodb_point"
+#! POSITION="1980 -12592"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Building_Foundation"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="20"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1657 -1610"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FOUNDTYPE" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.InteriorSpace_Tilt"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="21"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1697 -2663"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ROOMNUMBER" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.InteriorSpace_Point"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="22"
+#! FEAT_GEOMTYPE="geodb_point"
+#! POSITION="1670 -3858"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="geodb_oid" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="OBJECTID" ATTR_TYPE="integer" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ROOMNUMBER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.InteriorSpace"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="23"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1710 -5012"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="ROOMNUMBER" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACECLASS" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SPACEAREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.FloorplanLine"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="24"
+#! FEAT_GEOMTYPE="geodb_polyline"
+#! POSITION="1764 -6394"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCELAYER" ATTR_TYPE="char(24)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEID" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Floor_Poly"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="25"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1837 -7402"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Floor_Point"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="26"
+#! FEAT_GEOMTYPE="geodb_point"
+#! POSITION="1887 -9570"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Floor_Area"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="27"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1933 -11295"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORAREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="DBO.Floor_Outline"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="41"
+#! FEAT_GEOMTYPE="geodb_polygon"
+#! POSITION="1612 2248"
+#! ORDER="5e+014"
+#! COLLAPSED="false"
+#! KEYWORD="GEODATABASE_SDE_2"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="SITEID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORCODE" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="SOURCEDWG" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTUPDATE" ATTR_TYPE="date" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="LASTEDITOR" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_ORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_DROP_TABLE" PARM_VALUE="NO"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_AVG_NUM_POINTS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_UPDATE_KEY_COLUMNS" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_MEASURES_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_YORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_NAME" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_CONFIG_KEYWORD" PARM_VALUE="DEFAULTS"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_GRID{1}" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_XYSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZSCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_OBJECT_ID_ALIAS" PARM_VALUE="OBJECTID"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ZORIGIN" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_NAME" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_FEATURE_DATASET" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_MEASURES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_ANNO_REFERENCE_SCALE" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_SHAPE_ALIAS" PARM_VALUE="SHAPE"/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_HAS_Z_VALUES" PARM_VALUE=""/>
+#! <DEFLINE_PARM PARM_NAME="GEODB_TRUNCATE_TABLE" PARM_VALUE="YES"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:"
+#! DEFAULT_VALUE="sde"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI TEXT DestDataset_GEODATABASE_SDE Destination Esri ArcSDE Geodatabase Dataset:"
+#! DEFAULT_VALUE="sde"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="43"
+#! TYPE="FeatureMerger"
+#! VERSION="11"
+#! POSITION="1124 -8459"
+#! ORDER="5e+014"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="DWG_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="INTERIORSPACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORPLANLINE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="WEBMERCROT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_85X11" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_11X17" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FACILITY_CODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FACLEVEL" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME_1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="BLDG_NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <OUTPUT_FEAT NAME="NOT_MERGED"/>
+#! <FEAT_COLLAPSED COLLAPSED="1"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="DWG_NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="INTERIORSPACE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORPLANLINE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <OUTPUT_FEAT NAME="REFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="2"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="WEBMERCROT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_85X11" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_11X17" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FACILITY_CODE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FACLEVEL" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME_1" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="BLDG_NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <OUTPUT_FEAT NAME="UNREFERENCED"/>
+#! <FEAT_COLLAPSED COLLAPSED="3"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="WEBMERCROT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_85X11" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_11X17" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FACILITY_CODE" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FACLEVEL" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME_1" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <XFORM_ATTR ATTR_NAME="BLDG_NAME" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#! <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
+#! <FEAT_COLLAPSED COLLAPSED="4"/>
+#! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="CALCROT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="WEBMERCROT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_85X11" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SCALE_11X17" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_LEVEL" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="NAME_LONG" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASINTERIORSPACES" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORPLANLINES" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FACILITY_CODE" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FACLEVEL" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="IN_DATE" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="LAST_USER" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="GlobalID" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="FLOOR_NAME_1" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_ATTR ATTR_NAME="BLDG_NAME" IS_USER_CREATED="false" FEAT_INDEX="4" />
+#! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
+#! <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#! <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;FLOORID&lt;closeparen&gt; AUTO"/>
+#! <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX_DUMMY" PARM_VALUE="YES"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="29"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="20"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="30"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="19"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="31"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="18"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="32"
+#! SOURCE_NODE="14"
+#! TARGET_NODE="17"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="33"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="34"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="35"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="26"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="36"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="37"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="24"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="38"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="23"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="39"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="40"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="42"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="41"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="44"
+#! SOURCE_NODE="9"
+#! TARGET_NODE="43"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="45"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="47"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="43"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! <ATTR_LINK
+#! IDENTIFIER="131101"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="20"
+#! SOURCE_PORT_DESC="8"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65565"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="20"
+#! SOURCE_PORT_DESC="7"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131102"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="19"
+#! SOURCE_PORT_DESC="11"
+#! TARGET_PORT_DESC="3"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65566"
+#! SOURCE_NODE="13"
+#! TARGET_NODE="19"
+#! SOURCE_PORT_DESC="10"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131103"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="18"
+#! SOURCE_PORT_DESC="14"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65567"
+#! SOURCE_NODE="11"
+#! TARGET_NODE="18"
+#! SOURCE_PORT_DESC="13"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65568"
+#! SOURCE_NODE="14"
+#! TARGET_NODE="17"
+#! SOURCE_PORT_DESC="7"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131104"
+#! SOURCE_NODE="14"
+#! TARGET_NODE="17"
+#! SOURCE_PORT_DESC="8"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262177"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="12"
+#! TARGET_PORT_DESC="7"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65569"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131105"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="6"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196641"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="27"
+#! SOURCE_PORT_DESC="11"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196642"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="3"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262178"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="5"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65570"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="2"
+#! TARGET_PORT_DESC="1"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131106"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="16"
+#! SOURCE_PORT_DESC="3"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65571"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="26"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131107"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="26"
+#! SOURCE_PORT_DESC="23"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196643"
+#! SOURCE_NODE="3"
+#! TARGET_NODE="26"
+#! SOURCE_PORT_DESC="24"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65572"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196644"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="11"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131108"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="25"
+#! SOURCE_PORT_DESC="10"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65573"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="24"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131109"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="24"
+#! SOURCE_PORT_DESC="8"
+#! TARGET_PORT_DESC="7"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196645"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="24"
+#! SOURCE_PORT_DESC="9"
+#! TARGET_PORT_DESC="8"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196646"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="23"
+#! SOURCE_PORT_DESC="12"
+#! TARGET_PORT_DESC="11"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65574"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="23"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131110"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="23"
+#! SOURCE_PORT_DESC="6"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262182"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="23"
+#! SOURCE_PORT_DESC="11"
+#! TARGET_PORT_DESC="10"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196647"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="9"
+#! TARGET_PORT_DESC="9"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65575"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131111"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="6"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262183"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="22"
+#! SOURCE_PORT_DESC="10"
+#! TARGET_PORT_DESC="10"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196648"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="9"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131112"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="6"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262184"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="10"
+#! TARGET_PORT_DESC="7"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65576"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="21"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65578"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="41"
+#! SOURCE_PORT_DESC="4"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131114"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="41"
+#! SOURCE_PORT_DESC="9"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196650"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="41"
+#! SOURCE_PORT_DESC="10"
+#! TARGET_PORT_DESC="6"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="393261"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 9"
+#! TARGET_PORT_DESC="9"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="65581"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 3"
+#! TARGET_PORT_DESC="2"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="458797"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 29"
+#! TARGET_PORT_DESC="12"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="196653"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 8"
+#! TARGET_PORT_DESC="8"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="524333"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 30"
+#! TARGET_PORT_DESC="13"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="262189"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 6"
+#! TARGET_PORT_DESC="5"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="131117"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 5"
+#! TARGET_PORT_DESC="4"
+#! />
+#! <ATTR_LINK
+#! IDENTIFIER="327725"
+#! SOURCE_NODE="43"
+#! TARGET_NODE="15"
+#! SOURCE_PORT_DESC="ao 0 7"
+#! TARGET_PORT_DESC="6"
+#! />
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1,GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1,_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1,_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1,_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1,_GEODBInSearchFeature_GEODATABASE_SDE_1,_GEODBInSearchOrder_GEODATABASE_SDE_1,_GEODBInSearchMethod_GEODATABASE_SDE_1,_GEODBInChildVersionName_GEODATABASE_SDE_1,_GEODBInArchiveWhereClause_GEODATABASE_SDE_1,_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1,_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1,_GEODBInPersistentConnection_GEODATABASE_SDE_1,_GEODBInBeginSql_GEODATABASE_SDE_1,_GEODBInEndSql_GEODATABASE_SDE_1,DestDataset_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_TABLE_PARAMETERS_GROUP_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_2,GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_2,_GEODBOutDefaultZValue_GEODATABASE_SDE_2,_GEODBOutWriterMode_GEODATABASE_SDE_2,_GEODBOutTransaction_GEODATABASE_SDE_2,_GEODBOutTransactionInterval_GEODATABASE_SDE_2,_GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_2,_GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_2,_GEODBOutDumpFailedFeatures_GEODATABASE_SDE_2,_GEODBOutFFSDumpFile_GEODATABASE_SDE_2,_GEODBOutAnnotationUnits_GEODATABASE_SDE_2,_GEODBOutMeasures_GEODATABASE_SDE_2,_GEODBOutMeasureOrigin_GEODATABASE_SDE_2,_GEODBOutMeasureScale_GEODATABASE_SDE_2,_GEODBOutReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_2,_GEODBOutValidateFeatures_GEODATABASE_SDE_2,_GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_2,_GEODBOutPersistentConnection_GEODATABASE_SDE_2,_GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_2,_GEODBOutBeginSql_GEODATABASE_SDE_2,_GEODBOutEndSql_GEODATABASE_SDE_2
+DEFAULT_MACRO SourceDataset_GEODATABASE_SDE sde
+GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:
+DEFAULT_MACRO DestDataset_GEODATABASE_SDE sde
+GUI TEXT DestDataset_GEODATABASE_SDE Destination Esri ArcSDE Geodatabase Dataset:
+INCLUDE [ if {{$(SourceDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'SourceDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'DestDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE GEODATABASE_SDE
+READER_KEYWORD GEODATABASE_SDE_1
+READER_GEN_DIRECTIVES INSTANCE,,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,USERID,,_MERGE_SCHEMAS,YES,HISTORICAL_VERSION_NAME,,VERSION,,HISTORICAL_VERSION_TIMESTAMP,,CONNECTION_FILE,C:<backslash>Apps<backslash>Gizinta<backslash>gseUW<backslash>ETL<backslash>serverConfig<backslash>GIS<space>Production.sde,VERSION_TYPE,Connect<space>using<space>a<space>Transactional<space>Version,FEATURE_READ_MODE,Features,CONNECTION,Connection<space>File,WHERE,,USE_SEARCH_ENVELOPE,NO,SERVER,,TRANSLATE_SPATIAL_DATA_ONLY,no,REMOVE_TABLE_QUALIFIER,NO,IGNORE_RELATIONSHIP_INFO,yes,EXPOSE_ATTRS_GROUP,,SPLIT_COMPLEX_EDGES,no,CLIP_TO_ENVELOPE,NO,SPLIT_MULTI_PART_ANNOS,no,GEODATABASE_SDE_EXPOSE_FORMAT_ATTRS,,RESOLVE_DOMAINS,no,TABLELIST,DBO.Building_Roof<space>DBO.Building_Outline_Point<space>DBO.Building_Foundation<space>DBO.Building_Outline_Tilt<space>DBO.Floor_Level<space>DBO.Active_Floor<space>DBO.FloorplanLine<space>DBO.InteriorSpace_Tilt<space>DBO.InteriorSpace_Point<space>DBO.InteriorSpace<space>DBO.Floor_Poly<space>DBO.Floor_Point<space>DBO.Floor_Outline<space>DBO.Floor_Area,IGNORE_NETWORK_INFO,yes,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,RESOLVE_SUBTYPE_NAMES,yes
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} GEODATABASE_SDE
+MULTI_WRITER_KEYWORD{0} GEODATABASE_SDE_2
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEODATABASE_SDE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
+# ============================================================================
+# The following GUI line prompts for a source dataset, sometimes this is not
+# used by SDE.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GEODATABASE_SDE GEODATABASE_SDE_1
+DEFAULT_MACRO SourceDataset_GEODATABASE_SDE_1 $(SourceDataset_GEODATABASE_SDE)
+GUI TEXT SourceDataset_GEODATABASE_SDE_1 Source Esri ArcSDE Geodatabase Dataset:
+# ============================================================================
+# Reader connection file stuff.
+# If you manually change this value for whether or not to use connection files,
+# you must also make sure the correct directives appear below this to support your
+# choice.
+# i.e. The GEODB_SDE_CONNECTION_FILE directive should exist and not
+# be commented if you set _GEODBInUsingConnFile to YES.
+# _GEODBInUsingConnFile
+DEFAULT_MACRO _GEODBInUsingConnFile_GEODATABASE_SDE_1 no
+#=============================================================================
+# READER CONNECTION PARAMETERS: Either these or the connection file should be specified.
+# ============================================================================
+# END OF CONNECTION PARAMETERS
+#==============================================================================
+# Translation flags.
+#
+# =============================================================================
+#
+DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 C:\Apps\Gizinta\gseUW\ETL\serverConfig\Connection to prawn-GDBD.sde
+GUI FILENAME_MUSTEXIST GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 Connection File:
+GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the name of the host machine on which
+# the SDE Server runs.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_SERVER "$(GEODATABASE_SDE_IN_SERVER_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the username to use for
+# accessing the SDE dataset.
+DEFAULT_MACRO GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_USERID "$(GEODATABASE_SDE_IN_USERID_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the user password.
+DEFAULT_MACRO GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_PASSWORD "$(GEODATABASE_SDE_IN_PASSWORD_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the instance
+DEFAULT_MACRO GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_INSTANCE "$(GEODATABASE_SDE_IN_INSTANCE_GEODATABASE_SDE_1)"
+# ============================================================================
+GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
+# ============================================================================
+# The following GUI line prompts for the version.
+# ========================================================================
+# The following GUI line prompts for the historical version name.
+# ========================================================================
+# The following GUI line prompts for the historical version timestamp.
+# ========================================================================
+# ========================================================================
+# ========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_WHERE "$(GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1)"
+GUI OPTIONAL TEXT GEODATABASE_SDE_IN_WHERE_GEODATABASE_SDE_1 WHERE Clause:
+# ========================================================================
+# Determines whether non-spatial data, such as tables, subtypes, domains,
+# and relationship classes, get translated
+DEFAULT_MACRO GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_TRANSLATE_SPATIAL_DATA_ONLY "$(GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_TRANSLATE_SPATIAL_DATA_ONLY_GEODATABASE_SDE_1 yes%no Spatial Data Only
+# ========================================================================
+# Determines whether to resolve domains
+DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_RESOLVE_DOMAINS "$(GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_DOMAINS_GEODATABASE_SDE_1 yes%no Resolve Domains
+# ========================================================================
+# Determines whether to resolve the subtype associated with a feature to the
+# text description linked to the subtype value. The text description will
+# be added as an attribute on the feature.
+DEFAULT_MACRO GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_RESOLVE_SUBTYPE_NAMES "$(GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_RESOLVE_SUBTYPE_NAMES_GEODATABASE_SDE_1 yes%no Resolve Subtypes
+# ========================================================================
+# Determines whether to ignore the network info associated with a feature
+# coming from a network feature class. When set to 'yes', junctions will be
+# treated as point features, and edges will be treated as polyline features,
+# with the geodb_type being set to geodb_point and geodb_polyline, respectively.
+# Caution should be taken when changing the value for this keyword to a different
+# value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_IGNORE_NETWORK_INFO "$(GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_NETWORK_INFO_GEODATABASE_SDE_1 yes%no Ignore Network Info
+# ========================================================================
+# Determines whether to ignore the relationship info associated with a feature
+# coming from a feature class containing relationships. When set to 'yes', simple
+# relationships will not be read, and attributed relationships will be read as
+# tables. Caution should be taken when changing the value for this keyword to a
+# different value than was specified when creating the mapping file/workspace.
+DEFAULT_MACRO GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes
+GEODATABASE_SDE_1_IGNORE_RELATIONSHIP_INFO "$(GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_IGNORE_RELATIONSHIP_INFO_GEODATABASE_SDE_1 yes%no Ignore Relationship Info
+# ========================================================================
+# Determines whether complex edge features should be split up and each edge
+# element read as a separate feature. The default behaviour is to treat an
+# entire edge *feature* as an FME feature, rather than an edge *element* as an
+# FME feature. Returning edge elements ensures that all network connectivity
+# information on complex edges is read.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_SPLIT_COMPLEX_EDGES "$(GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_COMPLEX_EDGES_GEODATABASE_SDE_1 yes%no Split Complex Edges
+#==============================================================================
+# Determines whether annotation features should be split up and each part
+# element read as a separate feature. The default behaviour is to treat an
+# entire annotation *feature* as an FME feature, rather than an annotation
+# *element* as an FME feature. Returning edge elements ensures that all
+# rotation and positional information for each element is preserved.
+DEFAULT_MACRO GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 no
+GEODATABASE_SDE_1_SPLIT_MULTI_PART_ANNOS "$(GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1)"
+GUI CHECKBOX GEODATABASE_SDE_IN_SPLIT_MULTI_PART_ANNOS_GEODATABASE_SDE_1 yes%no Split Multi-Part Annotations
+# ========================================================================
+# The following determines whether to read features from the geodatabase
+# tables/feature classes or to read metadata from those tables/feature
+# classes.
+DEFAULT_MACRO GEODATABASE_SDE_IN_FEATURE_READ_MODE_GEODATABASE_SDE_1 Features
+GEODATABASE_SDE_1_FEATURE_READ_MODE "$(GEODATABASE_SDE_IN_FEATURE_READ_MODE_GEODATABASE_SDE_1)"
+DEFAULT_MACRO GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1 
+GEODATABASE_SDE_1_EXPOSE_ATTRS_GROUP "$(GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1)"
+GUI DISCLOSUREGROUP GEODATABASE_SDE_IN_EXPOSE_ATTRS_GROUP_GEODATABASE_SDE_1 GEODATABASE_SDE_EXPOSE_FORMAT_ATTRS Schema Attributes
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINX_GEODATABASE_SDE_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MINY_GEODATABASE_SDE_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXX_GEODATABASE_SDE_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 0
+GEODATABASE_SDE_1_SEARCH_ENVELOPE "$(GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1)"
+GUI OPTIONAL FLOAT GEODATABASE_SDE_IN_SEARCH_ENVELOPE_MAXY_GEODATABASE_SDE_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 NO
+GEODATABASE_SDE_1_CLIP_TO_ENVELOPE "$(GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1)"
+GUI OPTIONAL CHECKBOX GEODATABASE_SDE_IN_CLIP_TO_ENVELOPE_GEODATABASE_SDE_1 YES%NO Clip to Search Envelope
+#==============================================================================
+# The following specifies that complex representations for annotation should
+# be split into simpler representations.
+DEFAULT_MACRO _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBSplitComplexAnnotations_GEODATABASE_SDE_1 yes%no Split Complex Annotations:
+GEODATABASE_SDE_1_SPLIT_COMPLEX_ANNOS $(_GEODBSplitComplexAnnotations_GEODATABASE_SDE_1)
+#==============================================================================
+# The following specifies whether to keep (YES) or clean up (NO) Esri's
+# multipatch texture caches.
+DEFAULT_MACRO _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes
+GUI CHOICE _GEODBCacheMultipatchTextures_GEODATABASE_SDE_1 yes%no Cache Multipatch Textures:
+GEODATABASE_SDE_1_CACHE_MULTIPATCH_TEXTURES $(_GEODBCacheMultipatchTextures_GEODATABASE_SDE_1)
+# ============================================================================
+# Search Envelope Coordinate System
+DEFAULT_MACRO _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 
+GUI OPTIONAL COORDSYS _GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1 Search Envelope Coordinate System:
+GEODATABASE_SDE_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(_GEODB_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_GEODATABASE_SDE_1)"
+# ========================================================================
+# The following determines whether to vectorize arcs. If SPLIT_AT_ARCS
+# is set to yes, then arcs do not get vectorized and lines/polygons
+# containing arcs get split up into line segments and arc segments.
+#
+# Update: This keyword is not applicable when using rich geometry. Since
+# all new mapping files/workspaces have FME_USE_RICH_GEOMETRY set to YES then
+# we do not need to expose this keyword.
+#DEFAULT_MACRO _GEODBInSplitAtArcs no
+#DEFAULT_MACRO _GEODBInSplitAtArcs NO
+#GUI OPTIONAL CHOICE _GEODBInSplitAtArcs yes%no Split at Arcs
+#GEODATABASE_SDE_SPLIT_AT_ARCS "$(_GEODBInSplitAtArcs_GEODATABASE_SDE_1)"
+#
+# ========================================================================
+# The following defines the search feature for the query. It defines an
+# arbitrarily complex search feature as a spatial contraint. It is in the
+# form <keyword>_SEARCH_FEATURE [<xCoord> <yCoord>]+.
+DEFAULT_MACRO _GEODBInSearchFeature_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInSearchFeature_GEODATABASE_SDE_1 Search Feature:
+GEODATABASE_SDE_1_SEARCH_FEATURE $(_GEODBInSearchFeature_GEODATABASE_SDE_1)
+# ========================================================================
+# Determines whether the spatial component or the attribute component of a
+# query is performed first. This is only applicable when both spatial and
+# non-spatial searches are being performed.
+DEFAULT_MACRO _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST
+GUI OPTIONAL CHOICE _GEODBInSearchOrder_GEODATABASE_SDE_1 SPATIAL_FIRST%ATTRIBUTE_FIRST Search Order:
+GEODATABASE_SDE_1_SEARCH_ORDER $(_GEODBInSearchOrder_GEODATABASE_SDE_1)
+# ========================================================================
+# Determines which type of search method to use. This keyword is only applicable
+# when either the keyword SEARCH_ENVELOPE or the keyword SEARCH_FEATURE is specified.
+DEFAULT_MACRO _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS
+GUI OPTIONAL CHOICE _GEODBInSearchMethod_GEODATABASE_SDE_1 GEODB_INTERSECTS%GEODB_ENVELOPE_INTERSECTS%GEODB_TOUCHES%GEODB_OVERLAPS%GEODB_CROSSES%GEODB_WITHIN%GEODB_CONTAINS Search Method:
+GEODATABASE_SDE_1_SEARCH_METHOD $(_GEODBInSearchMethod_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies the name of a child version to be created. After
+# the version has been created, tables will be read using this version
+# rather than the version specified by the VERSION keyword.
+DEFAULT_MACRO _GEODBInChildVersionName_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInChildVersionName_GEODATABASE_SDE_1 Child Version Name:
+GEODATABASE_SDE_1_CHILD_VERSION_NAME $(_GEODBInChildVersionName_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies the archive where clause to be used when retrieving
+# features from an archived table in geodb.
+DEFAULT_MACRO _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT _GEODBInArchiveWhereClause_GEODATABASE_SDE_1 Archive WHERE Clause:
+GEODATABASE_SDE_1_ARCHIVE_WHERE $(_GEODBInArchiveWhereClause_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies that simple geometry should be checked for
+# when reading features.
+DEFAULT_MACRO _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBInCheckSimpleGeom_GEODATABASE_SDE_1 yes%no Check for Simple Geometry:
+GEODATABASE_SDE_1_CHECK_SIMPLE_GEOM $(_GEODBInCheckSimpleGeom_GEODATABASE_SDE_1)
+# ========================================================================
+# The following specifies whether feature-linked annotations should
+# be merged onto the main feature as a text list attribute when reading.
+DEFAULT_MACRO _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1 yes%no Merge Feature Linked Annotations:
+GEODATABASE_SDE_1_MERGE_FEAT_LINKED_ANNOS $(_GEODBMergeFeatLinkedAnnos_GEODATABASE_SDE_1)
+#==============================================================================
+# Determines whether the connection should persist after the reader/writer
+# has been shut down. The default is 'no'.
+DEFAULT_MACRO _GEODBInPersistentConnection_GEODATABASE_SDE_1 no
+GUI CHOICE _GEODBInPersistentConnection_GEODATABASE_SDE_1 yes%no Make Connection Persistent
+GEODATABASE_SDE_1_PERSISTENT_CONNECTION $(_GEODBInPersistentConnection_GEODATABASE_SDE_1)
+# ==============================================================================
+# The following specifies an SQL command to execute before opening the first
+# Geodatabase table.
+DEFAULT_MACRO _GEODBInBeginSql_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBInBeginSql_GEODATABASE_SDE_1 SQL Statement To Execute Before Translation:
+GEODATABASE_SDE_1_BEGIN_SQL{0} "$(_GEODBInBeginSql_GEODATABASE_SDE_1)"
+# ==============================================================================
+# The following specifies an SQL command to execute after closing all the
+# Geodatabase tables.
+DEFAULT_MACRO _GEODBInEndSql_GEODATABASE_SDE_1 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBInEndSql_GEODATABASE_SDE_1 SQL Statement To Execute After Translation:
+GEODATABASE_SDE_1_END_SQL{0} "$(_GEODBInEndSql_GEODATABASE_SDE_1)"
+GEODATABASE_SDE_1_DATASET "$(SourceDataset_GEODATABASE_SDE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEODATABASE_SDE_2"
+#! END_WB_HEADER
+#! START_DEST_HEADER GEODATABASE_SDE GEODATABASE_SDE_2
+GEODATABASE_SDE_2_COORDINATE_SYSTEM_GRANULARITY FEATURE_TYPE
+# ============================================================================
+# The following GUI line prompts for a source dataset, sometimes this is not
+# used by SDE.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GEODATABASE_SDE_2 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GEODATABASE_SDE GEODATABASE_SDE_2
+DEFAULT_MACRO DestDataset_GEODATABASE_SDE_2 $(DestDataset_GEODATABASE_SDE)
+GUI TEXT DestDataset_GEODATABASE_SDE_2 Destination Esri ArcSDE Geodatabase Dataset:
+# ============================================================================
+# Writer connection file stuff.
+# If you manually change this value for whether or not to use connection files,
+# you must also make sure the correct directives appear below this to support your
+# choice.
+# i.e. The GEODATABASE_SDE_CONNECTION_FILE directive should exist and not
+# be commented if you set _GEODBOutUsingConnFile to YES.
+#
+DEFAULT_MACRO _GEODBOutUsingConnFile_GEODATABASE_SDE_2 no
+#=============================================================================
+# WRITER CONNECTION PARAMETERS: Either these or the connection file should be specified.
+# END OF CONNECTION PARAMETERS
+#==============================================================================
+# =============================================================================
+#
+DEFAULT_MACRO GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2 C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde
+GUI FILENAME_MUSTEXIST GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2 Connection File:
+GEODATABASE_SDE_2_CONNECTION_FILE "$(GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2)"
+# ========================================================================
+# ============================================================================
+# The following GUI line prompts for the name of the host machine on which.
+# the SDE Server runs.
+DEFAULT_MACRO GEODATABASE_SDE_OUT_SERVER_GEODATABASE_SDE_2 
+GEODATABASE_SDE_2_SERVER "$(GEODATABASE_SDE_OUT_SERVER_GEODATABASE_SDE_2)"
+# ========================================================================
+# The following GUI line prompts for the username to use for
+# accessing the SDE dataset.
+DEFAULT_MACRO GEODATABASE_SDE_OUT_USERID_GEODATABASE_SDE_2 
+GEODATABASE_SDE_2_USERID "$(GEODATABASE_SDE_OUT_USERID_GEODATABASE_SDE_2)"
+# ========================================================================
+# The following GUI line prompts for the user password.
+DEFAULT_MACRO GEODATABASE_SDE_OUT_PASSWORD_GEODATABASE_SDE_2 
+GEODATABASE_SDE_2_PASSWORD "$(GEODATABASE_SDE_OUT_PASSWORD_GEODATABASE_SDE_2)"
+# ========================================================================
+# The following GUI line prompts for the instance
+DEFAULT_MACRO GEODATABASE_SDE_OUT_INSTANCE_GEODATABASE_SDE_2 
+GEODATABASE_SDE_2_INSTANCE "$(GEODATABASE_SDE_OUT_INSTANCE_GEODATABASE_SDE_2)"
+# ========================================================================
+# The following GUI line prompts for the version.
+# ============================================================================
+GEODATABASE_SDE_2_CONNECTION_FILE "$(GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE_2)"
+# ========================================================================
+# ============================================================================
+# This option specifies the transaction type. This should be set to VERSIONING
+# when writing to a versioned table/feature class in an Enterprise Geodatabase.
+# Both TRANSACTIONS and NONE can be chosen only when writing to non-versioned
+# tables/feature classes.
+DEFAULT_MACRO GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_2 NONE
+GEODATABASE_SDE_2_TRANSACTION_TYPE "$(GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_2)"
+GUI ACTIVECHOICE GEODATABASE_SDE_OUT_TRANSACTION_TYPE_GEODATABASE_SDE_2 VERSIONING%TRANSACTIONS,GEODATABASE_SDE_OUT_VERSION%NONE,GEODATABASE_SDE_OUT_VERSION Transaction Type:
+# ============================================================================
+# Optional template file can be specified. This will load the schema
+# of the template file into the database before any writing occurs.
+DEFAULT_MACRO GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2 
+GEODATABASE_SDE_2_TEMPLATEFILE "$(GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2)"
+GUI OPTIONAL FILENAME_MUSTEXIST GEODATABASE_SDE_OUT_TEMPLATEFILE_GEODATABASE_SDE_2 XML_Geodatabase_Files(*.xml)|*.xml|(*.zip)|*.zip|(*.z)|*.z|All_files(*.*)|*.* Template File:
+# ========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_OUT_TABLE_PARAMETERS_GROUP_GEODATABASE_SDE_2 
+GUI DISCLOSUREGROUP GEODATABASE_SDE_OUT_TABLE_PARAMETERS_GROUP_GEODATABASE_SDE_2 FME_DISCLOSURE_CLOSED%SIMPLIFY_GEOM%ORIGIN_X%ORIGIN_Y%XY_SCALE%HAS_Z_VALUES%Z_ORIGIN%Z_SCALE%GRID_1 Table Parameters
+# ========================================================================
+# Specifies if the geomtery is to be simplified or not. Default is no
+DEFAULT_MACRO GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_2 no
+GEODATABASE_SDE_2_SIMPLIFY_GEOM "$(GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_2)"
+GUI LOOKUP_CHOICE GEODATABASE_SDE_OUT_SIMPLIFY_GEOM_GEODATABASE_SDE_2 yes%no Simplify Geometry:
+# ========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_2 0
+GEODATABASE_SDE_2_ORIGIN_X "$(GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_2)"
+GUI FLOAT GEODATABASE_SDE_OUT_ORIGIN_X_GEODATABASE_SDE_2 X Origin:
+# ========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_2 0
+GEODATABASE_SDE_2_ORIGIN_Y "$(GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_2)"
+GUI FLOAT GEODATABASE_SDE_OUT_ORIGIN_Y_GEODATABASE_SDE_2 Y Origin:
+# ========================================================================
+DEFAULT_MACRO GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_2 0
+GEODATABASE_SDE_2_XY_SCALE "$(GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_2)"
+GUI FLOAT GEODATABASE_SDE_OUT_XY_SCALE_GEODATABASE_SDE_2 Scale:
+# ========================================================================
+# Determines if dataset contains Z values. This value will be used if DEF lines
+# don't have anything set. The auto_detect option will use the first feature
+# headed for each feature class to determine whether the feature class should be
+# 2D or 3D.
+DEFAULT_MACRO GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_2 auto_detect
+GEODATABASE_SDE_2_HAS_Z_VALUES "$(GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_2)"
+GUI ACTIVECHOICE GEODATABASE_SDE_OUT_HAS_Z_VALUES_GEODATABASE_SDE_2 yes%no,GEODATABASE_SDE_OUT_Z_ORIGIN,GEODATABASE_SDE_OUT_Z_SCALE%auto_detect Contains Z Values:
+# ========================================================================
+# Determines false Z origin
+DEFAULT_MACRO GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_2 0
+GEODATABASE_SDE_2_Z_ORIGIN "$(GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_2)"
+GUI FLOAT GEODATABASE_SDE_OUT_Z_ORIGIN_GEODATABASE_SDE_2 Z Origin:
+# ========================================================================
+# ============================================================================
+# Determines Z scale
+DEFAULT_MACRO GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_2 1
+GEODATABASE_SDE_2_Z_SCALE "$(GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_2)"
+GUI FLOAT GEODATABASE_SDE_OUT_Z_SCALE_GEODATABASE_SDE_2 Z Scale:
+# ========================================================================
+# ============================================================================
+# Determines global Grid 1 size. If there is no value on DEF line for the
+# the feature type then this value will be used otherwise it will be overridden
+# by the DEF line value. If the value is 0 then the grid size will be automatically
+# calculated
+DEFAULT_MACRO GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_2 0
+GEODATABASE_SDE_2_GRID_1 "$(GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_2)"
+GUI FLOAT GEODATABASE_SDE_OUT_GRID_1_GEODATABASE_SDE_2 Grid 1 Size:
+# ============================================================================
+# Determines default Z value
+DEFAULT_MACRO _GEODBOutDefaultZValue_GEODATABASE_SDE_2 0
+GUI FLOAT _GEODBOutDefaultZValue_GEODATABASE_SDE_2 Default Z Value:
+GEODATABASE_SDE_2_DEFAULT_Z_VALUE $(_GEODBOutDefaultZValue_GEODATABASE_SDE_2)
+# ============================================================================
+# This option specifies the writer mode. If set to UPDATE or DELETE, the
+# mode can be overwritten by each individual feature using the attribute
+# 'fme_db_operation'.
+DEFAULT_MACRO _GEODBOutWriterMode_GEODATABASE_SDE_2 INSERT
+GUI CHOICE _GEODBOutWriterMode_GEODATABASE_SDE_2 INSERT%UPDATE%DELETE Writer Mode:
+GEODATABASE_SDE_2_WRITER_MODE $(_GEODBOutWriterMode_GEODATABASE_SDE_2)
+# ============================================================================
+# This option specifies the starting transaction number. Normally
+# this will be zero, which will write every feature to the Geodatabase,
+# but it might be another value if a previous translation was interrupted.
+DEFAULT_MACRO _GEODBOutTransaction_GEODATABASE_SDE_2 0
+GUI OPTIONAL INTEGER _GEODBOutTransaction_GEODATABASE_SDE_2 Transaction Number:
+GEODATABASE_SDE_2_TRANSACTION $(_GEODBOutTransaction_GEODATABASE_SDE_2)
+# ============================================================================
+# This option specifies how many features will be written to the Geodatabase on
+# each transaction.
+DEFAULT_MACRO _GEODBOutTransactionInterval_GEODATABASE_SDE_2 1000
+GUI OPTIONAL INTEGER _GEODBOutTransactionInterval_GEODATABASE_SDE_2 Features to Write Per Transaction:
+GEODATABASE_SDE_2_TRANSACTION_INTERVAL $(_GEODBOutTransactionInterval_GEODATABASE_SDE_2)
+# ============================================================================
+# Determines whether to continue the translation, despite having encountered
+# a feature that would normally stop the translation.
+DEFAULT_MACRO _GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_2 no
+GUI OPTIONAL CHOICE _GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_2 yes%no Ignore Failed Features:
+GEODATABASE_SDE_2_IGNORE_FAILED_FEATURE_ENTRY $(_GEODBOutIgnoreFailedFeatureEntry_GEODATABASE_SDE_2)
+# ============================================================================
+# The number of features to ignore before stopping a translation due to a
+# problematic feature. Used only if IGNORE_FAILED_FEATURE_ENTRY is 'yes'.
+DEFAULT_MACRO _GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_2 -1
+GUI OPTIONAL INTEGER _GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_2 Max Number of Features to Ignore:
+GEODATABASE_SDE_2_MAX_NUMBER_FAILED_FEATURES $(_GEODBOutMaxNumberFailedFeatures_GEODATABASE_SDE_2)
+# ============================================================================
+# Determines whether to store failed features in an FFS file, so that they
+# can be viewed/manipulated at a later time. Only applicable if the keyword
+# IGNORE_FAILED_FEATURE_ENTRY is set to 'yes'.
+DEFAULT_MACRO _GEODBOutDumpFailedFeatures_GEODATABASE_SDE_2 no
+GUI OPTIONAL CHOICE _GEODBOutDumpFailedFeatures_GEODATABASE_SDE_2 yes%no Dump Failed Features to File:
+GEODATABASE_SDE_2_DUMP_FAILED_FEATURES $(_GEODBOutDumpFailedFeatures_GEODATABASE_SDE_2)
+# ============================================================================
+# If the keyword DUMP_FAILED_FEATURES is set to 'yes', determines where to
+# store the failed features. The location must specify both the path and the
+# filename. The filename must have an extension of 'ffs'.
+DEFAULT_MACRO _GEODBOutFFSDumpFile_GEODATABASE_SDE_2 
+GUI OPTIONAL FILENAME _GEODBOutFFSDumpFile_GEODATABASE_SDE_2 FME_Feature_Store_Files(*.ffs)|*.ffs|All_files(*.*)|*.* Failed Feature Dump filename:
+GEODATABASE_SDE_2_FFS_DUMP_FILE "$(_GEODBOutFFSDumpFile_GEODATABASE_SDE_2)"
+# ============================================================================
+# Specifies the units to use when creating a new annotation feature class.
+DEFAULT_MACRO _GEODBOutAnnotationUnits_GEODATABASE_SDE_2 unknown_units
+GUI OPTIONAL CHOICE _GEODBOutAnnotationUnits_GEODATABASE_SDE_2 unknown_units%decimal_degrees%inches%points%feet%yards%miles%nautical_miles%millimeters%centimeters%meters%kilometers%decimeters Annotation Units:
+GEODATABASE_SDE_2_ANNOTATION_UNITS $(_GEODBOutAnnotationUnits_GEODATABASE_SDE_2)
+# ============================================================================
+# Determines if dataset contains measures. This value will be used if DEF lines
+# don't have anything set.
+DEFAULT_MACRO _GEODBOutMeasures_GEODATABASE_SDE_2 no
+GUI OPTIONAL CHOICE _GEODBOutMeasures_GEODATABASE_SDE_2 yes%no Contains Measures:
+GEODATABASE_SDE_2_HAS_MEASURES $(_GEODBOutMeasures_GEODATABASE_SDE_2)
+# ============================================================================
+# Determines measures' origin value
+DEFAULT_MACRO _GEODBOutMeasureOrigin_GEODATABASE_SDE_2 0
+GUI OPTIONAL FLOAT _GEODBOutMeasureOrigin_GEODATABASE_SDE_2 Measures Origin:
+GEODATABASE_SDE_2_MEASURES_ORIGIN $(_GEODBOutMeasureOrigin_GEODATABASE_SDE_2)
+# ============================================================================
+# Determines measures' scale value
+DEFAULT_MACRO _GEODBOutMeasureScale_GEODATABASE_SDE_2 100
+GUI OPTIONAL FLOAT _GEODBOutMeasureScale_GEODATABASE_SDE_2 Measures Scale:
+GEODATABASE_SDE_2_MEASURES_SCALE $(_GEODBOutMeasureScale_GEODATABASE_SDE_2)
+# ============================================================================
+# This option specifies whether we are to reconcile the changes between the
+# version specified by VERSION and its parent version and then post those
+# changes to the parent version. Note: all tables that need to be reconciled,
+# even if they were not written to during the translation will be reconciled.
+DEFAULT_MACRO _GEODBOutReconcileAndPost_GEODATABASE_SDE_2 no
+GUI OPTIONAL CHOICE _GEODBOutReconcileAndPost_GEODATABASE_SDE_2 yes%no Reconcile and Post:
+GEODATABASE_SDE_2_RECONCILE_AND_POST $(_GEODBOutReconcileAndPost_GEODATABASE_SDE_2)
+# ============================================================================
+# Decide whether or not to delete the child version after a reconcile and post
+# operation
+DEFAULT_MACRO _GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_2 yes
+GUI CHOICE _GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_2 yes%no Delete child state following reconcile and post:
+GEODATABASE_SDE_2_DELETE_CHILD_AFTER_RECONCILE_AND_POST $(_GEODBOutDeleteChildAfterReconcileAndPost_GEODATABASE_SDE_2)
+# ============================================================================
+# Determines whether to perform validation on features being written to the
+# geodatabase. Default is no.
+DEFAULT_MACRO _GEODBOutValidateFeatures_GEODATABASE_SDE_2 no
+GUI OPTIONAL CHOICE _GEODBOutValidateFeatures_GEODATABASE_SDE_2 yes%no Validate Features to Write:
+GEODATABASE_SDE_2_VALIDATE_FEATURES $(_GEODBOutValidateFeatures_GEODATABASE_SDE_2)
+# ============================================================================
+# Determines whether to perform simplification on network features being
+# written to the geodatabase. Default is no.
+DEFAULT_MACRO _GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_2 no
+GUI OPTIONAL CHOICE _GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_2 yes%no Simplify Network Features:
+GEODATABASE_SDE_2_SIMPLIFY_NETWORK_FEATURES $(_GEODBOutSimplifyNetworkFeatures_GEODATABASE_SDE_2)
+#==============================================================================
+# Determines whether the connection should persist after the reader/writer
+# has been shut down. The default is 'no'.
+DEFAULT_MACRO _GEODBOutPersistentConnection_GEODATABASE_SDE_2 no
+GUI CHOICE _GEODBOutPersistentConnection_GEODATABASE_SDE_2 yes%no Make Connection Persistent
+GEODATABASE_SDE_2_PERSISTENT_CONNECTION $(_GEODBOutPersistentConnection_GEODATABASE_SDE_2)
+#==============================================================================
+# Determines whether transactions should be committed at the end of each write,
+# as opposed to the start of the next. The default is 'no'.
+DEFAULT_MACRO _GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_2 no
+GUI CHOICE _GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_2 yes%no Commit Transactions at end of Write
+GEODATABASE_SDE_2_COMMIT_TRANSACTIONS_AFTER_WRITE $(_GEODBOutCommitTransactionsAfterWrite_GEODATABASE_SDE_2)
+# ==============================================================================
+# The following specifies an SQL command to execute before opening the first
+# Geodatabase table.
+DEFAULT_MACRO _GEODBOutBeginSql_GEODATABASE_SDE_2 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBOutBeginSql_GEODATABASE_SDE_2 SQL Statement To Execute Before Translation:
+GEODATABASE_SDE_2_BEGIN_SQL{0} "$(_GEODBOutBeginSql_GEODATABASE_SDE_2)"
+# ==============================================================================
+# The following specifies an SQL command to execute after closing all the
+# Geodatabase tables.
+DEFAULT_MACRO _GEODBOutEndSql_GEODATABASE_SDE_2 
+GUI OPTIONAL TEXT_EDIT_SQL _GEODBOutEndSql_GEODATABASE_SDE_2 SQL Statement To Execute After Translation:
+GEODATABASE_SDE_2_END_SQL{0} "$(_GEODBOutEndSql_GEODATABASE_SDE_2)"
+GEODATABASE_SDE_2_DATASET "$(DestDataset_GEODATABASE_SDE_2)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)LoadtoNewFisdm.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_SDE_1 GEODATABASE_SDE_1
+DEFAULT_MACRO DATASET_KEYWORD_GEODATABASE_SDE_2 GEODATABASE_SDE_2
+# -------------------------------------------------------------------------
+
+GEODATABASE_SDE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME LoadtoNewFisdm
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Floor_Outline   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   SCHELEV                      smallint   ALTITUDE                     smallint   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(50)   SOURCEDWG                    char(60)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Floor_Point   geodb_type                   geodb_point   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   CALCROT                      double   WEBMERCROT                   double   MODPORTRAIT                  double   MODLANDSCAPE                 double   FLOOR_NAME                   char(254)   SCALE_85X11                  double   SCALE_11X17                  double   FLOOR_LEVEL                  integer   NAME_LONG                    char(255)   NAME_SHORT                   char(255)   NAME                         char(254)   HASINTERIORSPACES            char(3)   HASFLOORPLANLINES            char(3)   HASFLOORAREAS                char(3)   FACILITY_CODE                char(254)   FACLEVEL                     char(14)   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   FLOOR_NAME_1                 char(60)   BLDG_NAME                    char(60)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Building_Roof   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FACILITYNO                   char(20)   NAME                         char(255)   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(30)   SOURCEID                     char(30)   SOURCEDWG                    char(60)   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Floor_Poly   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   FLOOR_AREA                   double   SCHELEV                      smallint   ALTITUDE                     smallint   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(50)   SOURCEDWG                    char(60)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Building_Outline_Tilt   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(20)   BUILDINGID                   char(20)   BLDGHEIGHT                   double   SPACING                      double   MARGIN                       double   XCENTER                      double   YCENTER                      double   CALCROT                      double   SOURCEID                     char(30)   SOURCEDWG                    char(60)   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.InteriorSpace   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   ROOM                         char(30)   SPACEID                      char(60)   SPACECLASS                   char(60)   SPACEAREA                    double   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(50)   SOURCEID                     char(30)   SOURCEDWG                    char(60)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.FloorplanLine   geodb_type                   geodb_polyline   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   SOURCELAYER                  char(24)   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(50)   SOURCEID                     char(30)   SOURCEDWG                    char(60)   GlobalID                     char(38)   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.InteriorSpace_Tilt   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   ROOM                         char(20)   SPACEID                      char(60)   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(50)   STACKLEVEL                   smallint   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Building_Foundation   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FACILITYNO                   char(20)   NAME                         char(255)   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(30)   SOURCEID                     char(30)   SOURCEDWG                    char(60)   FOUNDTYPE                    integer   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Floor_Area   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   FLOOR_AREA                   double   SCHELEV                      smallint   ALTITUDE                     smallint   SENSITIVITY                  char(20)   SOURCEDWG                    char(60)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.InteriorSpace_Point   geodb_type                   geodb_point   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   ROOM                         char(30)   SPACEID                      char(60)   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(50)   SOURCEDWG                    char(60)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Active_Floor   geodb_type                   geodb_table   geodb_oid                    integer   OBJECTID                     integer   BUILDINGID                   char(20)   FLOOR                        char(6)   FLOORID                      char(20)   DWG_NAME                     char(255)   INTERIORSPACE                char(255)   FLOORPLANLINE                char(255)   SCHELEV                      integer   ALTITUDE                     double   GlobalID                     char(38)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Floor_Level   geodb_type                   geodb_table   geodb_oid                    integer   OBJECTID                     integer   FLOOR                        char(6)   FLOOR_LEVEL                  integer   NAME_LONG                    char(255)   NAME_SHORT                   char(255)   GlobalID                     char(38)   BOTTOM_ELEV                  smallint
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_1_DEF DBO.Building_Outline_Point   geodb_type                   geodb_point   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   CALCROT                      double   NUMFLOORS                    integer   SOURCEDWG                    char(60)   SCALE_85X11                  double   SCALE_11X17                  double   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)
+
+# -------------------------------------------------------------------------
+
+Lookup ___KnownFeatureTypes___   DBO.InteriorSpace yes   DBO.Building_Outline_Point yes   DBO.InteriorSpace_Point yes   DBO.Building_Roof yes   DBO.Floor_Area yes   DBO.Floor_Poly yes   DBO.FloorplanLine yes   DBO.InteriorSpace_Tilt yes   DBO.Building_Outline_Tilt yes   DBO.Floor_Outline yes   DBO.Floor_Point yes   DBO.Building_Foundation yes   DBO.Floor_Level yes   DBO.Active_Floor yes   "" no
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@FeatureType()) == yes   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TYPE *    OUTPUT FEATURE_TYPE *       @Transform(GEODATABASE_SDE,FME_GENERIC,ALIAS_GEOMETRY)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Floor_Point (GEODATABASE_SDE_1) Splitter"    INPUT FEATURE_TYPE DBO.Floor_Point    OUTPUT FEATURE_TYPE DBO.Floor_Point_0_fPYhOPUiNvI=    OUTPUT FEATURE_TYPE DBO.Floor_Point_1_fPYhOPUiNvI=
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+
+INCLUDE [if { {ATTRIBUTES} == {ATTRIBUTES} } {                puts "MACRO FeatureMerger_REFERENCE_INFO ATTRIBUTES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          else {}; ]
+
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME FeatureMerger    INPUT REFERENCER FEATURE_TYPE DBO.Active_Floor    INPUT REFERENCEE FEATURE_TYPE DBO.Floor_Point_1_fPYhOPUiNvI=    REFERENCE_INFO $(FeatureMerger_REFERENCE_INFO)    REFERENCE_TABLE @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>FLOORID<closeparen>,FeatureMerger) @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>FLOORID<closeparen>,FeatureMerger) AUTO    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    REFERENCEES_FIRST No    OUTPUT COMPLETE FEATURE_TYPE FeatureMerger_MERGED
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Floor_Outline -> DBO.Floor_Outline Correlator"    INPUT FEATURE_TYPE DBO.Floor_Outline    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Floor_Outline)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Floor_Point_0_fPYhOPUiNvI= -> DBO.Floor_Point Correlator"    INPUT FEATURE_TYPE DBO.Floor_Point_0_fPYhOPUiNvI=    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Floor_Point)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Building_Roof -> DBO.Building_Roof Correlator"    INPUT FEATURE_TYPE DBO.Building_Roof    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Building_Roof)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Floor_Poly -> DBO.Floor_Poly Correlator"    INPUT FEATURE_TYPE DBO.Floor_Poly    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Floor_Poly)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Building_Outline_Tilt -> DBO.Building_Outline_Tilt Correlator"    INPUT FEATURE_TYPE DBO.Building_Outline_Tilt    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Building_Outline_Tilt)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.InteriorSpace -> DBO.InteriorSpace Correlator"    INPUT FEATURE_TYPE DBO.InteriorSpace    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,ROOMNUMBER,ROOM,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.InteriorSpace)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.FloorplanLine -> DBO.FloorplanLine Correlator"    INPUT FEATURE_TYPE DBO.FloorplanLine    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.FloorplanLine)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Building_Foundation -> DBO.Building_Foundation Correlator"    INPUT FEATURE_TYPE DBO.Building_Foundation    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Building_Foundation)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.InteriorSpace_Tilt -> DBO.InteriorSpace_Tilt Correlator"    INPUT FEATURE_TYPE DBO.InteriorSpace_Tilt    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,ROOMNUMBER,ROOM,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.InteriorSpace_Tilt)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Floor_Area -> DBO.Floor_Area Correlator"    INPUT FEATURE_TYPE DBO.Floor_Area    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,FLOORAREA,FLOOR_AREA,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Floor_Area)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "FeatureMerger_MERGED -> DBO.Active_Floor Correlator"    INPUT FEATURE_TYPE FeatureMerger_MERGED    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,HASFLOORAREA,T, ATTR_SET)"       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,SOURCEDWG,DWG_NAME,HASINTERIORSPACES,INTERIORSPACE,HASFLOORPLANLINES,FLOORPLANLINE,GROUNDELEV,ALTITUDE,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Active_Floor)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.InteriorSpace_Point -> DBO.InteriorSpace_Point Correlator"    INPUT FEATURE_TYPE DBO.InteriorSpace_Point    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,ROOMNUMBER,ROOM,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.InteriorSpace_Point)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Floor_Level -> DBO.Floor_Level Correlator"    INPUT FEATURE_TYPE DBO.Floor_Level    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE) "@EvaluateExpression(ATTR_CREATE_EXPR_PROPAGATE_MISSING,SITEID,UWS, ATTR_SET)"       @CopyAttributes(ENCODED,FLOORCODE,FLOOR,FLOORLEVEL,FLOOR_LEVEL,NAMELONG,NAME_LONG,NAMESHORT,NAME_SHORT)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Floor_Level)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DBO.Building_Outline_Point -> DBO.Building_Outline_Point Correlator"    INPUT FEATURE_TYPE DBO.Building_Outline_Point    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,GEODATABASE_SDE)       @CopyAttributes(ENCODED,LASTUPDATE,IN_DATE,LASTEDITOR,LAST_USER)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,DBO.Building_Outline_Point)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Floor_Outline   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Floor_Point   geodb_type                   geodb_point   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Building_Roof   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   SOURCEID                     char(30)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Floor_Poly   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Building_Outline_Tilt   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   CALCROT                      double   SOURCEID                     char(30)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.InteriorSpace   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   ROOMNUMBER                   char(30)   SPACEID                      char(60)   SPACECLASS                   char(60)   SPACEAREA                    double   SOURCEID                     char(30)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.FloorplanLine   geodb_type                   geodb_polyline   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   SOURCELAYER                  char(24)   SOURCEID                     char(30)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Building_Foundation   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FOUNDTYPE                    integer   SOURCEID                     char(30)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.InteriorSpace_Tilt   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   ROOMNUMBER                   char(20)   SPACEID                      char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Floor_Area   geodb_type                   geodb_polygon   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   FLOORAREA                    double   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Active_Floor   geodb_type                   geodb_table   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   SOURCEDWG                    char(100)   HASINTERIORSPACES            char(3)   HASFLOORPLANLINES            char(3)   HASFLOORAREA                 char(3)   SCHELEV                      integer   GROUNDELEV                   double   STACKLEVEL                   integer   SENSITIVITY                  char(20)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.InteriorSpace_Point   geodb_type                   geodb_point   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOORCODE                    char(20)   FLOORID                      char(60)   ROOMNUMBER                   char(30)   SPACEID                      char(60)   SOURCEDWG                    char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Floor_Level   geodb_type                   geodb_table   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   FLOORCODE                    char(20)   FLOORLEVEL                   integer   NAMELONG                     char(100)   NAMESHORT                    char(50)
+# -------------------------------------------------------------------------
+GEODATABASE_SDE_2_DEF DBO.Building_Outline_Point   geodb_type                   geodb_point   GEODB_DROP_TABLE             NO   GEODB_TRUNCATE_TABLE         YES   GEODB_OBJECT_ID_NAME         OBJECTID   GEODB_OBJECT_ID_ALIAS        OBJECTID   GEODB_SHAPE_NAME             SHAPE   GEODB_SHAPE_ALIAS            SHAPE   GEODB_CONFIG_KEYWORD         DEFAULTS   GEODB_FEATURE_DATASET        ""   GEODB_GRID{1}                ""   GEODB_AVG_NUM_POINTS         ""   GEODB_XORIGIN                ""   GEODB_YORIGIN                ""   GEODB_XYSCALE                ""   GEODB_HAS_Z_VALUES           ""   GEODB_ZORIGIN                ""   GEODB_ZSCALE                 ""   GEODB_HAS_MEASURES           ""   GEODB_MEASURES_ORIGIN        ""   GEODB_MEASURES_SCALE         ""   GEODB_ANNO_REFERENCE_SCALE   ""   SITEID                       char(60)   BUILDINGID                   char(60)   LASTUPDATE                   date   LASTEDITOR                   char(30)   SOURCEDWG                    char(60)
