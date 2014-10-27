@@ -8,7 +8,7 @@
 	<Transform>
 		<Dataset name="StreetPavement_Parking_Source" targetName="StreetPavement" qa="CheckFields,CheckGeometry" sourceIDField="autocad_entity_handle" sourceNameField="autocad_entity_handle">
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Optional">FACILITYID</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
@@ -24,7 +24,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">SURFUSE</TargetName>
+				<TargetName qa="Optional">PAVEUSE</TargetName>
 				<Method>DefaultValue</Method>
 				<DefaultValue>Parking Lot</DefaultValue>
 				<FieldType>String</FieldType>
@@ -32,7 +32,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">INSTALLDATE</TargetName>
+				<TargetName qa="Optional">DATEADDED</TargetName>
 				<Method>None</Method>
 				<FieldType>Date</FieldType>
 				<FieldLength>36</FieldLength>
@@ -75,7 +75,7 @@
 				<FieldLength>30</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Required">SOURCEDWG</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
@@ -104,7 +104,7 @@
 				<FieldType>String</FieldType>
 				<FieldLength>25</FieldLength>
 			</Field>
-			<ChangeDetection viewFields="FACILITYID,SURFTYPE,SURFUSE,SOURCEID,SOURCEDWG,SHAPE" idField="SOURCEID" viewIdField="SOURCEDWG" exceptStagingView="StreetPavementExceptStaging" exceptProductionView="StreetPavementExceptProduction"/>
+			<ChangeDetection viewFields="FACILITYID,SURFTYPE,PAVEUSE,SOURCEID,SOURCEDWG,SHAPE" idField="SOURCEID" viewIdField="SOURCEDWG" exceptStagingView="eStreetPavementExceptStaging" exceptProductionView="eStreetPavementExceptProduction"/>
 			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,RULEID,RefName</SourceFieldNames>
 		</Dataset>
 	</Transform>

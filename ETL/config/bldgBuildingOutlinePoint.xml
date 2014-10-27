@@ -21,74 +21,23 @@
 				<FieldLength>20</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">BUILDINGID</SourceName>
-				<TargetName qa="Optional">buildingid</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>20</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional">CALCROT</SourceName>
-				<TargetName qa="Optional">CALCROT</TargetName>
-				<Method>Copy</Method>
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">NUMFLOORS</TargetName>
-				<Method>Copy</Method>
-				<FieldType>Integer</FieldType>
-				<FieldLength>4</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional">SOURCEDWG</SourceName>
-				<TargetName qa="Optional">SOURCEDWG</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>60</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">SCALE_85X11</TargetName>
-				<Method>DefaultValue</Method>
-				<DefaultValue>1000</DefaultValue>
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">SCALE_11X17</TargetName>
-				<Method>DefaultValue</Method>
-				<DefaultValue>1000</DefaultValue>
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional">SENSITIVITY</SourceName>
-				<TargetName qa="Required">SENSITIVITY</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>60</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional">IN_DATE</SourceName>
-				<TargetName qa="Optional">IN_DATE</TargetName>
+				<SourceName qa="Optional">LASTUPDATE</SourceName>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>myGizinta.GetDBTime()</PythonExpression>
 				<FieldType>Date</FieldType>
 				<FieldLength>36</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">LAST_USER</SourceName>
-				<TargetName qa="Optional">LAST_USER</TargetName>
+				<SourceName qa="Optional">LASTEDITOR</SourceName>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
 				<FieldType>String</FieldType>
 				<FieldLength>30</FieldLength>
 			</Field>
-			<ChangeDetection exceptProductionView="BuildingOutlinePtExceptProduction" exceptStagingView="BuildingOutlinePtExceptStaging" idField="BUILDINGID" viewIdField="SOURCEDWG" viewFields="BUILDINGID,SOURCEDWG"/>
-			<SourceFieldNames>BLDGHEIGHT,BUILDINGID,CALCROT,GlobalID,HULLROT,IN_DATE,LAST_USER,MARGIN,SOURCEDWG,SOURCEID,SPACING,WORLDFILE,XCENTER,YCENTER</SourceFieldNames>
+			<ChangeDetection exceptProductionView="eBuildingOutlinePtExceptProduction" exceptStagingView="eBuildingOutlinePtExceptStaging" idField="BUILDINGID" viewIdField="BUILDINGID" viewFields="BUILDINGID"/>
+			<SourceFieldNames>BUILDINGID,CALCROT,LASTUPDATE,LASTEDITOR,SOURCEDWG,SOURCEID</SourceFieldNames>
 		</Dataset>
 	</Transform>
 </Gizinta>

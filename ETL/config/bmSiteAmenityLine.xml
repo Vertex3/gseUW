@@ -8,7 +8,7 @@
 	<Transform>
 		<Dataset name="SiteAmenityLine" qa="CheckFields,CheckGeometry" sourceIDField="" sourceNameField="">
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Optional">FACILITYID</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
@@ -24,7 +24,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">INSTALLDATE</TargetName>
+				<TargetName qa="Optional">DATEADDED</TargetName>
 				<Method>None</Method>
 				<FieldType>Date</FieldType>
 				<FieldLength>36</FieldLength>
@@ -76,13 +76,13 @@
 				<FieldLength>30</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Optional">SOURCEDWG</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>60</FieldLength>
 			</Field>
-			<ChangeDetection exceptProductionView="SiteAmenityExceptProduction" exceptStagingView="SiteAmenityExceptStaging" idField="SOURCEID" viewIdField="SOURCEDWG" viewFields="SOURCEDWG,SOURCEID,AMENTYPE,SHAPE"/>
+			<ChangeDetection exceptProductionView="eSiteAmenityExceptProduction" exceptStagingView="eSiteAmenityExceptStaging" idField="SOURCEID" viewIdField="SOURCEDWG" viewFields="SOURCEDWG,SOURCEID,AMENTYPE,SHAPE"/>
 			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,OBJECT,RULEID,RefName</SourceFieldNames>
 		</Dataset>
 	</Transform>

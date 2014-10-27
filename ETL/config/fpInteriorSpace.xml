@@ -24,15 +24,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">buildingid</TargetName>
-				<Method>PythonCalculate</Method>
-				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
-				<FieldType>String</FieldType>
-				<FieldLength>20</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">FLOOR</TargetName>
+				<TargetName qa="Required">FLOORCODE</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getFloor(feature)</PythonExpression>
 				<FieldType>String</FieldType>
@@ -47,16 +39,8 @@
 				<FieldLength>50</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">floorid</TargetName>
-				<Method>PythonCalculate</Method>
-				<PythonExpression>gseDrawing.getFloorID(feature)</PythonExpression>
-				<FieldType>String</FieldType>
-				<FieldLength>50</FieldLength>
-			</Field>
-			<Field>
 				<SourceName qa="Optional">ROOM_NUMBER</SourceName>
-				<TargetName qa="Optional">ROOM</TargetName>
+				<TargetName qa="Optional">ROOMNUMBER</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>20</FieldLength>
@@ -84,16 +68,8 @@
 				<FieldLength>8</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">SENSITIVITY</TargetName>
-				<Method>PythonCalculate</Method>
-				<PythonExpression>gseDrawing.getSensitivity(feature)</PythonExpression>
-				<FieldType>String</FieldType>
-				<FieldLength>60</FieldLength>
-			</Field>
-			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">IN_DATE</TargetName>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
 				<FieldType>Date</FieldType>
@@ -101,7 +77,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">LAST_USER</TargetName>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
 				<FieldType>String</FieldType>
@@ -115,16 +91,16 @@
 				<FieldLength>30</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Required">SOURCEDWG</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>60</FieldLength>
 			</Field>
-			<SourceFieldNames>Color,Elevation,Entity,FACFLOOR,FACNUM,FACROOM,FLOOR,Handle,Layer,LineWt,Linetype,ROOM_AREA,ROOM_NUMBER,RefName</SourceFieldNames>
-			<ChangeDetection exceptProductionView="InteriorSpaceExceptProduction" exceptStagingView="InteriorSpaceExceptStaging" 
+			<SourceFieldNames>Color,Elevation,Entity,FACFLOORCODE,FACNUM,FACROOM,FLOORCODE,Handle,Layer,LineWt,Linetype,ROOM_AREA,ROOM_NUMBER,RefName</SourceFieldNames>
+			<ChangeDetection exceptProductionView="eInteriorSpaceExceptProduction" exceptStagingView="eInteriorSpaceExceptStaging" 
 			idField="SPACEID"
-			viewFields="BUILDINGID,FLOOR,FLOORID,ROOM,SPACEID,SPACEAREA,SOURCEID,SHAPE"/>
+			viewFields="FLOORID,ROOMNUMBER,SPACEID,SPACEAREA,SOURCEID,SHAPE"/>
 		</Dataset>
 	</Transform>
 </Gizinta>

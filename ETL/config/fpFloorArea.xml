@@ -22,7 +22,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional">FLOOR</SourceName>
-				<TargetName qa="Required">FLOOR</TargetName>
+				<TargetName qa="Required">FLOORCODE</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>6</FieldLength>
@@ -35,15 +35,15 @@
 				<FieldLength>50</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">SENSITIVITY</SourceName>
-				<TargetName qa="Required">SENSITIVITY</TargetName>
+				<SourceName qa="Optional">FLOOR_AREA</SourceName>
+				<TargetName qa="Required">FLOORAREA</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
-				<FieldLength>60</FieldLength>
+				<FieldLength>50</FieldLength>
 			</Field>
 			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">IN_DATE</TargetName>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
 				<FieldType>Date</FieldType>
@@ -51,22 +51,22 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">LAST_USER</TargetName>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
 				<FieldType>String</FieldType>
 				<FieldLength>50</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Required">SOURCEDWG</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>60</FieldLength>
 			</Field>
-			<SourceFieldNames>Color,Elevation,Entity,FACFLOOR,FACNUM,FLOOR,GSF_AREA,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
-			<ChangeDetection exceptProductionView="FloorExceptProduction" exceptStagingView="FloorExceptStaging" idField="FLOORID"
-			viewFields="FLOORID,SCHELEV,ALTITUDE,SOURCEDWG,SHAPE"/>	
+			<SourceFieldNames>Color,Elevation,Entity,FACFLOORCODE,FACNUM,FLOORCODE,GSF_AREA,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
+			<ChangeDetection exceptProductionView="eFloorExceptProduction" exceptStagingView="eFloorExceptStaging" idField="FLOORID"
+			viewFields="FLOORID,SOURCEDWG,SHAPE"/>	
 		</Dataset>
 	</Transform>
 </Gizinta>

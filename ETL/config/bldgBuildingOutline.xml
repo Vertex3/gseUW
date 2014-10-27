@@ -13,7 +13,7 @@
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getSiteID(feature)</PythonExpression>
 				<FieldType>String</FieldType>
-				<FieldLength>20</FieldLength>
+				<FieldLength>60</FieldLength>
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
@@ -21,53 +21,15 @@
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
 				<FieldType>String</FieldType>
-				<FieldLength>2</FieldLength>
+				<FieldLength>60</FieldLength>
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">buildingid</TargetName>
+				<TargetName qa="Required">BLDGNAME</TargetName>
 				<Method>PythonCalculate</Method>
-				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
+				<PythonExpression>gseDrawing.getBuildingName(feature)</PythonExpression>
 				<FieldType>String</FieldType>
-				<FieldLength>2</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">BLDGHEIGHT</TargetName>
-				<Method>DefaultValue</Method>
-				<DefaultValue>100</DefaultValue>				
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">SPACING</TargetName>
-				<Method>DefaultValue</Method>
-				<DefaultValue>1</DefaultValue>				
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">MARGIN</TargetName>
-				<Method>DefaultValue</Method>
-				<DefaultValue>.1</DefaultValue>				
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">XCENTER</TargetName>
-				<Method>None</Method>
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">YCENTER</TargetName>
-				<Method>None</Method>
-				<FieldType>Double</FieldType>
-				<FieldLength>8</FieldLength>
+				<FieldLength>60</FieldLength>
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
@@ -77,30 +39,22 @@
 				<FieldLength>8</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">Handle</SourceName>
+				<SourceName qa="Optional">autocad_entity_handle</SourceName>
 				<TargetName qa="Optional">SOURCEID</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>30</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Optional">SOURCEDWG</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
 				<FieldLength>60</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">SENSITIVITY</TargetName>
-				<Method>PythonCalculate</Method>
-				<PythonExpression>gseDrawing.getSensitivity(feature)</PythonExpression>
-				<FieldType>String</FieldType>
-				<FieldLength>60</FieldLength>
-			</Field>
-			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">IN_DATE</TargetName>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
 				<FieldType>Date</FieldType>
@@ -108,16 +62,16 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">LAST_USER</TargetName>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
 				<FieldType>String</FieldType>
 				<FieldLength>50</FieldLength>
 			</Field>
-			<ChangeDetection exceptProductionView="BuildingOutlineTiltExceptProduction" exceptStagingView="BuildingOutlineTiltExceptStaging" 
+			<ChangeDetection exceptProductionView="eBuildingOutlineTiltExceptProduction" exceptStagingView="eBuildingOutlineTiltExceptStaging" 
 			idField="BUILDINGID"
 			viewIdField="BUILDINGID"
-			viewFields="BUILDINGID,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,SOURCEID,CALCROT,SHAPE"/>
+			viewFields="BUILDINGID,SOURCEID,CALCROT,SHAPE"/>
 			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
 		</Dataset>
 	</Transform>

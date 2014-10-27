@@ -3,7 +3,7 @@
 	<File>fpFloorArea.xml</File>
 	<File>fpFloorPoly.xml</File>
 	<File>fpFloorplanLine.xml</File>
-	<File>fpFloorplanLinePublish.xml</File>
+	<!--<File>fpFloorplanLinePublish.xml</File>-->
 	<File>fpFloorPoint.xml</File>
 	<File>fpInteriorSpace.xml</File>
 	<File>fpInteriorSpacePoint.xml</File>

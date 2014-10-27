@@ -11,7 +11,7 @@
 				<SourceName qa="Optional"></SourceName>
 				<TargetName qa="Optional">FACILITYID</TargetName>
 				<Method>Copy</Method>
-				<PythonExpression>DRAWING</PythonExpression>
+				<PythonExpression>fme_basename</PythonExpression>
 				<FieldType>String</FieldType>
 				<FieldLength>50</FieldLength>
 			</Field>
@@ -25,7 +25,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">SURFUSE</TargetName>
+				<TargetName qa="Optional">PAVEUSE</TargetName>
 				<Method>DefaultValue</Method>
 				<DefaultValue>Walking Path</DefaultValue>
 				<FieldType>String</FieldType>
@@ -33,7 +33,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Optional">INSTALLDATE</TargetName>
+				<TargetName qa="Optional">DATEADDED</TargetName>
 				<Method>None</Method>
 				<FieldType>Date</FieldType>
 				<FieldLength>36</FieldLength>
@@ -76,7 +76,7 @@
 				<FieldLength>30</FieldLength>
 			</Field>
 			<Field>
-				<SourceName qa="Optional">DRAWING</SourceName>
+				<SourceName qa="Optional">fme_basename</SourceName>
 				<TargetName qa="Required">SOURCEDWG</TargetName>
 				<Method>Copy</Method>
 				<FieldType>String</FieldType>
@@ -105,7 +105,7 @@
 				<FieldType>String</FieldType>
 				<FieldLength>25</FieldLength>
 			</Field>
-			<ChangeDetection viewFields="FACILITYID,SURFTYPE,SURFUSE,SOURCEID,SOURCEDWG,SHAPE" idField="SOURCEID" viewIdField="SOURCEDWG" exceptStagingView="StreetPavementExceptStaging" exceptProductionView="StreetPavementExceptProduction"/>
+			<ChangeDetection viewFields="FACILITYID,SURFTYPE,PAVEUSE,SOURCEID,SOURCEDWG,SHAPE" idField="SOURCEID" viewIdField="SOURCEDWG" exceptStagingView="eStreetPavementExceptStaging" exceptProductionView="eStreetPavementExceptProduction"/>
 
 			<SourceFieldNames>Color,Elevation,Entity,Handle,Layer,LineWt,Linetype,RULEID,RefName</SourceFieldNames>
 		</Dataset>

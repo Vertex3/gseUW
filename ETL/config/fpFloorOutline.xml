@@ -23,7 +23,7 @@
       </Field>
       <Field>
         <SourceName qa="Optional">FLOOR</SourceName>
-        <TargetName qa="Required">FLOOR</TargetName>
+        <TargetName qa="Required">FLOORCODE</TargetName>
         <Method>Copy</Method>
         <FieldType>String</FieldType>
         <FieldLength>6</FieldLength>
@@ -36,22 +36,6 @@
         <FieldLength>50</FieldLength>
       </Field>
       <Field>
-        <SourceName qa="Optional" />
-        <TargetName qa="Required">IN_DATE</TargetName>
-        <Method>PythonCalculate</Method>
-        <PythonExpression>gseDrawing.getDBTime()</PythonExpression>
-        <FieldType>Date</FieldType>
-        <FieldLength>36</FieldLength>
-      </Field>
-      <Field>
-        <SourceName qa="Optional" />
-        <TargetName qa="Required">LAST_USER</TargetName>
-        <Method>PythonCalculate</Method>
-        <PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
-        <FieldType>String</FieldType>
-        <FieldLength>50</FieldLength>
-      </Field>
-      <Field>
         <SourceName qa="Optional">SOURCEDWG</SourceName>
         <TargetName qa="Required">SOURCEDWG</TargetName>
         <Method>Copy</Method>
@@ -60,14 +44,22 @@
       </Field>
       <Field>
         <SourceName qa="Optional" />
-        <TargetName qa="Required">SENSITIVITY</TargetName>
+        <TargetName qa="Required">LASTUPDATE</TargetName>
         <Method>PythonCalculate</Method>
-        <PythonExpression>gseDrawing.getSensitivity(feature)</PythonExpression>
-        <FieldType>String</FieldType>
-        <FieldLength>60</FieldLength>
+        <PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+        <FieldType>Date</FieldType>
+        <FieldLength>36</FieldLength>
       </Field>
-      <SourceFieldNames>color,elevation,entity,facfloor,facnum,floor,gsf_area,handle,layer,linewt,linetype,refname</SourceFieldNames>
-      <ChangeDetection exceptProductionView="FloorOutlineExceptProduction" exceptStagingView="FloorOutlineExceptStaging" idField="floorid" viewFields="floorid,sourcedwg,shape" />
+      <Field>
+        <SourceName qa="Optional" />
+        <TargetName qa="Required">LASTEDITOR</TargetName>
+        <Method>PythonCalculate</Method>
+        <PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+        <FieldType>String</FieldType>
+        <FieldLength>50</FieldLength>
+      </Field>
+      <SourceFieldNames>color,elevation,entity,facFLOORCODE,facnum,FLOORCODE,gsf_area,handle,layer,linewt,linetype,refname</SourceFieldNames>
+      <ChangeDetection exceptProductionView="eFloorOutlineExceptProduction" exceptStagingView="eFloorOutlineExceptStaging" idField="FLOORID" viewFields="FLOORID,SOURCEDWG,SHAPE" />
     </Dataset>
   </Transform>
 </Gizinta>

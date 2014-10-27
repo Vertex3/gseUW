@@ -13,7 +13,7 @@
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getSiteID(feature)</PythonExpression>
 				<FieldType>String</FieldType>
-				<FieldLength>20</FieldLength>
+				<FieldLength>60</FieldLength>
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
@@ -21,39 +21,16 @@
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
 				<FieldType>String</FieldType>
-				<FieldLength>2</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">buildingid</TargetName>
-				<Method>PythonCalculate</Method>
-				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
-				<FieldType>String</FieldType>
-				<FieldLength>2</FieldLength>
-			</Field>
-			<Field>
-				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">FACILITYNO</TargetName>
-				<Method>PythonCalculate</Method>
-				<PythonExpression>gseDrawing.getBuilding(feature)</PythonExpression>
-				<FieldType>String</FieldType>
-				<FieldLength>2</FieldLength>
+				<FieldLength>60</FieldLength>
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
 				<TargetName qa="Optional">FOUNDTYPE</TargetName>
 				<Method>DefaultValue</Method>
 				<DefaultValue>1</DefaultValue>
-				<FieldType>String</FieldType>
-				<FieldLength>10</FieldLength>
+				<FieldType>Integer</FieldType>
+				<FieldLength>4</FieldLength>
 			</Field>
-<!--			<Field>
-				<SourceName qa="Optional">*NAME*</SourceName>
-				<TargetName qa="Optional">NAME</TargetName>
-				<Method>Copy</Method>
-				<FieldType>String</FieldType>
-				<FieldLength>255</FieldLength>
-			</Field>-->
 			<Field>
 				<SourceName qa="Optional"></SourceName>
 				<TargetName qa="Required">SENSITIVITY</TargetName>
@@ -64,7 +41,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">IN_DATE</TargetName>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
 				<FieldType>Date</FieldType>
@@ -72,7 +49,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"/>
-				<TargetName qa="Optional">LAST_USER</TargetName>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
 				<FieldType>String</FieldType>
@@ -92,9 +69,9 @@
 				<FieldType>String</FieldType>
 				<FieldLength>60</FieldLength>
 			</Field>
-			<ChangeDetection exceptProductionView="BuildingFoundationExceptProduction" exceptStagingView="BuildingFoundationExceptStaging" 
+			<ChangeDetection exceptProductionView="eBuildingFoundationExceptProduction" exceptStagingView="eBuildingFoundationExceptStaging" 
 			idField="BUILDINGID" viewIdField="SOURCEDWG"
-			viewFields="SOURCEDWG,BUILDINGID,FACILITYNO,FOUNDTYPE,SHAPE"/>
+			viewFields="SOURCEDWG,BUILDINGID,FOUNDTYPE,SHAPE"/>
 			<SourceFieldNames>Color,Elevation,Entity,FACNUM,Handle,Layer,LineWt,Linetype,RULEID,RefName</SourceFieldNames>
 		</Dataset>
 	</Transform>
