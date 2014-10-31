@@ -6,6 +6,7 @@ drop view dbo.pubFloors;
 drop view dbo.pubInteriorSpace_Points;
 drop view dbo.pubInteriorSpaces;
 drop view dbo.pubInteriorSpaces_Tilt;
+drop view dbo.qaDuplicateFloorPoints;
 drop view dbo.qaMissingFeaturesByFloor;
 drop view dbo.qaMissingFloorPoints;
 drop view dbo.qaUnexpectedFeaturesByFloor;
