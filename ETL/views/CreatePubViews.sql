@@ -287,3 +287,8 @@ WHERE
  (SELECT floorpoints.FloorID FROM dbo.ACTIVE_FLOOR))
  
  GO
+------------------------------------------------------------------------
+ 
+ create view qaDuplicateFloorPoints as  
+(SELECT max(objectid) as oid,count(*) as CountStar, floorid FROM UWGISProduction.dbo.FLOOR_POINT group by FLOORID having COUNT(*) > 1)   
+GO

@@ -6,7 +6,6 @@
 		fmeLoadFile="gseFloorplanLoader.fmw" 
 		source="CAD"/>
 	<File>fpFloorPoly.xml</File>
-<!--	<File>fpFloorArea.xml</File>-->
 	<File>fpFloorplanLine.xml</File>
 	<File>fpInteriorSpace.xml</File>
 </GizintaPlaylist>
