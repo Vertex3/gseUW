@@ -27,8 +27,11 @@ def getSiteIDFromPath(pth):
 	try:
 		pth = pth.split(os.sep)
 		if len(pth) > 3:
-			site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
-			site = site.split("-")[0] # get the first part of the string in case there is a dash
+			if pth[len(pth)-2].lower() == 'routing':
+				site = pth[len(pth)-4] # this will get the site folder name when Routing drawing
+			else:
+				site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
+			site = site.split("-")[0]# get the first part of the string if there is a dash
 	except:
 		print "Error getting SiteID for:" + str(pth)
 	return site
@@ -36,15 +39,15 @@ def getSiteIDFromPath(pth):
 def getFloorIDFromPath(pth):
 	global namedelimiter
 	dwg = pth[pth.rfind(os.sep)+1:]
-	site = getSiteIDFromPath(pth)
-	floorID = site + namedelimiter + getBuildingFromName(dwg) + namedelimiter + getFloorCodeFromName(dwg)
+	#site = getSiteIDFromPath(pth)
+	floorID = getBuildingFromName(dwg) + namedelimiter + getFloorCodeFromName(dwg)
 	return floorID
 
 def getBuildingIDFromPath(pth):
 	global namedelimiter
 	dwg = pth[pth.rfind(os.sep)+1:]
-	site = getSiteIDFromPath(pth)
-	buildingID = site + namedelimiter + getBuildingFromName(dwg)
+	#site = getSiteIDFromPath(pth)
+	buildingID = getBuildingFromName(dwg)
 	return buildingID
 
 def getBuildingNameFromPath(pth):
@@ -71,14 +74,14 @@ def getSiteplanID(feature):
 
 def getSiteplanBuildingID(feature):
 	try:
-		building = getSiteplanID(feature) + namedelimiter + str(feature.getAttribute("FACNUM"))
+		building = str(feature.getAttribute("FACNUM"))
 	except:
 		building = None
 	return building
 
 def getBuildingID(feature):
 	try:
-		building = getSiteID(feature) + namedelimiter + str(getBuilding(feature))
+		building = str(getBuilding(feature))
 	except:
 		building = None
 	return building
@@ -93,8 +96,7 @@ def getBuilding(feature):
 
 def getFloor(feature):
 	dwgName = getDrawing(feature)
-	if dwgName.rfind(".dwg") > -1:
-		dwgName = dwgName[:dwgName.rfind(".dwg")]
+	dwgName.split(os.sep)[0]
 	floorNum = dwgName[len(dwgName)-2:]
 	return floorNum
 
@@ -128,16 +130,12 @@ def getFloorFromName(dwg):
 	return floor
 
 def getFloorCodeFromName(dwg):
-	if dwg.lower().rfind(".dwg") > -1:
-		dwg = dwg[:dwg.lower().rfind(".dwg")]
+	dwg.split(os.sep)[0]
 	floorNum = dwg[len(dwg)-2:]
 	return floorNum.upper()
 
 def getDrawingFromName(dwg):
-	if dwg.find(os.sep) > -1:
-		dwg = dwg[dwg.rfind(os.sep)+1:]
-	if dwg.lower().rfind(".dwg") > -1:
-		dwg = dwg[:dwg.lower().rfind(".dwg")]
+	dwg.split(os.sep)[0]
 	return dwg
 
 def getSensitivityFromName(dwg):
