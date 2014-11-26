@@ -5,11 +5,11 @@
 		logFileName="gseFloorplanDerive.log" 
 		fmeLoadFile="gseFloorplanDerive.fmw" 
 		source="GDB"/>
-	<File>fpFloorArea.xml</File>
+	<File>fp\fpFloorArea.xml</File>
 <!--	<File>fpFloorPoly.xml</File>-->
-	<File>fpFloorPoint.xml</File>
-	<File>fpFloorOutline.xml</File>
+	<File>fp\fpFloorPoint.xml</File>
+	<File>fp\fpFloorOutline.xml</File>
 	<!--<File>fpFloorplanLinePublish.xml</File>-->
-	<File>fpInteriorSpaceTilt.xml</File>
-	<File>fpInteriorSpacePoint.xml</File>
+	<File>fp\fpInteriorSpaceTilt.xml</File>
+	<File>fp\fpInteriorSpacePoint.xml</File>
 </GizintaPlaylist>

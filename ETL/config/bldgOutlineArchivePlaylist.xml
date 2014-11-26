@@ -5,8 +5,8 @@
 		logFileName="gseBuildingOutlineArchive.log" 
 		fmeLoadFile="gseBuildingOutlineArchive.fmw" 
 		source="GDB"/>
-	<File>bldgBuildingOutline.xml</File>
-	<File>bldgBuildingOutlinePoint.xml</File>
-	<File>bldgBuildingFoundation.xml</File>
-	<File>bldgBuildingRoof.xml</File>
+	<File>bldg\bldgBuildingOutline.xml</File>
+	<File>bldg\bldgBuildingOutlinePoint.xml</File>
+	<File>bldg\bldgBuildingFoundation.xml</File>
+	<File>bldg\bldgBuildingRoof.xml</File>
 </GizintaPlaylist>

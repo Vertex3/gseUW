@@ -5,6 +5,6 @@
 		logFileName="gseBuildingDerive.log" 
 		fmeLoadFile="gseBuildingDerive.fmw" 
 		source="GDB"/>
-	<File>bmBuilding.xml</File>
-	<File>bmBuildingPoint.xml</File>
+	<File>bm\bmBuilding.xml</File>
+	<File>bm\bmBuildingPoint.xml</File>
 </GizintaPlaylist>

@@ -5,7 +5,7 @@
 		logFileName="gseFloorplanLoader.log" 
 		fmeLoadFile="gseFloorplanLoader.fmw" 
 		source="CAD"/>
-	<File>fpFloorPoly.xml</File>
-	<File>fpFloorplanLine.xml</File>
-	<File>fpInteriorSpace.xml</File>
+	<File>fp\fpFloorPoly.xml</File>
+	<File>fp\fpFloorplanLine.xml</File>
+	<File>fp\fpInteriorSpace.xml</File>
 </GizintaPlaylist>
