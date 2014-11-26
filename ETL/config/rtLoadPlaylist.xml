@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<GizintaPlaylist errorTableName="gzError" fileExtension=".dwg" logTableName="gzLog" xmlns:gizinta="http://gizinta.com">
+	<LoadSettings nameContains="RT" logFileName="gseRoutingLoader.log" fmeLoadFile="gseRoutingLoader.fmw" source="CAD"/>
+	<File>rt\rtDoorPoint.xml</File>
+	<File>rt\rtStop.xml</File>
+	<File>rt\rtRoomPoint.xml</File>
+	<File>rt\rtLineInterior.xml</File>
+	<File>rt\rtLineRmConnector.xml</File>
+	<File>rt\rtLineTransition.xml</File>
+	<File>rt\rtWaypoint.xml</File>
+</GizintaPlaylist>
