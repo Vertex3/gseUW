@@ -138,8 +138,6 @@
         <FieldLength>4</FieldLength>
       </Field>
 
-
-
       <Field>
         <SourceName>autocad_entity_handle</SourceName>
         <TargetName>SOURCEID</TargetName>
@@ -170,6 +168,9 @@
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
+	<ChangeDetection exceptProductionView="eLineInteriorProd" exceptStagingView="eLineInteriorStaging" 
+	idField="SPACEID"
+	viewFields="FLOORID,SPACEID,ADA,SHAPE"/>
     </Dataset>
   </Transform>
 </Gizinta>

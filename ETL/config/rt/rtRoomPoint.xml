@@ -110,6 +110,9 @@
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
+		<ChangeDetection exceptProductionView="eRoomPointProd" exceptStagingView="eRoomPointStaging" 
+		idField="SPACEID"
+		viewFields="FLOORID,SPACEID,ADA"/>
     </Dataset>
   </Transform>
 </Gizinta>

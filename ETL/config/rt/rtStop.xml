@@ -122,6 +122,9 @@
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
+		<ChangeDetection exceptProductionView="eStopProd" exceptStagingView="eStopStaging" 
+		idField="FLOORID"
+		viewFields="FLOORID,SPACEID1,SPACEID2,SHAPE"/>
     </Dataset>
   </Transform>
 </Gizinta>

@@ -151,6 +151,9 @@
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
+		<ChangeDetection exceptProductionView="eLineRmConnectorProd" exceptStagingView="eLineRmConnectorStaging" 
+		idField="SPACEID"
+		viewFields="FLOORID,SPACEID,ADA,SHAPE"/>
     </Dataset>
   </Transform>
 </Gizinta>
