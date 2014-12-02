@@ -80,6 +80,7 @@ def getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
 
     line1 = getLine1(fmeFile,fmeExe)
     comm = line1 + \
+    makeFMEParam("flr",floorID) + \
     makeFMEParam("DestDataset_GEODATABASE_SDE","sde") + \
     makeFMEParam("OUT_CONNECTION_FILE_GEODATABASE_SDE",GISStaging_sde) + \
     makeFMEParam("ProductionConnectionFile",GISProduction_sde) + \
@@ -116,6 +117,7 @@ def getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sd
     line1 = getLine1(fmeFile,fmeExe)
 
     comm =  line1 + \
+    makeFMEParam("flr",floorID) + \
     makeFMEParam("DestDataset_GEODATABASE_SDE","sde") + \
     makeFMEParam("SCHEMA_IN_REAL_FORMAT_SCHEMA","Esri Geodatabase (ArcSDE Geodatabase)") + \
     makeFMEParam("OUT_CONNECTION_FILE_GEODATABASE_SDE",GISStaging_sde) + \
