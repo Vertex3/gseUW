@@ -9,9 +9,12 @@
     <CADDataset sourceIDField="autocad_entity_handle" sourceName="RT-TRANS-1.0-2.0" targetName="RT_LineTransition">
       <WhereClause/>
     </CADDataset>
+    <GDBDataset sourceIDField="OBJECTID" sourceName="RT_LineTransition" targetName="RT_LineTransition">
+      <WhereClause/>
+    </GDBDataset>
   </Extract>
   <Transform>
-    <Dataset name="RT_LineTransition" qa="CheckFields,CheckGeometry" sourceIDField="floorid" sourceNameField="floorid">
+    <Dataset name="RT_LineTransition" qa="CheckFields,CheckGeometry" sourceIDField="FLOORID" sourceNameField="FLOORID">
       <Field>
         <SourceName/>
         <TargetName>SITEID</TargetName>

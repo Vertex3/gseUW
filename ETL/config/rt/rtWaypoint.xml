@@ -86,7 +86,7 @@
         <FieldLength>50</FieldLength>
       </Field>
 		<ChangeDetection exceptProductionView="eWaypointProd" exceptStagingView="eWaypointStaging" 
-		idField="FLOOID"
+		idField="FLOORID"
 		viewFields="FLOORID,NAME,WAYPOINTTYPE,SHAPE"/>
     </Dataset>
   </Transform>

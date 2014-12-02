@@ -1,11 +1,11 @@
 <Gizinta logTableName="gzLog" errorTableName="gzError" xmlns:gizinta="http://gizinta.com" version="2013.1">
   <Extract>
-    <CADDataset sourceIDField="autocad_entity_handle" sourceName="RT_LineRmConnector" targetName="RT_LineRmConnector">
+    <GDBDataset sourceIDField="SPACEID" sourceName="RT_LineRmConnector" targetName="RT_LineRmConnector">
       <WhereClause/>
-    </CADDataset>
+    </GDBDataset>
   </Extract>
   <Transform>
-    <Dataset name="RT_LineRmConnector" qa="CheckFields,CheckGeometry" sourceIDField="floorid" sourceNameField="floorid">
+    <Dataset name="RT_LineRmConnector" qa="CheckFields,CheckGeometry" sourceIDField="SPACEID" sourceNameField="SPACEID">
       <Field>
         <SourceName/>
         <TargetName>SITEID</TargetName>

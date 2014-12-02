@@ -112,7 +112,7 @@
       </Field>
 		<ChangeDetection exceptProductionView="eRoomPointProd" exceptStagingView="eRoomPointStaging" 
 		idField="SPACEID"
-		viewFields="FLOORID,SPACEID,ADA"/>
+		viewFields="FLOORID,SPACEID,ADA,SHAPE"/>
     </Dataset>
   </Transform>
 </Gizinta>
