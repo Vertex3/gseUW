@@ -6,11 +6,11 @@ ws = arcpy.GetParameterAsText(0)
 ws = r'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde\\'+wsDelim+'Floorplan'
 
 #fcs = ['Floor_Area','Floor_Outline','Floor_Point','Floor_Poly','FloorplanLine','InteriorSpace','InteriorSpace_Point']
-fcs = ['FloorplanLine']
+fcs = ['InteriorSpace']
 table = arcpy.GetParameterAsText(1)
-table = os.path.join(r'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde','pubFloors')
+table = os.path.join(r'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde','ACTIVE_FLOOR')
 field = arcpy.GetParameterAsText(2)
-field = 'SchematicElevation'
+field = 'SCHELEV'
 # Identify the geometry field
 #
 def main(argv = None):
