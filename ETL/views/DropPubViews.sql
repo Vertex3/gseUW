@@ -1,3 +1,4 @@
+drop view dbo.allFloor_Areas;
 drop view dbo.pubFloor_Areas;
 drop view dbo.pubFloor_Outlines;
 drop view dbo.pubFloor_Points;

@@ -1,294 +1,322 @@
 -- Create Pub Views - create publishing views
 go
-CREATE VIEW pubFloors AS
+CREATE VIEW ALLFloors AS
 SELECT     
- activefloors.FloorID,
- activefloors.FloorCode,
- fl.NameShort,
- fl.NameLong,
- activefloors.HasInteriorSpaces,
- activefloors.HasFloorplanLines,
- activefloors.HasFloorArea,
- activefloors.SCHELEV AS "SchematicElevation",
- activefloors.GROUNDELEV AS "GroundElevation",
- fl.FloorLevel,
- ROW_NUMBER() OVER (partition BY activefloors.buildingid ORDER BY fl.FloorLevel) - 1 AS StackLevel,
- activefloors.Sensitivity,
- activefloors.SourceDWG,
- activefloors.BuildingID,
- tilt.BLDGNAME as "BuildingName",
- tilt.CalcRot as "CalcRot",
- activefloors.BLDGCODE + '_' + LTRIM(STR(fl.FloorLevel)) AS DDPFloorSort,
- activefloors.LastUpdate,
- activefloors.LastEditor
+ activefloors.FLOORID,
+ activefloors.FLOORCODE,
+ fl.NAMESHORT,
+ fl.NAMELONG,
+ activefloors.HASINTERIORSPACES,
+ activefloors.HASFLOORPLANLINES,
+ activefloors.HASFLOORAREA,
+ activefloors.SCHELEV,
+ activefloors.GROUNDELEV,
+ fl.FLOORLEVEL,
+ ROW_NUMBER() OVER (partition BY activefloors.BUILDINGID ORDER BY fl.FLOORLEVEL) - 1 AS StackLevel,
+ activefloors.SENSITIVITY,
+ activefloors.SOURCEDWG,
+ activefloors.BUILDINGID,
+ tilt.BLDGNAME,
+ tilt.CALCROT,
+ activefloors.BLDGCODE + '_' + LTRIM(STR(fl.FLOORLEVEL)) AS DDPFLOORSORT,
+ activefloors.LASTUPDATE,
+ activefloors.LASTEDITOR
 FROM
  dbo.ACTIVE_FLOOR AS activefloors LEFT OUTER JOIN
- dbo.BUILDING_OUTLINE_TILT AS tilt ON tilt.BuildingID = activefloors.BuildingID INNER JOIN
- dbo.FLOOR_LEVEL AS fl ON activefloors.FloorCode = fl.FloorCode
-WHERE Sensitivity = 'None'
+ dbo.BUILDING_OUTLINE_TILT AS tilt ON tilt.BUILDINGID = activefloors.BUILDINGID INNER JOIN
+ dbo.FLOOR_LEVEL AS fl ON activefloors.FLOORCODE = fl.FLOORCODE
+GO
+------------------------------------------------------------------------
+go
+CREATE VIEW pubFloors AS
+SELECT     
+ activefloors.FLOORID,
+ activefloors.FLOORCODE,
+ fl.NAMESHORT,
+ fl.NAMELONG,
+ activefloors.HASINTERIORSPACES,
+ activefloors.HASFLOORPLANLINES,
+ activefloors.HASFLOORAREA,
+ activefloors.SCHELEV,
+ activefloors.GROUNDELEV,
+ fl.FLOORLEVEL,
+ ROW_NUMBER() OVER (partition BY activefloors.BUILDINGID ORDER BY fl.FLOORLEVEL) - 1 AS StackLevel,
+ activefloors.SENSITIVITY,
+ activefloors.SOURCEDWG,
+ activefloors.BUILDINGID,
+ tilt.BLDGNAME,
+ tilt.CALCROT,
+ activefloors.BLDGCODE + '_' + LTRIM(STR(fl.FLOORLEVEL)) AS DDPFLOORSORT,
+ activefloors.LASTUPDATE,
+ activefloors.LASTEDITOR
+FROM
+ dbo.ACTIVE_FLOOR AS activefloors LEFT OUTER JOIN
+ dbo.BUILDING_OUTLINE_TILT AS tilt ON tilt.BUILDINGID = activefloors.BUILDINGID INNER JOIN
+ dbo.FLOOR_LEVEL AS fl ON activefloors.FLOORCODE = fl.FLOORCODE
+WHERE SENSITIVITY = 'None'
 GO
 ------------------------------------------------------------------------
 go
 CREATE VIEW pubFloorplanLines AS
 SELECT     
- fpline.FloorID,
- fpline.FloorCode,
- floors.NameShort,
- floors.NameLong,
- floors.SchematicElevation,
- floors.GroundElevation,
- floors.FloorLevel,
- floors.StackLevel,
- floors.Sensitivity,
- fpline.SiteID,
- fpline.BuildingID,
- fpline.SourceLayer,
- fpline.SourceID,
- fpline.SourceDWG,
- fpline.LastUpdate,
- fpline.LastEditor,
+ fpline.FLOORID,
+ fpline.FLOORCODE,
+ floors.NAMESHORT,
+ floors.NAMELONG,
+ floors.SCHELEV,
+ floors.GROUNDELEV,
+ floors.FLOORLEVEL,
+ floors.STACKLEVEL,
+ floors.SENSITIVITY,
+ fpline.SITEID,
+ fpline.BUILDINGID,
+ fpline.SOURCELAYER,
+ fpline.SOURCEID,
+ fpline.SOURCEDWG,
+ fpline.LASTUPDATE,
+ fpline.LASTEDITOR,
  fpline.SHAPE,
  fpline.OBJECTID
 FROM         
 dbo.FLOORPLANLINE AS fpline INNER JOIN
-dbo.pubFloors AS floors ON fpline.FloorID = Floors.FloorID
-WHERE (floors.Sensitivity = 'None')
+dbo.pubFloors AS floors ON fpline.FLOORID = Floors.FLOORID
+WHERE (floors.SENSITIVITY = 'None')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW pubFloor_Areas AS
 SELECT     
- floorarea.FloorID,
- floorarea.FloorCode,
- floorarea.FloorArea,
- floors.NameShort,
- floors.NameLong,
- floors.SchematicElevation,
- floors.GroundElevation,
- floors.FloorLevel,
- floors.StackLevel, 
- floors.Sensitivity,
- floors.CalcRot,
- floors.DDPFloorSort,
- floorarea.BuildingID,
- floorarea.SiteID,
- floorarea.SourceDWG,
- floorarea.LastUpdate,
- floorarea.LastEditor,
+ floorarea.FLOORID,
+ floorarea.FLOORCODE,
+ floorarea.FLOORAREA,
+ floors.NAMESHORT,
+ floors.NAMELONG,
+ floors.SCHELEV,
+ floors.GROUNDELEV,
+ floors.FLOORLEVEL,
+ floors.STACKLEVEL, 
+ floors.SENSITIVITY,
+ floors.CALCROT,
+ floors.DDPFLOORSORT,
+ floorarea.BUILDINGID,
+ floorarea.SITEID,
+ floorarea.SOURCEDWG,
+ floorarea.LASTUPDATE,
+ floorarea.LASTEDITOR,
  floorarea.SHAPE,
  floorarea.OBJECTID
 FROM
 dbo.FLOOR_AREA AS floorarea INNER JOIN
-dbo.pubFloors AS floors ON floors.FloorID = floorarea.FloorID
-WHERE     (floors.Sensitivity = 'None')
+dbo.pubFloors AS floors ON floors.FLOORID = floorarea.FLOORID
+WHERE     (floors.SENSITIVITY = 'None')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW pubFloor_Outlines AS
 SELECT     
- flooroutlines.FloorID,
- flooroutlines.FloorCode,
- floors.NameShort,
- floors.NameLong,
- floors.SchematicElevation,
- floors.GroundElevation,
- floors.FloorLevel,
- floors.StackLevel,
- floors.Sensitivity,
- floors.CalcRot,
- floors.DDPFloorSort,
- flooroutlines.BuildingID,
- flooroutlines.SiteID,
- flooroutlines.SourceDWG,
- flooroutlines.LastUpdate,
- flooroutlines.LastEditor,
+ flooroutlines.FLOORID,
+ flooroutlines.FLOORCODE,
+ floors.NAMESHORT,
+ floors.NAMELONG,
+ floors.SCHELEV,
+ floors.GROUNDELEV,
+ floors.FLOORLEVEL,
+ floors.STACKLEVEL,
+ floors.SENSITIVITY,
+ floors.CALCROT,
+ floors.DDPFLOORSORT,
+ flooroutlines.BUILDINGID,
+ flooroutlines.SITEID,
+ flooroutlines.SOURCEDWG,
+ flooroutlines.LASTUPDATE,
+ flooroutlines.LASTEDITOR,
  flooroutlines.SHAPE,
  flooroutlines.OBJECTID
 FROM         
 dbo.FLOOR_OUTLINE AS flooroutlines INNER JOIN
-dbo.pubFloors AS floors ON flooroutlines.FloorID = floors.FloorID
-WHERE     (floors.Sensitivity = 'None')
+dbo.pubFloors AS floors ON flooroutlines.FLOORID = floors.FLOORID
+WHERE     (floors.SENSITIVITY = 'None')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW pubFloor_Points AS
 SELECT     
- floorpoint.FloorCode,
- floorpoint.FloorID,
- floors.NameShort,
- floors.NameLong,
- floors.SchematicElevation,
- floors.GroundElevation,
- floors.FloorLevel,
- floors.StackLevel,
- floors.Sensitivity,
- floors.CalcRot,
- (SELECT     COUNT(*) AS Expr1 FROM dbo.INTERIORSPACE AS SPC WHERE (floors.FloorID = floors.FloorID)) AS InteriorSpaceCount,
- (SELECT COUNT(*) AS Expr1 FROM dbo.FLOORPLANLINE AS fpl WHERE (floors.FloorID = floors.FloorID)) AS FloorplanLineCount,
- (SELECT     COUNT(*) AS Expr1 FROM dbo.FLOOR_AREA AS FA WHERE (floors.FloorID = floors.FloorID)) AS FloorAreaCount,
- ddp.ModPortrait,
- ddp.ModLandscape,
+ floorpoint.FLOORCODE,
+ floorpoint.FLOORID,
+ floors.NAMESHORT,
+ floors.NAMELONG,
+ floors.SCHELEV,
+ floors.GROUNDELEV,
+ floors.FLOORLEVEL,
+ floors.STACKLEVEL,
+ floors.SENSITIVITY,
+ floors.CALCROT,
+ (SELECT     COUNT(*) AS Expr1 FROM dbo.INTERIORSPACE AS SPC WHERE (floors.FLOORID = floors.FLOORID)) AS INTERIORSPACECOUNT,
+ (SELECT COUNT(*) AS Expr1 FROM dbo.FLOORPLANLINE AS fpl WHERE (floors.FLOORID = floors.FLOORID)) AS FLOORPLANLINECOUNT,
+ (SELECT     COUNT(*) AS Expr1 FROM dbo.FLOOR_AREA AS FA WHERE (floors.FLOORID = floors.FLOORID)) AS FLOORAREACOUNT,
+ ddp.MODPORTRAIT,
+ ddp.MODLANDSCAPE,
  ddp.Scale85X11,
  ddp.Scale11X17,
- floors.DDPFloorSort,
- floorpoint.SiteID,
- floorpoint.BuildingID,
- floorpoint.LastUpdate,
- floorpoint.LastEditor,
+ floors.DDPFLOORSORT,
+ floorpoint.SITEID,
+ floorpoint.BUILDINGID,
+ floorpoint.LASTUPDATE,
+ floorpoint.LASTEDITOR,
  floorpoint.SHAPE,
  floorpoint.OBJECTID
 FROM         
  dbo.FLOOR_POINT as floorpoint INNER JOIN
- dbo.pubFloors as floors ON floors.FloorID = floorpoint.FloorID LEFT OUTER JOIN
- dbo.DDPINDEX_SUPPORT ddp ON floorpoint.BuildingID = ddp.BuildingID
-WHERE     (floors.Sensitivity = 'None')
+ dbo.pubFloors as floors ON floors.FLOORID = floorpoint.FLOORID LEFT OUTER JOIN
+ dbo.DDPINDEX_SUPPORT ddp ON floorpoint.BUILDINGID = ddp.BUILDINGID
+WHERE     (floors.SENSITIVITY = 'None')
 
 ------------------------------------------------------------------------
 GO
 CREATE VIEW pubInteriorSpace_Points AS
 SELECT     
- spaces.SpaceID,
- spaces.RoomNumber,
- spaces.FloorID,
- spaces.FloorCode,
- floors.NameShort,
- floors.NameLong,
- floors.SchematicElevation,
- floors.GroundElevation,
- floors.FloorLevel,
- floors.StackLevel,
- floors.Sensitivity,
- spaces.BuildingID,
- spaces.SiteID,
- spaces.SourceDWG,
- spaces.LastUpdate,
- spaces.LastEditor,
+ spaces.SPACEID,
+ spaces.ROOMNUMBER,
+ spaces.FLOORID,
+ spaces.FLOORCODE,
+ floors.NAMESHORT,
+ floors.NAMELONG,
+ floors.SCHELEV,
+ floors.GROUNDELEV,
+ floors.FLOORLEVEL,
+ floors.STACKLEVEL,
+ floors.SENSITIVITY,
+ spaces.BUILDINGID,
+ spaces.SITEID,
+ spaces.SOURCEDWG,
+ spaces.LASTUPDATE,
+ spaces.LASTEDITOR,
  spaces.SHAPE,
  spaces.OBJECTID
 
 FROM         
 dbo.INTERIORSPACE_POINT AS spaces INNER JOIN
-dbo.pubFloors AS floors ON floors.FloorID = spaces.FloorID
-WHERE     (floors.Sensitivity = 'None')
+dbo.pubFloors AS floors ON floors.FLOORID = spaces.FLOORID
+WHERE     (floors.SENSITIVITY = 'None')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW pubInteriorSpaces AS
 SELECT     
- spaces.SpaceID,
- spaces.RoomNumber,
- spaces.FloorID,
- spaces.FloorCode,
- floors.NameShort,
- floors.NameLong,
- floors.SchematicElevation,
- floors.GroundElevation,
- floors.FloorLevel,
- floors.StackLevel,
- floors.Sensitivity,
+ spaces.SPACEID,
+ spaces.ROOMNUMBER,
+ spaces.FLOORID,
+ spaces.FLOORCODE,
+ floors.NAMESHORT,
+ floors.NAMELONG,
+ floors.SCHELEV,
+ floors.GROUNDELEV,
+ floors.FLOORLEVEL,
+ floors.STACKLEVEL,
+ floors.SENSITIVITY,
  spaces.SpaceClass,
  spaces.SpaceArea,
- spaces.BuildingID,
- spaces.SiteID,
- spaces.SourceID,
- spaces.SourceDWG,
- spaces.LastUpdate,
- spaces.LastEditor,
+ spaces.BUILDINGID,
+ spaces.SITEID,
+ spaces.SOURCEID,
+ spaces.SOURCEDWG,
+ spaces.LASTUPDATE,
+ spaces.LASTEDITOR,
  spaces.SHAPE,
  spaces.OBJECTID
 FROM
 dbo.INTERIORSPACE as spaces INNER JOIN
-dbo.pubFloors AS floors ON floors.FloorID = spaces.FloorID
-WHERE     (floors.Sensitivity = 'None')
+dbo.pubFloors AS floors ON floors.FLOORID = spaces.FLOORID
+WHERE     (floors.SENSITIVITY = 'None')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW pubInteriorSpaces_Tilt AS
 SELECT     
- spaces.SpaceID,
- spaces.RoomNumber,
- spaces.FloorID,
- spaces.FloorCode,
- floors.NameShort,
- floors.NameLong,
- floors.FloorLevel,
- floors.StackLevel,
- floors.Sensitivity,
- spaces.BuildingID,
- spaces.SiteID,
- spaces.LastUpdate,
- spaces.LastEditor,
+ spaces.SPACEID,
+ spaces.ROOMNUMBER,
+ spaces.FLOORID,
+ spaces.FLOORCODE,
+ floors.NAMESHORT,
+ floors.NAMELONG,
+ floors.FLOORLEVEL,
+ floors.STACKLEVEL,
+ floors.SENSITIVITY,
+ spaces.BUILDINGID,
+ spaces.SITEID,
+ spaces.LASTUPDATE,
+ spaces.LASTEDITOR,
  spaces.SHAPE,
  spaces.OBJECTID
 FROM
 dbo.INTERIORSPACE_Tilt AS spaces INNER JOIN
-dbo.pubFloors AS floors ON floors.FloorID = spaces.FloorID
-WHERE     (floors.Sensitivity = 'None')
+dbo.pubFloors AS floors ON floors.FLOORID = spaces.FLOORID
+WHERE     (floors.SENSITIVITY = 'None')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW qaMissingFeaturesByFloor AS
 SELECT     
- activefloors.HasInteriorSpaces,
- activefloors.HasFloorplanLines,
- activefloors.HasFloorArea,
- activefloors.FloorID,
- floorpoints.InteriorSpaceCount,
- floorpoints.FloorplanLineCount,
- floorpoints.FloorAreaCount
+ activefloors.HASINTERIORSPACES,
+ activefloors.HASFLOORPLANLINES,
+ activefloors.HASFLOORAREA,
+ activefloors.FLOORID,
+ floorpoints.INTERIORSPACECOUNT,
+ floorpoints.FLOORPLANLINECOUNT,
+ floorpoints.FLOORAREACOUNT
 FROM         
  dbo.ACTIVE_FLOOR AS activefloors INNER JOIN
- dbo.pubFloor_Points AS floorpoints ON activefloors.FloorID = floorpoints.FloorID
+ dbo.pubFloor_Points AS floorpoints ON activefloors.FLOORID = floorpoints.FLOORID
 WHERE     
-(floorpoints.InteriorSpaceCount = 0) AND (activefloors.HasInteriorSpaces = 'T') OR
-(floorpoints.FloorplanLineCount = 0) AND (activefloors.HasFloorplanLines = 'T') OR
-(floorpoints.FloorAreaCount = 0) AND (activefloors.HasFloorArea = 'T')
+(floorpoints.INTERIORSPACECOUNT = 0) AND (activefloors.HASINTERIORSPACES = 'T') OR
+(floorpoints.FLOORPLANLINECOUNT = 0) AND (activefloors.HASFLOORPLANLINES = 'T') OR
+(floorpoints.FLOORAREACOUNT = 0) AND (activefloors.HASFLOORAREA = 'T')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW qaMissingFloorPoints AS
 SELECT     
- FloorCode,
- FloorID,
- BuildingID,
- SourceDWG
+ FLOORCODE,
+ FLOORID,
+ BUILDINGID,
+ SOURCEDWG
 FROM         
 dbo.ACTIVE_FLOOR
 WHERE
-(FloorID NOT IN (SELECT FloorID FROM dbo.pubFloor_Points))
+(FLOORID NOT IN (SELECT FLOORID FROM dbo.pubFloor_Points))
  ------------------------------------------------------------------------
 GO
 CREATE VIEW qaUnexpectedFeaturesByFloor AS
 SELECT     
- activefloors.HasInteriorSpaces,
- activefloors.HasFloorplanLines,
- activefloors.HasFloorArea,
- activefloors.FloorID,
- FP.InteriorSpaceCount,
- FP.FloorplanLineCount,
- FP.FloorAreaCount,
+ activefloors.HASINTERIORSPACES,
+ activefloors.HASFLOORPLANLINES,
+ activefloors.HASFLOORAREA,
+ activefloors.FLOORID,
+ FP.INTERIORSPACECOUNT,
+ FP.FLOORPLANLINECOUNT,
+ FP.FLOORAREACOUNT,
  FP.SHAPE,
  FP.OBJECTID
 FROM         
 dbo.ACTIVE_FLOOR AS activefloors INNER JOIN
-dbo.pubFloor_Points AS FP ON activefloors.FloorID = FP.FloorID
+dbo.pubFloor_Points AS FP ON activefloors.FLOORID = FP.FLOORID
 WHERE     
-(FP.InteriorSpaceCount > 0) AND (activefloors.HasInteriorSpaces IS NULL OR activefloors.HasInteriorSpaces = 'F') OR
-(FP.FloorplanLineCount > 0) AND (activefloors.HasFloorplanLines IS NULL OR activefloors.HasFloorplanLines = 'F') OR
-(FP.FloorAreaCount > 0) AND (activefloors.HasFloorArea IS NULL OR activefloors.HasFloorArea = 'F')
+(FP.INTERIORSPACECOUNT > 0) AND (activefloors.HASINTERIORSPACES IS NULL OR activefloors.HASINTERIORSPACES = 'F') OR
+(FP.FLOORPLANLINECOUNT > 0) AND (activefloors.HASFLOORPLANLINES IS NULL OR activefloors.HASFLOORPLANLINES = 'F') OR
+(FP.FLOORAREACOUNT > 0) AND (activefloors.HASFLOORAREA IS NULL OR activefloors.HASFLOORAREA = 'F')
 ------------------------------------------------------------------------
 GO
 CREATE VIEW qaUnexpectedFloorPoints AS
 SELECT     
- FloorID,
- FloorCode,
- NameShort,
- LastUpdate,
- LastEditor,
- BuildingID,
- SiteID
+ FLOORID,
+ FLOORCODE,
+ NAMESHORT,
+ LASTUPDATE,
+ LASTEDITOR,
+ BUILDINGID,
+ SITEID
 FROM         
  dbo.pubFloor_Points as floorpoints
 WHERE    
-(FloorID NOT IN
- (SELECT floorpoints.FloorID FROM dbo.ACTIVE_FLOOR))
+(FLOORID NOT IN
+ (SELECT floorpoints.FLOORID FROM dbo.ACTIVE_FLOOR))
  
  GO
 ------------------------------------------------------------------------
  
  create view qaDuplicateFloorPoints as  
-(SELECT max(objectid) as oid,count(*) as CountStar, floorid FROM UWGISProduction.dbo.FLOOR_POINT group by FLOORID having COUNT(*) > 1)   
+(SELECT max(objectid) as oid,count(*) as CountStar, FLOORID FROM UWGISProduction.dbo.FLOOR_POINT group by FLOORID having COUNT(*) > 1)   
 GO
