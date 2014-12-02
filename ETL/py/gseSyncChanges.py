@@ -23,7 +23,7 @@ if (pypath) not in sys.path:
 import gseDrawing, gse
 
 log = None
-inputDrawing = arcpy.GetParameterAsText(0)
+arg0 = arcpy.GetParameterAsText(0)
 playlists = arcpy.GetParameterAsText(1)
 GISStagingDefault_sde = arcpy.GetParameterAsText(2)
 GISProdDefault_sde = arcpy.GetParameterAsText(3)
@@ -41,10 +41,18 @@ def main(argv = None):
         datasets = datasets + gzSupport.getXmlElements(playlist,"Dataset")
     gzSupport.workspace = GISProdDefault_sde
     retVal = True
-    tm = time.strftime("%Y%m%d%H%M%S")	
-    dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
-    drawingID = gseDrawing.getDrawingFromName(dwg)
-    log = open(gse.pyLogFolder + 'gseSyncChanges_' + drawingID + '_' + tm + '.log','w')
+    tm = time.strftime("%Y%m%d%H%M%S")
+    dwg = None
+    flr = None
+    if arg0.find(os.sep) > -1:
+        dwg = arg0#[inputDrawing.rfind(os.sep)+1:]
+        if dwg.lower().endswith('.dwg'):
+            dwg = dwg[:len(dwg)-4]
+        dname = dwg[dwg.rfind(os.sep)+1:].lower().replace('.dwg','')
+    else:
+        dwg = arg0
+        dname = dwg
+    log = open(gse.pyLogFolder + 'gseSyncChanges_' + dname + '_' + tm + '.log','w')
     processed = []
     for dataset in datasets:
         name = dataset.getAttributeNode("name").nodeValue
@@ -72,7 +80,7 @@ def main(argv = None):
                 except:
                     viewIdField = "floorid" # the default
                     gzSupport.addMessage("Using default id field " + viewIdField)
-                whereClause = buildViewWhereClause(viewIdField,inputDrawing)
+                whereClause = buildViewWhereClause(viewIdField,dwg)
                 adds = getChanges(changeNode,"exceptProductionView",GISStagingDefault_sde,whereClause,idField)
                 deletes = getChanges(changeNode,"exceptStagingView",GISStagingDefault_sde,whereClause,idField)
 
@@ -106,7 +114,7 @@ def main(argv = None):
             else:
                 # if there is no change node then replace everything for a floor
                 idField = "FLOORID"
-                whereClause = buildViewWhereClause(idField,inputDrawing)
+                whereClause = buildViewWhereClause(idField,dwg)
                 desc = arcpy.Describe(sourceDataset)
                 view = "tempCount"
                 gzSupport.workspace = GISStagingDefault_sde
@@ -137,20 +145,31 @@ def getChanges(changeNode,viewAttribute,sde,whereClause,idField):
 
     return diffs
 
-def buildViewWhereClause(viewIdField,inputDrawing):
+def buildViewWhereClause(viewIdField,dwg):
     # build a where clause based on the idfield
-    dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
-    if viewIdField.upper() == "SOURCEDWG":
-        drawingID = gseDrawing.getDrawingFromName(dwg)
-        whereClause = viewIdField + " = '" + drawingID  + "'"
-    elif viewIdField.upper() == "FLOORID":
-        floorID = gseDrawing.getFloorIDFromPath(inputDrawing)
-        whereClause = viewIdField + " = '" + floorID  + "'"
-    elif viewIdField.upper() == "BUILDINGID":
-        buildingID = gseDrawing.getBuildingIDFromPath(inputDrawing)
-        whereClause = viewIdField + " = '" + buildingID  + "'"
+    if dwg.find(os.sep) > -1:
+        # this is a drawing
+        if viewIdField.upper() == "SOURCEDWG":
+            drawingID = gseDrawing.getDrawingFromName(dwg[dwg.rfind(os.sep)+1:])
+            whereClause = viewIdField + " = '" + drawingID  + "'"
+        elif viewIdField.upper() == "FLOORID":
+            floorID = gseDrawing.getFloorIDFromPath(dwg)
+            whereClause = viewIdField + " = '" + floorID  + "'"
+        elif viewIdField.upper() == "BUILDINGID":
+            buildingID = gseDrawing.getBuildingIDFromPath(dwg)
+            whereClause = viewIdField + " = '" + buildingID  + "'"
+        else:
+            raise Exception("Could not build a view where clause for " + viewIdField)
     else:
-        raise Exception("Could not build a view where clause for " + viewIdField)
+        # this is a floor value
+        if viewIdField.upper() == "FLOORID":
+            floorID = gseDrawing.getFloorFromName(dwg)
+            whereClause = viewIdField + " = '" + floorID  + "'"
+        elif viewIdField.upper() == "BUILDINGID":
+            buildingID = gseDrawing.getBuildingFromName(dwg)
+            whereClause = viewIdField + " = '" + buildingID  + "'"
+        else:
+            raise Exception("Could not build a view where clause for " + viewIdField)
 
     arcpy.AddMessage( whereClause)
     return whereClause
