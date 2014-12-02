@@ -1,1 +1,1 @@
-py\\gseLoaderFME.py fpArchivePlaylist.xml gseDataConfigArchive.xml True False
+C:\Apps\Gizinta\gseUW\ETL\py\gseLoaderFME.py fpArchivePlaylist.xml gseDataConfigArchive.xml True False
