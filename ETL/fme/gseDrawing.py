@@ -33,7 +33,9 @@ def getSiteIDFromPath(pth):
 				site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
 			site = site.split("-")[0]# get the first part of the string if there is a dash
 	except:
-		print "Error getting SiteID for:" + str(pth)
+		site = feature.getAttribute('siteid')
+		if site == None or site == '':		
+			print "Error getting SiteID for:" + str(pth)
 	return site
 
 def getFloorIDFromPath(pth):
@@ -130,12 +132,12 @@ def getFloorFromName(dwg):
 	return floor
 
 def getFloorCodeFromName(dwg):
-	dwg.split(os.sep)[0]
+	dwg = dwg.split('.')[0]
 	floorNum = dwg[len(dwg)-2:]
 	return floorNum.upper()
 
 def getDrawingFromName(dwg):
-	dwg.split(os.sep)[0]
+	dwg.split('.')[0]
 	return dwg
 
 def getSensitivityFromName(dwg):
