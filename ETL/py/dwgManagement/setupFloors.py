@@ -1,75 +1,150 @@
-import os, sys, subprocess, arcpy, traceback
+### setupFloors.py - Insert records into active floor and floor level tables based on a set of
+### drawings defined in settings.py
+import os, sys, time, arcpy, traceback, settings
 
-workspace = r'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde'
-dwgfolder = r'C:\Apps\Gizinta\CADVault\Floorplans'
+workspace = settings.workspace
+dwgfolder = settings.dwgfolder
+splitstr = settings.filestring
+floorlevel = 'Floor_Level'
+activefloor = 'Active_Floor'
+tabActive_Floor = os.path.join(workspace,activefloor)
+tabFloor_Level = os.path.join(workspace,floorlevel)
 
-dwgs = []
 debug = False
 arcpy.env.workspace = workspace
 
 def main(argv = None):
 
-    for root, dirs, files in os.walk(dwgfolder,followlinks=True):
-        for dir in dirs:
-            for root, dirs, files in os.walk(root,followlinks=True):
-                for dwg in files:
-                    if dwg.lower().endswith(".dwg") and dwg.lower().find("outline") < 0: # and dwg.upper().find("MG") > -1 : example for processing subset
-                        # for each drawing split into parts and insert to table.
-                        dwg = dwg.replace(".dwg","")
-                        try:
-                            dwgs.index(dwg)
-                        except:
-                            parts = dwg.split("XP-")
-                            try:
-                                bldg = parts[0]
-                                flr = parts[1]
-                                pths = root.split(os.sep)
-                                site = pths[len(pths)-2].split('-')[0]
-                                insertActiveFloor(site,dwg,bldg,flr)
-                                dwgs.append(dwg)
-                            except:
-                                print dwg, "not processed"
+    dwgs = []
+    flrs = []
+    if not arcpy.Exists(tabActive_Floor):
+        addMessageLocal(tabActive_Floor + " table does not exist, exiting")
+        exit(-1)
+    if not arcpy.Exists(tabFloor_Level):
+        addMessageLocal(tabFloor_Level + " table does not exist, exiting")
+        exit(-1)
+    floorLevels = getFloorLevels()
+    activeFloors = getActiveFloors()
+    
+    for root, dirs, files in os.walk(dwgfolder):
+        for dwg in files:
+            if dwg.lower().endswith(".dwg") and dwg.lower().find("outline") < 0:
+                # for each drawing split into parts and insert to table.
+                dwg = dwg[:dwg.rfind('.')]
+                try:
+                    dwgs.index(dwg)
+                except:
+                    dwgs.append(dwg)
+                    parts = dwg.split(splitstr)
+                    bldg = parts[0]
+                    flr = parts[1]
+                    try:
+                        flrs.index(flr)
+                    except:
+                        flrs.append(flr)
+                    # insert a record into the active floors table
+                    if (bldg + '_' + flr) not in activeFloors:
+                        insertActiveFloor(dwg,bldg,flr)
+    # insert rows for floor levels found into Floor Levels table
+    insertFloorLevels(flrs,floorLevels)
 
     print "processed " + str(len(dwgs)) + " drawings", str(dwgs)
+    del flrs, floorLevels, dwgs, activeFloors
 
-
-def insertActiveFloor(siteid,dwg,bldg,flr):
-    tabActive_Floor = os.path.join(workspace,"Active_Floor")
+def insertActiveFloor(dwg,bldg,flr):
     retcode = False
-    if not arcpy.Exists(tabActive_Floor):
-        addMessageLocal("table does not exist, exiting")
-        retcode = False
-    else:
-        insertCursor = arcpy.InsertCursor(tabActive_Floor)
-        if debug:
-            addMessageLocal("Inserting into " +  tabActive_Floor)
+    insertCursor = arcpy.InsertCursor(tabActive_Floor)
+    if debug:
+        addMessageLocal("Inserting into " +  tabActive_Floor)
+    try:
+        insRow = insertCursor.newRow()
+        siteid = settings.siteid
+        #buildingid = siteid + "_" + str(bldg)
+        buildingid = str(bldg)
+        floorid = buildingid + "_" + flr
+        
+        insRow.setValue("siteid",siteid)
+        insRow.setValue("buildingid",buildingid)
+        insRow.setValue("bldgcode",bldg)
+        insRow.setValue("floorcode",flr)
+        insRow.setValue("floorid",floorid)
+        insRow.setValue("sourcedwg",dwg)
+        #insRow.setValue("hasinteriorspaces","Y")
+        #insRow.setValue("hasfloorplanlines","Y")
+        #insRow.setValue("hasfloorarea","Y")
+        insRow.setValue("schelev",getElev(flr))
+        #insRow.setValue("altitude",getElev(flr))
+        insRow.setValue("sensitivity","None")
+        insRow.setValue("lastupdate",time.strftime("%Y-%m-%d %H:%M:%S",time.localtime()))
+        insRow.setValue("lasteditor","setupFloors.py")
+        insertCursor.insertRow(insRow)
+        addMessageLocal("Row inserted into Active_Floor table for " + floorid)
+        retcode = True
+    except:
+        print "error processing",floorid
+        showTraceback()
+    finally:
+        del insertCursor
+    return retcode
 
-        try:
-            insRow = insertCursor.newRow()
-            buildingid = siteid + "_" + str(bldg)
-            floorid = buildingid + "_" + flr
-            
-            insRow.setValue("SITEID",siteid)
-            insRow.setValue("BUILDINGID",buildingid)
-            insRow.setValue("FLOORCODE",flr)
-            insRow.setValue("FLOORID",floorid)
-            insRow.setValue("SOURCEDWG",dwg)
-            #insRow.setValue("HASINTERIORSPACES","Y")
-            #insRow.setValue("HASFLOORPLANLINES","Y")
-            #insRow.setValue("HASFLOORAREA","Y")
-            elev = getElev(flr)
-            insRow.setValue("SCHELEV",elev)
-            insRow.setValue("GROUNDELEV",elev+36)
-            insRow.setValue("SENSITIVITY","None")
-            insRow.setValue("BLDGCODE",bldg)
-            insertCursor.insertRow(insRow)
-            addMessageLocal("Row inserted into Active_Floor table for " + dwg)
-            retcode = True
-        except:
-            print "Error inserting row for",dwg
-            showTraceback()
+def insertFloorLevels(flrs,floorLevels):
+    retcode = False
+    insertCursor = arcpy.InsertCursor(tabFloor_Level)
+    if debug:
+        addMessageLocal("Inserting into " +  tabFloor_Level)
+    for flr in flrs:
+        if flr not in floorLevels:
+            try:
+                insRow = insertCursor.newRow()
+                siteid = settings.siteid
+                insRow.setValue("siteid",siteid)
+                insRow.setValue("floorcode",flr)
+                insRow.setValue("floorlevel",getElev(flr))
+                insRow.setValue("namelong",flr)
+                insRow.setValue("nameshort",flr)
+                insertCursor.insertRow(insRow)
+                addMessageLocal("Row inserted into Floor_Level table for " + flr)
+                retcode = True
+            except:
+                showTraceback()
+        
     del insertCursor
     return retcode
+
+def getActiveFloors():
+    theValues = getValues(tabActive_Floor,"floorid")
+    return theValues
+
+def getFloorLevels():
+    theValues = getValues(tabFloor_Level,"floorcode")
+    return theValues
+
+def getValues(table,fieldname):
+    theValues = [] # unique list of floorid values
+    try:
+        cursor = arcpy.SearchCursor(table)
+        row = cursor.next()
+    except Exception, ErrorDesc:
+        addMessageLocal( "Unable to read the Dataset, Python error is: ")
+        showTraceback()
+        row = None
+
+    while row:
+        try:
+            currentValue = row.getValue(fieldname)
+            try:
+                theValues.index(currentValue) # if the current value is present
+            except:
+                theValues.append(currentValue) # else add the value if the first check fails.
+        except:
+            err = "Exception caught: unable to get field values"
+            addMessageLocal(err)
+            showTraceback()
+        row = cursor.next()
+
+    del cursor
+    return theValues
+
 
 def getElev(flr):
     elev = 0
@@ -78,12 +153,18 @@ def getElev(flr):
     elif flr[0] == 'M':
         if flr[1] == 'G':
             elev = 0.5
+        if flr[1] == 'P':
+            elev = - int(flr[2:]) + 0.5
+        if flr[1] == 'B':
+            elev = - int(flr[2:]) + 0.5
         else:
             elev = int(flr[1:]) + 0.5
     elif flr == '0G' or flr == 'MG':
         elev = 0
     elif flr == 'RF':
         elev = 9.8
+    elif flr == 'MRF':
+        elev = 9.9
     else:
         try:
             elev = int(flr)
@@ -92,7 +173,6 @@ def getElev(flr):
             print "Error getting floor level, defaulted to 0"
 
     return (elev * 10)
-
 
 def addMessageLocal(txt):
     print txt
