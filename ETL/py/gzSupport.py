@@ -326,7 +326,7 @@ def deleteRows(workspace,fClassName,expr):
         addMessageLocal(tableName)
     retcode = False
     if arcpy.Exists(tableName):
-        viewName = fClassName + "_View"
+        viewName = fClassName.replace('.','') + "_View"
         if arcpy.Exists(viewName):
             arcpy.Delete_management(viewName) # delete view if it exists
 
