@@ -66,6 +66,8 @@
 			</Field>
 			<SourceFieldNames>Color,Elevation,Entity,FACFLOORCODE,FACNUM,FLOORCODE,GSF_AREA,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
 			<ChangeDetection exceptProductionView="eFloorExceptProduction" exceptStagingView="eFloorExceptStaging" idField="FLOORID"
+			exceptPubSourceView="pFloorExceptSource" exceptPubTargetView="pFloorExceptTarget" exceptPubTargetTable="Floor_Area" exceptPubSourceTable="pubFloor_Areas"
+			exceptPubDatabasePrefix="campus.dbo." 
 			viewFields="FLOORID,SOURCEDWG,SHAPE"/>	
 		</Dataset>
 	</Transform>
