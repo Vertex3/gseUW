@@ -73,7 +73,7 @@ def main(argv = None):
     tm = time.strftime("%Y%m%d%H%M%S")
     
     logFile = gss[0].logFileName.replace('.log','_' + tm + '.log')
-    log = open(logFile,'w',1)
+    log = open(logFile,'w')
         
     try:
         totalTime = gzSupport.timer(0)
@@ -116,14 +116,18 @@ def main(argv = None):
                 for gs in gss:
                     if (gs.loaded == True or gs.syncd == True) and dwg.find(gs.nameContains) > -1: # if any load or sync processing happened...
                         loaded = True
-                if loaded:
+                if loaded == True:
                     msg(dwg + " total processing time: " + getTimeElapsed(drawingTime))
                     msg("Total Number of Processing Errors = " + str(errorCount))
                     processed += 1
-                    if gss[0].deleteCADFiles == True:
+                    if gss[0].deleteCADFiles == True and partFailed == False:
                         try:
                             gzSupport.cleanupGarbage()
                             os.remove(cadFile)
+                            try:
+                                os.remove(cadFile[:len(cadFile)-4]+'.wld')
+                            except:
+                                pass
                             msg(cadFile + " deleted")
                         except:
                             msg("Unable to delete CAD file " + cadFile + "... continuing")
@@ -147,7 +151,6 @@ def main(argv = None):
         msg("outputSuccess set to: " + str(outputSuccess) + ", " + str(processed) + " drawings processed")
         msg("Total Processing time: " + getTimeElapsed(totalTime) + "\n")
         del gss, playlists
-        log.flush()
         log.close()
 
 def cont(errorCount,exitOnError,partFailed):
