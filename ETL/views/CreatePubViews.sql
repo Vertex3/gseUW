@@ -249,6 +249,11 @@ dbo.pubFloors AS floors ON floors.FLOORID = spaces.FLOORID
 WHERE     (floors.SENSITIVITY = 'None')
 ------------------------------------------------------------------------
 GO
+CREATE VIEW pubSitePoints AS
+SELECT     OBJECTID, SITEID, SITENAME, SOURCEID, SOURCEDWG, LASTUPDATE, LASTEDITOR, SHAPE.STCentroid() AS SHAPE
+FROM         dbo.SITE
+------------------------------------------------------------------------
+GO
 CREATE VIEW qaMissingFeaturesByFloor AS
 SELECT     
  activefloors.HASINTERIORSPACES,
