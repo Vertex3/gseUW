@@ -2,7 +2,7 @@
 # SG Jan 2014
 # ---------------------------------------------------------------------------
 
-import sys,os, time
+import sys,os,time
 
 namedelimiter = "_"
 
@@ -70,6 +70,7 @@ def getSiteplanID(feature):
 		pth = pth.split(os.sep)
 		if len(pth) > 2:
 			site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
+			site = site.split("-")[0]# get the first part of the string if there is a dash
 	except:
 		print "Error getting SiteID for:" + str(pth)
 	return site
