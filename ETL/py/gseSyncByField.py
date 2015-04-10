@@ -13,35 +13,47 @@ arcpy.ImportToolbox(os.path.join(gse.etlFolder,"gse.tbx"))
 ws = arcpy.GetParameterAsText(0)
 if ws == None or ws == '' or ws == '#':
     ws = r'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde'
-print "Staging: ", ws
+print "Staging:", ws
+
 prodws = arcpy.GetParameterAsText(1)
 if prodws == None or prodws == '' or prodws == '#':
     prodws = r'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde'
-print "Target: ", prodws
+print "Target:", prodws
 
 config = arcpy.GetParameterAsText(2)
 if config == None or config == '' or config == '#':
     config = r'C:\Apps\Gizinta\gseUW\ETL\config\rtElevatorPlaylist.xml'
-print "Playlist: ", config
+print "Playlist:", config
+
+fname = arcpy.GetParameterAsText(3)
+if fname == None or fname == '' or fname == '#':
+    fname = '*'
+print "Sync Field Name:", str(fname)
 
 def main(argv = None):
-    fcs = gzSupport.getDatasets(config)
-    field = 'FLOORID'
-    floors = []
-    for fc in fcs:
-        dsname = fc.getAttributeNode("targetName").nodeValue
-        table = os.path.join(ws,dsname)
-        floors = getFloors(floors,table,field) 
-    floors.sort()
-    print floors
-    for floor in floors:
-        try:
-            result = arcpy.gseSyncChanges_gse(floor,config,ws,prodws)
-        except:
-            # sometimes there are deadlocks, try again
-            gzSupport.addMessage("Error encountered, attempting to sync again...")
-            result = arcpy.gseSyncChanges_gse(floor,config,ws,prodws)
+    if fname == '*':
+        doSync(fname,config,ws,prodws)
+    
+    elif fname == 'FLOORID':
+        fcs = gzSupport.getDatasets(config)
+        floors = []
+        for fc in fcs:
+            dsname = fc.getAttributeNode("targetName").nodeValue
+            table = os.path.join(ws,dsname)
+            floors = getFloors(floors,table,field) 
+        floors.sort()
+        print floors
+        for floor in floors:
+            doSync(floor,config,ws,prodws)
     print "completed"
+
+def doSync(floor,config,ws,prodws):
+    try:
+        result = arcpy.gseSyncChanges_gse(floor,config,ws,prodws)
+    except:
+        # sometimes there are deadlocks, try again
+        gzSupport.addMessage("Error encountered, attempting to sync again...")
+        result = arcpy.gseSyncChanges_gse(floor,config,ws,prodws)
     
 def getFloors(floors,table,fieldname):
     try:

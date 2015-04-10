@@ -41,9 +41,13 @@ def main(argv = None):
         datasets = datasets + gzSupport.getXmlElements(playlist,"Dataset")
     gzSupport.workspace = GISProdDefault_sde
     retVal = True
-    tm = time.strftime("%Y%m%d%H%M%S")	
-    dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
-    drawingID = gseDrawing.getDrawingFromName(dwg)
+    tm = time.strftime("%Y%m%d%H%M%S")    
+    if inputDrawing == '*':
+        dwg = '*'
+        drawingID = 'all'
+    else:
+        dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
+        drawingID = gseDrawing.getDrawingFromName(dwg)
     log = open(gse.pyLogFolder + 'gseSyncChanges_' + drawingID + '_' + tm + '.log','w')
     processed = []
     for dataset in datasets:
@@ -71,7 +75,8 @@ def main(argv = None):
                     gzSupport.addMessage("Using Change detection id field " + viewIdField)
                 except:
                     viewIdField = "floorid" # the default
-                    gzSupport.addMessage("Using default id field " + viewIdField)
+                    if inputDrawing != '*':
+                        gzSupport.addMessage("Using default id field " + viewIdField)
                 whereClause = buildViewWhereClause(viewIdField,inputDrawing)
                 adds = getChanges(changeNode,"exceptProductionView",GISStagingDefault_sde,whereClause,idField)
                 deletes = getChanges(changeNode,"exceptStagingView",GISStagingDefault_sde,whereClause,idField)
@@ -105,7 +110,10 @@ def main(argv = None):
 
             else:
                 # if there is no change node then replace everything for a floor
-                idField = "FLOORID"
+                if inputDrawing == '*':
+                    idField = ''
+                else:
+                    idField = "FLOORID"
                 whereClause = buildViewWhereClause(idField,inputDrawing)
                 desc = arcpy.Describe(sourceDataset)
                 view = "tempCount"
@@ -140,7 +148,9 @@ def getChanges(changeNode,viewAttribute,sde,whereClause,idField):
 def buildViewWhereClause(viewIdField,inputDrawing):
     # build a where clause based on the idfield
     dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
-    if viewIdField.upper() == "SOURCEDWG":
+    if inputDrawing == '*':
+        whereClause = ''
+    elif viewIdField.upper() == "SOURCEDWG":
         drawingID = gseDrawing.getDrawingFromName(dwg)
         whereClause = viewIdField + " = '" + drawingID  + "'"
     elif viewIdField.upper() == "FLOORID":

@@ -5,14 +5,14 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\Apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\fme\gseSyncToPublication.fmw
+#    F:\Apps\FME\fme.exe C:\apps\Gizinta\gseUW\ETL\fme\gseSyncToPublication.fmw
 #          --GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE "C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde"
 #          --GEODATABASE_SDE_OUT_CONNECTION_FILE_GEODATABASE_SDE "C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Publication.sde"
 #    
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="-252 -347"
+#! VIEW_POSITION="-177 -347"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -21,7 +21,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14338"
+#! FME_BUILD_NUM="14391"
 #! ZOOM_SCALE="88"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -30,24 +30,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID="583eebc2-24c8-4549-be42-e023b60e2fa7,806f84b2-78ac-4b05-8b91-f307c1dc78e7,32807df2-9768-441c-9fee-b47659ff04bd,d42722af-1ca4-49c8-bb2d-b6f87eadb080,3f9834e3-6cf3-41e2-9662-f85b37c72b84,a48f7770-48f5-4a0d-82c4-4ce01b25104c,1e740cfb-e2c1-4c81-92a9-158014346067,cd903bc4-dbb8-407b-974d-6ef01ccabd95,222741bd-6e4b-44ea-963a-b56130a21f50,61565e52-9fa9-408e-82b4-a2a8e1a3247a,7e30e7dd-10b0-416f-ba5a-77757437fce4"
+#! FME_DOCUMENT_PRIORGUID="583eebc2-24c8-4549-be42-e023b60e2fa7,806f84b2-78ac-4b05-8b91-f307c1dc78e7,32807df2-9768-441c-9fee-b47659ff04bd,d42722af-1ca4-49c8-bb2d-b6f87eadb080,3f9834e3-6cf3-41e2-9662-f85b37c72b84,a48f7770-48f5-4a0d-82c4-4ce01b25104c,1e740cfb-e2c1-4c81-92a9-158014346067,cd903bc4-dbb8-407b-974d-6ef01ccabd95,222741bd-6e4b-44ea-963a-b56130a21f50,61565e52-9fa9-408e-82b4-a2a8e1a3247a,7e30e7dd-10b0-416f-ba5a-77757437fce4,9e7f2adb-7803-4ac7-9212-5a67051289bb"
 #! DOC_TOP_LEFT="240 -3569"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2014-12-08T11:31:39"
+#! LAST_SAVE_DATE="2014-12-10T19:16:24"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140606 - Build 14338 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP3 (20140814 - Build 14391 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="2195 3221"
-#! FME_DOCUMENT_GUID="9e7f2adb-7803-4ac7-9212-5a67051289bb"
+#! FME_DOCUMENT_GUID="4b404d1e-2786-4052-9a0f-0845f7a7de05"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -4252,8 +4252,8 @@ FACTORY_DEF * TestFactory    FACTORY_NAME ChangeDetector_4_UnMatchedWeeder    IN
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc DuplicateRemover_2_6e925527_8bfc_48dc_96bc_4f1ecc4596b10_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicateRemover_2_6e925527_8bfc_48dc_96bc_4f1ecc4596b10___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicateRemover_2_6e925527_8bfc_48dc_96bc_4f1ecc4596b10__KeySeenCount($attrVal)] - 1]; };
-FACTORY_DEF * TestFactory    FACTORY_NAME DuplicateRemover_2    INPUT  FEATURE_TYPE dbo.pubFloor_Points    TEST @Tcl2("DuplicateRemover_2_6e925527_8bfc_48dc_96bc_4f1ecc4596b10_dupKeyCount {(FLOORID)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicateRemover_2_UNIQUE
+Tcl2 proc DuplicateRemover_2_c72b0c95_9914_4e80_9d27_3687fe634f6e1_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___DuplicateRemover_2_c72b0c95_9914_4e80_9d27_3687fe634f6e1___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__DuplicateRemover_2_c72b0c95_9914_4e80_9d27_3687fe634f6e1__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME DuplicateRemover_2    INPUT  FEATURE_TYPE dbo.pubFloor_Points    TEST @Tcl2("DuplicateRemover_2_c72b0c95_9914_4e80_9d27_3687fe634f6e1_dupKeyCount {(FLOORID)}") > 0    OUTPUT FAILED FEATURE_TYPE DuplicateRemover_2_UNIQUE
 
 # -------------------------------------------------------------------------
 

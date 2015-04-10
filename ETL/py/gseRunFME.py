@@ -38,7 +38,7 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
             print "No config file available for mode: " + source
             return false
         if runAs == "FME":
-            printComm(comm)
+            #printComm(comm)
             retcode = subprocess.call(comm, shell=True)
         elif runAs == "DataInterop":
             print (runAs + " \'runas\' mode is NOT currently supported")
