@@ -42,7 +42,7 @@
         <SourceName/>
         <TargetName>ACTIVE</TargetName>
         <Method>DefaultValue</Method>
-        <DefaultValue>0</DefaultValue>
+        <DefaultValue>1</DefaultValue>
         <FieldType>Integer</FieldType>
         <FieldLength>4</FieldLength>
       </Field>
@@ -51,7 +51,7 @@
         <SourceName/>
         <TargetName>ISPUBLIC</TargetName>
         <Method>DefaultValue</Method>
-        <DefaultValue>0</DefaultValue>
+        <DefaultValue>1</DefaultValue>
         <FieldType>Integer</FieldType>
         <FieldLength>4</FieldLength>
       </Field>
