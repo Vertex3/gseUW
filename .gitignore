@@ -13,5 +13,8 @@
 *.mxd
 ETL/py/*.pyc
 ETL/fme/*.pyc
+## data
 *.dwg
 *.wld
+*.gdb/
+
