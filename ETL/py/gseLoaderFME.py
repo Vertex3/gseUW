@@ -6,7 +6,7 @@
 # ---------------------------------------------------------------------------
 
 # Imports
-import os, sys
+import os, sys, gseSyncChanges
 
 ospath = os.path.realpath(__file__)
 etl = os.sep+'ETL'+os.sep
@@ -21,28 +21,13 @@ import arcpy, time, datetime, xml.dom.minidom, gse, gzSupport, gseRunFME
 # Script arguments
 playlists_xml = arcpy.GetParameterAsText(0) # one or more playlist xml values, separated by commas.
 if playlists_xml == '#' or playlists_xml == None or playlists_xml == '':
-#    playlists_xml = "fpbldgTiltLoadPlaylist.xml" # default value
-#    playlists_xml = "fpLoadPlaylist.xml,fpDerivePlaylist.xml" # default value
     playlists_xml = "fpLoadPlaylist.xml,fpDerivePlaylist.xml" # default value
 gseData_xml = arcpy.GetParameterAsText(1) # settings for CAD folder and GDB
 if gseData_xml == '#' or gseData_xml == None or gseData_xml == '':
-#    gseData_xml = "gseDataConfig.xml" # default value
     gseData_xml = "gseDataConfig.xml" # default value
-autoSync = arcpy.GetParameterAsText(2)
-if autoSync == '#' or autoSync == None or autoSync == '':
-    autoSync = True
-elif autoSync.lower() == "true":
-    autoSync = True
-else:
-    autoSync = False
 
+autoSync = arcpy.GetParameterAsText(2)
 exitOnError = arcpy.GetParameterAsText(3)
-if exitOnError == '#' or exitOnError == None or exitOnError == '':
-    exitOnError = True
-elif exitOnError.lower() == "true":
-    exitOnError = True
-else:
-    exitOnError = False
 
 successParam = 4
 
@@ -50,6 +35,7 @@ print "Playlist Parameters '" + playlists_xml + "'"
 
 log = None
 playlists = []
+playlists_xml = playlists_xml.split(",")
 
 def main(argv = None):
     # process one or more drawings
@@ -61,7 +47,6 @@ def main(argv = None):
     cfgfile = fixServerConfigPath(gseData_xml)
     xmlDataDoc = xml.dom.minidom.parse(cfgfile)
     gseData = gseDataSettings(xmlDataDoc)
-    playlists_xml = playlists_xml.split(",")
     gss = []
     for playlist in playlists_xml:
         filepath = fixConfigPath(playlist)
@@ -74,6 +59,9 @@ def main(argv = None):
     
     logFile = gss[0].logFileName.replace('.log','_' + tm + '.log')
     log = open(logFile,'w')
+    autoSync = gss[0].autoSync
+    exitOnError = gss[0].exitOnError
+    cleanup(gss[0].stagingWS,gss[0].productionWS,playlists)
         
     try:
         totalTime = gzSupport.timer(0)
@@ -118,7 +106,6 @@ def main(argv = None):
                         loaded = True
                 if loaded == True:
                     msg(dwg + " total processing time: " + getTimeElapsed(drawingTime))
-                    msg("Total Number of Processing Errors = " + str(errorCount))
                     processed += 1
                     if gss[0].deleteCADFiles == True and partFailed == False:
                         try:
@@ -133,10 +120,7 @@ def main(argv = None):
                             msg("Unable to delete CAD file " + cadFile + "... continuing")
                 if processed % 10 == 0:
                     msg("Processed " + str(processed) + " - Analyzing datasets...")
-                    arcpy.gseAnalyzeDatasets_gse()
-                    msg("Compressing...")
-                    gzSupport.compressGDB(gss[0].productionWS)
-                    gzSupport.compressGDB(gss[0].stagingWS)
+                    cleanup(gss[0].stagingWS,gss[0].productionWS,playlists)
                 gzSupport.cleanupGarbage()
     except:
         errorCount += 1
@@ -146,9 +130,11 @@ def main(argv = None):
         logProcess("gseLoaderFME","drawings",outputSuccess,gss[0].stagingWS)
 
     finally:
+        cleanup(gss[0].stagingWS,gss[0].productionWS,playlists)
         arcpy.SetParameterAsText(successParam,outputSuccess)
-        msg("Total Number of Errors = " + str(errorCount))
-        msg("outputSuccess set to: " + str(outputSuccess) + ", " + str(processed) + " drawings processed")
+        msg("\nTotal Number of Errors = " + str(errorCount))
+        msg("outputSuccess set to: " + str(outputSuccess))
+        msg(str(processed) + " drawings processed")
         msg("Total Processing time: " + getTimeElapsed(totalTime) + "\n")
         del gss, playlists
         log.close()
@@ -159,6 +145,19 @@ def cont(errorCount,exitOnError,partFailed):
         contin = True
     return contin
 
+def cleanup(stagingWS,productionWS,playlists_xml):
+    for playlist in playlists_xml:
+        analyzeDatasets(productionWS,playlist)
+        analyzeDatasets(stagingWS,playlist)
+    gzSupport.compressGDB(productionWS)
+    gzSupport.compressGDB(stagingWS)
+
+def analyzeDatasets(workspace,playlists):
+    msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
+    names = getFeatureTypes(playlists,"targetName").split(' ')
+    #for name in names:
+    arcpy.AnalyzeDatasets_management(workspace,'NO_SYSTEM',names,analyze_base=True)
+
 def doLoad(playlist_xml,folder,dwg,gs):
     # Load process drawing
     global log
@@ -167,7 +166,7 @@ def doLoad(playlist_xml,folder,dwg,gs):
     inputDrawing = os.path.join(folder,dwg)
     drawingTime = gzSupport.timer(0)
     msg("\nLoading " + dwg + " to database")
-    msg("fmeFile = " + gs.fmeLoadFile[gs.fmeLoadFile.rfind(os.sep)+1:])
+    #msg("fmeFile = " + gs.fmeLoadFile[gs.fmeLoadFile.rfind(os.sep)+1:])
     # load using FME
     if gs.fmeLoadFile == None or gs.fmeLoadFile == "" or gs.fmeLoadFile == gse.fmeFolder:
         msg("No FME file for loading")
@@ -180,7 +179,10 @@ def doLoad(playlist_xml,folder,dwg,gs):
     msg(dwg + " Load processing time: " + getTimeElapsed(drawingTime) )
     gzSupport.cleanupGarbage()
 
-    msg("return value set to: " + str(retVal))
+    if retVal == False:
+        msg("return value set to: " + str(retVal))
+        msg("Total Number of Processing Errors = " + str(errorCount))
+
     return retVal
 
 def getFeatureTypes(playlist,nm):
@@ -205,22 +207,20 @@ def doSync(playlists,folder,dwg,gs):
     
     # sync changes
     try:
-        result = arcpy.gseSyncChanges_gse(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS)
+        retVal = gseSyncChanges.sync(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS,log)
     except:
-        # sometimes there are deadlocks, try again
-        msg("Error encountered, attempting to sync again...")
-        result = arcpy.gseSyncChanges_gse(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS)
+        # sometimes there are deadlocks, just write a message since other things happened on 2nd try...
+        msg("Error encountered, sync failed...")
+        retVal = False
+        #result = arcpy.gseSyncChanges_gse(inputDrawing," ".join(playlists),gs.stagingWS,gs.productionWS)
         
-    if result.getOutput(0) != None and result.getOutput(0).lower() == 'true':
-        retVal=True
-    else:
-        retVal=False
     logProcess("Sync to Production",dwg,retVal,gs.productionWS)
     msg(dwg + " Sync processing time: " + getTimeElapsed(drawingTime) )
     del inputDrawing
     gzSupport.cleanupGarbage()
 
-    msg("return value set to: " + str(retVal))
+    if retVal == False:
+        msg("return value set to: " + str(retVal))
     return retVal
 
 def getTimeElapsed(timeVal):
@@ -254,6 +254,8 @@ class gseSettings:
         self.productionWS = gseData.productionWS
         self.minTime = gseData.minTime
         self.deleteCADFiles = gseData.deleteCADFiles
+        self.autoSync = gseData.autoSync
+        self.exitOnError = gseData.exitOnError
         self.fileExt = gseData.fileExt
         self.fmeExe = gseData.fmeExe
         self.sourceEPSG = gseData.sourceEPSG
@@ -280,6 +282,8 @@ class gseDataSettings:
         self.productionWS = os.path.join(gse.sdeConnFolder,dataSettings.getAttributeNode("productionWS").nodeValue)
         self.minTime = datetime.datetime.strptime(eval(dataSettings.getAttributeNode("minTime").nodeValue),"%d/%m/%Y %I:%M:%S %p")
         self.deleteCADFiles = gzSupport.strToBool(dataSettings.getAttributeNode("deleteCADFiles").nodeValue)
+        self.autoSync = gzSupport.strToBool(dataSettings.getAttributeNode("autoSync").nodeValue)
+        self.exitOnError = gzSupport.strToBool(dataSettings.getAttributeNode("exitOnError").nodeValue)
         self.fileExt = dataSettings.getAttributeNode("fileExt").nodeValue
         self.fmeExe = dataSettings.getAttributeNode("fmeExe").nodeValue
         self.sourceEPSG = dataSettings.getAttributeNode("sourceEPSG").nodeValue

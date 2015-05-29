@@ -4,6 +4,7 @@
 #
 # Description: Sync changes from Staging to Production, uses Gizinta Xml files to drive the process
 # performs change detection/update if SQL Server views are set up and there is a change node in the Gizinta.
+# updated May 2015 to allow direct calling from other scripts in addition to arcpy method.
 # ---------------------------------------------------------------------------
 
 import os, sys, arcpy, time, datetime, xml.dom.minidom, gzSupport 
@@ -28,11 +29,23 @@ playlists = arcpy.GetParameterAsText(1)
 GISStagingDefault_sde = arcpy.GetParameterAsText(2)
 GISProdDefault_sde = arcpy.GetParameterAsText(3)
 successParam = 4
+debug = False
 
 def main(argv = None):
     global log
+    tm = time.strftime("%Y%m%d%H%M%S")    
+    log = open(gse.pyLogFolder + 'gseSyncChanges_' + drawingID + '_' + tm + '.log','w')
+    retVal = sync(inputDrawing,playlists,GISStagingDefault_sde,GISProdDefault_sde,log)
+    arcpy.SetParameter(successParam,retVal)
+
+    log.close()
+
+def sync(inputDrawing,playlists,GISStagingDefault_sde,GISProdDefault_sde,logfile):
+    
     # sync from the staging database to prod. The staging database should have rows for the current drawing
     # This process will replace rows in the production database for the floor/drawing, it uses change detection if it is set up in the Gizinta Xml files
+    global log
+    log = logfile
     plists = playlists.split(" ")
     arcpy.AddMessage(playlists)
     datasets = []
@@ -41,14 +54,12 @@ def main(argv = None):
         datasets = datasets + gzSupport.getXmlElements(playlist,"Dataset")
     gzSupport.workspace = GISProdDefault_sde
     retVal = True
-    tm = time.strftime("%Y%m%d%H%M%S")    
     if inputDrawing == '*':
         dwg = '*'
         drawingID = 'all'
     else:
         dwg = inputDrawing[inputDrawing.rfind(os.sep)+1:]
         drawingID = gseDrawing.getDrawingFromName(dwg)
-    log = open(gse.pyLogFolder + 'gseSyncChanges_' + drawingID + '_' + tm + '.log','w')
     processed = []
     for dataset in datasets:
         name = dataset.getAttributeNode("name").nodeValue
@@ -72,11 +83,13 @@ def main(argv = None):
                 idField = changeNode.getAttributeNode("idField").nodeValue
                 try:
                     viewIdField = changeNode.getAttributeNode("viewIdField").nodeValue
-                    gzSupport.addMessage("Using Change detection id field " + viewIdField)
+                    if debug == True:
+                        msg("Using Change detection id field " + viewIdField)
                 except:
                     viewIdField = "floorid" # the default
                     if inputDrawing != '*':
-                        gzSupport.addMessage("Using default id field " + viewIdField)
+                        if debug == True:
+                            msg("Using default id field " + viewIdField)
                 whereClause = buildViewWhereClause(viewIdField,inputDrawing)
                 adds = getChanges(changeNode,"exceptProductionView",GISStagingDefault_sde,whereClause,idField)
                 deletes = getChanges(changeNode,"exceptStagingView",GISStagingDefault_sde,whereClause,idField)
@@ -86,12 +99,12 @@ def main(argv = None):
                     arcpy.env.workspace = GISProdDefault_sde
                     retcode = gzSupport.deleteRows(GISProdDefault_sde,name,deleteExpr)
                     if retcode == True:
-                        msg(str(len(deletes)) + " Rows deleted in prod")
+                        msg(str(len(deletes)) + " Rows deleted in prod for " + name)
                     else:
                         msg("Failed to delete rows")
                         retVal = False
-                else:
-                    msg("No changed rows found to delete")
+                #else:
+                #    msg("No changed rows found to delete")
 
                 if len(adds) > 0:
                     addExpr = getDeltaWhereClause(desc,idField,adds)
@@ -103,8 +116,8 @@ def main(argv = None):
                     else:
                         msg("Failed to append rows for " + name)
                         retVal = False
-                else:
-                    msg("No changed rows found to add for " + name)
+                #else:
+                #    msg("No changed rows found to add for " + name)
                 del adds
                 del deletes
 
@@ -130,7 +143,7 @@ def main(argv = None):
                     msg("No rows in source database to update for " + name)
                 del view
     #msg(processed)
-    arcpy.SetParameter(successParam,retVal)
+    return retVal
 
 def getChanges(changeNode,viewAttribute,sde,whereClause,idField):
     # get the list of changed rows - just the IDs
@@ -168,7 +181,8 @@ def buildViewWhereClause(viewIdField,inputDrawing):
 def getChangedRows(view,idField,whereClause):
     # get the actual list of idFields by row
     deltas = []
-    msg("Getting changed rows for " + view[view.rfind(os.sep)+1:])
+    if debug == True: 
+        msg("Getting changed rows for " + view[view.rfind(os.sep)+1:])
     with arcpy.da.SearchCursor(view, idField,whereClause) as cursor:
         for row in cursor:
             for item in row:
@@ -207,7 +221,8 @@ def getDeltaWhereClause(desc,idField,theList):
             whereClause = whereClause + " or \"" + idField + "\" IS NULL"
     else:
         whereClause = ''
-    gzSupport.addMessage(whereClause)
+    if debug == True:
+        msg(whereClause)
     return whereClause
 
 def msg(val):
@@ -215,8 +230,7 @@ def msg(val):
     global log
     strVal = str(val)
     log.write(strVal + "\n")
-    gzSupport.addMessage(strVal)
-
+    arcpy.AddMessage(strVal)
 
 if __name__ == "__main__":
     main()
