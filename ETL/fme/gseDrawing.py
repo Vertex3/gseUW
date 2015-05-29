@@ -4,8 +4,8 @@
 
 import sys,os,time
 
-namedelimiter = "_"
-
+namedelimiter = '_'
+dash = '-'
 def getDrawing(feature):
 	#dwgName = feature.getAttribute("DRAWING")
 	dwgName = feature.getAttribute("fme_basename")
@@ -58,7 +58,7 @@ def getBuildingNameFromPath(pth):
 	try:
 		pth = pth.split(os.sep)
 		folder = pth[len(pth)-2] # this will get the parent folder name, needs to be set up for specific file structure
-		name = folder[9:].replace("-"," ").strip(' ').title()
+		name = folder[9:].replace(dash,' ').strip(' ').title()
 	except:
 		print "Error getting Building Name for:" + str(pth)
 	return name
@@ -100,7 +100,8 @@ def getBuilding(feature):
 def getFloor(feature):
 	dwgName = getDrawing(feature)
 	dwgName.split(os.sep)[0]
-	floorNum = dwgName[len(dwgName)-2:]
+	floorNum = dwgName[len(dwgName)-3:]
+	floorNum = floorNum.replace(dash,'')
 	return floorNum
 
 def getFloorID(feature):
@@ -134,7 +135,8 @@ def getFloorFromName(dwg):
 
 def getFloorCodeFromName(dwg):
 	dwg = dwg.split('.')[0]
-	floorNum = dwg[len(dwg)-2:]
+	floorNum = dwg[len(dwg)-3:]
+	floorNum = floorNum.replace(dash,'')
 	return floorNum.upper()
 
 def getDrawingFromName(dwg):
