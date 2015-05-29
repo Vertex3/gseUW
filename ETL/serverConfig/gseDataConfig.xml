@@ -4,10 +4,13 @@
 		cadFolder="'C:\Apps\Gizinta\gseUW\CAD\Floorplans'" 
 		stagingWS="GIS Staging.sde" productionWS="GIS Production.sde" 
 		deleteCADFiles="False" 
+		autoSync="True"
+		exitOnError="False"
 		minTime="'01/11/1900 9:00:00 AM'"
 		fileExt = ".dwg"
 		fmeExe = "C:\Apps\FME\fme.exe"
 		sourceEPSG="2285"
 		runas="FME"
+		truncate="Y"
 		/>
 </gseDataConfig>

@@ -1,1 +1,1 @@
-C:\Apps\Gizinta\gseUW\ETL\py\gseLoaderFME.py bmPlaylistAll.xml,bmBldgDerivePlaylist.xml gseDataConfigBasemap.xml True False
+C:\Apps\Gizinta\gseUW\ETL\py\gseLoaderFME.py bmPlaylistAll.xml,bmBldgDerivePlaylist.xml gseDataConfigBasemap.xml
