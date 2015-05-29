@@ -28,7 +28,7 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
     runAs = runas 
     if not sourceEPSG.upper().startswith("EPSG:"):
         sourceEPSG = "EPSG:" + sourceEPSG
-    print ("Creating subprocess for: " + fmeFile[fmeFile.rfind(os.sep)+1:] + "\n")
+    #print ("Creating subprocess for: " + fmeFile[fmeFile.rfind(os.sep)+1:] + "\n")
     try:
         if source == "CAD":
             comm = getCADCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,truncate,playlist_xml,logFile,fread,fwrite)
