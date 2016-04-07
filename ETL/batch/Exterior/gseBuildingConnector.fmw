@@ -5,7 +5,7 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\Apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\batch\Exterior\gseBuildingConnector.fmw
+#    F:\Apps\FME\fme.exe C:\apps\Gizinta\gseUW\ETL\batch\Exterior\gseBuildingConnector.fmw
 #          --SourceDataset_GEODATABASE_SDE sde
 #          --DestDataset_GEODATABASE_SDE sde
 #          --Snap_Distance 4
@@ -13,7 +13,7 @@
 #    
 #! PASSWORD=""
 #! ATTR_TYPE_ENCODING="SDF"
-#! VIEW_POSITION="-685 -1083"
+#! VIEW_POSITION="-2153 -1302"
 #! SHOW_INFO_NODES="true"
 #! FME_STROKE_MAX_DEVIATION="0"
 #! BEGIN_PYTHON=""
@@ -22,7 +22,7 @@
 #! TITLE=""
 #! MAX_LOG_FEATURES="200"
 #! END_TCL=""
-#! FME_BUILD_NUM="14338"
+#! FME_BUILD_NUM="14391"
 #! ZOOM_SCALE="67"
 #! CATEGORY=""
 #! REDIRECT_TERMINATORS="NONE"
@@ -31,24 +31,24 @@
 #! USAGE=""
 #! END_PYTHON=""
 #! HISTORY=""
-#! FME_DOCUMENT_PRIORGUID=""
+#! FME_DOCUMENT_PRIORGUID="59286313-f5ef-4b38-9ffd-e337fbafbd5d"
 #! DOC_TOP_LEFT="-2155 -3352"
 #! REQUIREMENTS_KEYWORD=""
 #! SOURCE_ROUTING_FILE=""
 #! DESTINATION_ROUTING_FILE=""
 #! DESTINATION="NONE"
-#! LAST_SAVE_DATE="2015-04-14T19:54:43"
+#! LAST_SAVE_DATE="2015-04-14T17:12:40"
 #! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #! WORKSPACE_VERSION="1"
 #! SOURCE="NONE"
-#! LAST_SAVE_BUILD="FME(R) 2014 SP2 (20140606 - Build 14338 - WIN32)"
+#! LAST_SAVE_BUILD="FME(R) 2014 SP3 (20140814 - Build 14391 - WIN32)"
 #! FME_SERVER_SERVICES=""
 #! LOG_MAX_RECORDED_FEATURES="200"
 #! LOG_FILE=""
 #! REQUIREMENTS=""
 #! BEGIN_TCL=""
 #! DOC_EXTENTS="11054 2767"
-#! FME_DOCUMENT_GUID="59286313-f5ef-4b38-9ffd-e337fbafbd5d"
+#! FME_DOCUMENT_GUID="b52e43e1-2411-4d5c-a993-e3d701edf898"
 #! SHOW_ANNOTATIONS="true"
 #! IGNORE_READER_FAILURE="No"
 #! WARN_INVALID_XFORM_PARAM="Yes"
@@ -67,7 +67,7 @@
 #! WRITE_DEFS="true"
 #! DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY}"
 #! DEFLINE_ATTRS="true"
-#! EXPOSABLE_ATTRS="geodb_text_leader_line_anchor_point char(254) geodb_dim_length double geodb_v_align char(50) geodb_rel_destination_oid integer multi_reader_type char(50) geodb_edge_feature_count integer geodb_feature_dataset char(254) geodb_subtype_name char(254) geodb_text_lc_gap double geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_from_junction_element_id integer geodb_raster_pyramid_resample_type char(100) geodb_rel_origin_oid integer fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_lc_textbox_y2 double geodb_metadata_string char(254) geodb_text_lc_textbox_y3 double geodb_dim_text_x double geodb_text_lc_textbox_y4 double geodb_dim_text_y double geodb_symbol_id integer geodb_text_lc_margin_left double geodb_dim_text_z double multi_reader_keyword char(50) geodb_text_point_scale_factor double geodb_text_leader_line char(254) geodb_element_id integer geodb_text_lc_accent_bar_width double geodb_font_italic boolean fme_basename char(50) geodb_text_line_spacing double geodb_text_ref_scale double geodb_topological_configuration char(6) geodb_h_align char(50) geodb_start_angle double fme_secondary_axis double geodb_text_lc_accent_bar_color char(50) geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_lc_margin_bottom double geodb_text_size double geodb_raster_pyramid_level integer geodb_text_leader_line_width double fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean fme_dataset char(50) geodb_text_character_width double geodb_text_lc_textbox_x1 double geodb_text_lc_textbox_x2 double geodb_rotation double geodb_text_lc_textbox_x3 double fme_fill_color char(50) geodb_secondary_axis double geodb_text_lc_textbox_x4 double geodb_font_underline boolean geodb_font_bold boolean geodb_text_color char(254) geodb_text_y_offset double geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_text_part_count integer geodb_type char(25) geodb_dim_line_display smallint geodb_text_clip boolean geodb_to_junction_element_id integer fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) multi_reader_id integer geodb_text_lc_margin_right double geodb_text_lc_style char(20) geodb_text_break_char integer geodb_text_leader_line_tolerance double geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_feature_is_simple boolean geodb_primary_axis double geodb_dim_line_x double geodb_right_to_left boolean geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_feature_has_relationships boolean geodb_junction_feature_count integer geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_edge_element_count integer geodb_text_lc_margin_top double geodb_text_word_spacing double geodb_dim_marker_display smallint fme_rotation double multi_reader_full_id integer geodb_junction_element_count integer fme_start_angle double geodb_dim_extn_line_angle double geodb_font_weight smallint geodb_element_index integer geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
+#! EXPOSABLE_ATTRS="geodb_text_leader_line_anchor_point char(254) geodb_dim_length double geodb_v_align char(50) geodb_rel_destination_oid integer multi_reader_type char(50) geodb_edge_feature_count integer geodb_feature_dataset char(254) geodb_text_lc_gap double geodb_subtype_name char(254) geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_from_junction_element_id integer geodb_raster_pyramid_resample_type char(100) geodb_rel_origin_oid integer fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_lc_textbox_y2 double geodb_text_lc_textbox_y3 double geodb_metadata_string char(254) geodb_text_lc_textbox_y4 double geodb_dim_text_x double geodb_symbol_id integer geodb_text_lc_margin_left double geodb_dim_text_y double multi_reader_keyword char(50) geodb_dim_text_z double geodb_text_point_scale_factor double geodb_text_leader_line char(254) geodb_element_id integer geodb_text_lc_accent_bar_width double geodb_font_italic boolean geodb_text_line_spacing double fme_basename char(50) geodb_text_ref_scale double geodb_topological_configuration char(6) geodb_start_angle double geodb_h_align char(50) fme_secondary_axis double geodb_text_lc_accent_bar_color char(50) geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_lc_margin_bottom double geodb_text_size double geodb_raster_pyramid_level integer geodb_text_leader_line_width double fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean geodb_text_character_width double fme_dataset char(50) geodb_text_lc_textbox_x1 double geodb_text_lc_textbox_x2 double geodb_text_lc_textbox_x3 double geodb_rotation double fme_fill_color char(50) geodb_secondary_axis double geodb_text_lc_textbox_x4 double geodb_font_underline boolean geodb_font_bold boolean geodb_text_color char(254) geodb_text_y_offset double geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_text_part_count integer geodb_type char(25) geodb_dim_line_display smallint geodb_text_clip boolean geodb_to_junction_element_id integer fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) multi_reader_id integer geodb_text_lc_margin_right double geodb_text_lc_style char(20) geodb_text_break_char integer geodb_text_leader_line_tolerance double geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_feature_is_simple boolean geodb_primary_axis double geodb_dim_line_x double geodb_right_to_left boolean geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_feature_has_relationships boolean geodb_junction_feature_count integer geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_edge_element_count integer geodb_text_lc_margin_top double geodb_text_word_spacing double geodb_dim_marker_display smallint fme_rotation double multi_reader_full_id integer geodb_junction_element_count integer fme_start_angle double geodb_dim_extn_line_angle double geodb_font_weight smallint geodb_element_index integer geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
 #! DEFLINE_PARMS=""
 #! ATTR_INDEX_TYPES=""
 #! ATTR_NAME_INVALID_CHARS=""
@@ -107,7 +107,7 @@
 #! WRITE_DEFS="true"
 #! DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY} GEODB_UPDATE_KEY_COLUMNS &quot;&quot; GEODB_DROP_TABLE NO GEODB_TRUNCATE_TABLE NO GEODB_OBJECT_ID_NAME OBJECTID GEODB_OBJECT_ID_ALIAS OBJECTID GEODB_SHAPE_NAME SHAPE GEODB_SHAPE_ALIAS SHAPE GEODB_CONFIG_KEYWORD DEFAULTS GEODB_FEATURE_DATASET &quot;&quot; GEODB_GRID{1} &quot;&quot; GEODB_AVG_NUM_POINTS &quot;&quot; GEODB_XORIGIN &quot;&quot; GEODB_YORIGIN &quot;&quot; GEODB_XYSCALE &quot;&quot; GEODB_HAS_Z_VALUES &quot;&quot; GEODB_ZORIGIN &quot;&quot; GEODB_ZSCALE &quot;&quot; GEODB_HAS_MEASURES &quot;&quot; GEODB_MEASURES_ORIGIN &quot;&quot; GEODB_MEASURES_SCALE &quot;&quot; GEODB_ANNO_REFERENCE_SCALE &quot;&quot;"
 #! DEFLINE_ATTRS="true"
-#! EXPOSABLE_ATTRS="geodb_dim_length double geodb_v_align char(50) geodb_feature_dataset char(254) fme_where char(254) geodb_subtype_name char(254) geodb_allow_symbol_overrides boolean geodb_text_feat_class_name char(254) geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_raster_pyramid_resample_type char(100) fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_metadata_string char(254) geodb_dim_text_x double geodb_symbol_id integer geodb_dim_text_y double geodb_dim_text_z double geodb_font_italic boolean fme_basename char(50) geodb_text_line_spacing double geodb_text_ref_scale double geodb_start_angle double geodb_h_align char(50) fme_secondary_axis double geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_size double fme_db_operation char(8) geodb_raster_pyramid_level integer fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean fme_dataset char(50) geodb_text_character_width double geodb_rotation double fme_fill_color char(50) geodb_secondary_axis double geodb_font_underline boolean geodb_font_bold boolean geodb_text_color char(254) geodb_text_y_offset double geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_type char(25) geodb_dim_line_display smallint geodb_text_clip boolean fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) geodb_text_break_char integer geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_primary_axis double geodb_right_to_left boolean geodb_dim_line_x double geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_text_word_spacing double geodb_text_y_coord double geodb_dim_marker_display smallint fme_rotation double fme_start_angle double geodb_dim_extn_line_angle double geodb_text_x_coord double geodb_font_weight smallint geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
+#! EXPOSABLE_ATTRS="geodb_dim_length double geodb_v_align char(50) geodb_feature_dataset char(254) geodb_text_feat_class_name char(254) fme_where char(254) geodb_subtype_name char(254) geodb_allow_symbol_overrides boolean geodb_raster_compression_quality integer fme_color char(50) geodb_font_name char(254) geodb_raster_pyramid_resample_type char(100) fme_text_string char(50) geodb_raster_compression_type char(100) fme_type char(50) geodb_metadata_string char(254) geodb_dim_text_x double geodb_symbol_id integer geodb_dim_text_y double geodb_dim_text_z double geodb_font_italic boolean geodb_text_line_spacing double fme_basename char(50) geodb_text_ref_scale double geodb_start_angle double geodb_h_align char(50) fme_secondary_axis double geodb_anno_class_id integer geodb_sweep_angle double geodb_text_x_offset double fme_feature_type char(50) geodb_dim_text_angle double geodb_ancillary_role char(7) geodb_font_size double fme_text_size double geodb_text_size double fme_db_operation char(8) geodb_raster_pyramid_level integer fme_sweep_angle double geodb_dim_using_custom_length boolean geodb_text_char_spacing double fme_primary_axis double geodb_text_string char(254) geodb_font_strikethrough boolean geodb_text_character_width double fme_dataset char(50) geodb_rotation double fme_fill_color char(50) geodb_secondary_axis double geodb_text_y_offset double geodb_font_underline boolean geodb_text_color char(254) geodb_font_bold boolean geodb_dim_style_id integer geodb_text_scale boolean geodb_measures char(254) geodb_type char(25) geodb_text_clip boolean geodb_dim_line_display smallint fme_geometry fme_char(50) geodb_text_string_with_format_tags char(254) geodb_text_break_char integer geodb_dim_extn_line_display smallint geodb_dim_type smallint geodb_dim_custom_length double geodb_dim_begin_dimension_x double geodb_dim_begin_dimension_y double geodb_dim_begin_dimension_z double geodb_primary_axis double geodb_right_to_left boolean geodb_dim_line_x double geodb_dim_end_dimension_x double geodb_dim_line_y double geodb_dim_end_dimension_y double geodb_dim_line_z double geodb_dim_end_dimension_z double geodb_linked_feature_id integer geodb_text_word_spacing double geodb_text_y_coord double geodb_dim_marker_display smallint fme_rotation double fme_start_angle double geodb_dim_extn_line_angle double geodb_text_x_coord double geodb_font_weight smallint geodb_font_charset smallint geodb_color char(50) geodb_text_angle double"
 #! DEFLINE_PARMS="&quot;GUI CHOICE GEODB_DROP_TABLE YES%NO Drop Table First&quot; NO &quot;GUI CHOICE GEODB_TRUNCATE_TABLE YES%NO Truncate Table First&quot; NO &quot;GUI OPTIONAL WHOLE_LINE FORCE_DEFS ATTRLIST_COMMAS GEODB_UPDATE_KEY_COLUMNS Update Key Fields&quot; &quot;&quot; &quot;GUI TEXT GEODB_OBJECT_ID_NAME Object ID Field&quot; OBJECTID &quot;GUI TEXT GEODB_OBJECT_ID_ALIAS Object ID Alias&quot; OBJECTID &quot;GUI TEXT GEODB_SHAPE_NAME Shape Field&quot; SHAPE &quot;GUI TEXT GEODB_SHAPE_ALIAS Shape Alias&quot; SHAPE &quot;GUI TEXT GEODB_CONFIG_KEYWORD Configuration Keyword&quot; DEFAULTS &quot;GUI OPTIONAL TEXT GEODB_FEATURE_DATASET Feature Dataset&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_GRID{1} Grid 1&quot; &quot;&quot; &quot;GUI OPTIONAL INTEGER GEODB_AVG_NUM_POINTS Avg Num of Points&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_XORIGIN X Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_YORIGIN Y Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_XYSCALE X,Y Scale&quot; &quot;&quot; &quot;GUI OPTIONAL CHOICE GEODB_HAS_Z_VALUES yes%no Contains Z Values&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_ZORIGIN Z Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_ZSCALE Z Scale&quot; &quot;&quot; &quot;GUI OPTIONAL CHOICE GEODB_HAS_MEASURES yes%no Contains Measures&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_MEASURES_ORIGIN Measure Origin&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_MEASURES_SCALE Measure Scale&quot; &quot;&quot; &quot;GUI OPTIONAL FLOAT GEODB_ANNO_REFERENCE_SCALE Annotation Reference Scale&quot; &quot;&quot; "
 #! ATTR_INDEX_TYPES=""
 #! ATTR_NAME_INVALID_CHARS=":. %-#[]&quot;()!?*&apos;&amp;+\/{}|="
@@ -1121,27 +1121,27 @@
 #! <BOOKMARK
 #! IDENTIFIER="20"
 #! NAME="No room points"
-#! DESCRIPTION=""
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="-1315 -123"
 #! BOTTOM_RIGHT="8411 -1470"
 #! STICKY="false"
-#! COLOUR="0.364706,0.823529,0.933333"
+#! COLOUR="0.364706,0.819608,0.929412"
 #! CONTENTS=""
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="25"
 #! NAME="Has Exterior Door"
-#! DESCRIPTION=""
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="-421 -2936"
 #! BOTTOM_RIGHT="8439 -4050"
 #! STICKY="true"
-#! COLOUR="0.301961,0.305882,0.286275"
-#! CONTENTS="44 37 87 41 96 92 110 51 91 103 26 112 77 45 98 38 53 94 28 6 116 "
+#! COLOUR="0.301961,0.301961,0.286275"
+#! CONTENTS="28 103 98 41 91 112 44 37 53 77 116 45 26 38 87 110 96 51 92 94 95 6 "
 #! />
 #! <BOOKMARK
 #! IDENTIFIER="56"
-#! NAME="Ext Lines that touch &lt; 2 lines"
-#! DESCRIPTION=""
+#! NAME="Dangling Ext Lines"
+#! DESCRIPTION="&lt;html&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;"
 #! TOP_LEFT="-2155 -1556"
 #! BOTTOM_RIGHT="8411 -2794"
 #! STICKY="false"
@@ -1167,17 +1167,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1190,7 +1190,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1244,17 +1244,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1267,7 +1267,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1302,17 +1302,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1325,7 +1325,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1515,17 +1515,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1538,7 +1538,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1605,18 +1605,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1655,17 +1655,17 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1678,7 +1678,7 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1753,18 +1753,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <OUTPUT_FEAT NAME="UNMATCHED_CANDIDATE"/>
 #! <FEAT_COLLAPSED COLLAPSED="2"/>
@@ -1774,17 +1774,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -1797,7 +1797,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -1838,6 +1838,7 @@
 #! <XFORM_PARM PARM_NAME="TREAT_POLYGON_AS" PARM_VALUE="Lines"/>
 #! <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="NeighborFinder"/>
+#! <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="TEST_LIST_NAME" PARM_VALUE=""/>
@@ -1879,18 +1880,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1920,17 +1921,17 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1943,7 +1944,7 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.DOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2008,18 +2009,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <OUTPUT_FEAT NAME="UNMATCHED_CANDIDATE"/>
 #! <FEAT_COLLAPSED COLLAPSED="2"/>
@@ -2029,17 +2030,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -2052,7 +2053,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="DOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="DOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -2083,6 +2084,7 @@
 #! <XFORM_PARM PARM_NAME="TREAT_POLYGON_AS" PARM_VALUE="Lines"/>
 #! <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="NeighborFinder_2"/>
+#! <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="TEST_LIST_NAME" PARM_VALUE=""/>
@@ -2107,17 +2109,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2130,7 +2132,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2231,17 +2233,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2254,7 +2256,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2350,17 +2352,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2373,7 +2375,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2454,17 +2456,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2477,7 +2479,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2588,18 +2590,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2626,7 +2628,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2636,7 +2637,9 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.TOFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.ROUTECLASS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2663,7 +2666,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_relationships&lt;opencurly&gt;&lt;closecurly&gt;"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ListElementCounter_3"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
@@ -2704,18 +2706,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2742,7 +2744,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2752,7 +2753,9 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.TOFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.ROUTECLASS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2779,7 +2782,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2805,18 +2807,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2843,7 +2845,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2853,7 +2854,9 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.TOFLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.ROUTECLASS" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2880,7 +2883,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._related_candidates" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._element_count" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE="BOOL_OP&lt;comma&gt;OR&lt;comma&gt;COMPOSITE_TEST&lt;comma&gt;&lt;lt&gt;Unused&lt;gt&gt;&lt;comma&gt;TEST_CLAUSE&lt;comma&gt;&lt;quote&gt;TEST&lt;space&gt;&lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;_element_count&lt;lt&gt;closeparen&lt;gt&gt;&lt;space&gt;=&lt;space&gt;1&lt;quote&gt;,Dangling&lt;space&gt;lines"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="TestFilter_4"/>
 #! <XFORM_PARM PARM_NAME="DEFAULT_VALUE" PARM_VALUE="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
@@ -2902,17 +2904,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2925,7 +2927,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2988,18 +2990,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="BulkAttributeRemover_2"/>
 #! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
@@ -3040,18 +3042,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3081,17 +3083,17 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3104,7 +3106,7 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.DOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3187,18 +3189,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3237,17 +3239,17 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3260,7 +3262,7 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3353,18 +3355,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ErrorType" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
@@ -3409,18 +3411,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ErrorType" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="MODE_NAME" PARM_VALUE="Replace with Point"/>
@@ -3598,18 +3600,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3636,7 +3638,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3646,7 +3647,9 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.TOFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.ROUTECLASS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_relationships{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3673,7 +3676,6 @@
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._relationships{}.card_area" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._related_candidates" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}._element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_relationships{}.geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_relationships"/>
 #! <XFORM_PARM PARM_NAME="CALC_CARD" PARM_VALUE="No"/>
@@ -3838,17 +3840,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3861,7 +3863,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3917,17 +3919,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3940,7 +3942,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3993,17 +3995,17 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4016,7 +4018,7 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_relationships{}.SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4093,18 +4095,18 @@
 #! <XFORM_ATTR ATTR_NAME="SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="geometry" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_coordcount" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SITEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="DOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4134,17 +4136,17 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORCODE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPACEID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ADA" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FITNESS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ACTIVE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ISPUBLIC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SURFACE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SPEED" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.WIDTH" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.HEIGHT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.ONEWAY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.EMERGENCY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.FROMFLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4157,7 +4159,7 @@
 #! <XFORM_ATTR ATTR_NAME="_close{}.SHAPE.STLength()" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.SpaceID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_close{}.ROOMNUMBER" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_close{}.EVAC" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}._element_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_close{}.DOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -4795,10 +4797,10 @@
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="g0" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length0" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="gn" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_lengthn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="FAILED"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
@@ -4819,10 +4821,10 @@
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_y" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_x" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="g0" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_length0" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="gn" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_lengthn" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
 #! <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
@@ -4860,10 +4862,10 @@
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="g0" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length0" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="gn" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_lengthn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="LEN_ATTR" PARM_VALUE="_length"/>
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="LengthCalculator"/>
@@ -4900,10 +4902,10 @@
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="g0" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length0" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="gn" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_lengthn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="UNTOUCHED"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
 #! <XFORM_ATTR ATTR_NAME="_x" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -4923,10 +4925,10 @@
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_y" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_x" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="g0" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_length0" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="gn" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_lengthn" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="SNAPTYPE_PARAM" PARM_VALUE="End Point Snapping"/>
 #! <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
@@ -5639,10 +5641,10 @@
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_y" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_x" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="g0" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length0" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="gn" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_lengthn" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <OUTPUT_FEAT NAME="DUPLICATE"/>
 #! <FEAT_COLLAPSED COLLAPSED="1"/>
@@ -5663,10 +5665,10 @@
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_y" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_closest_candidate_x" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="g0" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_length0" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="gn" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_lengthn" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="_lengthd" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="_length" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DuplicateRemover"/>
 #! <XFORM_PARM PARM_NAME="KEYATTR" PARM_VALUE="geodb_oid g0"/>
@@ -6086,7 +6088,7 @@ DEFAULT_MACRO _GEODBInUsingConnFile_GEODATABASE_SDE_1 no
 #
 # =============================================================================
 #
-DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Publication.sde
+DEFAULT_MACRO GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Publication.sde
 GUI FILENAME_MUSTEXIST GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1 Connection File:
 GEODATABASE_SDE_1_CONNECTION_FILE "$(GEODATABASE_SDE_IN_CONNECTION_FILE_GEODATABASE_SDE_1)"
 # ============================================================================
@@ -6626,7 +6628,15 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME GeometryExtractor    INPUT  FEATURE_TYP
 FACTORY_DEF * TeeFactory   FACTORY_NAME "GeometryExtractor OUTPUT Splitter"   INPUT FEATURE_TYPE GeometryExtractor_OUTPUT   OUTPUT FEATURE_TYPE GeometryExtractor_OUTPUT_0_7YFEg0eCxnE=   OUTPUT FEATURE_TYPE GeometryExtractor_OUTPUT_1_7YFEg0eCxnE=   OUTPUT FEATURE_TYPE GeometryExtractor_OUTPUT_2_7YFEg0eCxnE=
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME CoordinateCounter_2    INPUT  FEATURE_TYPE GeometryExtractor_OUTPUT_1_7YFEg0eCxnE=    OUTPUT FEATURE_TYPE CoordinateCounter_2_OUTPUT         "_coordcount" @NumCoords(FLATTEN_AGGREGATE)
+FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_3    INPUT  FEATURE_TYPE GeometryExtractor_OUTPUT_2_7YFEg0eCxnE=    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_3_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         @SupplyAttributes("_z",-9999)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_3_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         "_z" @Coordinate(z,0,FLATTEN_AGGREGATE)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME VertexCreator_3    INPUT  FEATURE_TYPE CoordinateExtractor_3_OUTPUT    MODE REPLACE    XVAL "@Value(_x)"    YVAL "@Value(_y)"    ZVAL "@Value(_z)"    OUTPUT OUTPUT FEATURE_TYPE VertexCreator_3_OUTPUT
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME CoordinateCounter_2    INPUT  FEATURE_TYPE GeometryExtractor_OUTPUT_0_7YFEg0eCxnE=    OUTPUT FEATURE_TYPE CoordinateCounter_2_OUTPUT         "_coordcount" @NumCoords(FLATTEN_AGGREGATE)
 
 # -------------------------------------------------------------------------
 
@@ -6638,15 +6648,7 @@ FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME VertexCreator_6    INPUT  FEA
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_3    INPUT  FEATURE_TYPE GeometryExtractor_OUTPUT_0_7YFEg0eCxnE=    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_3_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         @SupplyAttributes("_z",-9999)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_3_OUTPUT         "_x" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_y" @Coordinate(y,0,FLATTEN_AGGREGATE)         "_z" @Coordinate(z,0,FLATTEN_AGGREGATE)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME VertexCreator_3    INPUT  FEATURE_TYPE CoordinateExtractor_3_OUTPUT    MODE REPLACE    XVAL "@Value(_x)"    YVAL "@Value(_y)"    ZVAL "@Value(_z)"    OUTPUT OUTPUT FEATURE_TYPE VertexCreator_3_OUTPUT
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * SpatialRelationshipFactory    FACTORY_NAME SpatialRelator    INPUT BASE FEATURE_TYPE DBO.RT_LineTransition    INPUT BASE FEATURE_TYPE DBO.RT_LineRmConnector    INPUT BASE FEATURE_TYPE DBO.RT_LineInterior    INPUT CANDIDATE FEATURE_TYPE DBO.RT_RoomPoint    PREDICATE TOUCHES    LIST_NAME "_relationships"    SUCCESS_ATTR "_related_candidates"    CURVE_BOUNDARY_RULE ENDPOINTS_MOD2    CALCULATE_CARDINALITY Yes    OUTPUT TAGGED FEATURE_TYPE SpatialRelator_Output
+FACTORY_DEF * SpatialRelationshipFactory    FACTORY_NAME SpatialRelator    INPUT BASE FEATURE_TYPE DBO.RT_LineTransition    INPUT BASE FEATURE_TYPE DBO.RT_LineInterior    INPUT BASE FEATURE_TYPE DBO.RT_LineRmConnector    INPUT CANDIDATE FEATURE_TYPE DBO.RT_RoomPoint    PREDICATE TOUCHES    LIST_NAME "_relationships"    SUCCESS_ATTR "_related_candidates"    CURVE_BOUNDARY_RULE ENDPOINTS_MOD2    CALCULATE_CARDINALITY Yes    OUTPUT TAGGED FEATURE_TYPE SpatialRelator_Output
 
 # -------------------------------------------------------------------------
 
@@ -6662,7 +6664,7 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter no<space>rooms Splitter"   I
 FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter <lt>UNFILTERED<gt> Output Nuker"   INPUT FEATURE_TYPE TestFilter_<lt>UNFILTERED<gt>
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * SpatialRelationshipFactory    FACTORY_NAME SpatialRelator_2    INPUT BASE FEATURE_TYPE TestFilter_no<space>rooms_1_bTFtvfj0UCw=    INPUT CANDIDATE FEATURE_TYPE TestFilter_2_No<space>SPACEID2    INPUT CANDIDATE FEATURE_TYPE TestFilter_2_No<space>SPACEID1    PREDICATE TOUCHES    LIST_NAME "_relationships"    SUCCESS_ATTR "_related_candidates"    CURVE_BOUNDARY_RULE ENDPOINTS_MOD2    CALCULATE_CARDINALITY Yes    OUTPUT TAGGED FEATURE_TYPE SpatialRelator_2_Output
+FACTORY_DEF * SpatialRelationshipFactory    FACTORY_NAME SpatialRelator_2    INPUT BASE FEATURE_TYPE TestFilter_no<space>rooms_0_bTFtvfj0UCw=    INPUT CANDIDATE FEATURE_TYPE TestFilter_2_No<space>SPACEID2    INPUT CANDIDATE FEATURE_TYPE TestFilter_2_No<space>SPACEID1    PREDICATE TOUCHES    LIST_NAME "_relationships"    SUCCESS_ATTR "_related_candidates"    CURVE_BOUNDARY_RULE ENDPOINTS_MOD2    CALCULATE_CARDINALITY Yes    OUTPUT TAGGED FEATURE_TYPE SpatialRelator_2_Output
 
 # -------------------------------------------------------------------------
 
@@ -6681,19 +6683,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME BulkAttributeRemover    INPUT  FEATURE_
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_2    INPUT  FEATURE_TYPE TestFilter_no<space>rooms_2_bTFtvfj0UCw=    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_2_OUTPUT         "_xline0" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_yline0" @Coordinate(y,0,FLATTEN_AGGREGATE)         @SupplyAttributes("_zline0",0)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_2_OUTPUT         "_xline0" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_yline0" @Coordinate(y,0,FLATTEN_AGGREGATE)         "_zline0" @Coordinate(z,0,FLATTEN_AGGREGATE)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME CoordinateCounter_3    INPUT  FEATURE_TYPE CoordinateExtractor_2_OUTPUT    OUTPUT FEATURE_TYPE CoordinateCounter_3_OUTPUT         "_coordcount" @NumCoords(FLATTEN_AGGREGATE)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_6    INPUT  FEATURE_TYPE CoordinateCounter_3_OUTPUT    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_6_OUTPUT         "_xlinen" @Coordinate(x,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         "_ylinen" @Coordinate(y,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         @SupplyAttributes("_zlinen",0)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_6_OUTPUT         "_xlinen" @Coordinate(x,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         "_ylinen" @Coordinate(y,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         "_zlinen" @Coordinate(z,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * SpatialRelationshipFactory    FACTORY_NAME SpatialRelator_3    INPUT BASE FEATURE_TYPE VertexCreator_3_OUTPUT    INPUT BASE FEATURE_TYPE VertexCreator_6_OUTPUT    INPUT CANDIDATE FEATURE_TYPE TestFilter_no<space>rooms_0_bTFtvfj0UCw=    INPUT CANDIDATE FEATURE_TYPE GeometryExtractor_OUTPUT_2_7YFEg0eCxnE=    PREDICATE TOUCHES    LIST_NAME "_relationships"    SUCCESS_ATTR "_related_candidates"    CURVE_BOUNDARY_RULE ENDPOINTS_MOD2    CALCULATE_CARDINALITY No    OUTPUT TAGGED FEATURE_TYPE SpatialRelator_3_Output
+FACTORY_DEF * SpatialRelationshipFactory    FACTORY_NAME SpatialRelator_3    INPUT BASE FEATURE_TYPE VertexCreator_3_OUTPUT    INPUT BASE FEATURE_TYPE VertexCreator_6_OUTPUT    INPUT CANDIDATE FEATURE_TYPE TestFilter_no<space>rooms_1_bTFtvfj0UCw=    INPUT CANDIDATE FEATURE_TYPE GeometryExtractor_OUTPUT_1_7YFEg0eCxnE=    PREDICATE TOUCHES    LIST_NAME "_relationships"    SUCCESS_ATTR "_related_candidates"    CURVE_BOUNDARY_RULE ENDPOINTS_MOD2    CALCULATE_CARDINALITY No    OUTPUT TAGGED FEATURE_TYPE SpatialRelator_3_Output
 
 # -------------------------------------------------------------------------
 
@@ -6713,14 +6703,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME BulkAttributeRemover_2    INPUT  FEATUR
 FACTORY_DEF * TeeFactory   FACTORY_NAME "BulkAttributeRemover_2 OUTPUT Splitter"   INPUT FEATURE_TYPE BulkAttributeRemover_2_OUTPUT   OUTPUT FEATURE_TYPE BulkAttributeRemover_2_OUTPUT_0_6qQL+Q8mql4=   OUTPUT FEATURE_TYPE BulkAttributeRemover_2_OUTPUT_1_6qQL+Q8mql4=
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * ProximityFactory    FACTORY_NAME NeighborFinder    INPUT BASE FEATURE_TYPE BulkAttributeRemover_2_OUTPUT_0_6qQL+Q8mql4=    INPUT CANDIDATE FEATURE_TYPE CoordinateExtractor_6_OUTPUT    SPATIAL_MATCH CLOSEST @EvaluateExpression(FLOAT,$(Snap_Distance$encode),NeighborFinder)    INSERT_VERTEX_ON_BASE No    CANDIDATE_FEATURES_FIRST No    CLOSE_CANDIDATES_LIST  "_close{}"    DISTANCE_ATTR _distance    TREAT_POLYGON_AS LINE    NEVER_OVERWRITE_MERGED_ATTRS Yes    OUTPUT MATCHED FEATURE_TYPE NeighborFinder_MATCHED        @RenameAttributes(_angle,angle,_candidate_angle,candidate_angle,_candidate_label_angle,candidate_label_angle,_closest_candidate_x,closest_candidate_x,_closest_candidate_y,closest_candidate_y,_closest_base_x,closest_base_x,_closest_base_y,closest_base_y)
-
-# -------------------------------------------------------------------------
-FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_5 INPUT  FEATURE_TYPE NeighborFinder_MATCHED ATTR ConnectionType InteriorLine    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeCreator_5 OUTPUT Splitter"   INPUT FEATURE_TYPE AttributeCreator_5_OUTPUT   OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_0_AHl5K7h8luY=   OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_1_AHl5K7h8luY=
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * ProximityFactory    FACTORY_NAME NeighborFinder_2    INPUT BASE FEATURE_TYPE BulkAttributeRemover_2_OUTPUT_1_6qQL+Q8mql4=    INPUT CANDIDATE FEATURE_TYPE BulkAttributeRemover_OUTPUT    SPATIAL_MATCH CLOSEST @EvaluateExpression(FLOAT,$(Snap_Distance$encode),NeighborFinder_2)    INSERT_VERTEX_ON_BASE No    CANDIDATE_FEATURES_FIRST No    CLOSE_CANDIDATES_LIST  "_close{}"    DISTANCE_ATTR _distance    TREAT_POLYGON_AS LINE    NEVER_OVERWRITE_MERGED_ATTRS Yes    OUTPUT MATCHED FEATURE_TYPE NeighborFinder_2_MATCHED        @RenameAttributes(_angle,angle,_candidate_angle,candidate_angle,_candidate_label_angle,candidate_label_angle,_closest_candidate_x,closest_candidate_x,_closest_candidate_y,closest_candidate_y,_closest_base_x,closest_base_x,_closest_base_y,closest_base_y)    OUTPUT UNMATCHED_BASE FEATURE_TYPE NeighborFinder_2_UNMATCHED_BASE
+FACTORY_DEF * ProximityFactory    FACTORY_NAME NeighborFinder_2    INPUT BASE FEATURE_TYPE BulkAttributeRemover_2_OUTPUT_0_6qQL+Q8mql4=    INPUT CANDIDATE FEATURE_TYPE BulkAttributeRemover_OUTPUT    SPATIAL_MATCH CLOSEST @EvaluateExpression(FLOAT,$(Snap_Distance$encode),NeighborFinder_2)    INSERT_VERTEX_ON_BASE No    CANDIDATE_FEATURES_FIRST No    CLOSE_CANDIDATES_LIST  "_close{}"    DISTANCE_ATTR _distance    TREAT_POLYGON_AS LINE    NEVER_OVERWRITE_MERGED_ATTRS Yes    OUTPUT MATCHED FEATURE_TYPE NeighborFinder_2_MATCHED        @RenameAttributes(_angle,angle,_candidate_angle,candidate_angle,_candidate_label_angle,candidate_label_angle,_closest_candidate_x,closest_candidate_x,_closest_candidate_y,closest_candidate_y,_closest_base_x,closest_base_x,_closest_base_y,closest_base_y)    OUTPUT UNMATCHED_BASE FEATURE_TYPE NeighborFinder_2_UNMATCHED_BASE
 
 # -------------------------------------------------------------------------
 FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator ATTRSET_PROPAGATE_MISSING YES INPUT  FEATURE_TYPE NeighborFinder_2_UNMATCHED_BASE ATTR ErrorType No<space>room<space>and<space>no<space>door    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
@@ -6732,8 +6715,27 @@ FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME VertexCreator_2    INPUT  FEA
 FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_6 INPUT  FEATURE_TYPE NeighborFinder_2_MATCHED ATTR ConnectionType ExteriorDoor    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_6_OUTPUT 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeCreator_6 OUTPUT Splitter"   INPUT FEATURE_TYPE AttributeCreator_6_OUTPUT   OUTPUT FEATURE_TYPE AttributeCreator_6_OUTPUT_0_+pdQNSaepco=   OUTPUT FEATURE_TYPE AttributeCreator_6_OUTPUT_1_+pdQNSaepco=
 # -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory   FACTORY_NAME "CreateLineFromPts AnchoredSnapper_Anchor Input Collector"   INPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_0_AHl5K7h8luY=   INPUT FEATURE_TYPE AttributeCreator_6_OUTPUT_0_+pdQNSaepco=   OUTPUT FEATURE_TYPE CreateLineFromPts_AnchoredSnapper_Anchor
-FACTORY_DEF * TeeFactory   FACTORY_NAME "CreateLineFromPts VertexCreator_4_Input Input Collector"   INPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_1_AHl5K7h8luY=   INPUT FEATURE_TYPE AttributeCreator_6_OUTPUT_1_+pdQNSaepco=   OUTPUT FEATURE_TYPE CreateLineFromPts_VertexCreator_4_Input
+
+FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_2    INPUT  FEATURE_TYPE TestFilter_no<space>rooms_2_bTFtvfj0UCw=    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_2_OUTPUT         "_xline0" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_yline0" @Coordinate(y,0,FLATTEN_AGGREGATE)         @SupplyAttributes("_zline0",0)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_2_OUTPUT         "_xline0" @Coordinate(x,0,FLATTEN_AGGREGATE)         "_yline0" @Coordinate(y,0,FLATTEN_AGGREGATE)         "_zline0" @Coordinate(z,0,FLATTEN_AGGREGATE)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME CoordinateCounter_3    INPUT  FEATURE_TYPE CoordinateExtractor_2_OUTPUT    OUTPUT FEATURE_TYPE CoordinateCounter_3_OUTPUT         "_coordcount" @NumCoords(FLATTEN_AGGREGATE)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_6    INPUT  FEATURE_TYPE CoordinateCounter_3_OUTPUT    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_6_OUTPUT         "_xlinen" @Coordinate(x,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         "_ylinen" @Coordinate(y,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         @SupplyAttributes("_zlinen",0)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_6_OUTPUT         "_xlinen" @Coordinate(x,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         "_ylinen" @Coordinate(y,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)         "_zlinen" @Coordinate(z,@EvaluateExpression(FLOAT,<at>Value<openparen>_coordcount<closeparen><space>-<space>1,CoordinateExtractor_6),FLATTEN_AGGREGATE)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * ProximityFactory    FACTORY_NAME NeighborFinder    INPUT BASE FEATURE_TYPE BulkAttributeRemover_2_OUTPUT_1_6qQL+Q8mql4=    INPUT CANDIDATE FEATURE_TYPE CoordinateExtractor_6_OUTPUT    SPATIAL_MATCH CLOSEST @EvaluateExpression(FLOAT,$(Snap_Distance$encode),NeighborFinder)    INSERT_VERTEX_ON_BASE No    CANDIDATE_FEATURES_FIRST No    CLOSE_CANDIDATES_LIST  "_close{}"    DISTANCE_ATTR _distance    TREAT_POLYGON_AS LINE    NEVER_OVERWRITE_MERGED_ATTRS Yes    OUTPUT MATCHED FEATURE_TYPE NeighborFinder_MATCHED        @RenameAttributes(_angle,angle,_candidate_angle,candidate_angle,_candidate_label_angle,candidate_label_angle,_closest_candidate_x,closest_candidate_x,_closest_candidate_y,closest_candidate_y,_closest_base_x,closest_base_x,_closest_base_y,closest_base_y)
+
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_5 INPUT  FEATURE_TYPE NeighborFinder_MATCHED ATTR ConnectionType InteriorLine    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT 
+FACTORY_DEF * TeeFactory   FACTORY_NAME "AttributeCreator_5 OUTPUT Splitter"   INPUT FEATURE_TYPE AttributeCreator_5_OUTPUT   OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_0_AHl5K7h8luY=   OUTPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_1_AHl5K7h8luY=
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "CreateLineFromPts AnchoredSnapper_Anchor Input Collector"   INPUT FEATURE_TYPE AttributeCreator_6_OUTPUT_0_+pdQNSaepco=   INPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_0_AHl5K7h8luY=   OUTPUT FEATURE_TYPE CreateLineFromPts_AnchoredSnapper_Anchor
+FACTORY_DEF * TeeFactory   FACTORY_NAME "CreateLineFromPts VertexCreator_4_Input Input Collector"   INPUT FEATURE_TYPE AttributeCreator_6_OUTPUT_1_+pdQNSaepco=   INPUT FEATURE_TYPE AttributeCreator_5_OUTPUT_1_AHl5K7h8luY=   OUTPUT FEATURE_TYPE CreateLineFromPts_VertexCreator_4_Input
 MACRO CreateLineFromPts_WORKSPACE_NAME CreateLineFromPts
 MACRO $(CreateLineFromPts_WORKSPACE_NAME)_XFORMER_NAME CreateLineFromPts
 MACRO $(CreateLineFromPts_WORKSPACE_NAME)_TRANSFORMER_GROUP 
@@ -6741,8 +6743,8 @@ MACRO $(CreateLineFromPts_WORKSPACE_NAME)___COMPOUND_PARAMETERS
 MACRO $(CreateLineFromPts_WORKSPACE_NAME)_SUB_DOC_NAME CreateLineFromPts
 DEFAULT_MACRO CreateLineFromPts_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(CreateLineFromPts_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(CreateLineFromPts_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Anchor1429055683 Input Splitter"   INPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Anchor"   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Anchor"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_Input1429055683 Input Splitter"   INPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_Input"   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_Input"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Anchor1429056760 Input Splitter"   INPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Anchor"   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Anchor"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_Input1429056760 Input Splitter"   INPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_Input"   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_Input"
 # -------------------------------------------------------------------------
 
 # Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
@@ -6763,24 +6765,7 @@ FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4 OUTPUT Splitter"   INPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_OUTPUT"   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_OUTPUT_0_fvv6nP3nMPw="   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_OUTPUT_1_fvv6nP3nMPw="
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_OUTPUT_1_fvv6nP3nMPw="    MODE ADD    XVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._xline0<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2)"    YVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._yline0<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2)"    ZVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._zline0<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2)"    OUTPUT OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2_OUTPUT"
-
-# -------------------------------------------------------------------------
-
-# First determine which function we are going to be using -- we can do
-# this statically at parse time for efficiency sake
-
-MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function
-INCLUDE [ if {{fmebinary} == {fmebinary} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE_BINARY,"g0") }           } elseif {{fmebinary} == {fmehex} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE_BINARY_HEX,"g0") }           } elseif {{fmebinary} == {fmexml} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE,"g0") }           } elseif {{fmebinary} == {polyline} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE_POLYLINE,"g0",<Unused>) }           } elseif {{fmebinary} == {wkt} ||                      {fmebinary} == {wkb} ||                      {fmebinary} == {wkbhex} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @OGCGeometry(to_attribute,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {GEOJSON} ||                     {fmebinary} == {ESRIJSON} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @JSONGeometry(TO_ATTRIBUTE,fmebinary,"g0") }           } elseif {{fmebinary} == {KML} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @KMLGeometry(TO_ATTRIBUTE,"g0",<Unused>) }           } elseif {{fmebinary} == {GEORSS_SIMPLE} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @GeoRSSGeometry(TO_ATTRIBUTE,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {GML_2.1.2} ||                     {fmebinary} == {GML_3.1.1} ||                     {fmebinary} == {GML_3.2.1} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @GMLGeometry(TO_ATTRIBUTE,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {geohash} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @GeoHash(TO_ATTRIBUTE,"g0",<Unused>) }           } elseif {{fmebinary} == {ogeosms} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @OGCGeometry(to_attribute,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {geosms} ||                     {fmebinary} == {geo}    } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @OGCGeometry(to_attribute,fmebinary,"g0") }           }         ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_OUTPUT"         $($(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_3    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_OUTPUT"    OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_3_OUTPUT"         "_length0" @Length(3,1)
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_OUTPUT_0_fvv6nP3nMPw="    MODE ADD    XVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._xlinen<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5)"    YVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._ylinen<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5)"    ZVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._zlinen<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5)"    OUTPUT OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5_OUTPUT"
+FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_OUTPUT_1_fvv6nP3nMPw="    MODE ADD    XVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._xlinen<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5)"    YVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._ylinen<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5)"    ZVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._zlinen<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5)"    OUTPUT OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_5_OUTPUT"
 
 # -------------------------------------------------------------------------
 
@@ -6794,6 +6779,23 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_Geo
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_4    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_3_OUTPUT"    OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_4_OUTPUT"         "_lengthn" @Length(3,1)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_4_OUTPUT_0_fvv6nP3nMPw="    MODE ADD    XVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._xline0<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2)"    YVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._yline0<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2)"    ZVAL "@EvaluateExpression(FLOAT,<at>Value<openparen>_close<opencurly>0<closecurly>._zline0<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2)"    OUTPUT OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2_OUTPUT"
+
+# -------------------------------------------------------------------------
+
+# First determine which function we are going to be using -- we can do
+# this statically at parse time for efficiency sake
+
+MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function
+INCLUDE [ if {{fmebinary} == {fmebinary} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE_BINARY,"g0") }           } elseif {{fmebinary} == {fmehex} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE_BINARY_HEX,"g0") }           } elseif {{fmebinary} == {fmexml} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE,"g0") }           } elseif {{fmebinary} == {polyline} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @Geometry(TO_ATTRIBUTE_POLYLINE,"g0",<Unused>) }           } elseif {{fmebinary} == {wkt} ||                      {fmebinary} == {wkb} ||                      {fmebinary} == {wkbhex} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @OGCGeometry(to_attribute,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {GEOJSON} ||                     {fmebinary} == {ESRIJSON} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @JSONGeometry(TO_ATTRIBUTE,fmebinary,"g0") }           } elseif {{fmebinary} == {KML} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @KMLGeometry(TO_ATTRIBUTE,"g0",<Unused>) }           } elseif {{fmebinary} == {GEORSS_SIMPLE} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @GeoRSSGeometry(TO_ATTRIBUTE,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {GML_2.1.2} ||                     {fmebinary} == {GML_3.1.1} ||                     {fmebinary} == {GML_3.2.1} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @GMLGeometry(TO_ATTRIBUTE,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {geohash} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @GeoHash(TO_ATTRIBUTE,"g0",<Unused>) }           } elseif {{fmebinary} == {ogeosms} } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @OGCGeometry(to_attribute,fmebinary,"g0",<Unused>) }           } elseif {{fmebinary} == {geosms} ||                     {fmebinary} == {geo}    } {               puts {MACRO $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function @OGCGeometry(to_attribute,fmebinary,"g0") }           }         ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_VertexCreator_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_OUTPUT"         $($(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_Function)
+
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_3    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryExtractor_OUTPUT"    OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_3_OUTPUT"         "_length0" @Length(3,1)
 
 # -------------------------------------------------------------------------
 
@@ -6850,23 +6852,23 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_Len
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Splitter0    INPUT FEATURE_TYPE ___nothing_will_match_this_to_handle_when_below_inputs_are_not_specified___    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Anchor"    OUTPUT FEATURE_TYPE ___TOSNAP___ ___was_base___ yes
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Splitter1    INPUT FEATURE_TYPE ___nothing_will_match_this_to_handle_when_below_inputs_are_not_specified___    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryReplacer_2_OUTPUT"    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_2_OUTPUT"    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"    OUTPUT FEATURE_TYPE ___TOSNAP___ ___was_base___ no
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_Splitter1    INPUT FEATURE_TYPE ___nothing_will_match_this_to_handle_when_below_inputs_are_not_specified___    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryReplacer_2_OUTPUT"    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_GeometryReplacer_OUTPUT"    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_2_OUTPUT"    OUTPUT FEATURE_TYPE ___TOSNAP___ ___was_base___ no
 FACTORY_DEF * SnappingFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper    INPUT BASE FEATURE_TYPE ___TOSNAP___ ___was_base___ yes    INPUT CANDIDATE FEATURE_TYPE ___TOSNAP___ ___was_base___ no    SNAP_TYPE END_NODE    SNAP_TOLERANCE 0.1    EXTEND_LINES_TO_SNAP NEVER    OUTPUT SNAPPED FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_SNAPPED" @RemoveAttributes(___was_base___)    OUTPUT UNTOUCHED FEATURE_TYPE ___untouched___
 FACTORY_DEF * TestFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_UnTouchedWeeder    INPUT FEATURE_TYPE ___untouched___    TEST &___was_base___ == "yes"    OUTPUT FAILED FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_UNTOUCHED"        @RemoveAttributes(___was_base___)
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_SNAPPED"    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_UNTOUCHED"    OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_OUTPUT"         "_length" @Length(3,1)
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_UNTOUCHED"    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_AnchoredSnapper_SNAPPED"    OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_OUTPUT"         "_length" @Length(3,1)
 
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TestFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_Tester    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_LengthCalculator_OUTPUT"    NUM_TEST @EvaluateExpression(STRING_ENCODED,<at>Value<openparen>_length<closeparen>,$(CreateLineFromPts_WORKSPACE_NAME)_Tester) > 0.00 ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_Tester_PASSED"
 # -------------------------------------------------------------------------
 
-Tcl2 proc $(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_fe73bbef_1018_402d_9f79_cbebbb09381a19_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_fe73bbef_1018_402d_9f79_cbebbb09381a19___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_fe73bbef_1018_402d_9f79_cbebbb09381a19__KeySeenCount($attrVal)] - 1]; };
-FACTORY_DEF * TestFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_Tester_PASSED"    TEST @Tcl2("$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_fe73bbef_1018_402d_9f79_cbebbb09381a19_dupKeyCount {(geodb_oid g0)}") > 0    OUTPUT FAILED FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"
+Tcl2 proc $(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_7e4788bd_cfe2_4798_af2c_1ce2d10f78a92_dupKeyCount { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList { } ];     set attrVal {___$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_7e4788bd_cfe2_4798_af2c_1ce2d10f78a92___};     foreach {attrName} $attrs {         set attrName [FME_DecodeText $attrName];         append attrVal [FME_GetAttribute $attrName] {_fmebreak_};     };     return [expr [incr ::__$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_7e4788bd_cfe2_4798_af2c_1ce2d10f78a92__KeySeenCount($attrVal)] - 1]; };
+FACTORY_DEF * TestFactory    FACTORY_NAME $(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover    INPUT  FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_Tester_PASSED"    TEST @Tcl2("$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_7e4788bd_cfe2_4798_af2c_1ce2d10f78a92_dupKeyCount {(geodb_oid g0)}") > 0    OUTPUT FAILED FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"
 
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(CreateLineFromPts_WORKSPACE_NAME)_Tester_Passed1429055683 Output Collector"   INPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_Tester_Passed"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(CreateLineFromPts_WORKSPACE_NAME)_Tester_Passed1429056760 Output Collector"   INPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_DuplicateRemover_UNIQUE"   OUTPUT FEATURE_TYPE "$(CreateLineFromPts_WORKSPACE_NAME)_Tester_Passed"
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(CreateLineFromPts_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "CreateLineFromPts Tester_Passed Output Renamer/Nuker"   INPUT FEATURE_TYPE CreateLineFromPts_Tester_Passed   OUTPUT FEATURE_TYPE CreateLineFromPts_Tester_Passed
 # -------------------------------------------------------------------------

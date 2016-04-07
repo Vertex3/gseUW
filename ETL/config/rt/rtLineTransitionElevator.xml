@@ -59,7 +59,7 @@
 				<SourceName/>
 				<TargetName>SPEED</TargetName>
 				<Method>DefaultValue</Method>
-				<DefaultValue>616</DefaultValue>
+				<DefaultValue>187.75</DefaultValue>
 				<FieldType>Double</FieldType>
 				<FieldLength>8</FieldLength>
 			</Field>
