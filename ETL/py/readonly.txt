@@ -1,0 +1,3 @@
+fileAtt = os.stat(cadFile)[0]
+                        if (not fileAtt & stat.S_IWRITE):
+                            os.chmod(cadFile, stat.S_IWRITE)

@@ -1,6 +1,6 @@
 ### setupFloors.py - Insert records into active floor and floor level tables based on a set of
 ### drawings defined in settings.py
-import os, sys, time, arcpy, traceback, settings
+import os, sys, time, arcpy, traceback, settings, glob
 
 workspace = settings.workspace
 dwgfolder = settings.dwgfolder
@@ -13,10 +13,13 @@ tabFloor_Level = os.path.join(workspace,floorlevel)
 debug = False
 arcpy.env.workspace = workspace
 
-def main(argv = None):
+dwgs = []
+flrs = []
+activeFloors = []
+floorLevels = []
 
-    dwgs = []
-    flrs = []
+def main(argv = None):
+    global flrs, activeFloors,floorLevels,dwgs
     if not arcpy.Exists(tabActive_Floor):
         addMessageLocal(tabActive_Floor + " table does not exist, exiting")
         exit(-1)
@@ -25,31 +28,36 @@ def main(argv = None):
         exit(-1)
     floorLevels = getFloorLevels()
     activeFloors = getActiveFloors()
-    
-    for root, dirs, files in os.walk(dwgfolder):
-        for dwg in files:
-            if dwg.lower().endswith(".dwg") and dwg.lower().find("outline") < 0:
-                # for each drawing split into parts and insert to table.
-                dwg = dwg[:dwg.rfind('.')]
-                try:
-                    dwgs.index(dwg)
-                except:
-                    dwgs.append(dwg)
-                    parts = dwg.split(splitstr)
-                    bldg = parts[0]
-                    flr = parts[1]
-                    try:
-                        flrs.index(flr)
-                    except:
-                        flrs.append(flr)
-                    # insert a record into the active floors table
-                    if (bldg + '_' + flr) not in activeFloors:
-                        insertActiveFloor(dwg,bldg,flr)
+    os.path.walk(dwgfolder,processDir,None)
     # insert rows for floor levels found into Floor Levels table
     insertFloorLevels(flrs,floorLevels)
 
     print "processed " + str(len(dwgs)) + " drawings", str(dwgs)
     del flrs, floorLevels, dwgs, activeFloors
+
+def processDir(args,dir,files):
+    global dwgs
+    global flrs
+    global activeFloors
+    for dwg in files:
+        if dwg.lower().endswith(".dwg") and dwg.lower().find("outline") < 0 and dwg.find(splitstr) > - 1:
+            # for each drawing split into parts and insert to table.
+            dwg = dwg[:dwg.rfind('.')]
+            try:
+                dwgs.index(dwg)
+            except:
+                dwgs.append(dwg)
+                parts = dwg.split(splitstr)
+                bldg = parts[0]
+                flr = parts[1]
+                try:
+                    flrs.index(flr)
+                except:
+                    flrs.append(flr)
+                # insert a record into the active floors table
+                if (bldg + '_' + flr) not in activeFloors:
+                    insertActiveFloor(dwg,bldg,flr)
+    
 
 def insertActiveFloor(dwg,bldg,flr):
     retcode = False
