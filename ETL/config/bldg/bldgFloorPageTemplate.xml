@@ -1,12 +1,15 @@
 <?xml version="1.0" ?>
 <Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
 	<Extract>
-		<CADDataset sourceIDField="autocad_entity_handle" sourceName="Building_Outline_Tilt" targetName="Building_Outline_Tilt">
+		<CADDataset sourceIDField="autocad_entity_handle" sourceName="Building_Outline_Tilt" targetName="FloorPageTemplate">
+			<WhereClause/>
+		</CADDataset>
+		<CADDataset sourceIDField="autocad_entity_handle" sourceName="FloorPageTemplate" targetName="FloorPageTemplate">
 			<WhereClause/>
 		</CADDataset>
 	</Extract>
 	<Transform>
-		<Dataset name="Building_Outline_Tilt" qa="CheckFields,CheckGeometry" sourceIDField="autocad_entity_handle" sourceNameField="FACNUM">
+		<Dataset name="FloorPageTemplate" qa="CheckFields,CheckGeometry" sourceIDField="autocad_entity_handle" sourceNameField="FACNUM">
 			<Field>
 				<SourceName qa="Optional"></SourceName>
 				<TargetName qa="Required">SITEID</TargetName>
@@ -25,7 +28,7 @@
 			</Field>
 			<Field>
 				<SourceName qa="Optional"></SourceName>
-				<TargetName qa="Required">BLDGNAME</TargetName>
+				<TargetName qa="Required">BLDGNAME</TargetName><!--Apr2016 this is not actively used-->
 				<Method>PythonCalculate</Method>
 				<PythonExpression>gseDrawing.getBuildingName(feature)</PythonExpression>
 				<FieldType>String</FieldType>
@@ -68,7 +71,7 @@
 				<FieldType>String</FieldType>
 				<FieldLength>50</FieldLength>
 			</Field>
-			<ChangeDetection exceptProductionView="eBuildingOutlineTiltExceptProduction" exceptStagingView="eBuildingOutlineTiltExceptStaging" 
+			<ChangeDetection exceptProductionView="eFloorPageTExceptProduction" exceptStagingView="eFloorPageTExceptStaging" 
 			idField="BUILDINGID"
 			viewIdField="BUILDINGID"
 			viewFields="BUILDINGID,SOURCEID,CALCROT,SHAPE"/>

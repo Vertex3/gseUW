@@ -1,4 +1,4 @@
-update ACTIVE_FLOOR set 
-ACTIVE_FLOOR.GROUNDELEV = z + (SCHELEV - 10)
-from dbo.ACTIVE_FLOOR as af INNER JOIN 
-dbo.BUILDING_OUTLINE_POINT as op ON af.BUILDINGID=op.BUILDINGID
+update Building_Table set 
+GROUNDELEV = bz.Z 
+from dbo.BuildingZ as bz INNER JOIN 
+dbo.BUILDING_Table as bt ON bz.BUILDINGID=bz.BUILDINGID

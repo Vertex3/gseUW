@@ -18,3 +18,4 @@ ETL/fme/*.pyc
 *.wld
 *.gdb/
 
+*.ldb

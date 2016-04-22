@@ -118,10 +118,10 @@ def main(argv = None):
                             msg(cadFile + " deleted")
                         except:
                             msg("Unable to delete CAD file " + cadFile + "... continuing")
-            if processed % 10 == 0 and processed > 0:
-                msg("Processed " + str(processed) + " - Analyzing datasets...")
-                cleanup(gss[0].stagingWS,gss[0].productionWS,playlists)
-            gzSupport.cleanupGarbage()
+                if processed % 10 == 0 and processed > 0:
+                    msg("Processed " + str(processed) + " - Analyzing datasets...")
+                    cleanup(gss[0].stagingWS,gss[0].productionWS,playlists)
+                gzSupport.cleanupGarbage()
     except:
         errorCount += 1
         msg("A fatal error was encountered in gseLoaderFME.py")
@@ -130,8 +130,7 @@ def main(argv = None):
         logProcess("gseLoaderFME","drawings",outputSuccess,gss[0].stagingWS)
 
     finally:
-        if processed > 0:
-            cleanup(gss[0].stagingWS,gss[0].productionWS,playlists)
+        cleanup(gss[0].stagingWS,gss[0].productionWS,playlists)
         arcpy.SetParameterAsText(successParam,outputSuccess)
         msg("\nTotal Number of Errors = " + str(errorCount))
         msg("outputSuccess set to: " + str(outputSuccess))
@@ -150,67 +149,14 @@ def cleanup(stagingWS,productionWS,playlists_xml):
     for playlist in playlists_xml:
         analyzeDatasets(productionWS,playlist)
         analyzeDatasets(stagingWS,playlist)
-    #gzSupport.compressGDB(productionWS)
-    #gzSupport.compressGDB(stagingWS)
+    gzSupport.compressGDB(productionWS)
+    gzSupport.compressGDB(stagingWS)
 
-def analyzeDatasets1(workspace,playlists):
-    items = []
+def analyzeDatasets(workspace,playlists):
     msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
     names = getFeatureTypes(playlists,"targetName").split(' ')
-    arcpy.env.workspace = workspace
-    dataList = arcpy.ListTables() + arcpy.ListFeatureClasses()
-
-    # Next, for feature datasets get all of the datasets and featureclasses
-    # from the list and add them to the master list.
-    for dataset in arcpy.ListDatasets("", "Feature"):
-        arcpy.env.workspace = os.path.join(workspace,dataset)
-        for fc in arcpy.ListFeatureClasses():
-            dataList += [dataset + os.sep + fc]
-
-    # reset the workspace
-    arcpy.env.workspace = workspace
-
-    # Get the user name for the workspace
-    # remove any datasets that are not owned by the DBO user and aren't in the playlist
-    for name in names:
-        for item in dataList:
-            if item.lower().endswith(name.lower()) and item.lower().find(".dbo." ) > -1:
-                items.append(item)
-    # Execute analyze datasets
-    # Note: to use the "SYSTEM" option the workspace user must be an administrator.
-    arcpy.AnalyzeDatasets_management(workspace, "NO_SYSTEM", items, "ANALYZE_BASE","NO_ANALYZE_DELTA","NO_ANALYZE_ARCHIVE")
-    
-def analyzeDatasets(workspace,playlists):
-    
-    retVal = False
-    msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
-    sdeConn = arcpy.ArcSDESQLExecute(workspace)
-    #arcpy.env.workspace = workspace
-    #dataList = arcpy.ListTables() + arcpy.ListFeatureClasses()
-    #sqlList = ['Using ' + dataList[0][:dataList[0].find('.')]]
-    sqlList = ["EXEC sp_updatestats WITH RESULT SETS NONE;"]
-    for sql in sqlList:
-        try:
-            # Pass the SQL statement to the database.
-            retVal = sdeConn.execute(sql)
-        except Exception, ErrorDesc:
-            #print ErrorDesc
-            retVal = False
-            try:
-                retVal = sdeConn.execute("EXEC sp_updatestats;")
-            except:
-                retVal = False
-    #print retVal
-    #names = getFeatureTypes(playlists,"targetName").replace(' ',';')
     #for name in names:
-    #arcpy.AnalyzeDatasets_management(workspace,'NO_SYSTEM',names, "ANALYZE_BASE", "NO_ANALYZE_DELTA", "NO_ANALYZE_ARCHIVE")
-    return retVal
-
-def analyzeDatasets2(workspace,playlists):
-    msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
-    names = getFeatureTypes(playlists,"targetName").replace(' ',';')
-    #for name in names:
-    arcpy.AnalyzeDatasets_management(workspace,'NO_SYSTEM',names, "ANALYZE_BASE", "NO_ANALYZE_DELTA", "NO_ANALYZE_ARCHIVE")
+    arcpy.AnalyzeDatasets_management(workspace,'NO_SYSTEM',names,analyze_base=True)
 
 def doLoad(playlist_xml,folder,dwg,gs):
     # Load process drawing
@@ -235,6 +181,7 @@ def doLoad(playlist_xml,folder,dwg,gs):
 
     if retVal == False:
         msg("return value set to: " + str(retVal))
+        msg("Total Number of Processing Errors = " + str(errorCount))
 
     return retVal
 

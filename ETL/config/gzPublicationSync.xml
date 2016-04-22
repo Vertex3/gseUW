@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
+	<Extract>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="pubFloorAreas" targetName="Floor_Area">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="pubFloorPages" targetName="FloorPage">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="pubFloorplanLines" targetName="FloorplanLine">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="pubFloors" targetName="Floor">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="pubInteriorSpaces" targetName="InteriorSpace">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="pubInteriorSpacePoints" targetName="InteriorSpace_Point">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="pubInteriorSpaces_Tilt" targetName="InteriorSpace_Tilt">
+			<WhereClause/>
+		</GDBDataset>
+		<!-- RT Section -->
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_DoorPoint" targetName="RT_DoorPoint">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_LineExterior" targetName="RT_LineExterior">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_LineInterior" targetName="RT_LineInterior">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_LineRmConnector" targetName="RT_LineRmConnector">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_LineTransition" targetName="RT_LineTransition">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_RoomPoint" targetName="RT_RoomPoint">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_Stop" targetName="RT_Stop">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_Turn" targetName="RT_Turn">
+			<WhereClause/>
+		</GDBDataset>
+		<GDBDataset sourceIDField="OBJECTID" sourceName="RT_Waypoint" targetName="RT_Waypoint">
+			<WhereClause/>
+		</GDBDataset>
+	</Extract>
+</Gizinta>

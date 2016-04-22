@@ -2,11 +2,12 @@
 <GizintaPlaylist errorTableName="gzError" fileExtension=".dwg" logTableName="gzLog" xmlns:gizinta="http://gizinta.com">
 	<LoadSettings 
 		nameContains="Outline" 
-		logFileName="gseBuildingOutlineLoader.log" 
-		fmeLoadFile="gseBuildingOutlineLoader.fmw" 
+		logFileName="gseBuildingLoader.log" 
+		fmeLoadFile="gseBuildingLoader.fmw" 
 		source="CAD"/>
-	<File>bldg\bldgBuildingOutline.xml</File>
+<!--	<File>bldg\bldgBuildingOutline.xml</File>
 	<File>bldg\bldgBuildingOutlinePoint.xml</File>
 	<File>bldg\bldgBuildingFoundation.xml</File>
-	<File>bldg\bldgBuildingRoof.xml</File>
+	<File>bldg\bldgBuildingRoof.xml</File>-->
+	<File>bldg\bldgFloorPageTemplate.xml</File>
 </GizintaPlaylist>

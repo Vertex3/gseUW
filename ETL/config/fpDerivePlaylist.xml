@@ -6,10 +6,10 @@
 		fmeLoadFile="gseFloorplanDerive.fmw" 
 		source="GDB"/>
 	<File>fp\fpFloorArea.xml</File>
-<!--	<File>fpFloorPoly.xml</File>-->
+<!--	<File>fpFloorPoly.xml</File>
 	<File>fp\fpFloorPoint.xml</File>
 	<File>fp\fpFloorOutline.xml</File>
-	<!--<File>fpFloorplanLinePublish.xml</File>-->
+	<File>fpFloorplanLinePublish.xml</File>-->
 	<File>fp\fpInteriorSpaceTilt.xml</File>
 	<File>fp\fpInteriorSpacePoint.xml</File>
 </GizintaPlaylist>
