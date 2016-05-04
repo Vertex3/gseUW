@@ -14,7 +14,7 @@ gsepath = ospath[:ospath.rfind(etl)]
 etlpath = gsepath + etl
 if (etlpath) not in sys.path:
     sys.path.insert(0, etlpath)
-    print etlpath
+    print(etlpath)
 
 import arcpy, time, datetime, xml.dom.minidom, gse, gzSupport, gseRunFME
 
@@ -31,7 +31,7 @@ exitOnError = arcpy.GetParameterAsText(3)
 
 successParam = 4
 
-print "Playlist Parameters '" + playlists_xml + "'"
+print("Playlist Parameters '" + playlists_xml + "'")
 
 log = None
 playlists = []
@@ -153,64 +153,23 @@ def cleanup(stagingWS,productionWS,playlists_xml):
     #gzSupport.compressGDB(productionWS)
     #gzSupport.compressGDB(stagingWS)
 
-def analyzeDatasets1(workspace,playlists):
-    items = []
-    msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
-    names = getFeatureTypes(playlists,"targetName").split(' ')
-    arcpy.env.workspace = workspace
-    dataList = arcpy.ListTables() + arcpy.ListFeatureClasses()
-
-    # Next, for feature datasets get all of the datasets and featureclasses
-    # from the list and add them to the master list.
-    for dataset in arcpy.ListDatasets("", "Feature"):
-        arcpy.env.workspace = os.path.join(workspace,dataset)
-        for fc in arcpy.ListFeatureClasses():
-            dataList += [dataset + os.sep + fc]
-
-    # reset the workspace
-    arcpy.env.workspace = workspace
-
-    # Get the user name for the workspace
-    # remove any datasets that are not owned by the DBO user and aren't in the playlist
-    for name in names:
-        for item in dataList:
-            if item.lower().endswith(name.lower()) and item.lower().find(".dbo." ) > -1:
-                items.append(item)
-    # Execute analyze datasets
-    # Note: to use the "SYSTEM" option the workspace user must be an administrator.
-    arcpy.AnalyzeDatasets_management(workspace, "NO_SYSTEM", items, "ANALYZE_BASE","NO_ANALYZE_DELTA","NO_ANALYZE_ARCHIVE")
-    
 def analyzeDatasets(workspace,playlists):
     
     retVal = False
-    msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
+    #msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
     sdeConn = arcpy.ArcSDESQLExecute(workspace)
-    #arcpy.env.workspace = workspace
-    #dataList = arcpy.ListTables() + arcpy.ListFeatureClasses()
-    #sqlList = ['Using ' + dataList[0][:dataList[0].find('.')]]
     sqlList = ["EXEC sp_updatestats WITH RESULT SETS NONE;"]
     for sql in sqlList:
         try:
             # Pass the SQL statement to the database.
             retVal = sdeConn.execute(sql)
-        except Exception, ErrorDesc:
-            #print ErrorDesc
+        except:
             retVal = False
             try:
                 retVal = sdeConn.execute("EXEC sp_updatestats;")
             except:
                 retVal = False
-    #print retVal
-    #names = getFeatureTypes(playlists,"targetName").replace(' ',';')
-    #for name in names:
-    #arcpy.AnalyzeDatasets_management(workspace,'NO_SYSTEM',names, "ANALYZE_BASE", "NO_ANALYZE_DELTA", "NO_ANALYZE_ARCHIVE")
     return retVal
-
-def analyzeDatasets2(workspace,playlists):
-    msg("Analyzing Database " + workspace[workspace.rfind(os.sep)+1:])
-    names = getFeatureTypes(playlists,"targetName").replace(' ',';')
-    #for name in names:
-    arcpy.AnalyzeDatasets_management(workspace,'NO_SYSTEM',names, "ANALYZE_BASE", "NO_ANALYZE_DELTA", "NO_ANALYZE_ARCHIVE")
 
 def doLoad(playlist_xml,folder,dwg,gs):
     # Load process drawing

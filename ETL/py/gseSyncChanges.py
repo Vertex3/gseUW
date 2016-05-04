@@ -16,10 +16,10 @@ etlpath = gsepath + etl
 pypath = gsepath + "\\ETL\\fme\\"
 if (etlpath) not in sys.path:
     sys.path.insert(0, etlpath)
-    print etlpath
+    # print etlpath
 if (pypath) not in sys.path:
     sys.path.insert(0, pypath)
-    print pypath
+    # print pypath
 
 import gseDrawing, gse
 
@@ -33,7 +33,8 @@ debug = False
 
 def main(argv = None):
     global log
-    tm = time.strftime("%Y%m%d%H%M%S")    
+    tm = time.strftime("%Y%m%d%H%M%S")
+    drawingID = inputDrawing.split('.')[0]
     log = open(gse.pyLogFolder + 'gseSyncChanges_' + drawingID + '_' + tm + '.log','w')
     retVal = sync(inputDrawing,playlists,GISStagingDefault_sde,GISProdDefault_sde,log)
     arcpy.SetParameter(successParam,retVal)

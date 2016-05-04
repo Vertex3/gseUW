@@ -106,7 +106,7 @@ def addMessage(val):
     try:
         if sys.stdin.isatty():
             arcpy.AddMessage(str(val))
-            print str(val)
+            print(str(val))
         else:
             arcpy.AddMessage(str(val))
     except:
@@ -143,7 +143,7 @@ def logMessage(val):
         except:
             msg = "Unable to write to log file " + getLogFileName()
             arcpy.AddMessage(msg)
-            print msg
+            print(msg)
 
 def strToBool(s):
     # return a boolean for values like 'true'
@@ -666,9 +666,9 @@ def getFieldValues(mode,fields,datasets):
         try:
             cursor = arcpy.SearchCursor(table)
             row = cursor.next()
-        except Exception, ErrorDesc:
+        except:
             printMsg( "Unable to read the Dataset, Python error is: ")
-            msg = str(getTraceback(Exception, ErrorDesc))
+            msg = arcpy.GetMessages()
             printMsg(msg[msg.find("Error Info:"):])
             row = None
 

@@ -10,7 +10,7 @@ gsepath = ospath[:ospath.rfind(etl)]
 etlpath = gsepath + etl
 if (etlpath) not in sys.path:
     sys.path.insert(0, etlpath)
-    print etlpath
+    print(etlpath)
     
 import time, subprocess, gse, gseDrawing
 
@@ -35,7 +35,7 @@ def load(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG
         elif source == "GDB":
             comm = getGDBCommString(inputDrawing,fmeExe,fmeFile,GISStaging_sde,GISProduction_sde,sourceEPSG,truncate,playlist_xml,logFile,fread,fwrite)
         else:
-            print "No config file available for mode: " + source
+            print("No config file available for mode: " + source)
             return false
         if runAs == "FME":
             #printComm(comm)
