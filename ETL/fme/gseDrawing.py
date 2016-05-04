@@ -35,7 +35,7 @@ def getSiteIDFromPath(pth):
 	except:
 		site = feature.getAttribute('siteid')
 		if site == None or site == '':		
-			print "Error getting SiteID for:" + str(pth)
+			print("Error getting SiteID for:" + str(pth))
 	return site
 
 def getFloorIDFromPath(pth):
@@ -60,7 +60,7 @@ def getBuildingNameFromPath(pth):
 		folder = pth[len(pth)-2] # this will get the parent folder name, needs to be set up for specific file structure
 		name = folder[9:].replace(dash,' ').strip(' ').title()
 	except:
-		print "Error getting Building Name for:" + str(pth)
+		print("Error getting Building Name for:" + str(pth))
 	return name
 
 def getSiteplanID(feature):
@@ -72,7 +72,7 @@ def getSiteplanID(feature):
 			site = pth[len(pth)-3] # this will get the site folder name, needs to be set up for specific file structure
 			site = site.split("-")[0]# get the first part of the string if there is a dash
 	except:
-		print "Error getting SiteID for:" + str(pth)
+		print("Error getting SiteID for:" + str(pth))
 	return site
 
 def getSiteplanBuildingID(feature):

@@ -1,11 +1,11 @@
 <Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
 	<Extract>
-		<GDBDataset sourceIDField="SOURCEID" sourceName="Floor_Poly" targetName="Floor_Area"> 
+		<GDBDataset sourceIDField="SOURCEID" sourceName="Floor_Poly" targetName="FloorArea"> 
 			<WhereClause/>
 		</GDBDataset>
 	</Extract>
 	<Transform>
-		<Dataset name="Floor_Area" qa="CheckFields,CheckGeometry" sourceIDField="FLOORID" sourceNameField="FLOORID">
+		<Dataset name="FloorArea" qa="CheckFields,CheckGeometry" sourceIDField="FLOORID" sourceNameField="FLOORID">
 			<Field>
 				<SourceName qa="Optional">SITEID</SourceName>
 				<TargetName qa="Required">SITEID</TargetName>
@@ -65,7 +65,7 @@
 				<FieldLength>60</FieldLength>
 			</Field>
 			<SourceFieldNames>Color,Elevation,Entity,FACFLOORCODE,FACNUM,FLOORCODE,GSF_AREA,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
-			<ChangeDetection exceptProductionView="eFloorExceptProduction" exceptStagingView="eFloorExceptStaging" idField="FLOORID"
+			<ChangeDetection exceptProductionView="eFloorAreaExceptProduction" exceptStagingView="eFloorAreaExceptStaging" idField="FLOORID"
 			exceptPubSourceView="pFloorExceptSource" exceptPubTargetView="pFloorExceptTarget" exceptPubTargetTable="Floor_Area" exceptPubSourceTable="pubFloor_Areas"
 			exceptPubDatabasePrefix="campus.dbo." 
 			viewFields="FLOORID,SOURCEDWG,SHAPE"/>	

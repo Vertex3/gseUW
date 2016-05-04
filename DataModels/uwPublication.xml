@@ -58,10 +58,10 @@
         
         <DatasetType>esriDTFeatureDataset</DatasetType>
         <Children xsi:type="esri:ArrayOfDataElement">
-          <DataElement xsi:type="esri:DEFeatureClass"><CatalogPath>/FD=Floorplan/FC=Floor_Area</CatalogPath>
-            <Name>Floor_Area</Name>
+          <DataElement xsi:type="esri:DEFeatureClass"><CatalogPath>/FD=Floorplan/FC=FloorArea</CatalogPath>
+            <Name>FloorArea</Name>
             <DatasetType>esriDTFeatureClass</DatasetType>
-            <MetadataRetrieved>true</MetadataRetrieved><Metadata xsi:type="esri:XmlPropertySet"><XmlDoc>&lt;metadata xml:lang=&quot;en&quot;&gt;&lt;Esri&gt;&lt;MetaID&gt;&lt;/MetaID&gt;&lt;SyncOnce&gt;TRUE&lt;/SyncOnce&gt;&lt;ArcGISFormat&gt;1.0&lt;/ArcGISFormat&gt;&lt;/Esri&gt;&lt;idinfo&gt;&lt;descript&gt;&lt;abstract&gt;Floor_Area&lt;/abstract&gt;&lt;purpose&gt;Floor_Area&lt;/purpose&gt;&lt;/descript&gt;&lt;keywords&gt;&lt;theme&gt;&lt;themekt&gt;X-Ray&lt;/themekt&gt;&lt;themekey&gt;&lt;/themekey&gt;&lt;/theme&gt;&lt;/keywords&gt;&lt;accconst&gt;&lt;/accconst&gt;
+            <MetadataRetrieved>true</MetadataRetrieved><Metadata xsi:type="esri:XmlPropertySet"><XmlDoc>&lt;metadata xml:lang=&quot;en&quot;&gt;&lt;Esri&gt;&lt;MetaID&gt;&lt;/MetaID&gt;&lt;SyncOnce&gt;TRUE&lt;/SyncOnce&gt;&lt;ArcGISFormat&gt;1.0&lt;/ArcGISFormat&gt;&lt;/Esri&gt;&lt;idinfo&gt;&lt;descript&gt;&lt;abstract&gt;FloorArea&lt;/abstract&gt;&lt;purpose&gt;FloorArea&lt;/purpose&gt;&lt;/descript&gt;&lt;keywords&gt;&lt;theme&gt;&lt;themekt&gt;X-Ray&lt;/themekt&gt;&lt;themekey&gt;&lt;/themekey&gt;&lt;/theme&gt;&lt;/keywords&gt;&lt;accconst&gt;&lt;/accconst&gt;
 				&lt;useconst&gt;&lt;/useconst&gt;
 				&lt;status&gt;&lt;progress&gt;&lt;/progress&gt;
 				&lt;update&gt;&lt;/update&gt;
@@ -210,7 +210,7 @@
             
             <ShapeType>esriGeometryPolygon</ShapeType><LengthFieldName>SHAPE_LENGTH</LengthFieldName><AreaFieldName>SHAPE_AREA</AreaFieldName>
             <FeatureType>esriFTSimple</FeatureType>
-            <AliasName>Floor_Area</AliasName>
+            <AliasName>FloorArea</AliasName>
             <HasM>false</HasM>
             <HasZ>true</HasZ>
             
@@ -4081,5 +4081,25 @@
 <WKID>3857</WKID>
 </SpatialReference>
       <DSID>-1</DSID><Versioned>false</Versioned><CanVersion>false</CanVersion><HasM>false</HasM><HasZ>false</HasZ></DataElement>
-    </DatasetDefinitions><!--Workspace metadata--></WorkspaceDefinition>
+    </DatasetDefinitions><!--Workspace metadata--><Metadata xsi:type="esri:XmlPropertySet"><XmlDoc>&lt;metadata  xml:lang=&quot;en&quot;&gt;&lt;idinfo&gt;&lt;descript&gt;&lt;abstract&gt;&lt;/abstract&gt;&lt;purpose&gt;&lt;/purpose&gt;
+			&lt;/descript&gt;&lt;keywords&gt;&lt;theme&gt;&lt;themekt&gt;&lt;/themekt&gt;
+			&lt;/theme&gt;&lt;place&gt;&lt;placekt&gt;&lt;/placekt&gt;
+			&lt;/place&gt;&lt;/keywords&gt;&lt;ptcontac&gt;&lt;cntinfo&gt;&lt;cntorgp&gt;&lt;cntorg&gt;&lt;/cntorg&gt;&lt;cntper&gt;&lt;/cntper&gt;
+			&lt;/cntorgp&gt;&lt;addrtype&gt;&lt;/addrtype&gt;
+			&lt;address&gt;&lt;/address&gt;
+			&lt;city&gt;&lt;/city&gt;
+			&lt;state&gt;&lt;/state&gt;
+			&lt;postal&gt;&lt;/postal&gt;
+			&lt;cntvoice&gt;&lt;/cntvoice&gt;
+			&lt;cntemail&gt;&lt;/cntemail&gt;
+			&lt;/cntinfo&gt;&lt;/ptcontac&gt;&lt;citation&gt;&lt;citeinfo&gt;&lt;title&gt;&lt;/title&gt;
+			&lt;pubdate&gt;&lt;/pubdate&gt;
+			&lt;edition&gt;&lt;/edition&gt;
+			&lt;origin&gt;&lt;/origin&gt;
+			&lt;onlink&gt;&lt;/onlink&gt;
+			&lt;/citeinfo&gt;&lt;/citation&gt;&lt;accconst&gt;&lt;/accconst&gt;
+			&lt;useconst&gt;&lt;/useconst&gt;
+			&lt;status&gt;&lt;progress&gt;&lt;/progress&gt;
+			&lt;update&gt;&lt;/update&gt;
+			&lt;/status&gt;&lt;spdom&gt;&lt;bounding&gt;&lt;westbc&gt;NaN&lt;/westbc&gt;&lt;eastbc&gt;NaN&lt;/eastbc&gt;&lt;northbc&gt;NaN&lt;/northbc&gt;&lt;southbc&gt;NaN&lt;/southbc&gt;&lt;/bounding&gt;&lt;/spdom&gt;&lt;/idinfo&gt;&lt;/metadata&gt;</XmlDoc></Metadata></WorkspaceDefinition>
 <WorkspaceData xsi:type="esri:WorkspaceData" /></esri:Workspace>

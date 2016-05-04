@@ -17,7 +17,7 @@
 #          --flr "1100%"
 #          --gzDebug "False"
 #          --LOG_FILE "gseFloorplanDerive.log"
-#          --FEATURE_TYPES "InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point"
+#          --FEATURE_TYPES "InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point"
 #          --FEATURE_TYPES_READ "Floor_Poly InteriorSpace FloorplanLine"
 #          --truncate "Y"
 #          --FEATURE_TYPES_PROD "AllFloors FloorPageTemplate"
@@ -89,7 +89,7 @@
 #! ENABLED="true"
 #! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
 #! DATASET_TYPE="NONE"
-#! FEATURE_TYPES_LIST="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point"
+#! FEATURE_TYPES_LIST="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point"
 #! GENERATE_FME_BUILD_NUM="13545"
 #! COORDSYS=""
 #! MIN_FEATURES=""
@@ -951,7 +951,7 @@
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #! IS_SOURCE="true"
-#! NODE_NAME="DBO.Floor_Area"
+#! NODE_NAME="DBO.FloorArea"
 #! FEATURE_TYPE_NAME=""
 #! FEATURE_TYPE_NAME_QUALIFIER="DBO"
 #! IS_EDITABLE="true"
@@ -976,7 +976,7 @@
 #! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_AREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORAREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="SCHELEV" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="ALTITUDE" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
@@ -1145,8 +1145,8 @@
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES Floor_Point%InteriorSpace_Tilt%FloorplanLine%Floor_Outline%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%InteriorSpace%Floor_Area Feature Types to Write:"
-#! DEFAULT_VALUE="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point"
+#! GUI_LINE="GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES Floor_Point%InteriorSpace_Tilt%FloorplanLine%Floor_Outline%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%InteriorSpace%FloorArea Feature Types to Write:"
+#! DEFAULT_VALUE="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -1218,7 +1218,7 @@
 #! />
 #! <COMMENT
 #! IDENTIFIER="127"
-#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:11px; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px;&quot;&gt;Create Floor_Area Aggregate Polygon&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#! COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:11px; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11px;&quot;&gt;Create FloorArea Aggregate Polygon&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
 #! POSITION="4720 -1117"
 #! TOP_LEFT="4720 -1117"
 #! BOTTOM_RIGHT="5470 -1167"
@@ -1316,7 +1316,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1959,7 +1959,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2042,7 +2042,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -2148,7 +2148,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2171,7 +2171,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2518,7 +2518,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2601,7 +2601,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -2684,7 +2684,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -3006,12 +3006,12 @@
 #! <XFORM_ATTR ATTR_NAME="_zmin" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="_bldg_outline_length" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_feature_type,Floor_Area"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="fme_feature_type,FloorArea"/>
 #! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
 #! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
 #! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Floor_Area"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FloorArea"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #! IDENTIFIER="116"
@@ -3032,7 +3032,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3201,7 +3201,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -3238,7 +3238,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -6511,8 +6511,8 @@ DEFAULT_MACRO gzDebug False
 GUI OPTIONAL CHOICE gzDebug True%False Enable gzDebug (True/False):
 DEFAULT_MACRO LOG_FILE gseFloorplanDerive.log
 GUI OPTIONAL FILENAME LOG_FILE Log_Files_(*.log)|*.log|All_Files_(*.*)|*.* Log File:
-DEFAULT_MACRO FEATURE_TYPES InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point
-GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES Floor_Point%InteriorSpace_Tilt%FloorplanLine%Floor_Outline%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%InteriorSpace%Floor_Area Feature Types to Write:
+DEFAULT_MACRO FEATURE_TYPES InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point
+GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES Floor_Point%InteriorSpace_Tilt%FloorplanLine%Floor_Outline%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%InteriorSpace%FloorArea Feature Types to Write:
 DEFAULT_MACRO FEATURE_TYPES_READ Floor_Poly InteriorSpace FloorplanLine
 GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde\",WHERE,\"FLOORID='1100%' OR FLOORID like '1100%'\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO truncate Y
@@ -7603,11 +7603,11 @@ FME_END_PYTHON_ENC import<space>fmeobjects<comma><space>gzfme<lf><lf>gzfme.shutd
 MACRO WORKSPACE_NAME gseFloorplanDerive
 MACRO FME_VIEWER_APP fmedatainspector
 # -------------------------------------------------------------------------
-GEODATABASE_SDE_2_DEF DBO.Floor_Area   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   FLOOR_AREA                   double   SCHELEV                      smallint   ALTITUDE                     smallint   SENSITIVITY                  char(20)   SOURCEDWG                    char(60)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+GEODATABASE_SDE_2_DEF DBO.FloorArea   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   FLOORAREA                   double   SCHELEV                      smallint   ALTITUDE                     smallint   SENSITIVITY                  char(20)   SOURCEDWG                    char(60)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE GEODATABASE_SDE GEODATABASE_SDE_2::DBO.Floor_Area multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_2) TO FME_GENERIC ::DBO.Floor_Area ALIAS_GEOMETRY    ROUTE GEODATABASE_SDE GEODATABASE_SDE_5::FloorPageTemplate multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_5) TO FME_GENERIC ::FloorPageTemplate ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
-GEODATABASE_SDE_2_MERGE_DEF GEODATABASE_SDE_2::DBO.Floor_Area GLOB_NOCASE *
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE GEODATABASE_SDE GEODATABASE_SDE_2::DBO.FloorArea multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_2) TO FME_GENERIC ::DBO.FloorArea ALIAS_GEOMETRY    ROUTE GEODATABASE_SDE GEODATABASE_SDE_5::FloorPageTemplate multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_5) TO FME_GENERIC ::FloorPageTemplate ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+GEODATABASE_SDE_2_MERGE_DEF GEODATABASE_SDE_2::DBO.FloorArea GLOB_NOCASE *
 GEODATABASE_SDE_5_MERGE_DEF GEODATABASE_SDE_5::FloorPageTemplate GLOB * DEFLINE geodb_type,geodb_polygon,OBJECTID,integer,SITEID,char<openparen>60<closeparen>,BUILDINGID,char<openparen>60<closeparen>,CALCROT,double,LOCALROT,double,SOURCEID,char<openparen>30<closeparen>,SOURCEDWG,char<openparen>60<closeparen>,LASTUPDATE,date,LASTEDITOR,char<openparen>30<closeparen>,SHAPE.STArea<openparen><closeparen>,double,SHAPE.STLength<openparen><closeparen>,double,SCHELEV,integer,FLOORLEVEL,integer,GROUNDELEV,double,FLOORAREA,char<openparen>3<closeparen>,StackLevel,double,DDPFLOORSORT,char<openparen>71<closeparen>,FLOORCODE,char<openparen>20<closeparen>,INTERIORSPACE,char<openparen>3<closeparen>,BLDGNAME,char<openparen>30<closeparen>,DRAWINGNAME,char<openparen>100<closeparen>,NAMELONG,char<openparen>100<closeparen>,SENSITIVITY,char<openparen>30<closeparen>,FLOORID,char<openparen>60<closeparen>,NAMESHORT,char<openparen>50<closeparen>,FLOORPLANLINE,char<openparen>3<closeparen>
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
@@ -7673,7 +7673,7 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "gseGetBldgFloorInfo FeatureMerger_3_Mer
 # Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
 
 READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer_2    INPUT  FEATURE_TYPE DBO.Floor_Area    OUTPUT FEATURE_TYPE AttributeExposer_2_OUTPUT
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer_2    INPUT  FEATURE_TYPE DBO.FloorArea    OUTPUT FEATURE_TYPE AttributeExposer_2_OUTPUT
 
 # -------------------------------------------------------------------------
 
@@ -7816,9 +7816,9 @@ INCLUDE [if {"No" == "Yes"} {puts {MACRO Aggregator_BREAK_ATTR BREAK_BEFORE_FIEL
 FACTORY_DEF * AggregateFactory    FACTORY_NAME Aggregator    INPUT  FEATURE_TYPE TestFilter_Floor_Poly    MODE ONE_LEVEL    GROUP_BY floorid    $(Aggregator_BREAK_ATTR)    ACCUMULATE_ATTRIBUTES Yes    SEPARATOR <comma>    SUM_FIELDS floorarea    PRODUCE_MULTIS YES    OUTPUT AGGREGATE FEATURE_TYPE Aggregator_AGGREGATE         @Geometry(SET_TO_CONTAIN_INDIVIDUAL_GEOMS, NO)
 
 # -------------------------------------------------------------------------
-FACTORY_DEF * AttrSetFactory FACTORY_NAME Floor_Area INPUT  FEATURE_TYPE Aggregator_AGGREGATE ATTR fme_feature_type Floor_Area    OUTPUT OUTPUT FEATURE_TYPE Floor_Area_OUTPUT 
+FACTORY_DEF * AttrSetFactory FACTORY_NAME FloorArea INPUT  FEATURE_TYPE Aggregator_AGGREGATE ATTR fme_feature_type FloorArea    OUTPUT OUTPUT FEATURE_TYPE FloorArea_OUTPUT 
 # -------------------------------------------------------------------------
-FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_3 INPUT  FEATURE_TYPE InteriorSpace_Tilt_OUTPUT    INPUT  FEATURE_TYPE Floor_Point_OUTPUT    INPUT  FEATURE_TYPE InteriorSpace_Point_OUTPUT    INPUT  FEATURE_TYPE Floor_Area_OUTPUT    INPUT  FEATURE_TYPE Floor_Outline_OUTPUT ATTR DRAWING <at>Value<openparen>floorid<closeparen>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT 
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator_3 INPUT  FEATURE_TYPE InteriorSpace_Tilt_OUTPUT    INPUT  FEATURE_TYPE Floor_Point_OUTPUT    INPUT  FEATURE_TYPE InteriorSpace_Point_OUTPUT    INPUT  FEATURE_TYPE FloorArea_OUTPUT    INPUT  FEATURE_TYPE Floor_Outline_OUTPUT ATTR DRAWING <at>Value<openparen>floorid<closeparen>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_3_OUTPUT 
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME 3DForcer    INPUT  FEATURE_TYPE AttributeCreator_3_OUTPUT    OUTPUT FEATURE_TYPE 3DForcer_OUTPUT         @ZValue("@EvaluateExpression(FLOAT,<at>Value<openparen>$(elevName$encode)<closeparen><space>*<space>0.3048,3DForcer)")

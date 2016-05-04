@@ -17,7 +17,7 @@
 #          --pFLOORID 1327_M3
 #          --gzDebug True
 #          --LOG_FILE ""
-#          --FEATURE_TYPES "Floor_Area_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All Floor_Point Floor_All FloorplanLine_Publish_All"
+#          --FEATURE_TYPES "FloorArea_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All Floor_Point Floor_All FloorplanLine_Publish_All"
 #    
 #    
 #! PASSWORD=""
@@ -83,7 +83,7 @@
 #! SUPPORTS_FEATURE_TYPE_FANOUT="true"
 #! ENABLED="true"
 #! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
-#! FEATURE_TYPES_LIST="DBO.Floor_Area_All DBO.FloorplanLine_Publish_All DBO.Building_Foundation DBO.Building_Outline_Tilt DBO.InteriorSpace_Point_All DBO.InteriorSpace_All DBO.Building DBO.Campus DBO.InteriorSpace_Tilt_All DBO.Building_Roof DBO.Floor_Point Floor_Area_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All DBO.Floor_All Floor_Point DBO.FloorplanLine_All Floor_All FloorplanLine_Publish_All DBO.Building_Point"
+#! FEATURE_TYPES_LIST="DBO.FloorArea_All DBO.FloorplanLine_Publish_All DBO.Building_Foundation DBO.Building_Outline_Tilt DBO.InteriorSpace_Point_All DBO.InteriorSpace_All DBO.Building DBO.Campus DBO.InteriorSpace_Tilt_All DBO.Building_Roof DBO.Floor_Point FloorArea_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All DBO.Floor_All Floor_Point DBO.FloorplanLine_All Floor_All FloorplanLine_Publish_All DBO.Building_Point"
 #! GENERATE_FME_BUILD_NUM="13545"
 #! MAX_FEATURES=""
 #! COORDSYS=""
@@ -969,7 +969,7 @@
 #! <FEAT_ATTRIBUTE ATTR_NAME="MODPORTRAIT" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="HASFLOORAREAS" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="LINETYPE" ATTR_TYPE="char(24)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_AREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FLOORAREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="MODLANDSCAPE" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="NAME" ATTR_TYPE="char(254)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="NAME_SHORT" ATTR_TYPE="char(255)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
@@ -1036,7 +1036,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
-#! DEFAULT_VALUE="Floor_Area_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All Floor_Point Floor_All FloorplanLine_Publish_All"
+#! DEFAULT_VALUE="FloorArea_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All Floor_Point Floor_All FloorplanLine_Publish_All"
 #! IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -1117,7 +1117,7 @@
 #! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="LINETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1191,7 +1191,7 @@
 #! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="LINETYPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1233,7 +1233,7 @@
 #! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="LINETYPE" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -1302,7 +1302,7 @@
 #! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="LINETYPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1342,7 +1342,7 @@
 #! <XFORM_ATTR ATTR_NAME="MODPORTRAIT" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="HASFLOORAREAS" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="LINETYPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="MODLANDSCAPE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="NAME" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="NAME_SHORT" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -7046,7 +7046,7 @@ DEFAULT_MACRO gzDebug True
 GUI OPTIONAL CHOICE gzDebug True%False Enable gzDebug (True/False):
 DEFAULT_MACRO LOG_FILE 
 GUI OPTIONAL FILENAME LOG_FILE Log_Files_(*.log)|*.log|All_Files_(*.*)|*.* Log File:
-DEFAULT_MACRO FEATURE_TYPES Floor_Area_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All Floor_Point Floor_All FloorplanLine_Publish_All
+DEFAULT_MACRO FEATURE_TYPES FloorArea_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All Floor_Point Floor_All FloorplanLine_Publish_All
 GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 INCLUDE [ if {{$(DestDataset_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'DestDataset_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(OUT_CONNECTION_FILE_GEODATABASE_SDE)} == {}} { puts_real {Parameter 'OUT_CONNECTION_FILE_GEODATABASE_SDE' must be given a value.}; exit 1; }; ]
@@ -8152,7 +8152,7 @@ MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
 MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
 MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
 # -------------------------------------------------------------------------
-GEODATABASE_SDE_2_DEF DBO.InteriorSpace_Tilt_All   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   BUILDINGID                   char(4)   FLOOR                        char(6)   FLOORID                      char(12)   ROOM                         char(26)   SPACEID                      char(25)   IN_DATE                      date   LAST_USER                    char(50)   STACKLEVEL                   smallint   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double   HASFLOORPLANLINES            char(3)   ALTITUDE                     smallint   SOURCEID                     char(30)   FACLEVEL                     char(14)   HASINTERIORSPACES            char(3)   FACILITY_CODE                char(254)   SCALE_11X17                  double   FLOOR_NAME                   char(254)   SCALE_85X11                  double   NAME_LONG                    char(255)   FLOOR_LEVEL                  integer   SCHELEV                      smallint   CALCROT                      double   SOURCEDWG                    char(60)   SPACE_AREA                   double   MODPORTRAIT                  double   HASFLOORAREAS                char(3)   LINETYPE                     char(24)   FLOOR_AREA                   double   MODLANDSCAPE                 double   NAME                         char(254)   NAME_SHORT                   char(255)   WEBMERCROT                   double
+GEODATABASE_SDE_2_DEF DBO.InteriorSpace_Tilt_All   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   BUILDINGID                   char(4)   FLOOR                        char(6)   FLOORID                      char(12)   ROOM                         char(26)   SPACEID                      char(25)   IN_DATE                      date   LAST_USER                    char(50)   STACKLEVEL                   smallint   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double   HASFLOORPLANLINES            char(3)   ALTITUDE                     smallint   SOURCEID                     char(30)   FACLEVEL                     char(14)   HASINTERIORSPACES            char(3)   FACILITY_CODE                char(254)   SCALE_11X17                  double   FLOOR_NAME                   char(254)   SCALE_85X11                  double   NAME_LONG                    char(255)   FLOOR_LEVEL                  integer   SCHELEV                      smallint   CALCROT                      double   SOURCEDWG                    char(60)   SPACE_AREA                   double   MODPORTRAIT                  double   HASFLOORAREAS                char(3)   LINETYPE                     char(24)   FLOORAREA                   double   MODLANDSCAPE                 double   NAME                         char(254)   NAME_SHORT                   char(255)   WEBMERCROT                   double
 
 # -------------------------------------------------------------------------
 

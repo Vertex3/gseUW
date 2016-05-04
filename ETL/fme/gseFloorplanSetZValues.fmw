@@ -11,8 +11,8 @@
 #          --GizintaProject "C:\Apps\Gizinta\gseUW\ETL\config\fpPlaylistAll.xml"
 #          --flr "%"
 #          --LOG_FILE "gseFloorplanSetZValues.log"
-#          --FEATURE_TYPES "InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point"
-#          --FEATURE_TYPES_READ "DBO.Floor_Area DBO.Floor_Poly DBO.FloorplanLine DBO.InteriorSpace DBO.InteriorSpace_Point"
+#          --FEATURE_TYPES "InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point"
+#          --FEATURE_TYPES_READ "DBO.FloorArea DBO.Floor_Poly DBO.FloorplanLine DBO.InteriorSpace DBO.InteriorSpace_Point"
 #          --SourceDataset_GEODATABASE_SDE "sde"
 #          --FEATURE_TYPES_PROD "AllFloors"
 #    
@@ -83,7 +83,7 @@
 #! ENABLED="true"
 #! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
 #! DATASET_TYPE="NONE"
-#! FEATURE_TYPES_LIST="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point"
+#! FEATURE_TYPES_LIST="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point"
 #! GENERATE_FME_BUILD_NUM="13545"
 #! COORDSYS=""
 #! MIN_FEATURES=""
@@ -827,7 +827,7 @@
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #! IS_SOURCE="true"
-#! NODE_NAME="DBO.Floor_Area"
+#! NODE_NAME="DBO.FloorArea"
 #! FEATURE_TYPE_NAME=""
 #! FEATURE_TYPE_NAME_QUALIFIER="DBO"
 #! IS_EDITABLE="true"
@@ -852,7 +852,7 @@
 #! <FEAT_ATTRIBUTE ATTR_NAME="BUILDINGID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="FLOORID" ATTR_TYPE="char(60)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#! <FEAT_ATTRIBUTE ATTR_NAME="FLOOR_AREA" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="FloorArea" ATTR_TYPE="double" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="SCHELEV" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="ALTITUDE" ATTR_TYPE="smallint" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! <FEAT_ATTRIBUTE ATTR_NAME="SENSITIVITY" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
@@ -948,13 +948,13 @@
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#! GUI_LINE="GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES InteriorSpace_Tilt%FloorplanLine%Floor_Outline%InteriorSpace%Floor_Point%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%Floor_Area Feature Types to Write:"
-#! DEFAULT_VALUE="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point"
+#! GUI_LINE="GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES InteriorSpace_Tilt%FloorplanLine%Floor_Outline%InteriorSpace%Floor_Point%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%FloorArea Feature Types to Write:"
+#! DEFAULT_VALUE="InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\&quot;,WHERE,\&quot;FLOORID=&apos;%&apos; OR FLOORID like &apos;%&apos;\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
-#! DEFAULT_VALUE="DBO.Floor_Area DBO.Floor_Poly DBO.FloorplanLine DBO.InteriorSpace DBO.InteriorSpace_Point"
+#! DEFAULT_VALUE="DBO.FloorArea DBO.Floor_Poly DBO.FloorplanLine DBO.InteriorSpace DBO.InteriorSpace_Point"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -1014,7 +1014,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1037,7 +1037,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1079,7 +1079,7 @@
 #! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="floor" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="floorid" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="floor_area" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="floorarea" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="schelev" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="sensitivity" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1118,7 +1118,7 @@
 #! <XFORM_ATTR ATTR_NAME="buildingid" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="floor" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="floorid" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#! <XFORM_ATTR ATTR_NAME="floor_area" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#! <XFORM_ATTR ATTR_NAME="floorarea" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="schelev" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="altitude" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #! <XFORM_ATTR ATTR_NAME="sensitivity" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1421,7 +1421,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1483,7 +1483,7 @@
 #! <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="FLOORID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#! <XFORM_ATTR ATTR_NAME="FLOOR_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#! <XFORM_ATTR ATTR_NAME="FLOORAREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SCHELEV" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="ALTITUDE" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="SENSITIVITY" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2937,9 +2937,9 @@ DEFAULT_MACRO flr %
 GUI OPTIONAL TEXT flr Enter the FloorID or like expression:
 DEFAULT_MACRO LOG_FILE gseFloorplanSetZValues.log
 GUI OPTIONAL FILENAME LOG_FILE Log_Files_(*.log)|*.log|All_Files_(*.*)|*.* Log File:
-DEFAULT_MACRO FEATURE_TYPES InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish Floor_Area InteriorSpace_Point
-GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES InteriorSpace_Tilt%FloorplanLine%Floor_Outline%InteriorSpace%Floor_Point%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%Floor_Area Feature Types to Write:
-DEFAULT_MACRO FEATURE_TYPES_READ DBO.Floor_Area DBO.Floor_Poly DBO.FloorplanLine DBO.InteriorSpace DBO.InteriorSpace_Point
+DEFAULT_MACRO FEATURE_TYPES InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point
+GUI OPTIONAL LISTBOX_ENCODED FEATURE_TYPES InteriorSpace_Tilt%FloorplanLine%Floor_Outline%InteriorSpace%Floor_Point%Floor_Poly%InteriorSpace_Point%FloorplanLine_Publish%FloorArea Feature Types to Write:
+DEFAULT_MACRO FEATURE_TYPES_READ DBO.FloorArea DBO.Floor_Poly DBO.FloorplanLine DBO.InteriorSpace DBO.InteriorSpace_Point
 GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",WHERE,\"FLOORID='%' OR FLOORID like '%'\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO SourceDataset_GEODATABASE_SDE sde
 GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:
@@ -4054,13 +4054,13 @@ MULTI_READER_CONTINUE_ON_READER_FAILURE No
 MACRO WORKSPACE_NAME gseFloorplanSetZValues
 MACRO FME_VIEWER_APP fmedatainspector
 # -------------------------------------------------------------------------
-GEODATABASE_SDE_2_DEF DBO.Floor_Area   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   FLOOR_AREA                   double   SCHELEV                      smallint   ALTITUDE                     smallint   SENSITIVITY                  char(20)   SOURCEDWG                    char(60)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
+GEODATABASE_SDE_2_DEF DBO.FloorArea   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   FLOOR                        char(20)   FLOORID                      char(60)   FLOORAREA                   double   SCHELEV                      smallint   ALTITUDE                     smallint   SENSITIVITY                  char(20)   SOURCEDWG                    char(60)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   FLOOR_NAME                   char(60)   BLDG_NAME                    char(60)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double
 # -------------------------------------------------------------------------
 GEODATABASE_SDE_3_DEF Building_Outline_Point   geodb_type                   geodb_point   geodb_oid                    integer   OBJECTID                     integer   SITEID                       char(60)   BUILDINGID                   char(60)   CALCROT                      double   NUMFLOORS                    integer   SOURCEDWG                    char(60)   SCALE_85X11                  double   SCALE_11X17                  double   SENSITIVITY                  char(20)   IN_DATE                      date   LAST_USER                    char(30)   GlobalID                     char(38)   ALTITUDE                     double   SOURCEID                     char(30)   DWG_NAME                     char(255)   FLOOR                        char(6)   INTERIORSPACE                char(255)   NAME_LONG                    char(255)   BLDGHEIGHT                   double   FLOOR_LEVEL                  integer   SCHELEV                      integer   "SHAPE.STLength()"           double   MARGIN                       double   FLOORPLANLINE                char(255)   YCENTER                      double   "SHAPE.STArea()"             double   XCENTER                      double   FLOORID                      char(20)   SPACING                      double   NAME_SHORT                   char(255)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE GEODATABASE_SDE GEODATABASE_SDE_2::DBO.Floor_Area multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_2) TO FME_GENERIC ::DBO.Floor_Area ALIAS_GEOMETRY    ROUTE GEODATABASE_SDE GEODATABASE_SDE_3::Building_Outline_Point multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_3) TO FME_GENERIC ::Building_Outline_Point ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
-GEODATABASE_SDE_2_MERGE_DEF GEODATABASE_SDE_2::DBO.Floor_Area GLOB_NOCASE *
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   INPUT FEATURE_TYPE *    ROUTE GEODATABASE_SDE GEODATABASE_SDE_2::DBO.FloorArea multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_2) TO FME_GENERIC ::DBO.FloorArea ALIAS_GEOMETRY    ROUTE GEODATABASE_SDE GEODATABASE_SDE_3::Building_Outline_Point multi_reader_keyword,$(DATASET_KEYWORD_GEODATABASE_SDE_3) TO FME_GENERIC ::Building_Outline_Point ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+GEODATABASE_SDE_2_MERGE_DEF GEODATABASE_SDE_2::DBO.FloorArea GLOB_NOCASE *
 GEODATABASE_SDE_3_MERGE_DEF GEODATABASE_SDE_3::Building_Outline_Point GLOB *
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
@@ -4079,7 +4079,7 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME BulkAttributeRenamer    INPUT  FEATURE_
 # Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
 
 READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer_2    INPUT  FEATURE_TYPE DBO.Floor_Area    OUTPUT FEATURE_TYPE AttributeExposer_2_OUTPUT
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer_2    INPUT  FEATURE_TYPE DBO.FloorArea    OUTPUT FEATURE_TYPE AttributeExposer_2_OUTPUT
 
 # -------------------------------------------------------------------------
 

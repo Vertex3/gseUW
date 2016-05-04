@@ -63,7 +63,7 @@ dbo.PubFloors AS floors ON fpline.FLOORID = Floors.FLOORID
 
 ------------------------------------------------------------------------
 GO
-CREATE VIEW pubFloor_Areas AS
+CREATE VIEW pubFloorAreas AS
 SELECT     
  floorarea.FLOORID,
  floorarea.FLOORCODE,
@@ -85,7 +85,7 @@ SELECT
  floorarea.SHAPE,
  floorarea.OBJECTID
 FROM
-dbo.FLOOR_AREA AS floorarea INNER JOIN
+dbo.FLOORAREA AS floorarea INNER JOIN
 dbo.PubFloors AS floors ON floors.FLOORID = floorarea.FLOORID
 
 ------------------------------------------------------------------------
