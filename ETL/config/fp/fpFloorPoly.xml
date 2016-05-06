@@ -90,7 +90,7 @@
 				<FieldType>String</FieldType>
 				<FieldLength>50</FieldLength>
 			</Field>
-			<ChangeDetection exceptProductionView="eFloorAreaExceptProduction" exceptStagingView="eFloorAreaExceptStaging" idField="FLOORID"
+			<ChangeDetection exceptProductionView="eFloorPolyExceptProduction" exceptStagingView="eFloorPolyExceptStaging" idField="FLOORID"
 			viewFields="BUILDINGID,FLOORCODE,FLOORID,FLOORAREA,SOURCEID,SOURCEDWG,SHAPE"/>
 			<SourceFieldNames>Color,Elevation,Entity,FACFLOORCODE,FACNUM,FLOORCODE,GSF_AREA,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
 		</Dataset>
