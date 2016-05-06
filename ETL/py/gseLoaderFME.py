@@ -95,6 +95,7 @@ def main(argv = None):
                         retVal = doSync(playlists,folder,dwg,gss[pVal]) # sync from Staging to Production
                         if(retVal != True):
                             outputSuccess = False
+                            partFailed = True
                             errorCount += 1
                         else:
                             for playlist in playlists: # go back through the playlists and Sync for this drawing
