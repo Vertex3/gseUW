@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 <GizintaPlaylist errorTableName="gzError" fileExtension=".dwg" logTableName="gzLog" xmlns:gizinta="http://gizinta.com">
-	<LoadSettings 
-		nameContains="XP" 
-		logFileName="gseFloorplanLoader.log" 
-		fmeLoadFile="gseFloorplanLoader.fmw" 
-		source="CAD"/>
+	<LoadSettings nameContains="XP" 
+	logFileName="gseFloorplanLoader.log" 
+	fmeLoadFile="gseFloorplanLoader.fmw" 
+	source="CAD"/>
 	<File>fp\fpFloorPoly.xml</File>
 	<File>fp\fpFloorplanLine.xml</File>
 	<File>fp\fpInteriorSpace.xml</File>
+	<File>fp\fpFloorArea.xml</File>
+	<File>fp\fpInteriorSpaceTilt.xml</File>
+	<File>fp\fpInteriorSpacePoint.xml</File>
 </GizintaPlaylist>
