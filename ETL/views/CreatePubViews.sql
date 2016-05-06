@@ -1,5 +1,5 @@
 -- Create Pub Views - create publishing views
-use UWGISProduction
+use UWCadSde
 go
 CREATE VIEW AllFloors AS
 SELECT     
