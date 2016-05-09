@@ -176,7 +176,7 @@ def buildViewWhereClause(viewIdField,inputDrawing):
     else:
         raise Exception("Could not build a view where clause for " + viewIdField)
 
-    arcpy.AddMessage( whereClause)
+    #arcpy.AddMessage( whereClause)
     return whereClause
 
 def getChangedRows(view,idField,whereClause):
