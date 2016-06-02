@@ -1,0 +1,70 @@
+
+<Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
+	<Extract>
+		<CADDataset sourceIDField="FLOORID" sourceName="FloorplanLine" targetName="FloorplanLine_Isometric">
+			<WhereClause/>
+		</CADDataset>
+	</Extract>
+	<Transform>
+		<Dataset name="FloorplanLine_Isometric" qa="CheckFields,CheckGeometry" sourceIDField="FLOORID" sourceNameField="LINETYPE">
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">SITEID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getSiteID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>20</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">BUILDINGID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getBuildingID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>2</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">FLOOR</SourceName>
+				<TargetName qa="Required">FLOORCODE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getFloor(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>6</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"></SourceName>
+				<TargetName qa="Required">FLOORID</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getFloorID(feature)</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LASTUPDATE</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.getDBTime()</PythonExpression>
+				<FieldType>Date</FieldType>
+				<FieldLength>36</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional"/>
+				<TargetName qa="Optional">LASTEDITOR</TargetName>
+				<Method>PythonCalculate</Method>
+				<PythonExpression>gseDrawing.defaultUserName()</PythonExpression>
+				<FieldType>String</FieldType>
+				<FieldLength>50</FieldLength>
+			</Field>
+			<Field>
+				<SourceName qa="Optional">fme_basename</SourceName>
+				<TargetName qa="Required">SOURCEDWG</TargetName>
+				<Method>Copy</Method>
+				<FieldType>String</FieldType>
+				<FieldLength>60</FieldLength>
+			</Field>
+			<ChangeDetection exceptProductionView="eFloorplanLineIsoExceptProduction" exceptStagingView="eFloorplanLineIsoExceptStaging" idField="FLOORID"
+			viewFields="FLOORID,SOURCELAYER,SOURCEDWG,SHAPE"/>
+			<SourceFieldNames>Color,Elevation,Entity,FACFLOORCODE,FACNUM,FLOORCODE,GRIDVAL,Handle,Layer,LineWt,Linetype,RefName</SourceFieldNames>
+		</Dataset>
+	</Transform>
+</Gizinta>

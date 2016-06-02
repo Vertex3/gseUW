@@ -83,7 +83,7 @@
 #! SUPPORTS_FEATURE_TYPE_FANOUT="true"
 #! ENABLED="true"
 #! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
-#! FEATURE_TYPES_LIST="DBO.FloorArea_All DBO.FloorplanLine_Publish_All DBO.Building_Foundation DBO.Building_Outline_Tilt DBO.InteriorSpace_Point_All DBO.InteriorSpace_All DBO.Building DBO.Campus DBO.InteriorSpace_Tilt_All DBO.Building_Roof DBO.Floor_Point FloorArea_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All DBO.Floor_All Floor_Point DBO.FloorplanLine_All Floor_All FloorplanLine_Publish_All DBO.Building_Point"
+#! FEATURE_TYPES_LIST="DBO.FloorArea_All DBO.FloorplanLine_Publish_All DBO.Building_Foundation DBO.Building_Outline_Isometric DBO.InteriorSpace_Point_All DBO.InteriorSpace_All DBO.Building DBO.Campus DBO.InteriorSpace_Isometric_All DBO.Building_Roof DBO.Floor_Point FloorArea_All InteriorSpace_All InteriorSpace_Point_All FloorplanLine_All DBO.Floor_All Floor_Point DBO.FloorplanLine_All Floor_All FloorplanLine_Publish_All DBO.Building_Point"
 #! GENERATE_FME_BUILD_NUM="13545"
 #! MAX_FEATURES=""
 #! COORDSYS=""
@@ -922,7 +922,7 @@
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #! IS_SOURCE="true"
-#! NODE_NAME="DBO.InteriorSpace_Tilt_All"
+#! NODE_NAME="DBO.InteriorSpace_Isometric_All"
 #! IS_EDITABLE="false"
 #! IDENTIFIER="38"
 #! FEAT_GEOMTYPE="geodb_polygon"
@@ -2057,7 +2057,7 @@
 #! PARMS_EDITED="true"
 #! ENABLED="true"
 #! >
-#! <OUTPUT_FEAT NAME="DBO.Building_Outline_Tilt"/>
+#! <OUTPUT_FEAT NAME="DBO.FloorPageTemplate"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -2086,7 +2086,7 @@
 #! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.FloorPageTemplate"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_WHERE,&quot;OPTIONAL TEXT&quot;,GEODATABASE_SDE&lt;space&gt;WHERE&lt;space&gt;Clause:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
@@ -2104,10 +2104,10 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="BldgReader"/>
 #! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
 #! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Building_Outline_Tilt"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.FloorPageTemplate"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
-#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Building_Outline_Tilt,&quot;geodb_oid,OBJECTID,BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,SOURCEID,SOURCEDWG,IN_DATE,LAST_USER,GlobalID,SHAPE.STArea(),SHAPE.STLength()&quot;"/>
+#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.FloorPageTemplate"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.FloorPageTemplate,&quot;geodb_oid,OBJECTID,BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,SOURCEID,SOURCEDWG,IN_DATE,LAST_USER,GlobalID,SHAPE.STArea(),SHAPE.STLength()&quot;"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
@@ -5384,7 +5384,7 @@
 #! PARMS_EDITED="true"
 #! ENABLED="true"
 #! >
-#! <OUTPUT_FEAT NAME="DBO.Building_Outline_Tilt"/>
+#! <OUTPUT_FEAT NAME="DBO.FloorPageTemplate"/>
 #! <FEAT_COLLAPSED COLLAPSED="0"/>
 #! <XFORM_ATTR ATTR_NAME="geodb_oid" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #! <XFORM_ATTR ATTR_NAME="OBJECTID" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -5415,7 +5415,7 @@
 #! <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE=""/>
 #! <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_COMPLEX_EDGES" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
+#! <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE="DBO.FloorPageTemplate"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_VERSION" PARM_VALUE="SDE.DEFAULT"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEODATABASE_SDE_CONNECTION,&quot;OPTIONAL ACTIVECHOICE Parameters,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;OS Authentication&quot;&quot;,USERID,PASSWORD,CONNECTION_FILE,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connection File&quot;&quot;,SERVER,DATASET,USERID,PASSWORD,INSTANCE,VERSION,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP&quot;,GEODATABASE_SDE&lt;space&gt;Connection:,GEODATABASE_SDE_CONNECTION_FILE,&quot;OPTIONAL FILENAME_MUSTEXIST Connection&quot;,GEODATABASE_SDE&lt;space&gt;File:,GEODATABASE_SDE_VERSION_TYPE,&quot;OPTIONAL ACTIVECHOICE &quot;&quot;Connect using a Transactional Version&quot;&quot;,HISTORICAL_VERSION_NAME,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a Historical Marker&quot;&quot;,VERSION,HISTORICAL_VERSION_TIMESTAMP%&quot;&quot;Connect using a specific date and time&quot;&quot;,VERSION,HISTORICAL_VERSION_NAME&quot;,GEODATABASE_SDE&lt;space&gt;Version&lt;space&gt;Type:,GEODATABASE_SDE_VERSION,&quot;OPTIONAL SDE_T_VERSION_LIST $[DATASET],SERVER,$[SERVER],INSTANCE,$[INSTANCE],USERID,$[USERID],PASSWORD,$[PASSWORD],VERSION,$[VERSION]&quot;,GEODATABASE_SDE&lt;space&gt;Transactional&lt;space&gt;Version:,GEODATABASE_SDE_REMOVE_TABLE_QUALIFIER,&quot;OPTIONAL CHECKBOX YES%NO&quot;,GEODATABASE_SDE&lt;space&gt;Remove&lt;space&gt;Schema&lt;space&gt;Qualifier,GEODATABASE_SDE_TABLELIST,&quot;IGNORE TEXT&quot;,GEODATABASE_SDE&lt;space&gt;Table&lt;space&gt;List:,GEODATABASE_SDE_TRANSLATE_SPATIAL_DATA_ONLY,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Spatial&lt;space&gt;Data&lt;space&gt;Only,GEODATABASE_SDE_RESOLVE_DOMAINS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Domains,GEODATABASE_SDE_RESOLVE_SUBTYPE_NAMES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Resolve&lt;space&gt;Subtypes,GEODATABASE_SDE_IGNORE_NETWORK_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Network&lt;space&gt;Info,GEODATABASE_SDE_IGNORE_RELATIONSHIP_INFO,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Ignore&lt;space&gt;Relationship&lt;space&gt;Info,GEODATABASE_SDE_SPLIT_COMPLEX_EDGES,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Complex&lt;space&gt;Edges,GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS,&quot;OPTIONAL CHECKBOX yes%no&quot;,GEODATABASE_SDE&lt;space&gt;Split&lt;space&gt;Multi-Part&lt;space&gt;Annotations"/>
@@ -5432,10 +5432,10 @@
 #! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader_4"/>
 #! <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE="ENVELOPE_INTERSECT%INTERSECTS%CONTAINS%CROSSES%DISJOINT%EQUALS%OVERLAPS%TOUCHES%WITHIN"/>
 #! <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="sde"/>
-#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.Building_Outline_Tilt"/>
+#! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_TABLELIST" PARM_VALUE="DBO.FloorPageTemplate"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_SPLIT_MULTI_PART_ANNOS" PARM_VALUE="no"/>
-#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.Building_Outline_Tilt"/>
-#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.Building_Outline_Tilt,&quot;geodb_oid,OBJECTID,BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,CALCROT,WORLDFILE,SOURCEID,SOURCEDWG,IN_DATE,LAST_USER,GlobalID,SHAPE.STArea(),SHAPE.STLength()&quot;"/>
+#! <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="DBO.FloorPageTemplate"/>
+#! <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE="DBO.FloorPageTemplate,&quot;geodb_oid,OBJECTID,BUILDINGID,HULLROT,BLDGHEIGHT,SPACING,MARGIN,XCENTER,YCENTER,CALCROT,WORLDFILE,SOURCEID,SOURCEDWG,IN_DATE,LAST_USER,GlobalID,SHAPE.STArea(),SHAPE.STLength()&quot;"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_RESOLVE_DOMAINS" PARM_VALUE="no"/>
 #! <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEODATABASE_SDE"/>
 #! <XFORM_PARM PARM_NAME="GEODATABASE_SDE_CONNECTION_FILE" PARM_VALUE="$(ProductionConnectionFile)"/>
@@ -8152,12 +8152,12 @@ MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
 MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
 MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
 # -------------------------------------------------------------------------
-GEODATABASE_SDE_2_DEF DBO.InteriorSpace_Tilt_All   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   BUILDINGID                   char(4)   FLOOR                        char(6)   FLOORID                      char(12)   ROOM                         char(26)   SPACEID                      char(25)   IN_DATE                      date   LAST_USER                    char(50)   STACKLEVEL                   smallint   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double   HASFLOORPLANLINES            char(3)   ALTITUDE                     smallint   SOURCEID                     char(30)   FACLEVEL                     char(14)   HASINTERIORSPACES            char(3)   FACILITY_CODE                char(254)   SCALE_11X17                  double   FLOOR_NAME                   char(254)   SCALE_85X11                  double   NAME_LONG                    char(255)   FLOOR_LEVEL                  integer   SCHELEV                      smallint   CALCROT                      double   SOURCEDWG                    char(60)   SPACE_AREA                   double   MODPORTRAIT                  double   HASFLOORAREAS                char(3)   LINETYPE                     char(24)   FLOORAREA                   double   MODLANDSCAPE                 double   NAME                         char(254)   NAME_SHORT                   char(255)   WEBMERCROT                   double
+GEODATABASE_SDE_2_DEF DBO.InteriorSpace_Isometric   geodb_type                   geodb_polygon   geodb_oid                    integer   OBJECTID                     integer   BUILDINGID                   char(4)   FLOOR                        char(6)   FLOORID                      char(12)   ROOM                         char(26)   SPACEID                      char(25)   IN_DATE                      date   LAST_USER                    char(50)   STACKLEVEL                   smallint   GlobalID                     char(38)   "SHAPE.STArea()"             double   "SHAPE.STLength()"           double   HASFLOORPLANLINES            char(3)   ALTITUDE                     smallint   SOURCEID                     char(30)   FACLEVEL                     char(14)   HASINTERIORSPACES            char(3)   FACILITY_CODE                char(254)   SCALE_11X17                  double   FLOOR_NAME                   char(254)   SCALE_85X11                  double   NAME_LONG                    char(255)   FLOOR_LEVEL                  integer   SCHELEV                      smallint   CALCROT                      double   SOURCEDWG                    char(60)   SPACE_AREA                   double   MODPORTRAIT                  double   HASFLOORAREAS                char(3)   LINETYPE                     char(24)   FLOORAREA                   double   MODLANDSCAPE                 double   NAME                         char(254)   NAME_SHORT                   char(255)   WEBMERCROT                   double
 
 # -------------------------------------------------------------------------
 
-Lookup ___KnownFeatureTypes___   "$(DATASET_KEYWORD_GEODATABASE_SDE_2)_DBO.InteriorSpace_Tilt_All" yes   "" no
-FACTORY_DEF * TeeFactory   FACTORY_NAME "GEODATABASE_SDE_2 Merger"   INPUT FEATURE_TYPE *     multi_reader_keyword $(DATASET_KEYWORD_GEODATABASE_SDE_2)   OUTPUT FEATURE_TYPE "DBO.InteriorSpace_Tilt_All"
+Lookup ___KnownFeatureTypes___   "$(DATASET_KEYWORD_GEODATABASE_SDE_2)_DBO.InteriorSpace_Isometric" yes   "" no
+FACTORY_DEF * TeeFactory   FACTORY_NAME "GEODATABASE_SDE_2 Merger"   INPUT FEATURE_TYPE *     multi_reader_keyword $(DATASET_KEYWORD_GEODATABASE_SDE_2)   OUTPUT FEATURE_TYPE "DBO.InteriorSpace_Isometric"
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@Concatenate(&multi_reader_keyword,"_",@FeatureType())) == yes   OUTPUT PASSED FEATURE_TYPE *
@@ -8170,7 +8170,7 @@ DEFAULT_MACRO WB_CURRENT_CONTEXT
 # Expose all attributes.  This ensures that if you expose fme_dataset, you will get it.
 
 READER_META_ATTRIBUTES fme_feature_type fme_dataset fme_basename
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer    INPUT  FEATURE_TYPE DBO.InteriorSpace_Tilt_All    OUTPUT FEATURE_TYPE AttributeExposer_OUTPUT
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeExposer    INPUT  FEATURE_TYPE DBO.InteriorSpace_Isometric    OUTPUT FEATURE_TYPE AttributeExposer_OUTPUT
 
 # -------------------------------------------------------------------------
 

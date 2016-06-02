@@ -14,7 +14,7 @@
 #          --FEATURE_TYPES "InteriorSpace_Tilt FloorplanLine InteriorSpace Floor_Outline Floor_Point Floor_Poly FloorplanLine_Publish FloorArea InteriorSpace_Point"
 #          --FEATURE_TYPES_READ "DBO.FloorArea DBO.Floor_Poly DBO.FloorplanLine DBO.InteriorSpace DBO.InteriorSpace_Point"
 #          --SourceDataset_GEODATABASE_SDE "sde"
-#          --FEATURE_TYPES_PROD "AllFloors"
+#          --FEATURE_TYPES_PROD "Floor"
 #    
 #    
 #! DESTINATION="NONE"
@@ -964,7 +964,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_PROD &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,SourceDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
-#! DEFAULT_VALUE="AllFloors"
+#! DEFAULT_VALUE="Floor"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -2943,7 +2943,7 @@ DEFAULT_MACRO FEATURE_TYPES_READ DBO.FloorArea DBO.Floor_Poly DBO.FloorplanLine 
 GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_READ "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",WHERE,\"FLOORID='%' OR FLOORID like '%'\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInFeatureReadMode,Features,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO SourceDataset_GEODATABASE_SDE sde
 GUI TEXT SourceDataset_GEODATABASE_SDE Source Esri ArcSDE Geodatabase Dataset:
-DEFAULT_MACRO FEATURE_TYPES_PROD AllFloors
+DEFAULT_MACRO FEATURE_TYPES_PROD Floor
 GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_PROD "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,SourceDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO elevName schelev
 GUI IGNORE TEXT elevName Floor Elevation Value Name:

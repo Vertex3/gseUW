@@ -19,7 +19,7 @@
 #          --FEATURE_TYPES "RT_LineTransition RT_LineRmConnector RT_RoomPoint"
 #          --FEATURE_TYPES_READ "RT_RoomPoint"
 #          --truncate "Y"
-#          --FEATURE_TYPES_PROD "AllFloors"
+#          --FEATURE_TYPES_PROD "Floor"
 #          --flr "_"
 #    
 #    
@@ -1245,7 +1245,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #! GUI_LINE="GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_PROD &quot;sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\&quot;C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\&quot;,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,INSTANCE,sde:sqlserver:cpo-rtsde.cpo.washington.edu,USERID,sa,_MERGE_SCHEMAS,YES,VERSION,dbo.DEFAULT,VERSION_TYPE,\&quot;Connect using a Transactional Version\&quot;,CONNECTION,Parameters,SERVER,cpo-rtsde.cpo.washington.edu,REMOVE_TABLE_QUALIFIER,NO,TABLELIST,DBO.Active_Floor,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
-#! DEFAULT_VALUE="AllFloors"
+#! DEFAULT_VALUE="Floor"
 #! IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -10117,7 +10117,7 @@ DEFAULT_MACRO FEATURE_TYPES_READ RT_RoomPoint
 GUI OPTIONAL TEXT FEATURE_TYPES_READ Feature Types to Read:
 DEFAULT_MACRO truncate Y
 GUI OPTIONAL STRING_OR_CHOICE truncate Y%N Truncate before load option:
-DEFAULT_MACRO FEATURE_TYPES_PROD AllFloors
+DEFAULT_MACRO FEATURE_TYPES_PROD Floor
 GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES_PROD "sde,_FORMAT_OVERRIDE_,GEODATABASE_SDE,_DATASET_OVERRIDE_,DestDataset_GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,CLIP_TO_ENVELOPE,NO,_GEODBSplitComplexAnnotations,no,_GEODBCacheMultipatchTextures,yes,_GEODBInSearchOrder,SPATIAL_FIRST,_GEODBInSearchMethod,GEODB_INTERSECTS,_GEODBInCheckSimpleGeom,no,_GEODBMergeFeatLinkedAnnos,no,_GEODBInPersistentConnection,no,INSTANCE,sde:sqlserver:cpo-rtsde.cpo.washington.edu,USERID,sa,_MERGE_SCHEMAS,YES,VERSION,dbo.DEFAULT,VERSION_TYPE,\"Connect using a Transactional Version\",CONNECTION,Parameters,SERVER,cpo-rtsde.cpo.washington.edu,REMOVE_TABLE_QUALIFIER,NO,TABLELIST,DBO.Active_Floor,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO flr _
 GUI OPTIONAL TEXT flr floorid or wildcard:

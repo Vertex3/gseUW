@@ -1,14 +1,10 @@
-drop view dbo.allFloorAreas;
-drop view dbo.pubFloorAreas;
-drop view dbo.pubFloor_Outlines;
-drop view dbo.pubFloor_Points;
-drop view dbo.pubFloorplanLines;
+use UWGISProduction
+drop view dbo.allFloors;
 drop view dbo.pubFloors;
+drop view dbo.pubFloorAreas;
+drop view dbo.pubFloorplanLines;
 drop view dbo.pubInteriorSpace_Points;
 drop view dbo.pubInteriorSpaces;
 drop view dbo.pubInteriorSpaces_Tilt;
-drop view dbo.qaDuplicateFloorPoints;
-drop view dbo.qaMissingFeaturesByFloor;
-drop view dbo.qaMissingFloorPoints;
-drop view dbo.qaUnexpectedFeaturesByFloor;
-drop view dbo.qaUnexpectedFloorPoints;
+drop view dbo.pubFloorPages;
+drop view dbo.pubSitePoints;

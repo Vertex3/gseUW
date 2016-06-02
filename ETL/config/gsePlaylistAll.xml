@@ -23,7 +23,9 @@
 	<File>fp\fpFloorPoly.xml</File>
 	<File>fp\fpInteriorSpace.xml</File>
 	<File>fp\fpInteriorSpacePoint.xml</File>
-	<File>fp\fpInteriorSpaceTilt.xml</File>
+	<File>fp\fpInteriorSpaceIsometric.xml</File>
+	<File>fp\fpFloorplanLineIsometric.xml</File>
+	<File>fp\fpFloorAreaIsometric.xml</File>
 	<File>rt\rtDoorPoint.xml</File>
 	<File>rt\rtStop.xml</File>
 	<File>rt\rtRoomPoint.xml</File>
