@@ -107,7 +107,7 @@ def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
     viewSql += getFieldSql(fields)
     viewSql += " FROM " + stagingWSName + ".dbo." + evwname + " EXCEPT "
     viewSql += " SELECT " + getFieldSql(fields).replace('SHAPE.STAsText() AS ','')
-    viewSql += " FROM " + OPENQUERY('[maps.uw.edu'], 'SELECT ' getFieldSql(fields) + productionWSName + ".dbo." + evwname + ");" + "\nGO"
+    viewSql += " FROM OPENQUERY([maps.uw.edu], 'SELECT " + getFieldSql(fields) + " FROM " + productionWSName + ".dbo." + evwname + "');" + "\nGO"
 
     msg(viewSql)
     return viewSql
@@ -117,7 +117,7 @@ def getExceptStagingViewSql(dsname,exceptProd,exceptStaging,fields):
     viewSql = ""
     viewSql = "CREATE VIEW dbo." + exceptStaging + " AS "
     viewSql += " SELECT " + getFieldSql(fields).replace('SHAPE.STAsText() AS ','')
-    viewSql += " FROM " + OPENQUERY('[maps.uw.edu'], 'SELECT ' getFieldSql(fields) + productionWSName + ".dbo." + evwname + ")"
+    viewSql += " FROM OPENQUERY([maps.uw.edu], 'SELECT " + getFieldSql(fields) + " FROM " + productionWSName + ".dbo." + evwname + "')"
     viewSql += " EXCEPT " 
     viewSql += " SELECT " + getFieldSql(fields)
     viewSql += " FROM " +  stagingWSName + ".dbo." + evwname + ";" + "\nGO"
