@@ -9,8 +9,8 @@
 -- In the "Query" menu in SSMS, simply toggle "SQLCMD Mode"
 
 :setvar schema "dbo"
-:setvar pubdb "GDB_D"
-:setvar cadsde "UWGISProduction"
+:setvar pubdb "UWMapData"
+:setvar cadsde "UWCadSde"
 
 -- set the database where views will be created
 USE $(pubdb);
