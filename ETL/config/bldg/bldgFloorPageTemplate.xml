@@ -7,6 +7,9 @@
 		<CADDataset sourceIDField="autocad_entity_handle" sourceName="FloorPageTemplate" targetName="FloorPageTemplate">
 			<WhereClause/>
 		</CADDataset>
+		<CADDataset sourceIDField="autocad_entity_handle" sourceName="GIS-PAGE-TEMPLATE" targetName="FloorPageTemplate">
+			<WhereClause/>
+		</CADDataset>
 	</Extract>
 	<Transform>
 		<Dataset name="FloorPageTemplate" qa="CheckFields,CheckGeometry" sourceIDField="autocad_entity_handle" sourceNameField="FACNUM">
