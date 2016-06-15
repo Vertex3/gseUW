@@ -379,7 +379,7 @@ def appendRows(sourceTable,targetTable,expr):
     desc = arcpy.Describe(targetTable)
     viewName = makeView(desc.dataElementType,workspace,sourceTable,viewName,expr,[])
     arcpy.Append_management(viewName,targetTable,"NO_TEST")
-    addMessageLocal(targTable + " rows Appended ")
+    #addMessageLocal(targTable + " rows Appended ")
     retcode = True
 
     return retcode
