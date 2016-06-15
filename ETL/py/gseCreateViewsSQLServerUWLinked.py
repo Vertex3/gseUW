@@ -13,7 +13,13 @@ gsepath = ospath[:ospath.rfind(etl)]
 etlpath = gsepath + etl
 if (etlpath) not in sys.path:
 	sys.path.insert(0, etlpath)
-	print etlpath
+	#print etlpath
+	
+txtPrefix = 'txt'
+shapeText = 'SHAPE_TEXT'
+owner = 'dbo'
+linkedServer = '[MAPS.UW.EDU]'
+dot = "."
 
 import arcpy, datetime, xml.dom.minidom, gse, gzSupport
 
@@ -71,8 +77,12 @@ def main(argv = None):
             fieldStr = changeNode.getAttributeNode("viewFields").nodeValue
             fieldStr = fieldStr.replace(" ","")
             fields = fieldStr.split(",")
+            textSql = getTextViewSql(name,fields)
             eprodSql = getExceptProdViewSql(name,exceptProd,exceptStaging,fields)
             estagingSql = getExceptStagingViewSql(name,exceptProd,exceptStaging,fields)
+            retVal = createView(linkedServer + dot + txtPrefix+name,textSql)
+            if retVal == False:
+                outputSuccess = False
             retVal = createView(exceptProd,eprodSql)
             if retVal == False:
                 outputSuccess = False
@@ -100,14 +110,24 @@ def createView(viewName,sql):
             retVal = False
     return retVal
 
+def getTextViewSql(dsname,fields):
+    evwname = dsname #+ "_EVW"
+    viewSql = ""
+    viewSql = "CREATE VIEW " + linkedServer + dot + productionWSName + dot + owner + dot + txtPrefix + dsname + " AS SELECT "
+    viewSql += getFieldSql(fields)
+    viewSql += " FROM " + linkedServer + productionWSName + dot + owner + dot + evwname
+    
+    msg(viewSql)
+    return viewSql
+
 def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
     evwname = dsname #+ "_EVW"
     viewSql = ""
-    viewSql = "CREATE VIEW dbo." + exceptProd + " AS SELECT "
+    viewSql = "CREATE VIEW " + owner + dot + exceptProd + " AS SELECT "
     viewSql += getFieldSql(fields)
-    viewSql += " FROM " + stagingWSName + ".dbo." + evwname + " EXCEPT "
+    viewSql += " FROM " + stagingWSName + owner + evwname + " EXCEPT "
     viewSql += " SELECT " + getFieldSql(fields).replace('SHAPE.STAsText() AS ','')
-    viewSql += " FROM " + OPENQUERY('[maps.uw.edu'], 'SELECT ' getFieldSql(fields) + productionWSName + ".dbo." + evwname + ");" + "\nGO"
+    viewSql += " FROM " + linkedServer + dot + productionWSName + dot + owner + dot + txtPrefix + dsname + ";" + "\nGO"
 
     msg(viewSql)
     return viewSql
@@ -115,12 +135,12 @@ def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
 def getExceptStagingViewSql(dsname,exceptProd,exceptStaging,fields):
     evwname = dsname #+ "_EVW"
     viewSql = ""
-    viewSql = "CREATE VIEW dbo." + exceptStaging + " AS "
+    viewSql = "CREATE VIEW " + owner + dot + exceptStaging + " AS "
     viewSql += " SELECT " + getFieldSql(fields).replace('SHAPE.STAsText() AS ','')
-    viewSql += " FROM " + OPENQUERY('[maps.uw.edu'], 'SELECT ' getFieldSql(fields) + productionWSName + ".dbo." + evwname + ")"
+    viewSql += " FROM " + linkedServer + dot + productionWSName + dot + owner + dot + txtPrefix + dsname 
     viewSql += " EXCEPT " 
     viewSql += " SELECT " + getFieldSql(fields)
-    viewSql += " FROM " +  stagingWSName + ".dbo." + evwname + ";" + "\nGO"
+    viewSql += " FROM " +  stagingWSName + dot + owner + dot + evwname + ";" + "\nGO"
 
     msg(viewSql)
     return viewSql
@@ -130,7 +150,7 @@ def getFieldSql(fields):
     fieldSql = ""
     for field in fields:
         if field.upper() == "SHAPE":
-            field = "SHAPE.STAsText() AS SHAPE_TEXT"
+            field = "SHAPE.STAsText() AS " + shapeText
         fieldSql += field
         if fnum < len(fields) -1:
             fieldSql += ","
