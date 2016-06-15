@@ -36,6 +36,7 @@ SELECT
  ft.BUILDINGID,
  fact.NAME as BLDGNAME,
  fpt.CALCROT,
+ fpt.LOCALROT,
  ft.BUILDINGID + '_' + LTRIM(STR(fl.FLOORLEVEL)) AS DDPFLOORSORT
 FROM
  [$(cadsde)].[$(schema)].Floor_Table AS ft INNER JOIN
@@ -62,6 +63,7 @@ SELECT
  floors.STACKLEVEL,
  floors.SENSITIVITY,
  floors.CALCROT,
+ floors.LOCALROT,
  floors.DDPFLOORSORT,
  fpt.BUILDINGID,
  fpt.SITEID,
