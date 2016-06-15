@@ -36,9 +36,13 @@ productionWSName = arcpy.GetParameterAsText(2) # Database name for production Wo
 if productionWSName == '#' or productionWSName == None or productionWSName == '':
     productionWSName = "UWCadSde"
 
-sde = arcpy.GetParameterAsText(3) # sde Connection file for views Workspace
-if sde == '#' or sde == None or sde == '':
-    sde = os.path.join(gse.sdeConnFolder,"GIS Staging.sde")
+stagesde = arcpy.GetParameterAsText(3) # sde Connection file for views Workspace
+if stagesde == '#' or stagesde == None or stagesde == '':
+    stagesde = os.path.join(gse.sdeConnFolder,"GIS Staging.sde")
+
+cadsde = arcpy.GetParameterAsText(4) # cadsde Connection file for views Workspace
+if cadsde == '#' or cadsde == None or cadsde == '':
+    sde = os.path.join(gse.sdeConnFolder,"GIS Production.sde")
 
 log = open(os.path.join(sys.path[0],"Create Views.sql"),"w")
 
@@ -80,19 +84,19 @@ def main(argv = None):
             textSql = getTextViewSql(name,fields)
             eprodSql = getExceptProdViewSql(name,exceptProd,exceptStaging,fields)
             estagingSql = getExceptStagingViewSql(name,exceptProd,exceptStaging,fields)
-            retVal = createView(linkedServer + dot + txtPrefix+name,textSql)
+            retVal = createView(cadsde,txtPrefix+name,textSql)
             if retVal == False:
                 outputSuccess = False
-            retVal = createView(exceptProd,eprodSql)
+            retVal = createView(stagesde,exceptProd,eprodSql)
             if retVal == False:
                 outputSuccess = False
-            createView(exceptStaging,estagingSql)
+            createView(stagesde,exceptStaging,estagingSql)
             if retVal == False:
                 outputSuccess = False
 
     log.close()
 
-def createView(viewName,sql):
+def createView(sde,viewName,sql):
     view = os.path.join(sde,viewName)
     printmsg(view)
     sql = sql[sql.find("AS SELECT ")+3:]
