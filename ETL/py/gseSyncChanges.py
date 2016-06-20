@@ -79,8 +79,11 @@ def sync(inputDrawing,playlists,GISStagingDefault_sde,GISProdDefault_sde,logfile
                     processed.append(name)
                 # if there is a change node then do change detection using views
                 arcpy.env.workspace = GISStagingDefault_sde
-                desc = arcpy.Describe(os.path.join(GISProdDefault_sde,name))
-
+                #descT = arcpy.Describe(targetDataset)
+                #fieldsT = descT.Fields
+                descS = arcpy.Describe(sourceDataset)
+                #fieldsS = descS.Fields
+                
                 idField = changeNode.getAttributeNode("idField").nodeValue
                 try:
                     viewIdField = changeNode.getAttributeNode("viewIdField").nodeValue
@@ -96,7 +99,7 @@ def sync(inputDrawing,playlists,GISStagingDefault_sde,GISProdDefault_sde,logfile
                 deletes = getChanges(changeNode,"exceptStagingView",GISStagingDefault_sde,whereClause,idField)
 
                 if len(deletes) > 0:
-                    deleteExpr = getDeltaWhereClause(desc,idField,deletes)
+                    deleteExpr = getDeltaWhereClause(idField,deletes)
                     arcpy.env.workspace = GISProdDefault_sde
                     retcode = gzSupport.deleteRows(GISProdDefault_sde,name,deleteExpr)
                     if retcode == True:
@@ -108,7 +111,7 @@ def sync(inputDrawing,playlists,GISStagingDefault_sde,GISProdDefault_sde,logfile
                 #    msg("No changed rows found to delete")
 
                 if len(adds) > 0:
-                    addExpr = getDeltaWhereClause(desc,idField,adds)
+                    addExpr = getDeltaWhereClause(idField,adds)
                     arcpy.env.workspace = GISProdDefault_sde
                     gzSupport.workspace = GISProdDefault_sde
                     retcode = gzSupport.appendRows(sourceDataset,targetDataset,addExpr)
@@ -129,11 +132,11 @@ def sync(inputDrawing,playlists,GISStagingDefault_sde,GISProdDefault_sde,logfile
                 else:
                     idField = "FLOORID"
                 whereClause = buildViewWhereClause(idField,inputDrawing)
-                desc = arcpy.Describe(sourceDataset)
+                #desc = arcpy.Describe(sourceDataset)
                 view = "tempCount"
                 gzSupport.workspace = GISStagingDefault_sde
                 arcpy.env.workspace = GISStagingDefault_sde
-                gzSupport.makeView(desc.DataElementType,GISStagingDefault_sde,name,view,whereClause,[])
+                gzSupport.makeView(descS.DataElementType,GISStagingDefault_sde,name,view,whereClause,[])
                 res = arcpy.GetCount_management(view)
                 count = int(res.getOutput(0))
                 if(count > 0):
@@ -191,12 +194,12 @@ def getChangedRows(view,idField,whereClause):
     del cursor
     return deltas
 
-def getDeltaWhereClause(desc,idField,theList):
+def getDeltaWhereClause(idField,theList):
     # build a where clause from the list of IDs
     ftype = "STRING"
-    for field in desc.Fields:
-        if field.name.upper() == idField.upper():
-            ftype = field.type.upper()
+    #for field in fields: this might be cheating a bit - if IDfield is not a string then this might not work
+    #    if field.name.upper() == idField.upper():
+    #        ftype = field.type.upper()
     hasNone = False
     num = 0
     strList = '('
