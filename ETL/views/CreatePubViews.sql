@@ -9,8 +9,8 @@
 -- In the "Query" menu in SSMS, simply toggle "SQLCMD Mode"
 
 :setvar schema "dbo"
-:setvar pubdb "UWMapData"
-:setvar cadsde "UWCadSde"
+:setvar pubdb "GDB_D"
+:setvar cadsde "UWGISProduction"
 
 -- set the database where views will be created
 USE $(pubdb);
@@ -36,7 +36,6 @@ SELECT
  ft.BUILDINGID,
  fact.NAME as BLDGNAME,
  fpt.CALCROT,
- fpt.LOCALROT,
  ft.BUILDINGID + '_' + LTRIM(STR(fl.FLOORLEVEL)) AS DDPFLOORSORT
 FROM
  [$(cadsde)].[$(schema)].Floor_Table AS ft INNER JOIN
@@ -187,7 +186,6 @@ SELECT
  floors.STACKLEVEL,
  floors.SENSITIVITY,
  floors.CALCROT,
- floors.LOCALROT,
  floors.DDPFLOORSORT,
  fpt.BUILDINGID,
  fpt.SITEID,

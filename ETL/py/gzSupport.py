@@ -151,14 +151,15 @@ def strToBool(s):
 
 def showTraceback():
     # get the traceback object and print it out
-    tBack = sys.exc_info()[2]
+    #tBack = sys.exc_info()[2]
     # tbinfo contains the line number that the code failed on and the code from that line
-    tbinfo = traceback.format_tb(tBack)
-    tbStr = ""
-    for i in range(0,len(tbinfo)):
-        tbStr = tbStr + str(tbinfo[i])
+    #tbinfo = traceback.format_tb(tBack)
+    #tbStr = ""
+    #for i in range(0,len(tbinfo)):
+    #    tbStr = tbStr + str(tbinfo[i])
     # concatenate information together concerning the error into a message string
-    pymsg = "Python Error messages:\nTraceback Info:\n" + tbStr + "Error Info:    " + str(sys.exc_type)+ ": " + str(sys.exc_value) + "\n"
+    pymsg = "Python Error messages:\nTraceback Info:\n" + arcpy.GetMessages()
+    #tbStr + "Error Info:    " + str(sys.exc_type)+ ": " + str(sys.exc_value) + "\n"
     # print messages for use in Python/PythonWin
     addError(pymsg)
 
@@ -378,7 +379,7 @@ def appendRows(sourceTable,targetTable,expr):
     desc = arcpy.Describe(targetTable)
     viewName = makeView(desc.dataElementType,workspace,sourceTable,viewName,expr,[])
     arcpy.Append_management(viewName,targetTable,"NO_TEST")
-    addMessageLocal(targTable + " rows Appended ")
+    #addMessageLocal(targTable + " rows Appended ")
     retcode = True
 
     return retcode
