@@ -1,4 +1,4 @@
 gseUW
 =====
 
-University of Washinton Gizinta Sync Engine
+University of Washington Gizinta Sync Engine
