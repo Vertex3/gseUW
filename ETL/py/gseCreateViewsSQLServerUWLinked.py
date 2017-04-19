@@ -119,7 +119,7 @@ def getTextViewSql(dsname,fields):
     viewSql = ""
     viewSql = "CREATE VIEW " + linkedServer + dot + productionWSName + dot + owner + dot + txtPrefix + dsname + " AS SELECT "
     viewSql += getFieldSql(fields)
-    viewSql += " FROM " + linkedServer + productionWSName + dot + owner + dot + evwname
+    viewSql += " FROM " + productionWSName + dot + owner + dot + evwname
     
     msg(viewSql)
     return viewSql
@@ -127,9 +127,9 @@ def getTextViewSql(dsname,fields):
 def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
     evwname = dsname #+ "_EVW"
     viewSql = ""
-    viewSql = "CREATE VIEW " + owner + dot + exceptProd + " AS SELECT "
-    viewSql += getFieldSql(fields)
-    viewSql += " FROM " + stagingWSName + owner + evwname + " EXCEPT "
+    viewSql = "CREATE VIEW " + owner + dot + exceptProd 
+    viewSql += " AS SELECT " + getFieldSql(fields)
+    viewSql += " FROM " + stagingWSName + dot + owner + dot + evwname + " EXCEPT "
     viewSql += " SELECT " + getFieldSql(fields).replace('SHAPE.STAsText() AS ','')
     viewSql += " FROM " + linkedServer + dot + productionWSName + dot + owner + dot + txtPrefix + dsname + ";" + "\nGO"
 
@@ -139,8 +139,8 @@ def getExceptProdViewSql(dsname,exceptProd,exceptStaging,fields):
 def getExceptStagingViewSql(dsname,exceptProd,exceptStaging,fields):
     evwname = dsname #+ "_EVW"
     viewSql = ""
-    viewSql = "CREATE VIEW " + owner + dot + exceptStaging + " AS "
-    viewSql += " SELECT " + getFieldSql(fields).replace('SHAPE.STAsText() AS ','')
+    viewSql = "CREATE VIEW " + owner + dot + exceptStaging 
+    viewSql += " AS SELECT " + getFieldSql(fields).replace('SHAPE.STAsText() AS ','')
     viewSql += " FROM " + linkedServer + dot + productionWSName + dot + owner + dot + txtPrefix + dsname 
     viewSql += " EXCEPT " 
     viewSql += " SELECT " + getFieldSql(fields)
