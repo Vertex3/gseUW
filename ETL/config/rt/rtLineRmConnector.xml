@@ -1,8 +1,8 @@
 <Gizinta logTableName="gzLog" errorTableName="gzError" xmlns:gizinta="http://gizinta.com" version="2013.1">
   <Extract>
-    <GDBDataset sourceIDField="SPACEID" sourceName="RT_LineRmConnector" targetName="RT_LineRmConnector">
-      <WhereClause/>
-    </GDBDataset>
+		<GDBDataset sourceIDField="SPACEID" sourceName="RT_LineRmConnector" targetName="RT_LineRmConnector">
+			<WhereClause/>
+		</GDBDataset>
   </Extract>
   <Transform>
     <Dataset name="RT_LineRmConnector" qa="CheckFields,CheckGeometry" sourceIDField="SPACEID" sourceNameField="SPACEID">
