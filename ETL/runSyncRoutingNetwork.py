@@ -2,7 +2,7 @@
 import os,sys,subprocess, time, traceback, multiprocessing, etl
 
 timeout = 10
-sites = ['UWS'] # add more later
+site = 'UWS' # add more later
 sitefile = os.path.join(os.path.dirname(os.path.realpath(__file__)),'routingsites.txt')
 with open(sitefile,'r') as infile:
 	data = infile.read()
@@ -18,7 +18,7 @@ routeparams = []
 rtFolder = os.path.join(etlFolder,"batch","Routing")
 
 # This section replaces the old "doNetwork.bat" - take data from the production database and push into network dataset.
-routeparams.append([fme,os.path.join(etlFolder,"fme","gseRoutingElevatorConstructor.fmw")])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
+routeparams.append([fme,os.path.join(etlFolder,"fme","gseRoutingElevatorConstructor.fmw"),'--SiteID',site])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
 routeparams.append([fme,os.path.join(etlFolder,"batch","Exterior","gseBuildingConnector.fmw")])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
 routeparams.append(['del',os.path.join(rtFolder,'Routing.gdb'), '/s', '/q'])
 routeparams.append(['xcopy',os.path.join(rtFolder,'Template.gdb'), os.path.join(rtFolder,'Routing.gdb'), '/e', '/i', '/y'])

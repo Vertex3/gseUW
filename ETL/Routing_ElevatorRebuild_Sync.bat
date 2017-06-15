@@ -1,2 +1,0 @@
-fme C:\Apps\Gizinta\gseUW\ETL\fme\gseRoutingElevatorConstructor.fmw 
-rem C:\Apps\Gizinta\gseUW\ETL\py\gseSyncByField.py 'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Staging.sde' 'C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde' 'C:\Apps\Gizinta\gseUW\ETL\config\rtElevatorPlaylist.xml'
