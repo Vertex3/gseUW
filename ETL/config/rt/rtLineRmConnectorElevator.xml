@@ -1,11 +1,11 @@
 <Gizinta logTableName="gzLog" errorTableName="gzError" xmlns:gizinta="http://gizinta.com" version="2013.1">
   <Extract>
-    <GDBDataset sourceIDField="SPACEID" sourceName="InteriorSpace_Point" targetName="RT_RoomPoint">
+    <GDBDataset sourceIDField="SPACEID" sourceName="RT_LineRmConnector" targetName="RT_LineRmConnector">
       <WhereClause/>
     </GDBDataset>
   </Extract>
   <Transform>
-    <Dataset name="RT_RoomPoint" qa="CheckFields,CheckGeometry" sourceIDField="SPACEID" sourceNameField="SPACEID">
+    <Dataset name="RT_LineRmConnector" qa="CheckFields,CheckGeometry" sourceIDField="SPACEID" sourceNameField="SPACEID">
       <Field>
         <SourceName/>
         <TargetName>SITEID</TargetName>
@@ -38,14 +38,8 @@
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
-      <Field>
-        <SourceName>SPACEID</SourceName>
-        <TargetName>SOURCEID</TargetName>
-        <Method>Copy</Method>
-        <FieldType>String</FieldType>
-        <FieldLength>30</FieldLength>
-      </Field>
 	  
+
       <Field>
         <SourceName/>
         <TargetName>ADA</TargetName>
@@ -53,6 +47,14 @@
         <DefaultValue>1</DefaultValue>
         <FieldType>Integer</FieldType>
         <FieldLength>4</FieldLength>
+      </Field>
+      <Field>
+        <SourceName/>
+        <TargetName>EVAC</TargetName>
+        <Method>DefaultValue</Method>
+        <DefaultValue>No</DefaultValue>
+        <FieldType>String</FieldType>
+        <FieldLength>3</FieldLength>
       </Field>
       <Field>
         <SourceName/>
@@ -80,10 +82,35 @@
       </Field>
       <Field>
         <SourceName/>
+        <TargetName>SURFACE</TargetName>
+        <Method>DefaultValue</Method>
+        <DefaultValue>Unknown</DefaultValue>
+        <FieldType>String</FieldType>
+        <FieldLength>60</FieldLength>
+      </Field>
+      <Field>
+        <SourceName/>
+        <TargetName>SPEED</TargetName>
+        <Method>DefaultValue</Method>
+        <DefaultValue>89.58</DefaultValue>
+        <FieldType>Double</FieldType>
+        <FieldLength>8</FieldLength>
+      </Field>
+      <Field>
+        <SourceName/>
         <TargetName>NAME</TargetName>
         <Method>DefaultValue</Method>
         <DefaultValue/>
+        <FieldType>String</FieldType>
         <FieldLength>255</FieldLength>
+      </Field>
+      <Field>
+        <SourceName/>
+        <TargetName>ONEWAY</TargetName>
+        <Method>DefaultValue</Method>
+        <DefaultValue>B</DefaultValue>
+        <FieldType>String</FieldType>
+        <FieldLength>2</FieldLength>
       </Field>
       <Field>
         <SourceName/>
@@ -93,7 +120,21 @@
         <FieldType>String</FieldType>
         <FieldLength>60</FieldLength>
       </Field>
-  
+      <Field>
+        <SourceName/>
+        <TargetName>ROUTECLASS</TargetName>
+        <Method>DefaultValue</Method>
+        <DefaultValue>10</DefaultValue>
+        <FieldType>Integer</FieldType>
+        <FieldLength>4</FieldLength>
+      </Field>
+      <Field>
+        <SourceName>fme_basename</SourceName>
+        <TargetName>SOURCEDWG</TargetName>
+        <Method>Copy</Method>
+        <FieldType>String</FieldType>
+        <FieldLength>60</FieldLength>
+      </Field>
       <Field>
         <SourceName/>
         <TargetName>LASTUPDATE</TargetName>
@@ -110,9 +151,10 @@
         <FieldType>String</FieldType>
         <FieldLength>50</FieldLength>
       </Field>
-		<ChangeDetection exceptProductionView="eRoomPointProd" exceptStagingView="eRoomPointStaging" 
+		<ChangeDetection exceptProductionView="eLineRmConnectorProd" exceptStagingView="eLineRmConnectorStaging" 
 		idField="SPACEID"
-		viewFields="FLOORID,SPACEID,ADA,SHAPE"/>
+	viewFields="FLOORID,SPACEID,ADA,SHAPE,FROMFLOOR,TOFLOOR"/>
+		
     </Dataset>
   </Transform>
 </Gizinta>

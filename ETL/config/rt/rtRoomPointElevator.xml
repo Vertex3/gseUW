@@ -1,6 +1,6 @@
 <Gizinta logTableName="gzLog" errorTableName="gzError" xmlns:gizinta="http://gizinta.com" version="2013.1">
   <Extract>
-    <GDBDataset sourceIDField="SPACEID" sourceName="InteriorSpace_Point" targetName="RT_RoomPoint">
+    <GDBDataset sourceIDField="SPACEID" sourceName="RT_RoomPoint" targetName="RT_RoomPoint">
       <WhereClause/>
     </GDBDataset>
   </Extract>

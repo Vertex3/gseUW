@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <GizintaPlaylist errorTableName="gzError" fileExtension=".dwg" logTableName="gzLog" xmlns:gizinta="http://gizinta.com">
 	<LoadSettings nameContains="RT" logFileName="gseElevator.log" fmeLoadFile="" source="GDB"/>
-	<File>rt\rtRoomPoint.xml</File>
+	<File>rt\rtRoomPointElevator.xml</File>
 	<File>rt\rtLineTransitionElevator.xml</File>
-	<File>rt\rtLineRmConnector.xml</File>
+	<File>rt\rtLineRmConnectorElevator.xml</File>
 </GizintaPlaylist>

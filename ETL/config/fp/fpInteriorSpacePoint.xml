@@ -74,7 +74,7 @@
 			</Field>
 			<SourceFieldNames>Color,Elevation,Entity,FACFLOORCODE,FACNUM,FACROOM,FLOORCODE,Handle,Layer,LineWt,Linetype,ROOM_AREA,ROOM_NUMBER,RefName</SourceFieldNames>
 			<ChangeDetection exceptProductionView="eInteriorSpacePointExceptProduction" exceptStagingView="eInteriorSpacePointExceptStaging" idField="SPACEID"
-			viewFields="ROOMNUMBER,SPACEID,FLOORID"/>
+			viewFields="ROOMNUMBER,SPACEID,FLOORID,SHAPE"/>
 		</Dataset>
 	</Transform>
 </Gizinta>
