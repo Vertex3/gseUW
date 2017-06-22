@@ -4,9 +4,8 @@
 #
 # Description: load floorplans for a campus to staging database using Gizinta FME approach plus custom sync to production
 # ---------------------------------------------------------------------------
-
 # Imports
-import os, sys, gseSyncChanges
+import os, sys, gseSyncChanges, stat
 
 ospath = os.path.realpath(__file__)
 etl = os.sep+'ETL'+os.sep
@@ -111,6 +110,11 @@ def main(argv = None):
                     if gss[0].deleteCADFiles == True and partFailed == False:
                         try:
                             gzSupport.cleanupGarbage()
+                            fileAtt = os.stat(cadFile)[0]
+                            msg(cadFile)
+                            if (not fileAtt & stat.S_IWRITE):  
+                               # File is read-only, so make it writeable  
+                               os.chmod(cadFile, stat.S_IWRITE) 
                             os.remove(cadFile)
                             try:
                                 os.remove(cadFile[:len(cadFile)-4]+'.wld')
