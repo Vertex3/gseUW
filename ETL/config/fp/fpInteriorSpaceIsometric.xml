@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Gizinta errorTableName="gzError" logTableName="gzLog" version="2013.1" xmlns:gizinta="http://gizinta.com">
 	<Extract>
-		<GDBDataset sourceIDField="SPACEID" sourceName="InteriorSpace" targetName="InteriorSpace_Isometric">
+		<GDBDataset sourceIDField="SPACEID" sourceName="RMS" targetName="InteriorSpace_Isometric">
 			<WhereClause/>
 		</GDBDataset>
 	</Extract>
