@@ -8,16 +8,13 @@ with open(sitefile,'r') as infile:
 	data = infile.read()
 	sites = data.splitlines()
 	print('Sites from routingsites.txt: ' + " ".join(sites))
-#pyt = r'C:\Python27\ArcGIS10.3\python.exe'
-pyt = "python.exe"
+pyt = r'C:\Python27\ArcGIS10.4\python.exe'
+#pyt = "python.exe"
 fme = "c:\\apps\\FME\\fme.exe"
 etlFolder = "c:\\apps\\Gizinta\\gseUW\\ETL"
 script = r"C:\Apps\Gizinta\gseUW\ETL\py\gseLoaderFME.py"
 siteparams = []
 siteparams.append([pyt,script,"rtLoadPlaylist.xml","gseDataConfig_%SITE%.xml"])
-# *** question - do we need to run just the sites here then the rest is system-wide?
-siteparams.append([fme,os.path.join(etlFolder,"fme","gseRoutingElevatorConstructor.fmw")])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
-siteparams.append([fme,os.path.join(etlFolder,"batch","Exterior","gseBuildingConnector.fmw")])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
 
 stdout = sys.stdout
 sys.stdout = open(os.path.realpath(__file__) + '.log', "w+")

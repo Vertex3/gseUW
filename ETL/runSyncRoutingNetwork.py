@@ -22,7 +22,7 @@ routeparams.append([fme,os.path.join(etlFolder,"fme","gseRoutingElevatorConstruc
 routeparams.append([fme,os.path.join(etlFolder,"batch","Exterior","gseBuildingConnector.fmw")])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
 routeparams.append(['del',os.path.join(rtFolder,'Routing.gdb'), '/s', '/q'])
 routeparams.append(['xcopy',os.path.join(rtFolder,'Template.gdb'), os.path.join(rtFolder,'Routing.gdb'), '/e', '/i', '/y'])
-routeparams.append([fme,os.path.join(rtFolder,'GenerateNetworkDataset.fmw'),'--GEODATABASE_SDE_IN_CONNECTION_FILE', r'C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde'])
+routeparams.append([fme,os.path.join(rtFolder,'GenerateNetworkDataset.fmw'),'--GEODATABASE_SDE_IN_RT', r'C:\apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde'])
 routeparams.append([pyt,os.path.join(rtFolder,'buildNDS.py')])
 routeparams.append(['del',os.path.join(rtFolder,'RemoteRouting.gdb'), '/s', '/q'])
 routeparams.append(['xcopy',os.path.join(rtFolder,'Routing.gdb'),os.path.join(rtFolder,'RemoteRouting.gdb'), '/e', '/i', '/y'])
