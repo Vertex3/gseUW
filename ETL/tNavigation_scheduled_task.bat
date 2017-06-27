@@ -1,0 +1,1 @@
+call C:\apps\Gizinta\gseUW\ETL\runSyncNavigation.py

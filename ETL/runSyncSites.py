@@ -2,18 +2,23 @@
 import os,sys,subprocess, time, traceback, multiprocessing, etl
 
 timeout = 10
-sites = ['UWS'] # add more later
-sitefile = os.path.join(os.path.dirname(os.path.realpath(__file__)),'routingsites.txt')
+sites = [] # add more later
+sitetxt = 'sitesCAD.txt'
+sitefile = os.path.join(os.path.dirname(os.path.realpath(__file__)),sitetxt)
 with open(sitefile,'r') as infile:
 	data = infile.read()
 	sites = data.splitlines()
-	print('Sites from routingsites.txt: ' + " ".join(sites))
+	print('Sites from ' + sitetxt  + ' ' + ' '.join(sites))
+
 pyt = r'C:\Python27\ArcGIS10.4\python.exe'
 #pyt = "python.exe"
 fme = "c:\\apps\\FME\\fme.exe"
 etlFolder = "c:\\apps\\Gizinta\\gseUW\\ETL"
 script = r"C:\Apps\Gizinta\gseUW\ETL\py\gseLoaderFME.py"
+
 siteparams = []
+siteparams.append([pyt,script,"bldgLoadPlaylist.xml","gseDataConfig_%SITE%.xml"])
+siteparams.append([pyt,script,"fpLoadPlaylist.xml","gseDataConfig_%SITE%.xml"])
 siteparams.append([pyt,script,"rtLoadPlaylist.xml","gseDataConfig_%SITE%.xml"])
 
 stdout = sys.stdout
@@ -44,12 +49,12 @@ def doSites(params):
 			comm = " ".join(ps).strip()
 			print(comm)
 			res = subprocess.call(comm, shell=True)
+			print("result=" + str(res))
 			if res != 0:
 				error = True
-			print("non-zero result")
+			etl.pprint('Completed')
 	etl.pprint('Completed Sites')
 	return error
 	
-
 if __name__ == "__main__":
 	main()
