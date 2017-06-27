@@ -2,23 +2,25 @@
 import os,sys,subprocess, time, traceback, multiprocessing, etl
 
 timeout = 10
-site = 'UWS' # add more later
-sitefile = os.path.join(os.path.dirname(os.path.realpath(__file__)),'routingsites.txt')
+sites = [] # add more later
+sitefile = os.path.join(os.path.dirname(os.path.realpath(__file__)),'sitesNavigation.txt')
 with open(sitefile,'r') as infile:
 	data = infile.read()
 	sites = data.splitlines()
-	print('Sites from routingsites.txt: ' + " ".join(sites))
-#pyt = r'C:\Python27\ArcGIS10.3\python.exe'
-pyt = "python.exe"
+	print('Sites from sitesNavigation.txt: ' + " ".join(sites))
+
+sites =['UWS'] # will need to update when sites are added and ensure params are correct
+	
+pyt = r'C:\Python27\ArcGIS10.4\python.exe'
+#pyt = "python.exe"
 fme = "c:\\apps\\FME\\fme.exe"
 etlFolder = "c:\\apps\\Gizinta\\gseUW\\ETL"
-
 
 routeparams = []
 rtFolder = os.path.join(etlFolder,"batch","Routing")
 
-# This section replaces the old "doNetwork.bat" - take data from the production database and push into network dataset.
-routeparams.append([fme,os.path.join(etlFolder,"fme","gseRoutingElevatorConstructor.fmw"),'--SiteID',site])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
+# This section replaces the old "doNetwork.bat" - take data from the cadsde database and push into network dataset.
+routeparams.append([fme,os.path.join(etlFolder,"fme","gseRoutingElevatorConstructor.fmw"),'--SiteID','%SITE%'])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
 routeparams.append([fme,os.path.join(etlFolder,"batch","Exterior","gseBuildingConnector.fmw")])# *** ? ,os.path.join(etlFolder,"serverConfig","gseDataConfig_%SITE%.xml")])
 routeparams.append(['del',os.path.join(rtFolder,'Routing.gdb'), '/s', '/q'])
 routeparams.append(['xcopy',os.path.join(rtFolder,'Template.gdb'), os.path.join(rtFolder,'Routing.gdb'), '/e', '/i', '/y'])
@@ -56,10 +58,12 @@ def doNetwork(params,site):
 				comm = " ".join(ps).strip()
 				print(comm)
 				res = subprocess.call(comm, shell=True)
+				print("result=" + str(res))
 				if res != 0:
-					#error = True
-					print("non-zero result")
-	etl.pprint('Completed Routing Network')
+					error = True
+				print('Completed')
+	print('Completed Sites')
+	etl.pprint('Completed ' + os.path.realpath(__file__))
 	return error
 		
 
