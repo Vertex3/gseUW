@@ -14,6 +14,7 @@ routeparams = []
 rtFolder = os.path.join(etlFolder,"batch","Routing")
 
 print ('Extracting since ' +  startTime)
+lastRun = None
 
 routeparams.append([fme,os.path.join(rtFolder,"RT_Extract.fmw"),'--Extract_Since',startTime])
 stdout = sys.stdout
@@ -22,31 +23,39 @@ sys.stdout = open(os.path.realpath(__file__) + '.log', "w+")
 def main(argv = None):
 
 	### Main function - loop through files
+	global startTime,lastRun
 	res = 0
 	etl.pprint('Starting ' + __file__)
 	error = False
-	doSite(routeparams)
+	if lastRun == None:
+		lastRun = startTime # default 1 day ago
+	doSites(routeparams,startTime,lastRun)
+	lastRun = datetime.datetime.now()
+	lastRun = lastRun.strftime("%Y%m%d%H%M%S")
+	
 	etl.pprint('Completed ' + __file__)
 	sys.stdout = stdout
 
 	if error:
 		raise Exception("Error in processing",res)
 
-def doSite(params):		
+def doSites(params,start,lastRun):		
 	error = False
-	for param in params: # continue regardless of errors.
-		ps = []
-		for p in range(0,len(param)):
-			if p == 0:
-				ps.append(etl.getParam(param,p,'',site))
-			else:
-				ps.append(etl.getParam(param,p,'\"',site))
-		comm = " ".join(ps).strip()
-		print(comm)
-		res = subprocess.call(comm, shell=True)
-		if res != 0:
-			error = True
-		print("non-zero result")
+	for site in sites:
+		for param in params: # continue regardless of errors.
+			ps = []
+			for p in range(0,len(param)):
+				if p == 0:
+					ps.append(etl.getParam(param,p,'',site))
+				else:
+					ps.append(etl.getParam(param,p,'\"',site))
+			comm = " ".join(ps).strip()
+			comm = comm.replace(start,lastRun)
+			print(comm)
+			res = 0#subprocess.call(comm, shell=True)
+			if res != 0:
+				error = True
+			print("non-zero result")
 	etl.pprint('Completed Extract')
 	return error
 	

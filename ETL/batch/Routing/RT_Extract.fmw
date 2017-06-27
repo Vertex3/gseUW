@@ -5,56 +5,55 @@
 #    Command-line to run this workspace:
 #    
 #    
-#    C:\apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\batch\Routing\RT_Extract.fmw
+#    C:\apps\FME\fme.exe C:\apps\Gizinta\gseUW\ETL\batch\Routing\RT_Extract.fmw
 #          --FEATURE_TYPES "DBO.RT_DoorPoint DBO.RT_LineInterior DBO.RT_LineRmConnector DBO.RT_LineTransition DBO.RT_RoomPoint DBO.RT_Stop DBO.RT_Turn DBO.RT_LineExterior"
 #          --Extract_Since "20170620084600"
-#          --DestDataset_ACAD "C:\Apps\Gizinta\gseUW\ETL\batch\Routing\RT_Extract.dwg"
+#          --DestDataset_ACAD "C:\Vault_Mirror\BatchGIS\Export\RT_Extract.dwg"
 #    
 #    
-#!   WORKSPACE_VERSION="1"
-#!   DESTINATION_ROUTING_FILE=""
-#!   HISTORY=""
-#!   FME_REPROJECTION_ENGINE="FME"
-#!   FME_BUILD_NUM="16494"
-#!   DESTINATION="NONE"
-#!   DOC_EXTENTS="3066.51 749.509"
-#!   REQUIREMENTS=""
-#!   CATEGORY=""
-#!   VIEW_POSITION="-59.3756 21.8752"
-#!   END_TCL=""
-#!   REDIRECT_TERMINATORS="NONE"
-#!   SOURCE="NONE"
-#!   FME_DOCUMENT_GUID="3cd71f55-08a2-4618-a8c6-be716e52a4c8"
-#!   USAGE=""
-#!   SHOW_INFO_NODES="true"
-#!   END_PYTHON=""
-#!   DESCRIPTION=""
-#!   FME_SERVER_SERVICES=""
-#!   FME_STROKE_MAX_DEVIATION="0"
-#!   ATTR_TYPE_ENCODING="SDF"
-#!   PASSWORD=""
-#!   EXPLICIT_BOOKMARK_ORDER="false"
-#!   LAST_SAVE_DATE="2017-06-27T08:57:53"
-#!   IGNORE_READER_FAILURE="No"
-#!   SHOW_ANNOTATIONS="true"
-#!   FME_GEOMETRY_HANDLING="Enhanced"
-#!   PYTHON_COMPATIBILITY="27"
-#!   MAX_LOG_FEATURES="200"
-#!   FME_DOCUMENT_PRIORGUID="a73e1611-d500-46b3-bf50-8cc5265b5acb,e01babfc-036c-4133-99dd-bca12fdeae30,3e88939a-b575-497a-b640-63b3ef43f02e"
-#!   LEGAL_TERMS_CONDITIONS=""
-#!   LOG_FILE=""
-#!   DOC_TOP_LEFT="65.6247 -745.88"
-#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
-#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
-#!   REQUIREMENTS_KEYWORD=""
-#!   ZOOM_SCALE="100"
 #!   TITLE=""
-#!   SOURCE_ROUTING_FILE=""
-#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   FME_DOCUMENT_GUID="a7363cea-5832-43ff-85ca-9f5ea8222953"
 #!   BEGIN_TCL=""
+#!   REDIRECT_TERMINATORS="NONE"
+#!   LEGAL_TERMS_CONDITIONS=""
+#!   PASSWORD=""
+#!   HISTORY=""
+#!   MAX_LOG_FEATURES="200"
 #!   LOG_MAX_RECORDED_FEATURES="200"
+#!   DOC_EXTENTS="3066.51 596.382"
+#!   SHOW_ANNOTATIONS="true"
+#!   LAST_SAVE_BUILD="FME(R) 2016.0.1.2 (20160318 - Build 16178 - WIN32)"
+#!   FME_DOCUMENT_PRIORGUID="a73e1611-d500-46b3-bf50-8cc5265b5acb,e01babfc-036c-4133-99dd-bca12fdeae30,3e88939a-b575-497a-b640-63b3ef43f02e,3cd71f55-08a2-4618-a8c6-be716e52a4c8"
+#!   REQUIREMENTS=""
+#!   LOG_FILE=""
+#!   LAST_SAVE_DATE="2017-06-27T14:02:41"
+#!   CATEGORY=""
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   WORKSPACE_VERSION="1"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   USAGE=""
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   IGNORE_READER_FAILURE="No"
+#!   REQUIREMENTS_KEYWORD=""
 #!   BEGIN_PYTHON=""
-#!   LAST_SAVE_BUILD="FME(R) 2016.1.0.1 (20160516 - Build 16494 - WIN32)"
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_SERVER_SERVICES=""
+#!   SOURCE_ROUTING_FILE=""
+#!   DESCRIPTION=""
+#!   FME_BUILD_NUM="16178"
+#!   SOURCE="NONE"
+#!   PYTHON_COMPATIBILITY="27"
+#!   VIEW_POSITION="-56.2506 18.7502"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_TOP_LEFT="65.6247 -592.753"
+#!   DESTINATION="NONE"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   SHOW_INFO_NODES="true"
+#!   ZOOM_SCALE="100"
 #! >
 #! <DATASETS>
 #! <DATASET
@@ -70,7 +69,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY}"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="geodb_secondary_axis double geodb_font_weight smallint geodb_dim_line_display smallint geodb_start_angle double geodb_text_x_offset double geodb_raster_pyramid_resample_type char(100) geodb_dim_extn_line_angle double geodb_text_lc_textbox_x3 double geodb_dim_length double multi_reader_id integer geodb_anno_class_id integer geodb_h_align char(50) geodb_font_underline boolean fme_basename char(50) geodb_text_lc_margin_left double geodb_v_align char(50) geodb_text_size double geodb_linked_feature_id integer geodb_text_ref_scale double geodb_dim_begin_dimension_z double geodb_font_name char(254) geodb_text_lc_textbox_x1 double geodb_dim_text_x double geodb_raster_compression_type char(100) geodb_text_lc_textbox_x2 double geodb_dim_line_x double geodb_text_color char(254) geodb_dim_type smallint geodb_text_lc_margin_bottom double multi_reader_keyword char(50) geodb_element_index integer geodb_text_lc_textbox_y1 double fme_text_string char(50) geodb_font_bold boolean fme_feature_type char(50) geodb_right_to_left boolean geodb_text_line_spacing double geodb_dim_end_dimension_z double fme_color char(50) geodb_feature_has_relationships boolean geodb_measures char(254) geodb_raster_pyramid_level integer geodb_dim_end_dimension_y double fme_geometry fme_char(50) geodb_text_leader_line_color char(50) geodb_junction_feature_count integer geodb_text_break_char integer geodb_text_string char(254) geodb_rotation double fme_text_size double geodb_text_lc_textbox_y2 double geodb_text_lc_textbox_x4 double geodb_dim_line_y double geodb_dim_using_custom_length boolean geodb_dim_end_dimension_x double geodb_text_lc_textbox_y4 double geodb_feature_dataset char(254) fme_rotation double fme_fill_color char(50) multi_reader_type char(50) geodb_dim_marker_display smallint geodb_text_string_with_format_tags char(254) geodb_type char(25) geodb_dim_begin_dimension_y double geodb_text_y_offset double geodb_color char(50) geodb_text_scale boolean geodb_metadata_string char(254) geodb_rel_origin_oid integer geodb_edge_element_count integer geodb_font_size double geodb_text_lc_accent_bar_color char(50) geodb_rel_destination_oid integer fme_secondary_axis double geodb_subtype_name char(254) geodb_dim_custom_length double geodb_feature_class_alias char(254) fme_primary_axis double geodb_edge_feature_count integer geodb_dim_text_y double geodb_junction_element_count integer geodb_dim_style_id integer geodb_text_point_scale_factor double geodb_text_lc_margin_right double geodb_text_lc_gap double geodb_font_charset smallint geodb_text_lc_margin_top double geodb_dim_extn_line_display smallint geodb_to_junction_element_id integer fme_start_angle double geodb_text_char_spacing double geodb_text_leader_line_anchor_point char(254) geodb_dim_line_z double geodb_text_angle double geodb_text_character_width double geodb_ancillary_role char(7) geodb_text_lc_accent_bar_width double fme_sweep_angle double geodb_dim_begin_dimension_x double geodb_font_italic boolean geodb_oid integer geodb_feature_is_simple boolean geodb_text_clip boolean fme_dataset char(50) geodb_symbol_id integer geodb_font_strikethrough boolean geodb_text_part_count integer geodb_sweep_angle double geodb_raster_compression_quality integer geodb_primary_axis double geodb_text_lc_style char(20) geodb_from_junction_element_id integer geodb_text_leader_line_tolerance double fme_type char(50) multi_reader_full_id integer geodb_topological_configuration char(6) geodb_text_word_spacing double geodb_dim_text_angle double geodb_text_leader_line char(254) geodb_dim_text_z double geodb_element_id integer geodb_text_leader_line_width double geodb_text_lc_textbox_y3 double"
+#!   EXPOSABLE_ATTRS="geodb_dim_text_x double geodb_dim_begin_dimension_x double geodb_dim_text_angle double geodb_feature_dataset char(254) geodb_start_angle double geodb_dim_using_custom_length boolean geodb_text_lc_margin_top double fme_basename char(50) fme_text_size double geodb_dim_line_y double geodb_text_lc_accent_bar_color char(50) geodb_text_clip boolean geodb_rel_destination_oid integer fme_sweep_angle double fme_type char(50) geodb_color char(50) geodb_h_align char(50) multi_reader_type char(50) geodb_text_ref_scale double geodb_text_character_width double geodb_text_x_offset double fme_start_angle double geodb_subtype_name char(254) fme_geometry fme_char(50) geodb_anno_class_id integer geodb_rotation double geodb_dim_text_y double geodb_text_lc_gap double geodb_font_charset smallint multi_reader_full_id integer geodb_text_lc_textbox_x2 double geodb_text_string char(254) geodb_type char(25) fme_rotation double geodb_text_point_scale_factor double geodb_v_align char(50) geodb_raster_pyramid_resample_type char(100) geodb_text_lc_textbox_y3 double geodb_edge_feature_count integer geodb_font_bold boolean geodb_junction_element_count integer fme_dataset char(50) geodb_dim_begin_dimension_y double geodb_dim_extn_line_angle double geodb_element_index integer geodb_feature_class_alias char(254) geodb_element_id integer geodb_text_lc_textbox_y4 double fme_primary_axis double multi_reader_id integer geodb_feature_has_relationships boolean geodb_text_y_offset double geodb_dim_extn_line_display smallint geodb_topological_configuration char(6) geodb_junction_feature_count integer geodb_text_lc_margin_left double multi_reader_keyword char(50) geodb_text_lc_textbox_y2 double geodb_text_size double geodb_text_word_spacing double geodb_text_leader_line_tolerance double geodb_metadata_string char(254) geodb_text_lc_textbox_x4 double geodb_text_char_spacing double geodb_font_name char(254) geodb_raster_compression_type char(100) geodb_secondary_axis double geodb_linked_feature_id integer geodb_font_underline boolean geodb_font_italic boolean geodb_edge_element_count integer geodb_to_junction_element_id integer geodb_text_part_count integer geodb_text_leader_line char(254) fme_color char(50) geodb_dim_line_x double geodb_symbol_id integer geodb_oid integer geodb_text_color char(254) geodb_ancillary_role char(7) geodb_font_size double geodb_text_leader_line_width double geodb_raster_compression_quality integer geodb_from_junction_element_id integer geodb_dim_line_display smallint geodb_text_lc_accent_bar_width double geodb_dim_end_dimension_z double geodb_text_lc_textbox_x1 double geodb_dim_line_z double fme_fill_color char(50) geodb_text_string_with_format_tags char(254) geodb_dim_custom_length double geodb_text_line_spacing double geodb_feature_is_simple boolean geodb_sweep_angle double geodb_raster_pyramid_level integer geodb_text_lc_margin_bottom double geodb_font_weight smallint geodb_dim_length double geodb_text_scale boolean geodb_dim_type smallint geodb_text_angle double geodb_dim_text_z double geodb_dim_end_dimension_x double geodb_right_to_left boolean geodb_text_lc_textbox_x3 double geodb_dim_begin_dimension_z double geodb_dim_end_dimension_y double fme_text_string char(50) geodb_text_lc_style char(20) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_break_char integer geodb_text_lc_margin_right double geodb_text_leader_line_anchor_point char(254) geodb_font_strikethrough boolean geodb_dim_marker_display smallint fme_feature_type char(50) fme_secondary_axis double geodb_primary_axis double geodb_measures char(254) geodb_rel_origin_oid integer geodb_dim_style_id integer"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -80,35 +79,39 @@
 #!   DATASET_TYPE="NONE"
 #!   GENERATE_FME_BUILD_NUM="16494"
 #!   MAX_FEATURES_PER_FEATURE_TYPE=""
-#!   MIN_FEATURES=""
-#!   START_FEATURE=""
-#!   MAX_FEATURES=""
 #!   COORDSYS=""
+#!   START_FEATURE=""
+#!   MIN_FEATURES=""
+#!   MAX_FEATURES=""
 #!   FEATURE_TYPES="$(FEATURE_TYPES)"
 #! >
 #! <METAFILE_PARAMETER
-#!   NAME="DATASET_NAME"
-#!   VALUE="Database"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="NETWORK_PROXY"
-#!   VALUE="NO"
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Specify the Esri ArcSDE Geodatabase Dataset"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="FEATURE_TYPE_NAME"
 #!   VALUE="Feature Class or Table"
 #! />
 #! <METAFILE_PARAMETER
-#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
-#!   VALUE="FeatureClass1"
+#!   NAME="NETWORK_AUTHENTICATION"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
+#!   VALUE="YES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_PROXY"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="Database"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="WRITER_DATASET_HINT"
 #!   VALUE="Esri ArcSDE Geodatabase Dataset"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="READER_DATASET_HINT"
-#!   VALUE="Specify the Esri ArcSDE Geodatabase Dataset"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="ADVANCED_PARMS"
@@ -119,12 +122,8 @@
 #!   VALUE="BEGIN_SQL{0} END_SQL{0} CHILD_VERSION_NAME"
 #! />
 #! <METAFILE_PARAMETER
-#!   NAME="NETWORK_AUTHENTICATION"
-#!   VALUE="NO"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
-#!   VALUE="YES"
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="FeatureClass1"
 #! />
 #! </DATASET>
 #! <DATASET
@@ -140,7 +139,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="geodb_type {FME_GEN_GEOMETRY}"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="geodb_secondary_axis double geodb_font_weight smallint geodb_dim_line_display smallint geodb_start_angle double geodb_text_x_offset double geodb_raster_pyramid_resample_type char(100) geodb_dim_extn_line_angle double geodb_text_lc_textbox_x3 double geodb_dim_length double multi_reader_id integer geodb_anno_class_id integer geodb_h_align char(50) geodb_font_underline boolean fme_basename char(50) geodb_text_lc_margin_left double geodb_v_align char(50) geodb_text_size double geodb_linked_feature_id integer geodb_text_ref_scale double geodb_dim_begin_dimension_z double geodb_font_name char(254) geodb_text_lc_textbox_x1 double geodb_dim_text_x double geodb_raster_compression_type char(100) geodb_text_lc_textbox_x2 double geodb_dim_line_x double geodb_text_color char(254) geodb_dim_type smallint geodb_text_lc_margin_bottom double multi_reader_keyword char(50) geodb_element_index integer fme_text_string char(50) geodb_text_lc_textbox_y1 double geodb_font_bold boolean fme_feature_type char(50) geodb_right_to_left boolean geodb_text_line_spacing double geodb_dim_end_dimension_z double fme_color char(50) geodb_feature_has_relationships boolean geodb_measures char(254) geodb_raster_pyramid_level integer geodb_dim_end_dimension_y double fme_geometry fme_char(50) geodb_text_leader_line_color char(50) geodb_junction_feature_count integer geodb_text_break_char integer geodb_text_string char(254) geodb_rotation double fme_text_size double geodb_text_lc_textbox_y2 double geodb_text_lc_textbox_x4 double geodb_dim_line_y double geodb_dim_using_custom_length boolean geodb_dim_end_dimension_x double geodb_text_lc_textbox_y4 double geodb_feature_dataset char(254) fme_rotation double fme_fill_color char(50) multi_reader_type char(50) geodb_dim_marker_display smallint geodb_text_string_with_format_tags char(254) geodb_type char(25) geodb_dim_begin_dimension_y double geodb_text_y_offset double geodb_color char(50) geodb_text_scale boolean geodb_metadata_string char(254) geodb_rel_origin_oid integer geodb_edge_element_count integer geodb_font_size double geodb_text_lc_accent_bar_color char(50) geodb_rel_destination_oid integer fme_secondary_axis double geodb_subtype_name char(254) geodb_dim_custom_length double geodb_feature_class_alias char(254) fme_primary_axis double geodb_edge_feature_count integer geodb_dim_text_y double geodb_junction_element_count integer geodb_dim_style_id integer geodb_text_point_scale_factor double geodb_text_lc_margin_right double geodb_text_lc_gap double geodb_font_charset smallint geodb_text_lc_margin_top double geodb_dim_extn_line_display smallint geodb_to_junction_element_id integer fme_start_angle double geodb_text_char_spacing double geodb_text_leader_line_anchor_point char(254) geodb_dim_line_z double geodb_text_angle double geodb_text_character_width double geodb_ancillary_role char(7) geodb_text_lc_accent_bar_width double fme_sweep_angle double geodb_dim_begin_dimension_x double geodb_font_italic boolean geodb_oid integer geodb_feature_is_simple boolean geodb_text_clip boolean fme_dataset char(50) geodb_symbol_id integer geodb_font_strikethrough boolean geodb_text_part_count integer geodb_sweep_angle double geodb_raster_compression_quality integer geodb_primary_axis double geodb_text_lc_style char(20) geodb_from_junction_element_id integer geodb_text_leader_line_tolerance double fme_type char(50) multi_reader_full_id integer geodb_topological_configuration char(6) geodb_text_word_spacing double geodb_dim_text_angle double geodb_text_leader_line char(254) geodb_dim_text_z double geodb_element_id integer geodb_text_leader_line_width double geodb_text_lc_textbox_y3 double"
+#!   EXPOSABLE_ATTRS="geodb_dim_text_x double geodb_dim_begin_dimension_x double geodb_dim_text_angle double geodb_feature_dataset char(254) geodb_start_angle double geodb_dim_using_custom_length boolean geodb_text_lc_margin_top double fme_basename char(50) fme_text_size double geodb_dim_line_y double geodb_text_lc_accent_bar_color char(50) geodb_text_clip boolean geodb_rel_destination_oid integer fme_sweep_angle double fme_type char(50) geodb_color char(50) geodb_h_align char(50) multi_reader_type char(50) geodb_text_ref_scale double geodb_text_character_width double geodb_text_x_offset double fme_start_angle double geodb_subtype_name char(254) fme_geometry fme_char(50) geodb_anno_class_id integer geodb_rotation double geodb_dim_text_y double geodb_text_lc_gap double geodb_font_charset smallint multi_reader_full_id integer geodb_text_lc_textbox_x2 double geodb_text_string char(254) geodb_type char(25) fme_rotation double geodb_text_point_scale_factor double geodb_v_align char(50) geodb_raster_pyramid_resample_type char(100) geodb_text_lc_textbox_y3 double geodb_edge_feature_count integer geodb_font_bold boolean geodb_junction_element_count integer fme_dataset char(50) geodb_dim_begin_dimension_y double geodb_dim_extn_line_angle double geodb_element_index integer geodb_feature_class_alias char(254) geodb_element_id integer geodb_text_lc_textbox_y4 double fme_primary_axis double multi_reader_id integer geodb_feature_has_relationships boolean geodb_text_y_offset double geodb_dim_extn_line_display smallint geodb_topological_configuration char(6) geodb_junction_feature_count integer geodb_text_lc_margin_left double multi_reader_keyword char(50) geodb_text_lc_textbox_y2 double geodb_text_size double geodb_text_word_spacing double geodb_text_leader_line_tolerance double geodb_metadata_string char(254) geodb_text_lc_textbox_x4 double geodb_text_char_spacing double geodb_font_name char(254) geodb_raster_compression_type char(100) geodb_secondary_axis double geodb_linked_feature_id integer geodb_font_underline boolean geodb_font_italic boolean geodb_edge_element_count integer geodb_to_junction_element_id integer geodb_text_part_count integer geodb_text_leader_line char(254) fme_color char(50) geodb_dim_line_x double geodb_symbol_id integer geodb_oid integer geodb_text_color char(254) geodb_ancillary_role char(7) geodb_font_size double geodb_text_leader_line_width double geodb_raster_compression_quality integer geodb_from_junction_element_id integer geodb_dim_line_display smallint geodb_text_lc_accent_bar_width double geodb_dim_end_dimension_z double geodb_text_lc_textbox_x1 double geodb_dim_line_z double fme_fill_color char(50) geodb_text_string_with_format_tags char(254) geodb_dim_custom_length double geodb_text_line_spacing double geodb_feature_is_simple boolean geodb_sweep_angle double geodb_raster_pyramid_level integer geodb_text_lc_margin_bottom double geodb_font_weight smallint geodb_dim_length double geodb_text_scale boolean geodb_dim_type smallint geodb_text_angle double geodb_dim_text_z double geodb_dim_end_dimension_x double geodb_right_to_left boolean geodb_text_lc_textbox_x3 double geodb_dim_begin_dimension_z double geodb_dim_end_dimension_y double fme_text_string char(50) geodb_text_lc_style char(20) geodb_text_lc_textbox_y1 double geodb_text_leader_line_color char(50) geodb_text_break_char integer geodb_text_lc_margin_right double geodb_text_leader_line_anchor_point char(254) geodb_font_strikethrough boolean geodb_dim_marker_display smallint fme_feature_type char(50) fme_secondary_axis double geodb_primary_axis double geodb_measures char(254) geodb_rel_origin_oid integer geodb_dim_style_id integer"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -150,35 +149,39 @@
 #!   DATASET_TYPE="NONE"
 #!   GENERATE_FME_BUILD_NUM="16494"
 #!   MAX_FEATURES_PER_FEATURE_TYPE=""
-#!   MIN_FEATURES=""
-#!   START_FEATURE=""
-#!   MAX_FEATURES=""
 #!   COORDSYS=""
+#!   START_FEATURE=""
+#!   MIN_FEATURES=""
+#!   MAX_FEATURES=""
 #!   FEATURE_TYPES=""
 #! >
 #! <METAFILE_PARAMETER
-#!   NAME="DATASET_NAME"
-#!   VALUE="Database"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="NETWORK_PROXY"
-#!   VALUE="NO"
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Specify the Esri ArcSDE Geodatabase Dataset"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="FEATURE_TYPE_NAME"
 #!   VALUE="Feature Class or Table"
 #! />
 #! <METAFILE_PARAMETER
-#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
-#!   VALUE="FeatureClass1"
+#!   NAME="NETWORK_AUTHENTICATION"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
+#!   VALUE="YES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="NETWORK_PROXY"
+#!   VALUE="NO"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="Database"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="WRITER_DATASET_HINT"
 #!   VALUE="Esri ArcSDE Geodatabase Dataset"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="READER_DATASET_HINT"
-#!   VALUE="Specify the Esri ArcSDE Geodatabase Dataset"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="ADVANCED_PARMS"
@@ -189,12 +192,8 @@
 #!   VALUE="BEGIN_SQL{0} END_SQL{0} CHILD_VERSION_NAME"
 #! />
 #! <METAFILE_PARAMETER
-#!   NAME="NETWORK_AUTHENTICATION"
-#!   VALUE="NO"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="SUPPORTS_SCHEMA_IN_FEATURE_TYPE_NAME"
-#!   VALUE="YES"
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="FeatureClass1"
 #! />
 #! </DATASET>
 #! <DATASET
@@ -210,7 +209,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="autocad_color 10 autocad_linetype CONTINUOUS autocad_layer_frozen no autocad_layer_hidden no autocad_layer_locked no autocad_layer_on yes autocad_layer_desc &quot;&quot;"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="autocad_shape_vertical char(6) autocad_row_distance number(31,15) autocad_extrusion_x number(31,15) autocad_shape_width number(31,15) autocad_number_columns number(5,0) autocad_mline_type char(50) autocad_raster_clip_points{}.x number(31,15) autocad_mpolygon_pattern_name char(32) autocad_invisible_attributes{} char(50) autocad_size_y number(31,15) autocad_version char(32) autocad_alignment_x number(31,15) autocad_original_rotation number(31,15) autocad_fit_z string autocad_linespace_factor number(31,15) autocad_end_width number(31,15) autocad_raster_contrast number(4,0) autocad_raster_display_opt_show_unaligned logical autocad_width number(31,15) autocad_block_insert_x number(31,15) autocad_original_position_y number(31,15) autocad_linetype char(50) autocad_start_tangent_x number(31,15) autocad_raster_transparency number(4,0) autocad_fill_color number(6,0) autocad_scale number(31,15) autocad_mpolygon_pattern_double number(5,0) autocad_proxygraphics number(6,0) autocad_mtext_string char(50) autocad_mpolygon_gradient_name char(32) autocad_num_lines number(5,0) autocad_txt_offset_y number(31,15) autocad_control_y string autocad_group_selectable char(50) autocad_normal_z number(31,15) fme_attrib_info{}.oblique number(31,15) autocad_dim_arrowhead_pt_2.y number(31,15) autocad_hatch_loop{}.autocad_hatch_bulges_present number(5,0) autocad_original_position_z number(31,15) autocad_mpolygon_origin_point_x number(31,15) autocad_arc_defpt.z number(31,15) autocad_rational_spline number(6,0) autocad_text_rotation number(31,15) autocad_hatch_pattern_scale number(31,15) autocad_shape_height number(31,15) autocad_hatch_loop{}.autocad_hatch_bulge{} number(31,15) autocad_hatch_gradient_angle number(31,15) autocad_group_description char(50) fme_type char(50) autocad_group_anonymous char(50) autocad_original_text_string string autocad_raster_filename string autocad_defpt4.x number(31,15) fme_attrib_info{}.color.green number(31,15) autocad_mtext_text_height number(31,15) autocad_degree number(31,15) autocad_sweep_angle number(31,15) autocad_linetype_scale number(31,15) autocad_control_weights string autocad_extrusion_y number(31,15) autocad_mpolygon_pattern_color char(50) autocad_hatch_origin_point_y number(31,15) autocad_line_defpoint.x number(31,15) autocad_raster_display_opt_show logical autocad_dimension_style_name char(50) autocad_num_verts number(5,0) autocad_box_width number(31,15) autocad_latitude number(31,15) autocad_lunits number(6,0) fme_attrib_info{}.isVisible char(6) autocad_fit_tolerance number(31,15) autocad_attributes_follow char(50) autocad_elevation number(31,15) autocad_oblique number(31,15) fme_secondary_axis number(31,15) autocad_original_position_x number(31,15) autocad_defpt2.y number(31,15) autocad_insunits number(6,0) fme_dataset char(50) autocad_width_factor number(31,15) autocad_alignment_z number(31,15) autocad_defpt3.x number(31,15) fme_attrib_info{}.color.blue number(31,15) autocad_xref_path string autocad_start_angle number(31,15) autocad_layer char(50) autocad_raster_fade number(4,0) autocad_knots string autocad_shape_filename char(65) autocad_mpolygon_pattern_angle number(31,15) autocad_projectname char(32) autocad_raster_clip_points{}.z number(31,15) autocad_control_x string autocad_textpict char(50) autocad_anno_type char(30) autocad_arc_defpt.x number(31,15) fme_attrib_info{}.attribute_flag char(2) autocad_original_entity char(50) autocad_hatch_pattern_space number(31,15) autocad_arc_defpt.y number(31,15) autocad_hatch_pattern_type number(6,0) autocad_true_type_font char(50) autocad_mpolygon_gradient_color1 char(50) autocad_dim_arrowhead_pt_1.x number(31,15) fme_geometry fme_char(50) autocad_group_accessible char(50) autocad_mpolygon_pattern_type number(6,0) autocad_defpt4.y number(31,15) autocad_justification char(50) autocad_defpt2.x number(31,15) autocad_hatch_pattern_angle number(31,15) autocad_mpolygon_pixel_size number(31,15) autocad_mpolygon_gradient_shift number(31,15) autocad_box_height number(31,15) fme_attrib_info{}.field_size number(5,0) fme_attrib_info{}.location_z number(31,15) autocad_yscale number(31,15) autocad_ucs_xangle number(31,15) autocad_mtext_ref_rect_width number(31,15) autocad_txt_offset_x number(31,15) fme_fill_color char(50) fme_attrib_info{}.align_y number(31,15) autocad_hatch_gradient_color2 char(50) autocad_original_text_size number(31,15) autocad_entity_handle char(50) autocad_hatch_object_type number(6,0) autocad_raster_clip_inverted logical autocad_dim_flag number(5,0) autocad_num_cntl_pts number(11,0) fme_attrib_info{}.style char(512) autocad_alignment_y number(31,15) autocad_fit_y string autocad_hatch_style number(6,0) autocad_mpolygon_pattern_space number(31,15) autocad_lineweight char(10) fme_attrib_info{}.layer char(512) autocad_block_insert_y number(31,15) autocad_start_tangent_y number(31,15) autocad_hatch_gradient_one_color_mode number(5,0) autocad_defpt3.y number(31,15) autocad_start_tangent_z number(31,15) autocad_text_string char(50) autocad_dim_clone_inspection_point.z number(31,15) autocad_longitude number(31,15) autocad_hatch_gradient_type number(6,0) autocad_group_name char(50) autocad_size_z number(31,15) autocad_bulge char(50) fme_attrib_info{}.rotation number(31,15) autocad_mpolygon_gradient_type number(6,0) autocad_size_x number(31,15) autocad_mpolygon_gradient_angle number(31,15) autocad_line_defpoint.y number(31,15) autocad_mpolygon_gradient_color2 char(50) fme_attrib_info{}.color.red number(31,15) autocad_linetype_generation number(1,0) autocad_defpt3.z number(31,15) fme_basename char(50) autocad_auprec number(6,0) autocad_original_layer char(50) autocad_primary_axis number(31,15) autocad_text_z_pos number(31,15) autocad_hatch_gradient_color1 char(50) autocad_text_midpoint.y number(31,15) autocad_fontname char(50) autocad_xref_name char(50) autocad_base_z number(31,15) autocad_raster_brightness number(4,0) fme_attrib_info{}.generation char(25) fme_text_size number(31,15) autocad_dimension_attach_point number(5,0) autocad_hatch_gradient_name char(32) autocad_hatch_gradient_shift number(31,15) autocad_visible_attributes{} char(50) autocad_shape_index number(31,15) fme_primary_axis number(31,15) autocad_aunits number(6,0) autocad_text_x_pos number(31,15) autocad_entity char(50) autocad_original_entity_type char(50) autocad_raster_display_opt_clip logical autocad_knot_param char(10) fme_attrib_info{}.align_x number(31,15) autocad_thickness number(31,15) autocad_dim_clone_inspection_point.y number(31,15) autocad_path_type char(10) autocad_raster_display_opt_transparent logical autocad_knot_tolerance number(31,15) autocad_normal_y number(31,15) autocad_end_tangent_z number(31,15) autocad_xscale number(31,15) fme_text_string char(50) autocad_defpt2.z number(31,15) fme_attrib_info{}.field_name char(513) fme_attrib_info{} char(50) autocad_mpolygon_gradient_one_color_mode number(5,0) autocad_dim_arrowhead_pt_1.y number(31,15) autocad_periodic_spline number(6,0) autocad_text_size number(31,15) autocad_num_fit_pts number(11,0) autocad_angdir logical fme_attrib_info{}.field_value char(2049) autocad_defpt4.z number(31,15) autocad_mpolygon_object_type number(6,0) autocad_text_midpoint.x number(31,15) autocad_hatch_complex_mode number(5,0) fme_attrib_info{}.justification char(25) autocad_hatch_origin_point_x number(31,15) autocad_mline_style char(50) autocad_raster_original_transparency char(50) autocad_anno_handle char(50) autocad_hatch_shade_tint_value number(31,15) autocad_block_name char(50) autocad_attmode number(6,0) autocad_text_midpoint.z number(31,15) fme_color char(50) autocad_base_y number(31,15) autocad_shape_rotation number(31,15) autocad_angbase number(31,15) autocad_secondary_axis number(31,15) autocad_hatch_pattern_double number(5,0) fme_start_angle number(31,15) autocad_hatch_pattern_name char(32) fme_feature_type char(50) autocad_number_rows number(5,0) fme_attrib_info{}.location_x number(31,15) autocad_xrecord_data_list{} char(50) autocad_flag number(6,0) autocad_polyflag char(50) autocad_hatch_pixel_size number(31,15) autocad_control_z string autocad_attribute_display char(50) autocad_mpolygon_pattern_scale number(31,15) autocad_big_fontname char(65) autocad_color number(6,0) autocad_xref_type char(10) autocad_end_tangent_y number(31,15) autocad_zscale number(31,15) autocad_closed_spline number(6,0) autocad_dimension_type char(50) autocad_base_x number(31,15) autocad_normal_x number(31,15) fme_rotation number(31,15) autocad_attach_point char(50) autocad_luprec number(6,0) autocad_dim_clone_inspection_point.x number(31,15) fme_attrib_info{}.location_y number(31,15) autocad_rotation number(31,15) autocad_fit_x string autocad_arrow_head_on char(50) autocad_extrusion_z number(31,15) fme_attrib_info{}.width_factor number(31,15) autocad_true_color char(50) autocad_block_insert_z number(31,15) autocad_dim_arrowhead_pt_2.x number(31,15) autocad_raster_clip_points{}.y number(31,15) autocad_start_width number(31,15) fme_attrib_info{}.height number(31,15) autocad_num_knots number(11,0) autocad_end_tangent_x number(31,15) fme_sweep_angle number(31,15) autocad_shape_name char(32) autocad_fillmode logical autocad_mpolygon_origin_point_y number(31,15) autocad_txt_offset_z number(31,15) autocad_mpolygon_shade_tint_value number(31,15) autocad_line_defpoint.z number(31,15) autocad_extended_data_list{} char(50) autocad_text_y_pos number(31,15) fme_attrib_info{}.color.source char(10) autocad_group_num_entities char(50) autocad_mpolygon_style number(6,0)"
+#!   EXPOSABLE_ATTRS="fme_type char(50) autocad_hatch_gradient_color2 char(50) fme_text_size number(31,15) autocad_degree number(31,15) autocad_lunits number(6,0) autocad_hatch_origin_point_x number(31,15) autocad_fit_y string autocad_mpolygon_style number(6,0) autocad_xrecord_data_list{} char(50) autocad_num_cntl_pts number(11,0) autocad_group_selectable char(50) autocad_box_height number(31,15) autocad_mpolygon_origin_point_x number(31,15) autocad_width_factor number(31,15) autocad_hatch_pattern_name char(32) autocad_normal_y number(31,15) autocad_dim_arrowhead_pt_2.x number(31,15) autocad_path_type char(10) autocad_longitude number(31,15) fme_attrib_info{}.location_z number(31,15) autocad_original_rotation number(31,15) fme_attrib_info{}.rotation number(31,15) autocad_mline_style char(50) autocad_elevation number(31,15) fme_basename char(50) autocad_secondary_axis number(31,15) autocad_extended_data_list{} char(50) autocad_size_z number(31,15) autocad_latitude number(31,15) autocad_original_position_x number(31,15) autocad_raster_clip_points{}.y number(31,15) fme_fill_color char(50) autocad_dim_clone_inspection_point.z number(31,15) autocad_num_verts number(5,0) autocad_lineweight char(10) fme_attrib_info{}.generation char(25) autocad_linespace_factor number(31,15) autocad_text_string char(50) autocad_start_tangent_z number(31,15) autocad_mpolygon_gradient_color2 char(50) autocad_proxygraphics number(6,0) autocad_end_tangent_y number(31,15) autocad_fit_tolerance number(31,15) fme_attrib_info{}.isVisible char(6) autocad_arc_defpt.x number(31,15) autocad_mpolygon_gradient_type number(6,0) autocad_anno_type char(30) fme_secondary_axis number(31,15) autocad_mtext_ref_rect_width number(31,15) autocad_fit_x string autocad_hatch_gradient_type number(6,0) fme_attrib_info{}.oblique number(31,15) autocad_linetype_scale number(31,15) autocad_angbase number(31,15) autocad_aunits number(6,0) autocad_insunits number(6,0) autocad_mpolygon_gradient_color1 char(50) autocad_start_tangent_y number(31,15) autocad_raster_original_transparency char(50) autocad_hatch_object_type number(6,0) autocad_visible_attributes{} char(50) autocad_end_tangent_x number(31,15) autocad_textpict char(50) autocad_raster_clip_points{}.x number(31,15) autocad_block_insert_z number(31,15) fme_attrib_info{}.location_x number(31,15) fme_attrib_info{}.align_y number(31,15) autocad_periodic_spline number(6,0) fme_attrib_info{}.field_size number(5,0) autocad_start_width number(31,15) autocad_row_distance number(31,15) autocad_size_y number(31,15) autocad_extrusion_z number(31,15) autocad_group_num_entities char(50) autocad_start_angle number(31,15) autocad_entity char(50) fme_feature_type char(50) autocad_defpt3.x number(31,15) fme_attrib_info{} char(50) autocad_dim_arrowhead_pt_1.x number(31,15) autocad_oblique number(31,15) autocad_text_z_pos number(31,15) autocad_num_lines number(5,0) autocad_arc_defpt.y number(31,15) autocad_shape_filename char(65) autocad_arc_defpt.z number(31,15) autocad_mtext_string char(50) autocad_mpolygon_shade_tint_value number(31,15) autocad_color number(6,0) autocad_ucs_xangle number(31,15) autocad_txt_offset_x number(31,15) autocad_sweep_angle number(31,15) autocad_alignment_x number(31,15) autocad_control_x string autocad_defpt4.y number(31,15) autocad_fit_z string autocad_original_text_string string autocad_fontname char(50) autocad_txt_offset_y number(31,15) autocad_defpt3.z number(31,15) autocad_block_insert_y number(31,15) autocad_width number(31,15) fme_attrib_info{}.color.blue number(31,15) fme_attrib_info{}.color.red number(31,15) autocad_hatch_pattern_double number(5,0) autocad_mpolygon_pattern_type number(6,0) fme_attrib_info{}.style char(512) autocad_fill_color number(6,0) fme_dataset char(50) autocad_true_color char(50) autocad_attmode number(6,0) autocad_version char(32) autocad_alignment_z number(31,15) autocad_raster_brightness number(4,0) autocad_hatch_gradient_angle number(31,15) autocad_group_name char(50) autocad_control_z string autocad_original_entity_type char(50) autocad_dim_arrowhead_pt_2.y number(31,15) autocad_arrow_head_on char(50) fme_text_string char(50) autocad_text_rotation number(31,15) autocad_hatch_style number(6,0) autocad_block_insert_x number(31,15) autocad_projectname char(32) autocad_extrusion_x number(31,15) autocad_raster_display_opt_transparent logical autocad_control_weights string fme_attrib_info{}.field_name char(513) autocad_extrusion_y number(31,15) autocad_attach_point char(50) autocad_knot_param char(10) fme_attrib_info{}.width_factor number(31,15) autocad_raster_clip_inverted logical autocad_big_fontname char(65) autocad_xref_type char(10) autocad_auprec number(6,0) fme_color char(50) autocad_group_accessible char(50) autocad_fillmode logical autocad_true_type_font char(50) autocad_number_columns number(5,0) autocad_hatch_pattern_type number(6,0) autocad_hatch_pattern_space number(31,15) autocad_line_defpoint.x number(31,15) autocad_normal_z number(31,15) autocad_text_y_pos number(31,15) autocad_base_y number(31,15) autocad_original_layer char(50) autocad_rational_spline number(6,0) autocad_shape_index number(31,15) autocad_attributes_follow char(50) autocad_attribute_display char(50) autocad_defpt4.z number(31,15) autocad_num_knots number(11,0) autocad_dim_clone_inspection_point.y number(31,15) autocad_invisible_attributes{} char(50) fme_attrib_info{}.location_y number(31,15) autocad_anno_handle char(50) autocad_angdir logical autocad_defpt2.z number(31,15) autocad_hatch_gradient_shift number(31,15) fme_attrib_info{}.justification char(25) autocad_raster_display_opt_show_unaligned logical autocad_number_rows number(5,0) autocad_original_position_y number(31,15) autocad_alignment_y number(31,15) autocad_box_width number(31,15) autocad_mpolygon_pattern_scale number(31,15) autocad_line_defpoint.z number(31,15) autocad_mpolygon_pattern_space number(31,15) autocad_size_x number(31,15) autocad_mtext_text_height number(31,15) autocad_hatch_loop{}.autocad_hatch_bulge{} number(31,15) autocad_hatch_pixel_size number(31,15) autocad_mpolygon_origin_point_y number(31,15) autocad_original_text_size number(31,15) autocad_primary_axis number(31,15) autocad_text_size number(31,15) autocad_shape_height number(31,15) autocad_line_defpoint.y number(31,15) autocad_hatch_gradient_name char(32) autocad_dimension_style_name char(50) autocad_raster_fade number(4,0) autocad_thickness number(31,15) autocad_mpolygon_pixel_size number(31,15) autocad_shape_width number(31,15) autocad_mpolygon_pattern_name char(32) fme_primary_axis number(31,15) autocad_knot_tolerance number(31,15) autocad_polyflag char(50) autocad_xscale number(31,15) autocad_end_tangent_z number(31,15) autocad_dimension_attach_point number(5,0) autocad_closed_spline number(6,0) autocad_dim_clone_inspection_point.x number(31,15) autocad_shape_name char(32) autocad_xref_name char(50) autocad_original_position_z number(31,15) autocad_hatch_pattern_angle number(31,15) autocad_raster_display_opt_clip logical autocad_num_fit_pts number(11,0) autocad_control_y string autocad_mpolygon_pattern_angle number(31,15) autocad_start_tangent_x number(31,15) fme_sweep_angle number(31,15) fme_attrib_info{}.layer char(512) autocad_knots string autocad_defpt2.x number(31,15) autocad_hatch_pattern_scale number(31,15) fme_attrib_info{}.color.green number(31,15) autocad_hatch_origin_point_y number(31,15) autocad_dimension_type char(50) autocad_dim_arrowhead_pt_1.y number(31,15) autocad_mpolygon_gradient_one_color_mode number(5,0) autocad_group_anonymous char(50) autocad_hatch_gradient_one_color_mode number(5,0) autocad_mpolygon_gradient_angle number(31,15) autocad_text_midpoint.x number(31,15) autocad_txt_offset_z number(31,15) autocad_raster_clip_points{}.z number(31,15) autocad_raster_contrast number(4,0) autocad_entity_handle char(50) autocad_layer char(50) autocad_shape_vertical char(6) autocad_mpolygon_pattern_color char(50) autocad_raster_transparency number(4,0) autocad_text_midpoint.y number(31,15) fme_attrib_info{}.color.source char(10) autocad_mpolygon_pattern_double number(5,0) autocad_justification char(50) fme_geometry fme_char(50) autocad_hatch_shade_tint_value number(31,15) autocad_hatch_gradient_color1 char(50) autocad_linetype char(50) autocad_text_x_pos number(31,15) autocad_mpolygon_object_type number(6,0) autocad_defpt2.y number(31,15) autocad_normal_x number(31,15) autocad_dim_flag number(5,0) autocad_raster_filename string fme_rotation number(31,15) autocad_shape_rotation number(31,15) autocad_hatch_loop{}.autocad_hatch_bulges_present number(5,0) autocad_group_description char(50) autocad_block_name char(50) autocad_rotation number(31,15) autocad_yscale number(31,15) autocad_defpt3.y number(31,15) autocad_hatch_complex_mode number(5,0) autocad_mpolygon_gradient_name char(32) autocad_linetype_generation number(1,0) autocad_end_width number(31,15) autocad_raster_display_opt_show logical autocad_scale number(31,15) fme_attrib_info{}.attribute_flag char(2) fme_attrib_info{}.height number(31,15) autocad_zscale number(31,15) fme_start_angle number(31,15) autocad_luprec number(6,0) autocad_defpt4.x number(31,15) autocad_flag number(6,0) autocad_bulge char(50) autocad_base_x number(31,15) autocad_text_midpoint.z number(31,15) autocad_xref_path string fme_attrib_info{}.field_value char(2049) autocad_mpolygon_gradient_shift number(31,15) fme_attrib_info{}.align_x number(31,15) autocad_mline_type char(50) autocad_base_z number(31,15) autocad_original_entity char(50)"
 #!   DEFLINE_PARMS="&quot;GUI NAMEDGROUP autocad_settings autocad_layer_desc%autocad_layer_appearance_group%autocad_layer_state_group Layer Settings&quot; &quot;&quot; &quot;GUI DISCLOSUREGROUP autocad_layer_appearance_group autocad_linetype%autocad_color Layer Appearance&quot; YES &quot;GUI DISCLOSUREGROUP autocad_layer_state_group autocad_layer_on%autocad_layer_frozen%autocad_layer_hidden%autocad_layer_locked Layer State&quot; &quot;&quot; &quot;GUI INTEGER autocad_color Default Color&quot; 10 &quot;GUI TEXT autocad_linetype Default Linetype&quot; CONTINUOUS &quot;GUI CHOICE autocad_layer_frozen Yes%No Frozen&quot; No &quot;GUI CHOICE autocad_layer_hidden Yes%No Hidden&quot; No &quot;GUI CHOICE autocad_layer_locked Yes%No Locked&quot; No &quot;GUI CHOICE autocad_layer_on Yes%No On&quot; Yes &quot;GUI OPTIONAL TEXT autocad_layer_desc Description&quot; &quot;&quot; "
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=". %-#[]&quot;()!?*&apos;&amp;+\/"
@@ -219,37 +218,37 @@
 #!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
 #!   DATASET_TYPE="FILE"
 #!   GENERATE_FME_BUILD_NUM="16494"
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
 #!   FANOUT_GROUP="NO"
 #!   COORDSYS=""
-#!   FANOUT_EXPRESSION=""
 #! >
 #! <METAFILE_PARAMETER
-#!   NAME="DATASET_NAME"
-#!   VALUE="dwg file"
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the DWG file(s)"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="FEATURE_TYPE_NAME"
 #!   VALUE="Layer"
 #! />
 #! <METAFILE_PARAMETER
-#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
-#!   VALUE="Layer1"
+#!   NAME="DATASET_NAME"
+#!   VALUE="dwg file"
 #! />
 #! <METAFILE_PARAMETER
 #!   NAME="WRITER_DATASET_HINT"
 #!   VALUE="Specify a name for the DWG file"
 #! />
 #! <METAFILE_PARAMETER
-#!   NAME="MIME_TYPE"
-#!   VALUE=".dwg image/vnd.dwg .dxf image/vnd.dxf ADD_DISPOSITION"
-#! />
-#! <METAFILE_PARAMETER
-#!   NAME="READER_DATASET_HINT"
-#!   VALUE="Select the DWG file(s)"
-#! />
-#! <METAFILE_PARAMETER
 #!   NAME="ADVANCED_PARMS"
 #!   VALUE="ACAD_OUT_DEFAULT_ATTR_STORAGE ACAD_OUT_DEFAULT_APPLICATION ACAD_OUT_OUTPUT_DEFINED_ATTRS_ONLY ACAD_OUT_SHAPE_DIRECTORY ACAD_OUT_CREATED_BLOCK_NAME_PREFIX ACAD_OUT_AUDIT_AND_FIX ACAD_OUT_COORDINATE_SYSTEM_STORAGE ACAD_OUT_APPEND_TO_TEMPLATEFILE ACAD_OUT_PRESERVE_TEMPLATE_PAPER_SPACE_ENTITIES ACAD_OUT_USE_BLOCK_NAME_FOR_CREATION ACAD_OUT_PURGE ACAD_OUT_INSERTION_SCALE_UNITS ACAD_OUT_WRITE_THUMBNAIL_IMAGE ACAD_OUT_PREFER_DONUTS_AS_HATCHES"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="Layer1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE=".dwg image/vnd.dwg .dxf image/vnd.dxf ADD_DISPOSITION"
 #! />
 #! </DATASET>
 #! </DATASETS>
@@ -1186,16 +1185,16 @@
 #!     <FEAT_ATTRIBUTE ATTR_NAME="MONTIMEWINDOWEND" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="DOOR" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="fme_feature_type" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="autocad_layer_appearance_group" PARM_VALUE="YES"/>
+#!     <DEFLINE_PARM PARM_NAME="autocad_settings" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="autocad_layer_hidden" PARM_VALUE="No"/>
 #!     <DEFLINE_PARM PARM_NAME="autocad_layer_state_group" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="autocad_color" PARM_VALUE="10"/>
+#!     <DEFLINE_PARM PARM_NAME="autocad_layer_appearance_group" PARM_VALUE="YES"/>
+#!     <DEFLINE_PARM PARM_NAME="autocad_layer_locked" PARM_VALUE="No"/>
+#!     <DEFLINE_PARM PARM_NAME="autocad_layer_desc" PARM_VALUE=""/>
+#!     <DEFLINE_PARM PARM_NAME="autocad_linetype" PARM_VALUE="CONTINUOUS"/>
 #!     <DEFLINE_PARM PARM_NAME="autocad_layer_frozen" PARM_VALUE="No"/>
 #!     <DEFLINE_PARM PARM_NAME="autocad_layer_on" PARM_VALUE="Yes"/>
-#!     <DEFLINE_PARM PARM_NAME="autocad_settings" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="autocad_layer_desc" PARM_VALUE=""/>
-#!     <DEFLINE_PARM PARM_NAME="autocad_layer_hidden" PARM_VALUE="No"/>
-#!     <DEFLINE_PARM PARM_NAME="autocad_linetype" PARM_VALUE="CONTINUOUS"/>
-#!     <DEFLINE_PARM PARM_NAME="autocad_layer_locked" PARM_VALUE="No"/>
-#!     <DEFLINE_PARM PARM_NAME="autocad_color" PARM_VALUE="10"/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="true"
@@ -1249,13 +1248,13 @@
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI OPTIONAL DATE_TIME Extract_Since Extract Buildings since this date:"
+#!   GUI_LINE="GUI OPTIONAL DATE_TIME_OR_ATTR Extract_Since Extract Buildings since this date:"
 #!   DEFAULT_VALUE="20170620084600"
 #!   IS_STAND_ALONE="true"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI FILENAME DestDataset_ACAD DWG_Files(*.dwg)/DXF_Files(*.dxf)|*.dwg;*.dxf|DWG_Files(*.dwg)|*.dwg|DXF_Files(*.dxf)|*.dxf|All_Files|* Destination Autodesk AutoCAD DWG/DXF File:"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)RT_Extract.dwg"
+#!   DEFAULT_VALUE="C:\Vault_Mirror\BatchGIS\Export\RT_Extract.dwg"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -1268,10 +1267,10 @@
 #! <COMMENT
 #!   IDENTIFIER="16"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Had to leave this in or caused writer error on line exterior schema...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1143.76 -181.252"
-#!   TOP_LEFT="1143.76 -181.252"
-#!   BOTTOM_RIGHT="1893.77 -323.753"
-#!   BOUNDING_RECT="1143.76 -181.252 750.008 142.501"
+#!   POSITION="1140.63 -119.254"
+#!   TOP_LEFT="1140.63 -119.254"
+#!   BOTTOM_RIGHT="1890.64 -261.755"
+#!   BOUNDING_RECT="1140.63 -119.254 750.008 142.501"
 #!   ORDER="5e+14"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -1305,8 +1304,8 @@
 #!   IDENTIFIER="2"
 #!   TYPE="StatisticsCalculator"
 #!   VERSION="7"
-#!   POSITION="837.377 -745.88"
-#!   BOUNDING_RECT="837.377 -745.88 -1 -1"
+#!   POSITION="1218.63 -592.753"
+#!   BOUNDING_RECT="1218.63 -592.753 -1 -1"
 #!   ORDER="5e+14"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1482,28 +1481,28 @@
 #!     <XFORM_ATTR ATTR_NAME="_stdev" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="_stdevp" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="2" />
-#!     <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE="_median"/>
-#!     <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="LASTUPDATE"/>
-#!     <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE="_mean"/>
-#!     <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE="_range"/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="MaxBuildingDate"/>
-#!     <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE="_mode"/>
-#!     <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE="_stdev"/>
-#!     <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE="_maxLastUpdate"/>
-#!     <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_min"/>
-#!     <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
-#!     <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
-#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
-#!     <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="For multiple results only"/>
-#!     <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE="_sum"/>
 #!     <XFORM_PARM PARM_NAME="STDEVP_ATTR" PARM_VALUE="_stdevp"/>
 #!     <XFORM_PARM PARM_NAME="FME_PROCESS_GROUPS_ORDERED" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="STATS_ATTRS" PARM_VALUE="LASTUPDATE"/>
 #!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MAX_ATTR" PARM_VALUE="_maxLastUpdate"/>
 #!     <XFORM_PARM PARM_NAME="FME_PROCESS_COUNTDISP" PARM_VALUE="No Parallelism"/>
+#!     <XFORM_PARM PARM_NAME="NUMERIC_ATTR" PARM_VALUE="_numeric_count"/>
+#!     <XFORM_PARM PARM_NAME="MODE_ATTR" PARM_VALUE="_mode"/>
+#!     <XFORM_PARM PARM_NAME="MEAN_ATTR" PARM_VALUE="_mean"/>
+#!     <XFORM_PARM PARM_NAME="HISTO_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MIN_ATTR" PARM_VALUE="_min"/>
+#!     <XFORM_PARM PARM_NAME="ATTIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="STDEV_ATTR" PARM_VALUE="_stdev"/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE="_count"/>
+#!     <XFORM_PARM PARM_NAME="PREPEND_ATTR_NAME_CHOICE" PARM_VALUE="For multiple results only"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BUILDINGID"/>
+#!     <XFORM_PARM PARM_NAME="RANGE_ATTR" PARM_VALUE="_range"/>
+#!     <XFORM_PARM PARM_NAME="MEDIAN_ATTR" PARM_VALUE="_median"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="MaxBuildingDate"/>
+#!     <XFORM_PARM PARM_NAME="COMPUTE_HISTOGRAM" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="SUM_ATTR" PARM_VALUE="_sum"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #!   IDENTIFIER="4"
@@ -1583,7 +1582,6 @@
 #!     <XFORM_ATTR ATTR_NAME="MONTIMEWINDOWEND" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="DOOR" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="since" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_median" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1664,7 +1662,6 @@
 #!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <OUTPUT_FEAT NAME="REFERENCED"/>
 #!     <FEAT_COLLAPSED COLLAPSED="2"/>
-#!     <XFORM_ATTR ATTR_NAME="since" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="2" />
@@ -1680,7 +1677,6 @@
 #!     <XFORM_ATTR ATTR_NAME="numReferences" IS_USER_CREATED="false" FEAT_INDEX="2" />
 #!     <OUTPUT_FEAT NAME="UNREFERENCED"/>
 #!     <FEAT_COLLAPSED COLLAPSED="3"/>
-#!     <XFORM_ATTR ATTR_NAME="since" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="3" />
@@ -1695,7 +1691,6 @@
 #!     <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="3" />
 #!     <OUTPUT_FEAT NAME="DUPLICATE_SUPPLIER"/>
 #!     <FEAT_COLLAPSED COLLAPSED="4"/>
-#!     <XFORM_ATTR ATTR_NAME="since" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="4" />
@@ -1708,33 +1703,33 @@
 #!     <XFORM_ATTR ATTR_NAME="_stdev" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="_stdevp" IS_USER_CREATED="false" FEAT_INDEX="4" />
 #!     <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="4" />
-#!     <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
-#!     <XFORM_PARM PARM_NAME="IGNORE_NULLS" PARM_VALUE="No"/>
-#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; AUTO"/>
-#!     <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Supplier"/>
-#!     <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Requestor"/>
-#!     <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
-#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="JOIN_ATTRIBUTES_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="REJECT_NULL_MISSING_KEYS" PARM_VALUE="No"/>
-#!     <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="MERGE_COUNT_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="CONNECT_Z_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="PROCESS_DUPS" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="SUPPLIERS_FIRST" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="SUPPLIER_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Merge Supplier"/>
+#!     <XFORM_PARM PARM_NAME="MERGE_TYPE" PARM_VALUE="Attributes Only"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="Use Requestor"/>
+#!     <XFORM_PARM PARM_NAME="IGNORE_NULLS" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="CONNECT_Z_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JOIN_KEYS" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; &lt;at&gt;Value&lt;openparen&gt;BUILDINGID&lt;closeparen&gt; AUTO"/>
+#!     <XFORM_PARM PARM_NAME="REJECT_NULL_MISSING_KEYS" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GEOM_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureMerger"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #!   IDENTIFIER="10"
 #!   TYPE="TestFilter"
 #!   VERSION="1"
-#!   POSITION="2031.27 -419.254"
-#!   BOUNDING_RECT="2031.27 -419.254 -1 -1"
+#!   POSITION="1893.77 -467.753"
+#!   BOUNDING_RECT="1893.77 -467.753 -1 -1"
 #!   ORDER="5e+14"
 #!   PARMS_EDITED="false"
 #!   ENABLED="true"
@@ -1742,7 +1737,6 @@
 #! >
 #!     <OUTPUT_FEAT NAME="&lt;at&gt;Value&lt;openparen&gt;_maxLastUpdate&lt;closeparen&gt;&lt;space&gt;&lt;gt&gt;&lt;space&gt;__Extract_Since_"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="since" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1757,7 +1751,6 @@
 #!     <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;lt&gt;UNFILTERED&lt;gt&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="since" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1919,83 +1912,13 @@
 #!     <XFORM_ATTR ATTR_NAME="MONTIMEWINDOWEND" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="DOOR" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
+#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
 #!     <XFORM_PARM PARM_NAME="TEST_LIST" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="BOOL_OP" PARM_VALUE="OR"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ExteriorLines"/>
 #!     <XFORM_PARM PARM_NAME="COMPOSITE_TEST" PARM_VALUE="&lt;Unused&gt;"/>
 #!     <XFORM_PARM PARM_NAME="TEST_CLAUSE" PARM_VALUE="TEST &lt;at&gt;Value&lt;openparen&gt;fme_feature_type&lt;closeparen&gt; CONTAINS RT_LineExterior"/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ExteriorLines"/>
-#!     <XFORM_PARM PARM_NAME="TEST_MODE" PARM_VALUE="Automatic"/>
-#!     <XFORM_PARM PARM_NAME="TEST_DESCRIPTION" PARM_VALUE="&quot;&quot;"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#!   IDENTIFIER="22"
-#!   TYPE="AttributeCreator"
-#!   VERSION="8"
-#!   POSITION="1625.25 -564.068"
-#!   BOUNDING_RECT="1625.25 -564.068 -1 -1"
-#!   ORDER="5e+14"
-#!   PARMS_EDITED="false"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="16494"
-#! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="since" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_median" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_range" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_mean" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_stdev" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_stdevp" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; since SET_TO $(Extract_Since)"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#!   IDENTIFIER="24"
-#!   TYPE="DateFormatter"
-#!   VERSION="5"
-#!   POSITION="1432.52 -745.88"
-#!   BOUNDING_RECT="1432.52 -745.88 -1 -1"
-#!   ORDER="5e+14"
-#!   PARMS_EDITED="false"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="16494"
-#! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="BUILDINGID" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_maxLastUpdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_median" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_numeric_count" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_sum" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_range" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_mean" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_stdev" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_stdevp" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_mode" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="DATE_ATTR" PARM_VALUE="$(Extract_Since)"/>
-#!     <XFORM_PARM PARM_NAME="SRCFMT" PARM_VALUE="Unknown - Automatic Detection"/>
-#!     <XFORM_PARM PARM_NAME="FMT" PARM_VALUE="FME Date/Time (%Y%m%d%H%M%S)"/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="DateFormatter"/>
-#!     <XFORM_PARM PARM_NAME="INVALID_DATE_VALUE" PARM_VALUE="_FME_NO_OP_"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
@@ -2004,10 +1927,8 @@
 #!   SOURCE_NODE="1"
 #!   TARGET_NODE="11"
 #!   SOURCE_PORT_DESC="-1"
-#!   TARGET_PORT_DESC="fi 0 "
+#!   TARGET_PORT_DESC="fi 0"
 #!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
@@ -2017,85 +1938,51 @@
 #!   SOURCE_PORT_DESC="-1"
 #!   TARGET_PORT_DESC="-1"
 #!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="25"
-#!   SOURCE_NODE="2"
-#!   TARGET_NODE="24"
-#!   SOURCE_PORT_DESC="fo 0 SUMMARY"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
 #!   IDENTIFIER="17"
 #!   SOURCE_NODE="4"
 #!   TARGET_NODE="9"
-#!   SOURCE_PORT_DESC="fo 0 MERGED"
+#!   SOURCE_PORT_DESC="fo 0"
 #!   TARGET_PORT_DESC="-1"
 #!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
 #!   IDENTIFIER="13"
 #!   SOURCE_NODE="10"
 #!   TARGET_NODE="4"
-#!   SOURCE_PORT_DESC="fo 0 &lt;lt&gt;at&lt;gt&gt;Value&lt;lt&gt;openparen&lt;gt&gt;_maxLastUpdate&lt;lt&gt;closeparen&lt;gt&gt;&lt;lt&gt;space&lt;gt&gt;&lt;lt&gt;gt&lt;gt&gt;&lt;lt&gt;space&lt;gt&gt;__Extract_Since_"
-#!   TARGET_PORT_DESC="fi 1 SUPPLIER"
+#!   SOURCE_PORT_DESC="fo 0"
+#!   TARGET_PORT_DESC="fi 1"
 #!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="28"
-#!   SOURCE_NODE="22"
-#!   TARGET_NODE="10"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="27"
-#!   SOURCE_NODE="24"
-#!   TARGET_NODE="22"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
 #!   IDENTIFIER="15"
 #!   SOURCE_NODE="11"
 #!   TARGET_NODE="2"
-#!   SOURCE_PORT_DESC="fo 1 FAILED"
-#!   TARGET_PORT_DESC="fi 0 "
+#!   SOURCE_PORT_DESC="fo 1"
+#!   TARGET_PORT_DESC="fi 0"
 #!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
 #!   IDENTIFIER="18"
 #!   SOURCE_NODE="11"
 #!   TARGET_NODE="4"
-#!   SOURCE_PORT_DESC="fo 1 FAILED"
-#!   TARGET_PORT_DESC="fi 0 REQUESTOR"
+#!   SOURCE_PORT_DESC="fo 1"
+#!   TARGET_PORT_DESC="fi 0"
 #!   ENABLED="true"
-#!   EXECUTION_IDX="1"
-#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="24"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0"
+#!   TARGET_PORT_DESC="fi 0"
+#!   ENABLED="true"
 #!   EXTRA_POINTS=""
 #! />
 #! </FEAT_LINKS>
@@ -2114,7 +2001,7 @@ DEFAULT_MACRO FEATURE_TYPES DBO.RT_DoorPoint DBO.RT_LineInterior DBO.RT_LineRmCo
 GUI OPTIONAL FEATURE_TYPES FEATURE_TYPES ",_FORMAT_OVERRIDE_,GEODATABASE_SDE,CONNECTION_FILE,\"C:\Apps\Gizinta\gseUW\ETL\serverConfig\GIS Production.sde\",REMOVE_TABLE_QUALIFIER,NO,TRANSLATE_SPATIAL_DATA_ONLY,no,RESOLVE_DOMAINS,no,RESOLVE_SUBTYPE_NAMES,yes,IGNORE_NETWORK_INFO,yes,IGNORE_RELATIONSHIP_INFO,yes,SPLIT_COMPLEX_EDGES,no,SPLIT_MULTI_PART_ANNOS,no,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_CLOSED,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,CLIP_TO_ENVELOPE,NO,SPLIT_COMPLEX_ANNOS,no,CACHE_MULTIPATCH_TEXTURES,yes,SEARCH_ORDER,SPATIAL_FIRST,SEARCH_METHOD,GEODB_INTERSECTS,CHECK_SIMPLE_GEOM,no,MERGE_FEAT_LINKED_ANNOS,no,PERSISTENT_CONNECTION,no,READ_VERSION_DIFFERENCES,NO,_GEODB_IN_ALIAS_MODE,NONE,ALIAS_MODE,NONE,DYNAMIC_WORKFLOW,yes,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,VERSION_TYPE,\"Version from SDE Connection\",GEODB_SDE_RDR_ADV_PARM,FME_DISCLOSURE_CLOSED,COMPARE_VERSION_TYPE,<Unused>,CREDENTIALS_OVERRIDE,NO,FEATURE_READ_MODE,Features,USE_SEARCH_ENVELOPE,NO,_MERGE_SCHEMAS,YES,_MERGE_SCHEMAS,YES" Feature Types to Read:
 DEFAULT_MACRO Extract_Since 20170620084600
 GUI OPTIONAL DATE_TIME Extract_Since Extract Buildings since this date:
-DEFAULT_MACRO DestDataset_ACAD $(FME_MF_DIR)RT_Extract.dwg
+DEFAULT_MACRO DestDataset_ACAD C:\Vault_Mirror\BatchGIS\Export\RT_Extract.dwg
 GUI FILENAME DestDataset_ACAD DWG_Files(*.dwg)/DXF_Files(*.dxf)|*.dwg;*.dxf|DWG_Files(*.dwg)|*.dwg|DXF_Files(*.dxf)|*.dxf|All_Files|* Destination Autodesk AutoCAD DWG/DXF File:
 INCLUDE PYTHON
 def ParamFunc():
@@ -2791,12 +2678,12 @@ FACTORY_DEF * TestFactory    FACTORY_NAME ExteriorLines    INPUT  FEATURE_TYPE D
 FACTORY_DEF * TeeFactory   FACTORY_NAME "ExteriorLines FAILED Splitter"   INPUT FEATURE_TYPE ExteriorLines_FAILED   OUTPUT FEATURE_TYPE ExteriorLines_FAILED_0_R40CVKDsr6k=   OUTPUT FEATURE_TYPE ExteriorLines_FAILED_1_LgR92WLwiXY=
 # -------------------------------------------------------------------------
 
-DEFAULT_MACRO __MaxBuildingDate_15476886_b83a_4108_83f1_6d99e01301be10_GROUP_BY
-MACRO __MaxBuildingDate_15476886_b83a_4108_83f1_6d99e01301be10_GROUP_BY BUILDINGID
+DEFAULT_MACRO __MaxBuildingDate_3d9eb768_9640_432a_9429_ee615caa3b731_GROUP_BY
+MACRO __MaxBuildingDate_3d9eb768_9640_432a_9429_ee615caa3b731_GROUP_BY BUILDINGID
 DYNAMIC_FUNCTION_CONFIGURATION Python FMEOBJECTS
 DYNAMIC_FUNCTION_CONFIGURATION Python import StatisticsCalculator
-DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    'MaxBuildingDate',{     'GROUP_BY_MACRO':'__MaxBuildingDate_15476886_b83a_4108_83f1_6d99e01301be10_GROUP_BY',     'GROUP_BY':'BUILDINGID',     'STATS_ATTRS':'LASTUPDATE',     'MIN_ATTR':'_min',     'MAX_ATTR':'_maxLastUpdate',     'COUNT_ATTR':'_count',     'NUMERIC_ATTR':'_numeric_count',     'SUM_ATTR':'_sum',     'RANGE_ATTR':'_range',     'MEAN_ATTR':'_mean',     'MEDIAN_ATTR':'_median',     'STDEV_ATTR':'_stdev',     'STDEVP_ATTR':'_stdevp',     'MODE_ATTR':'_mode',     'COMPUTE_HISTOGRAM':'NO',     'HISTO_ATTR':'<Unused>',     'PREPEND_ATTR_NAME':'No',     'encoded_result_attrs':True,     None:None})"
-FACTORY_DEF * TeeFactory    FACTORY_NAME MaxBuildingDate_InputProcessor    INPUT  FEATURE_TYPE ExteriorLines_FAILED_0_R40CVKDsr6k=    OUTPUT FEATURE_TYPE __ORIGINAL__       @Python(StatisticsCalculator.recordFeature,MaxBuildingDate)
+DYNAMIC_FUNCTION_CONFIGURATION Python "StatisticsCalculator.connectTransformer(    'MaxBuildingDate',{     'GROUP_BY_MACRO':'__MaxBuildingDate_3d9eb768_9640_432a_9429_ee615caa3b731_GROUP_BY',     'GROUP_BY':'BUILDINGID',     'STATS_ATTRS':'LASTUPDATE',     'MIN_ATTR':'_min',     'MAX_ATTR':'_maxLastUpdate',     'COUNT_ATTR':'_count',     'NUMERIC_ATTR':'_numeric_count',     'SUM_ATTR':'_sum',     'RANGE_ATTR':'_range',     'MEAN_ATTR':'_mean',     'MEDIAN_ATTR':'_median',     'STDEV_ATTR':'_stdev',     'STDEVP_ATTR':'_stdevp',     'MODE_ATTR':'_mode',     'COMPUTE_HISTOGRAM':'NO',     'HISTO_ATTR':'<Unused>',     'PREPEND_ATTR_NAME':'No',     'encoded_result_attrs':True,     None:None})"
+FACTORY_DEF * TeeFactory    FACTORY_NAME MaxBuildingDate_InputProcessor    INPUT  FEATURE_TYPE ExteriorLines_FAILED_1_LgR92WLwiXY=    OUTPUT FEATURE_TYPE __ORIGINAL__       @Python(StatisticsCalculator.recordFeature,MaxBuildingDate)
 FACTORY_DEF * TeeFactory    FACTORY_NAME MaxBuildingDate_UnneededInputNuker    INPUT FEATURE_TYPE __ORIGINAL__
 FACTORY_DEF * SortFactory    FACTORY_NAME MaxBuildingDate_CompleteOutputter    INPUT FEATURE_TYPE __UNUSED_INPUT_TO_GUARANTEE_FACTORY_DOESNT_CONSUME_EVERYTHING__
 FACTORY_DEF * CreationFactory    FACTORY_NAME MaxBuildingDate_SummaryCreator    CREATE_AT_END    NUMBER_TO_CREATE 1    OUTPUT FEATURE_TYPE MaxBuildingDate_SUMMARY
@@ -2804,17 +2691,7 @@ FACTORY_DEF * ElementFactory    FACTORY_NAME MaxBuildingDate_SummaryExploder    
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc DateFormatter_formatter {invalidValue} {       set dateFormat {FME Date/Time (%Y%m%d%H%M%S)};       if { [string compare $dateFormat {FME Date/Time (%Y%m%d%H%M%S)}] == 0 } {          set dateFormat {%Y%m%d%H%M%S};       } elseif { [string compare $dateFormat {FME Date (%Y%m%d)}] == 0} {          set dateFormat {%Y%m%d};       } elseif { [string compare $dateFormat {FME Time (%H%M%S)}] == 0} {          set dateFormat {%H%M%S};       } elseif { [string compare $dateFormat {ISO Date (%Y-%m-%d)}] == 0} {          set dateFormat {%Y-%m-%d};       } elseif { [string compare $dateFormat {ISO DateTime (%Y-%m-%dT%H:%M:%S)}] == 0} {          set dateFormat {%Y-%m-%dT%H:%M:%S};       } elseif { [string compare $dateFormat {ISO Time (%H:%M:%S)}] == 0} {          set dateFormat {%H:%M:%S};       } elseif { [string compare $dateFormat {Locale Date (%c)}] == 0} {          set dateFormat {%c};       };     set attrs [split {$(Extract_Since)} {,}];     foreach attr $attrs {        set date [string trim [FME_GetAttribute $attr]];        set comment { Don't touch NULL or empty attribute values };        if { [string length $date] == 0 } { continue; };        set srcfmt {};        if {{FME_AUTOMATIC} != {FME_AUTOMATIC}} {            set srcfmt {FME_AUTOMATIC};        } else {           set comment { In Automatic mode we ignore the millisecond part };           regexp {^[^.]*} $date date;           set comment { Error out if single char or all numeric in AUTO mode };           if { [regexp {^.$} $date] || [regexp {^[0-9]+$} $date] } {              set date {};           };        };        set comment { An empty $date at this point is invalid, so don't process further };        set dateLen [string length $date];        if {$dateLen > 0} {           if {[string length $srcfmt] == 0} {              set attrFull $attr;              append attrFull .full;              set fullDate [FME_GetAttribute $attrFull];              if { [string compare -length $dateLen $date $fullDate] == 0 } {                 set extra [string range $fullDate $dateLen end]000000;                 set date [string range \"$date$extra\" 0 13];                 set dateLen 14              };              if {($dateLen == 14) && [regexp {^[0-9]*$} $date]} {                 set srcfmt %Y%m%d%H%M%S;              };           };           set sourceFormatOpt {};           if {[string length $srcfmt] > 0} {              set sourceFormatOpt \"-format {$srcfmt}\";           };           set comment { Compute the output value and catch any errors };           set error [catch { set seconds [eval clock scan "{$date}" $sourceFormatOpt];                              set output [clock format $seconds -format $dateFormat];           }];           set comment { If there was error then we try again by removing digits after last decimal };           if { $error != 0 } {              set index [string last "." $date];              if { $index > 0 } {                 set date [eval string range $date 0 [expr $index-1]];                 set dateLen [string length $date];                 set error [catch { set seconds [eval clock scan "{$date}" $sourceFormatOpt]; set output [clock format $seconds -format $dateFormat]; }];              };           };           if { $error == 0 } {              FME_SetAttribute $attr $output;           };        };        if { (0 == $dateLen) || ($error != 0) } {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };        };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME DateFormatter    INPUT  FEATURE_TYPE MaxBuildingDate_SUMMARY    OUTPUT FEATURE_TYPE DateFormatter_OUTPUT         @Tcl2("DateFormatter_formatter {_FME_NO_OP_}")
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * AttrSetFactory    FACTORY_NAME AttributeCreator    INPUT  FEATURE_TYPE DateFormatter_OUTPUT    MULTI_FEATURE_MODE NO 	 NULL_ATTR_MODE NO_OP 	 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV 	 ATTR_ACTION "" "since" "SET_TO" "$(Extract_Since$encode)"    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT
-
-
-# -------------------------------------------------------------------------
-
-FACTORY_DEF * TeeFactory    FACTORY_NAME TestFilterSince    INPUT  FEATURE_TYPE AttributeCreator_OUTPUT    OUTPUT FEATURE_TYPE TestFilterSince_TESTFILTERINPUTLINE_0
+FACTORY_DEF * TeeFactory    FACTORY_NAME TestFilterSince    INPUT  FEATURE_TYPE MaxBuildingDate_SUMMARY    OUTPUT FEATURE_TYPE TestFilterSince_TESTFILTERINPUTLINE_0
 
 FACTORY_DEF * TestFactory FACTORY_NAME TestFilterSince_TestFactory_0 INPUT FEATURE_TYPE TestFilterSince_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_maxLastUpdate<closeparen>,TestFilterSince) > @EvaluateExpression(FDIV,STRING_ENCODED,$(Extract_Since$encode),TestFilterSince) ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE TestFilterSince_<at>Value<openparen>_maxLastUpdate<closeparen><space><gt><space>__Extract_Since_ OUTPUT FAILED FEATURE_TYPE TestFilterSince_TESTFILTERINPUTLINE_1
 FACTORY_DEF * TeeFactory FACTORY_NAME TestFilterSince_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE TestFilterSince_TESTFILTERINPUTLINE_1 OUTPUT FEATURE_TYPE TestFilterSince_<lt>UNFILTERED<gt>
@@ -2823,11 +2700,11 @@ FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilterSince <lt>UNFILTERED<gt> Outp
 
 INCLUDE [if { {ATTRIBUTES} == {ATTRIBUTES} } {                puts "MACRO FeatureMerger_REFERENCE_INFO ATTRIBUTES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {POLYGONS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_POLYS";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {AGGREGATES}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} && {<Unused>} == {LINESFROMPOINTS}} {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_LINES_FROM_POINTS";             }          elseif { {ATTRIBUTES} == {GEOM_BUILD} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_BUILD_AGGREGATES";             }          elseif { {ATTRIBUTES} == {GEOM_AND_ATTRS} } {                puts "MACRO FeatureMerger_REFERENCE_INFO GEOM_AND_ATTR_BUILD_AGGREGATES";             }          else {}; ]
 
-FACTORY_DEF * ReferenceFactory    FACTORY_NAME FeatureMerger    INPUT REFERENCER FEATURE_TYPE ExteriorLines_FAILED_1_LgR92WLwiXY=    INPUT REFERENCEE FEATURE_TYPE TestFilterSince_<at>Value<openparen>_maxLastUpdate<closeparen><space><gt><space>__Extract_Since_    REFERENCE_INFO $(FeatureMerger_REFERENCE_INFO)    REFERENCE_TABLE @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>BUILDINGID<closeparen>,FeatureMerger) @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>BUILDINGID<closeparen>,FeatureMerger) AUTO    ATTR_ACCUM_MODE "HANDLE_CONFLICT"    ATTR_CONFLICT_RES "REQUESTOR_IF_CONFLICT"    IGNORE_NULLS "No"    HANDLE_NULL_MISSING_KEYS_LIKE_FME2013 No    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    REFERENCEES_FIRST No    OUTPUT COMPLETE FEATURE_TYPE FeatureMerger_MERGED
+FACTORY_DEF * ReferenceFactory    FACTORY_NAME FeatureMerger    INPUT REFERENCER FEATURE_TYPE ExteriorLines_FAILED_0_R40CVKDsr6k=    INPUT REFERENCEE FEATURE_TYPE TestFilterSince_<at>Value<openparen>_maxLastUpdate<closeparen><space><gt><space>__Extract_Since_    REFERENCE_INFO $(FeatureMerger_REFERENCE_INFO)    REFERENCE_TABLE @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>BUILDINGID<closeparen>,FeatureMerger) @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>BUILDINGID<closeparen>,FeatureMerger) AUTO    ATTR_ACCUM_MODE "HANDLE_CONFLICT"    ATTR_CONFLICT_RES "REQUESTOR_IF_CONFLICT"    IGNORE_NULLS "No"    HANDLE_NULL_MISSING_KEYS_LIKE_FME2013 No    MERGE_ATTRIBUTES Yes    MANAGE_FME_TYPE Yes    MODE COMPLETE    PROCESS_DUPLICATE_REFERENCEES No    REFERENCEES_FIRST No    OUTPUT COMPLETE FEATURE_TYPE FeatureMerger_MERGED
 
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC DBO.RT_LineExterior_GEODATABASE_SDE_2 TO ACAD __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>DBO.RT_Waypoint<closeparen>,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>DBO.RT_Waypoint<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma><lt>at<gt>Value<lt>openparen<gt>fme_feature_type<lt>closeparen<gt><comma>DBO.RT_Waypoint<closeparen> GEOMETRY    ROUTE FME_GENERIC FeatureMerger_MERGED TO ACAD __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>DBO.RT_Waypoint<closeparen>,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>DBO.RT_Waypoint<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma><lt>at<gt>Value<lt>openparen<gt>fme_feature_type<lt>closeparen<gt><comma>DBO.RT_Waypoint<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC FeatureMerger_MERGED TO ACAD __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>DBO.RT_Waypoint<closeparen>,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>DBO.RT_Waypoint<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma><lt>at<gt>Value<lt>openparen<gt>fme_feature_type<lt>closeparen<gt><comma>DBO.RT_Waypoint<closeparen> GEOMETRY    ROUTE FME_GENERIC DBO.RT_LineExterior_GEODATABASE_SDE_2 TO ACAD __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>DBO.RT_Waypoint<closeparen>,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>DBO.RT_Waypoint<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma><lt>at<gt>Value<lt>openparen<gt>fme_feature_type<lt>closeparen<gt><comma>DBO.RT_Waypoint<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
