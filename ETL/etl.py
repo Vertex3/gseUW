@@ -1,4 +1,4 @@
-### runSync.py - run a floorplan sync process with subprocesses
+### etl.py - suppport for automation scripts in ETL folder.
 import os,sys,subprocess, time, traceback, multiprocessing
 
 timeout = 10
@@ -10,6 +10,17 @@ def getParam(params,num,enc,site):
 			enc = ''
 		param = (enc + params[num] + enc).replace('%SITE%',site)
 	return param
+
+def getSites(sitetxt):
+
+	sitefile = os.path.join(os.path.dirname(os.path.realpath(__file__)),sitetxt)
+	with open(sitefile,'r') as infile:
+		data = infile.read()
+		sites = data.splitlines()
+		print('Sites from ' + sitetxt  + ' ' + ' '.join(sites))
+		infile.close()
+	return sites
+
 
 def runproc(script,q1):
 	items = []
