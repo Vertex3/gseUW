@@ -54,7 +54,7 @@ def doSites(params,sitesCAD,sitesNav,startTime):
 				res = subprocess.call(comm, shell=True)
 			elif comm.find('runRoutingExtract.py') < 0:
 				print('Site ' + comm)
-				res = 0#subprocess.call(comm, shell=True)
+				res = subprocess.call(comm, shell=True)
 			print("result=" + str(res))
 			if res != 0:
 				error = True
