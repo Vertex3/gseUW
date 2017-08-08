@@ -1,6 +1,6 @@
 <Gizinta xmlns:gizinta="http://gizinta.com" errorTableName="gzError" logTableName="gzLog" version="2013.1">
 	<Extract>
-		<CADDataset sourceIDField="Handle" sourceName="RMS" targetName="InteriorSpace">
+		<CADDataset sourceIDField="Handle" sourceName="InteriorSpace" targetName="InteriorSpace">
 			<WhereClause/>
 		</CADDataset>
 	</Extract>
