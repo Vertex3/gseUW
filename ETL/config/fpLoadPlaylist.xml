@@ -8,5 +8,8 @@
 	<File>fp\fpFloorplanLine.xml</File>
 	<File>fp\fpInteriorSpace.xml</File>
 	<File>fp\fpFloorArea.xml</File>
+	<File>fp\fpFloorAreaIsometric.xml</File>
+	<File>fp\fpFloorplanLineIsometric.xml</File>
+	<File>fp\fpInteriorSpaceIsometric.xml</File>
 	<File>fp\fpInteriorSpacePoint.xml</File>
 </GizintaPlaylist>

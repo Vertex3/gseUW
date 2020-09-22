@@ -1,1 +1,0 @@
-call C:\Apps\FME\fme.exe C:\Apps\Gizinta\gseUW\ETL\fme\Update_newmapdata_new_cadsde.fmw
