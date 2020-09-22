@@ -11,3 +11,4 @@ call C:\Apps\Gizinta\gseUW\ETL\load_SPT.bat
 call C:\Apps\Gizinta\gseUW\ETL\load_UWB.bat
 call C:\Apps\Gizinta\gseUW\ETL\load_UWS.bat
 call C:\Apps\Gizinta\gseUW\ETL\load_UWT.bat
+call C:\Apps\Gizinta\gseUW\ETL\load_WAS.bat

@@ -5,7 +5,7 @@
 	<File>fp\fpFloorplanLine.xml</File>
 	<File>fp\fpInteriorSpace.xml</File>
 	<!--<File>fp\fpFloorplanLinePublish.xml</File>-->
-	<File>fp\fpInteriorSpaceTilt.xml</File>
+	<!--<File>fp\fpInteriorSpaceTilt.xml</File>-->
 	<File>fp\fpInteriorSpacePoint.xml</File>
 	<File>fp\fpFloor.xml</File>
 	<!--<File>fp\fpFloorPoint.xml</File>-->
